@@ -1,8 +1,11 @@
 $icon-font-path: '/assets/fonts/bootstrap/';
+@import "../assets/themes/paper/variables";
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 $fa-font-path: '/assets/fonts/font-awesome/';
 @import '~font-awesome/scss/font-awesome';
-
+@import "../assets/themes/paper/bootswatch";
+@import "~nouislider/distribute/nouislider";
+@import "../assets/styles/noUiSlider";
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
 
 /**
@@ -16,10 +19,38 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   padding: 0.2em 0;
 }
 
+.fa-2x,.fa-3x,.fa-4x {
+  vertical-align: middle;
+}
+
+
+.panel.small-fixed-panel{
+  width:120px;
+  display: flex;
+  .panel-body{
+    flex:1;
+  }
+
+  .panel-bar{
+    @extend .bg-primary;
+    width:4px;
+    margin:10px 0;
+  }
+}
+
+@for $i from 1 through 6 {
+  .topmargin-#{$i*5} { margin-top: 5px * $i; }
+  .bottommargin-#{$i*5} { margin-bottom: 5px * $i; }
+  .leftmargin-#{$i*5} { margin-left: 5px * $i; }
+  .rightmargin-#{$i*5} { margin-right: 5px * $i; }
+}
+
+
 // Component styles are injected through gulp
 /* inject:scss */
 @import 'admin/admin';
 @import 'main/main';
+@import 'samplepef/samplepef';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
 /* endinject */
