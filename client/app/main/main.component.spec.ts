@@ -37,4 +37,5 @@ describe('Component: MainComponent', function() {
     $httpBackend.flush();
     expect(mainComponent.awesomeThings.length).to.equal(4);
   });
+
 });

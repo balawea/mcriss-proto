@@ -7,16 +7,20 @@ export class MainController {
 
   awesomeThings = [];
   newThing = '';
+  recruits = [];
 
   /*@ngInject*/
   constructor($http) {
     this.$http = $http;
-
   }
 
   $onInit() {
     this.$http.get('/api/things').then(response => {
       this.awesomeThings = response.data;
+    });
+
+    this.$http.get('/api/recruits').then(response => {
+      this.recruits = response.data;
     });
   }
 
