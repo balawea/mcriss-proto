@@ -8,9 +8,16 @@ import routes from './samplepef.routes';
 
 export class SamplepefComponent {
   private message : string;
+  $http;
+  recruit;
+  id;
 
   /*@ngInject*/
-  constructor() {
+  constructor($http, $location) {
+    console.log("ctr");
+    this.$http = $http;
+    this.id = $location.hash();
+    console.log(this.id);
 
     this.message = 'Hello this is a test';
     //TODO, obviously we don't want to ever set up a slider like this ever. it should be a directive
@@ -30,6 +37,17 @@ export class SamplepefComponent {
         density: 4
 
       }
+    });
+  }   //ctr
+
+  $onInit() {
+    this.$http.get('/api/recruits/' + this.id).then(response => {
+      console.log("oninit ...");
+      this.recruit = response.data;
+      console.log(response.data);
+    }).then( function() {
+      console.log("oninit .then:");
+//      console.log("recruits count" + this.recruits[0].toString());
     });
   }
 }
