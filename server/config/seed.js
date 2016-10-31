@@ -6,6 +6,8 @@
 'use strict';
 import Thing from '../api/thing/thing.model';
 import User from '../api/user/user.model';
+import Recruit from '../api/recruit/recruit.model';
+import PefReq from '../api/pef_requirement/pef_requirement.model';
 
 Thing.find({}).remove()
   .then(() => {
@@ -38,6 +40,143 @@ Thing.find({}).remove()
             + 'and openshift subgenerators'
     });
   });
+
+Recruit.find({}).remove()
+  .then(() => {
+    Recruit.create({
+      firstName: 'Howard',
+      lastName: 'James',
+      middleInitial: 'L',
+      dob: '12/11/1989',
+      sex: 'M',
+      edipi: '00100',
+      active: true
+    }, {
+      firstName: 'Valerie',
+      lastName: 'Kuo',
+      middleInitial: 'R',
+      dob: '08/20/1977',
+      sex: 'F',
+      edipi: '00101',
+      active: true
+    }, {
+      firstName: 'Ashley',
+      lastName: 'Martinez',
+      middleInitial: 'A',
+      dob: '03/16/70',
+      sex: 'M',
+      edipi: '00102',
+      active: true
+    }, {
+      firstName: 'Andrew',
+      lastName: 'Junior',
+      middleInitial: 'N',
+      dob: '10/07/1986',
+      sex: 'M',
+      edipi: '00103',
+      active: true
+    }, {
+      firstName: 'Milton',
+      lastName: 'Bradley',
+      middleInitial: 'J',
+      dob: '11/17/1945',
+      sex: 'M',
+      edipi: '00104',
+      active: false
+    }, {
+      firstName: 'Charlotte',
+      lastName: 'Early',
+      middleInitial: 'O',
+      dob: '04/17/1972',
+      sex: 'F',
+      edipi: '00107',
+      active: false
+    }, {
+      firstName: 'William',
+      lastName: 'Franklin',
+      middleInitial: '',
+      dob: '09/02/1965',
+      sex: 'M',
+      edipi: '00105',
+      active: true
+    });
+  });
+
+PefReq.find({}).remove()
+  .then(() => {
+    PefReq.create({
+      pefReqId: 1,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 2,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 3,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 4,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 5,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 6,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 7,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 8,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 9,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 10,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 11,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 12,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 13,
+      requirementType: '',
+      requirement: '',
+      active: true
+    }, {
+      pefReqId: 14,
+      requirementType: '',
+      requirement: '',
+      active: true
+    });
+  });
+
 
 User.find({}).remove()
   .then(() => {
