@@ -11,7 +11,6 @@ const uiBootstrap = require('angular-ui-bootstrap');
 // const ngMessages = require('angular-messages');
 // import ngValidationMatch from 'angular-validation-match';
 
-
 import {routeConfig} from './app.config';
 
 import _Auth from '../components/auth/auth.module';
@@ -20,9 +19,9 @@ import admin from './admin';
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
 import main from './main/main.component';
+import samplepef from './samplepef/samplepef.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
-
 
 
 import './app.scss';
@@ -41,6 +40,7 @@ angular.module('mcrissDemoApp', [
   admin,  navbar,
   footer,
   main,
+  samplepef,
   constants,
 
   util

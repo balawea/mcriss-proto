@@ -3,10 +3,16 @@
 const angular = require('angular');
 
 export class NavbarComponent {
-  menu = [{
+  menu = [
+    {
     'title': 'Home',
     'state': 'main'
-  }];
+  },
+    {
+      'title': 'Test PEF',
+      'state': 'samplepef'
+    }
+  ];
   isLoggedIn: Function;
   isAdmin: Function;
   getCurrentUser: Function;
