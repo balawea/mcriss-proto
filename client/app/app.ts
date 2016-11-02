@@ -4,8 +4,6 @@ const angular = require('angular');
 const ngCookies = require('angular-cookies');
 const ngResource = require('angular-resource');
 const ngSanitize = require('angular-sanitize');
-
-
 const uiRouter = require('angular-ui-router');
 const uiBootstrap = require('angular-ui-bootstrap');
 // const ngMessages = require('angular-messages');
@@ -42,7 +40,6 @@ angular.module('mcrissDemoApp', [
   main,
   samplepef,
   constants,
-
   util
 ])
   .config(routeConfig)

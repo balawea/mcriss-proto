@@ -1,6 +1,5 @@
 'use strict';
 const angular = require('angular');
-
 const uiRouter = require('angular-ui-router');
 const noUiSlider = require('nouislider');
 
@@ -11,46 +10,56 @@ export class SamplepefComponent {
   $http;
   recruit;
   id;
+  clslider;
+  elslider;
 
   /*@ngInject*/
   constructor($http, $location) {
-    console.log("ctr");
     this.$http = $http;
     this.id = $location.hash();
-    console.log(this.id);
 
-    this.message = 'Hello this is a test';
-    //TODO, obviously we don't want to ever set up a slider like this ever. it should be a directive
-    noUiSlider.create(document.getElementById('clslider'), {
-      start: 0,
-      connect: [true, false],
+    /*
+    this.clslider = noUiSlider.create(document.getElementById('clslider'), {
+      start:0,
+      connect: true,
       step: 1,
-      //tooltips: wNumb({decimals: 0}),
       range: {
         'min': 0,
-        'max': 300
+        'max': 100
       },
-
       pips: {
-        mode: 'positions',
-        values: [0,25,50,75,100],
-        density: 4
-
+        mode: 'steps',
+        density: 2
       }
     });
-  }   //ctr
 
+    this.elslider = noUiSlider.create(document.getElementById('elslider'), {
+      start:0,
+      connect: true,
+      step: 1,
+      tooltips: true,
+      range: {
+        'min': 0,
+        'max': 100
+      },
+      pips: {
+        mode: 'steps',
+        density: 4
+      }
+    });
+*/
+
+  }   //ctor
+
+  /*@ngInject*/
   $onInit() {
     this.$http.get('/api/recruits/' + this.id).then(response => {
-      console.log("oninit ...");
       this.recruit = response.data;
-      console.log(response.data);
-    }).then( function() {
-      console.log("oninit .then:");
-//      console.log("recruits count" + this.recruits[0].toString());
     });
-  }
-}
+  }   //oninit
+
+} //class
+
 
 export default angular.module('mcrissProtoApp.samplepef', [uiRouter])
   .config(routes)

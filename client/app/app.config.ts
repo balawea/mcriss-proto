@@ -8,3 +8,4 @@ export function routeConfig($urlRouterProvider, $locationProvider) {
 
   $locationProvider.html5Mode(true);
 }
+

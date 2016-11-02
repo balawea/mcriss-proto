@@ -1,15 +1,16 @@
+
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">{{vm.recruit.FirstName + " " + vm.recruit.LastName}}</h1>
+      <h2 class="page-header">{{vm.recruit.FirstName + " " + vm.recruit.LastName}}</h2>
     </div>
   </div>
 </div>
 
-
+<!-- dob, height, weight, cit -->
 <div class="col-sm-3">
   <div class="well">
-    <h5><i class="fa fa-user fa-2x text-primary"></i> DOB {{vm.recruit.Dob}}</h5>
+    <h5><i class="fa fa-user fa-2x text-primary"></i> DOB {{vm.recruit.Dob | date : 'yyyyMMdd'}}</h5>
     <div class="panel panel-default small-fixed-panel pull-left">
       <div class="panel-bar"></div>
       <div class="panel-body">
@@ -43,63 +44,62 @@
     </div>
   </div>
 
-
 </div>
 
 <!-- driving -->
 <div class="col-sm-3">
   <div class="well">
     <div class="text-center">
-  <span class="fa-stack fa-4x text-primary">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-car fa-stack-1x fa-inverse"></i>
-</span>
+      <span class="fa-stack fa-4x text-primary">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-car fa-stack-1x fa-inverse"></i>
+      </span>
     </div>
     <div class="form-horizontal">
-      <div class="form-group">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="" id="driverslicense" checked="{{vm.recruit.DriversLicense}}">
-            Drivers License
-          </label>
-        </div>
 
-        <label for="inputID" class="col-sm-5 control-label">Driving Offenses</label>
+      <div class="form-group">
+        <label for="drivingoffenses" class="col-sm-5 control-label">Driving Offenses</label>
         <div class="col-sm-3">
-          <select name="name" id="inputID" class="form-control">
+          <select name="name" id="drivingoffenses" class="form-control">
             <option value="">{{vm.recruit.DrivingOffensesCount}}</option>
           </select>
         </div>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="driverslicense" checked="{{vm.recruit.DriversLicense}}">
+          Drivers License
+        </label>
       </div>
 
     </div>
   </div>
 </div>
 
-
 <!-- misconduct -->
 <div class="col-sm-3">
   <div class="well">
     <div class="text-center">
-  <span class="fa-stack fa-4x text-primary">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-gavel fa-stack-1x fa-inverse"></i>
-</span>
-    </div>
+      <span class="fa-stack fa-4x text-primary">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-gavel fa-stack-1x fa-inverse"></i>
+      </span>
+     </div>
 
     <div class="form-horizontal">
       <div class="form-group">
-        <label for="inputID" class="col-sm-5 control-label">Misconduct Offenses</label>
+        <label for="misconductoffenses" class="col-sm-5 control-label">Misconduct Offenses</label>
         <div class="col-sm-3">
-          <select name="name" id="misconductoffenses" class="form-control">
+          <select id="misconductoffenses" class="form-control">
             <option value="">{{vm.recruit.MisconductCount}}</option>
           </select>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputID" class="col-sm-5 control-label">Drug Offenses</label>
+        <label for="drugoffenses" class="col-sm-5 control-label">Drug Offenses</label>
         <div class="col-sm-3">
-          <select name="name" id="drugoffenses" class="form-control">
+          <select id="drugoffenses" class="form-control">
             <option>{{vm.recruit.DrugUseCount}}</option>
           </select>
         </div>
@@ -109,56 +109,76 @@
   </div>
 </div>
 
-
 <!-- test scores -->
 <div class="col-sm-3">
   <div class="well">
-    <h5><i class="fa fa-lightbulb-o fa-3x text-primary"></i> Test Scores</h5>
+    <h5><i class="fa fa-lightbulb-o fa-3x text-primary"></i>  Test Scores</h5>
 
     <div class="form-horizontal">
-      <div class="form-group">
-        <label for="inputID" class="col-sm-5 control-label">CL:</label>
-        <div class="col-sm-3">
-          <select name="name" id="cl" class="form-control">
-            <option value="">{{vm.recruit.Cl}}</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputID" class="col-sm-5 control-label">EL:</label>
-        <div class="col-sm-3">
-          <select name="name" id="el" class="form-control">
-            <option value="">{{vm.recruit.El}}</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputID" class="col-sm-5 control-label">GT:</label>
-        <div class="col-sm-3">
-          <select name="name" id="gt" class="form-control">
-            <option value="">{{vm.recruit.Gt}}</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputID" class="col-sm-5 control-label">MM:</label>
+        <label>CL:
+        <input type="text" value="{{vm.recruit.Cl}}"></label>
       </div>
 
+      <div class="form-horizontal">
+        <label>EL:
+        <input type="text" value="{{vm.recruit.El}}"></label>
+      </div>
+
+      <div class="form-horizontal">
+        <label>GT:
+        <input type="text" value="{{vm.recruit.Gt}}"></label>
+      </div>
+
+      <div class="form-horizontal">
+        <label>MM:
+        <input type="text" value="{{vm.recruit.Mm}}"></label>
+      </div>
+
+  </div>
+</div>
+
+<!-- vision -->
+<div class="col-sm-3">
+  <div class="well">
+    <div class="text-center">
+      <span class="fa-stack fa-4x text-primary">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+
+    <div class="form-horizontal">
+      <label class="col-md-5">Color Perception:</label>
+      <input type="text" value="{{vm.recruit.ColorPerception}}">
+    </div>
+
+    <div class="form-horizontal">
+      <label class="col-md-5">Depth Perception:</label>
+      <input type="text" value="{{vm.recruit.DepthPerception}}">
     </div>
   </div>
 </div>
 
-<div class="col-sm-6">
+<!-- TOE -->
+<div class="col-sm-3">
   <div class="well">
-    <div id="clslider"></div>
-    <div style="margin-top:80px"></div>
-    <div id="elslider"></div>
+    <h5>Term of Enlistment</h5>
+
+    <div class="form-horizontal">
+
+      <div class="col-sm-3 col-sm-offset-3">
+        <div class="center-block">
+          <select name="name" id="toe" class="form-control">
+            <option>{{vm.recruit.TOE}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
   </div>
 
 </div>
 
-This part is from angular {{vm.message}}
-
-<input type="text" ng-model="vm.message">
 <div class="clearfix"></div>
 

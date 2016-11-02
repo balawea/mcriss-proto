@@ -10,18 +10,6 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
-        <li><a href="#" uib-tooltip="{{thing.info}}"> {{thing.name}}</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
       <h1 class="page-header">Recruits:</h1>
       <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="recruit in $ctrl.recruits">
         <li><a href="/samplepef#{{recruit._id}}" uib-tooltip="{{recruit._id + '\n' + recruit.FirstName}}"> {{recruit.FirstName + ' ' + recruit.LastName}}</a></li>

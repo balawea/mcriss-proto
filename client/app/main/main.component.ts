@@ -4,7 +4,6 @@ import routing from './main.routes';
 
 export class MainController {
   $http;
-
   awesomeThings = [];
   newThing = '';
   recruits = [];
@@ -15,10 +14,6 @@ export class MainController {
   }
 
   $onInit() {
-    this.$http.get('/api/things').then(response => {
-      this.awesomeThings = response.data;
-    });
-
     this.$http.get('/api/recruits').then(response => {
       this.recruits = response.data;
     });
@@ -36,8 +31,7 @@ export class MainController {
   }
 }
 
-export default angular.module('mcrissDemoApp.main', [
-  uiRouter])
+export default angular.module('mcrissDemoApp.main', [uiRouter])
     .config(routing)
     .component('main', {
       template: require('./main.html'),
