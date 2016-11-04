@@ -7,6 +7,7 @@ export class MainController {
   awesomeThings = [];
   newThing = '';
   recruits = [];
+  pefs = [];
 
   /*@ngInject*/
   constructor($http) {
@@ -17,6 +18,11 @@ export class MainController {
     this.$http.get('/api/recruits').then(response => {
       this.recruits = response.data;
     });
+
+    this.$http.get('/api/pefRequirements').then(response => {
+      this.pefs = response.data;
+    });
+
   }
 
   addThing() {
