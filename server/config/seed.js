@@ -210,7 +210,63 @@ Recruit.find({}).remove()
 PefReq.find({}).remove()
   .then(() => {
     PefReq.create(
-      {
+
+      {     ///AE
+        pefCode: 'AE',
+        description: 'AVIATION SUPPORT',
+        mos: [{mos: '6500', description: '6500 Aviation Ordnance'}, {mos: '6531', description: '6531 Aviation Ordnance Technician'}, {mos: '6541', description: '6541 Aviation Ordnance Systems Technician'},
+          {mos: '7000', description: '7000 Airfield Services'}, {mos: '7011', description: '7011 Expeditionary Airfield Systems Technician'}, {mos: '7051', description: '7051 Aircraft Rescue and Firefighting Specialist'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Four (4) Year Term of Enlistment (TOE)', val: 4},
+          usCitizen: {val: true},
+          clearance: {description: 'Eligible for a SECRET Clearance', val: 'SECRET'},
+          gt: {description: 'GT 105', val: 105, waiver: 3},
+          mm: {description: 'MM 95', val: 95, waiver: 3},
+          height: {
+            description: 'Minimum height 64 inches (Actual Height, no waivers). Maximum Height 75 inches (Actual Height, no waivers).',
+            min: 64,
+            max: 75,
+            optional: false,   //only some MOSs in a PEF may have height requirements
+            waiverable: false
+          },
+          driving: {
+            driversLicense: {val: true, waiver: true},
+            offenses: {description: 'No convictions of driving offenses other than Traffic Violations', maxAboveRs: 0},
+            trafficViolations: {
+              description: 'No convictions of driving offenses other than Traffic Violations',
+              max: 0,
+              waiver: true
+            }
+          },
+          moral: {
+            conduct: {
+              description: 'No Conduct Waivers above RS. No Waivers.',
+              maxAboveRs: 0,
+              waiver: false
+            },
+            marijuana: {description: 'No Drug Waivers above RS. No Waivers.', maxAboveRs: 0, waiver: true},
+            otherDrugs: {description: 'No Drug Waivers above RS. No Waivers.', maxAboveRs: 0, waiver: true}
+          },
+          vision: {
+            correctable: {description: 'Vision correctable to 20/20', val: true},
+            color: {description:'Pass the Normal Color Perception (NCP) Test w/PIP (12 out of 14 correct) or FALANT.', val: 12, waiver: false}
+          }
+        } //requirements
+      },
+      {     ///AF
+        pefCode: 'AF',
+        description: 'AVIATION MECHANIC',
+        mos: [{mos: '6000', description: '0000 MOS for RS'}, {mos: '6100', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Five (5) Year Term of Enlistment (TOE)', val: 5},
+          mm: {description: 'MM Score of 105 on the ASVAB. (Max 3-point waiver)', val: 105, waiver: 3}
+        } //requirements
+      },
+      { //// AG
       pefCode: 'AG',
       description: 'ENLISTED AIRCREW',
       mos: [
@@ -241,7 +297,72 @@ PefReq.find({}).remove()
         flightPhysical: {description:'Pass rigorous flight physical', val:true, waiver:false}
       } //requirements
     },
-      {
+      {     ///AJ
+        pefCode: 'AJ',
+        description: 'AVIATION OPERATIONS',
+        mos: [{mos: '7200', description: '0000 MOS for RS'}, {mos: '7300', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Five (5) Year Term of Enlistment (TOE)', val: 5},
+          usCitizen: {val: true},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS.', val: 'SECRET'},
+          gt: {description: 'GT Score of 105 on the ASVAB.', val: 105, waiver: 3},
+          moral: {
+            conduct: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0, maxAtRs:0, waiver: false},
+            marijuana: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0, waiver: false},
+            otherDrugs: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0, waiver: false}
+          },
+          vision: {
+            color: {description:'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', val:12, waiver:false},
+          }
+        } //requirements
+      },
+      {     ///BA
+        pefCode: 'BA',
+        description: 'AVIATION ELECTRONICS TECHNICIAN',
+        mos: [{mos: '5900', description: '0000 MOS for RS'}, {mos: '6300', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Five (5) Year Term of Enlistment (TOE)', val: 5},
+          usCitizen: {val: true},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS).', val: 'SECRET'},
+          el: {description: 'EL Score of 105 on the ASVAB', val: 105, waiver: 3},
+          moral: {
+            conduct: {description: 'No Conduct or Drug waivers above RS',maxAboveRs: 0, waiver:false},
+            marijuana: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0, waiver: false},
+            otherDrugs: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0, waiver: false}
+          },
+          algebra: {description: 'Successfully completed one year of High School Algebra or higher math', val: true},
+          vision: {
+            color: {description:'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', val:12, waiver:false},
+          }
+        } //requirements
+      },
+      {     ///BY
+        pefCode: 'BY',
+        description: 'ELECTRONICS MAINTENANCE',
+        mos: [{mos: '2100', description: '0000 MOS for RS'}, {mos: '2800', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Five (5) Year Term of Enlistment (TOE)', val: 5},
+          usCitizen: {val: true},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS.', val: 'SECRET'},
+          el: {description: 'EL Score of 115 on the ASVAB', val: 115, waiver: 3},
+          moral: {
+            conduct: {description: 'No Conduct or Drug waivers above RS',maxAtRs: 0,maxAboveRs: 0},
+            marijuana: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0},
+            otherDrugs: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0}
+          },
+          algebra: {description: 'Successfully completed one year of High School Algebra or higher math', val: true},
+          vision: {
+            color: {description:'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', val:12, waiver:false},
+          }
+        } //requirements
+      },
+      {//// CA
         pefCode: 'CA',
         description: 'TRANSPORTATION OPTION',
         mos: [{mos:'3500', description:'3500 Motor Transport'}, {mos:'3531', description:'3531 Motor Vehicle Operator'}],
@@ -262,78 +383,166 @@ PefReq.find({}).remove()
           }
         } //requirements
       },
-
-      {     ///DUMMY
-        pefCode: 'DUMMY',
-        description: 'DUMMY PEF',
-        mos: [{mos: '0000', description: '0000 MOS for RS'}, {mos: 'XXXX', description: 'XXXX MOS for RS'}],
-        disqualifications: ['Lorem ipsum', 'something dolor'],
+      {     ///CB
+        pefCode: 'CB',
+        description: 'LEGAL AND ADMINISTRATION OPTION',
+        mos: [{mos: '0100', description: '0000 MOS for RS'}, {mos: '4400', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
         requirements: {
-          toe: {description: '', val: 7},
-          usCitizen: {val: true},
-          usCitizenFamily: {val: false},
-          sex: {description: 'Female Only', val: 'F'},
-          age: {min: 20, max:40, waivable:false},
-          clearance: {description: 'Clearance Level clearance required', val: 'Clearance Level'},
-          gt: {description: 'gt string', val: 110, waiver: 0},
-          cl: {description: 'cl string', val: 95, waiver: 1},
-          el: {description: 'el string', val: 95, waiver: 1},
-          mm: {description: 'mm string', val: 90, waiver: 2},
-          ve: {description: 've string', val: 85, waiver: 3},
-          qt: {description: 'qt string', val: 80, waiver: 0},
-          dlab: {description: 'dlab string', val: 130, waiver: 10},
+          toe: {description: 'Four (4) Year Term of Enlistment (TOE)', val: 4},
+          cl: {description:'CL Score of 100 on the ASVAB', val:100, waiver:3}
+        } //requirements
+      },
+      {     ///CC
+        pefCode: 'CC',
+        description: 'SUPPLY AND ACCOUNTING OPTIONS',
+        mos: [{mos: '3000', description: '0000 MOS for RS'}, {mos: '3400', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Four (4) Year Term of Enlistment (TOE)', val: 4},
+          cl: {description: 'CL Score of 105 on the ASVAB', val: 105, waiver: 3}
+        } //requirements
+      },
+      {     ///CD
+        pefCode: 'CD',
+        description: 'EQUIPMENT/VEHICLE REPAIR OPTION',
+        mos: [{mos: '1300', description: '0000 MOS for RS'}, {mos: '3500', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Four (4) Year Term of Enlistment (TOE)', val: 4},
           height: {
+            description: 'Height requirement minimum 59 inches, no waivers',
             min: 59,
-            max: 79,
             optional: false,   //only some MOSs in a PEF may have height requirements
-            waiver: 2
-          },
-          weight: {
-            description: 'weight description string',
-            min: 120,
-            max: 190,
-            optional: true,   //only some MOSs in a PEF may have weight requirements
+            waivable: false,
             waiver: 0
           },
-          driving: {
-            driversLicense: {val: true, waiver: true},
-            offenses: {maxAtRs: 1, maxAboveRs: 1, waiver: false},
-            trafficViolations: {
-              description: 'no traffic violations allowed',
-              max: 0,
-              maxAtRs: 0,
-              maxAboveRs: 0,
-              maxAtDep: 0,
-              maxBeforeDep: 0,
-              waiver: false
-            }
-          },
-          moral: {
-            conduct: {
-              description: 'conduct string',
-              maxAtRs: 1,
-              maxAboveRs: 0,
-              maxBeforeDep: 2,
-              optional: true,
-              waiver: true
-            },
-            marijuana: {description: 'mari string', max: 5, maxAtRs: 3, maxAboveRs: 0, maxBeforeDep: 0, waiver: false},
-            otherDrugs: {description: 'drug string', maxAtRs: 1, maxAboveRs: 0, waiver: false}
-          },
-          tierGrad: {description: 'tier 1 grads only', val: 1, waiver: false},
-          algebra: {description: '[]', val: true, waiver: true},
           vision: {
-            correctable: {description: 'vision correctable', val: true, waiver: false},
-            depth: {val: 13, ndp:true, waiver: true},
-            color: {val: 12, waiver: false},
-            acuity: {description: 'min vision test score', min1: 70, min2: 80, waiver: true}
+            color: {description:'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', val:12, waiver:false},
+          }
+        } //requirements
+      },
+      {     ///CE
+        pefCode: 'CE',
+        description: 'COMBAT SUPPORT',
+        mos: [{mos: '0800', description: '0000 MOS for RS'}, {mos: '1800', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Four (4) Year Term of Enlistment (TOE)', val: 4},
+          sex: {description: 'male Only', val: 'M'},
+          gt: {description: 'GT Score of 90 on the ASVAB', val: 90, waiver: 3},
+          vision: {
+            color: {description:'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', val:12, waiver:false},
           },
-          waterQual: {description: 'sdfsxdf', val: true, optional: true, waiver: true},
-          flightPhysical: {description: 'sdfsdf', val: true},
-          speech: {description: 'sdfsdf', val: false, waiver: false},
-          doncafScreening: {description: 'doncaf', val: false},
-          pftClass1: {description: 'class 1', val: true, waiver: false},
-          prpScreen: {description: 'informational', maxUnfavorableResponses: 1, waiver: true}
+          waterQual: {description:'Must have WS-B(+) Water Survival Qualification. Must perform the following: Crawl (25 yards), breast stroke (25 yards), ' +
+          'side stroke (25 yards), elementary back stroke (25 yards), vertical fall from 12 foot platform, underwater swim without breaking surface (15 yards), ' +
+          'tread water 2 1/2 minutes, front float 2 1/2 minutes', val:true, optional:false, waiver:false}
+        } //requirements
+      },
+      {     ///CF
+        pefCode: 'CF',
+        description: 'ORDNANCE TECHNICIAN/METAL WORKS OPTION',
+        mos: [{mos: '1300', description: '0000 MOS for RS'}, {mos: '2100', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Four (4) Year Term of Enlistment (TOE)', val: 4},
+          mm: {description: 'MM Score of 95 on the ASVAB', val: 95, waiver: 3},
+          moral: {conduct: {description: 'MOS 2111 - No Misconduct above RS Level',maxAboveRs: 0,optional: true}},
+          vision: {
+            color: {description:'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', val:12, waiver:false},
+          }
+        } //requirements
+      },
+      {     ///CG
+        pefCode: 'CG',
+        description: 'PUBLIC AFFAIRS',
+        mos: [{mos: '4300', description: '0000 MOS for RS'}, {mos: '7300', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Four (4) Year Term of Enlistment (TOE)', val: 4},
+          usCitizen: {val: true},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level)', val: 'SECRET'},
+          gt: {description: 'GT Score of 110 on the ASVAB', val: 110, waiver: 0},
+          ve: {description: 'VE Score of 45 on the ASVAB', val: 45, waiver: 0},
+          moral: {
+            conduct: {description: 'No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level',maxAtRs: 0,maxAboveRs: 0},
+            marijuana: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0},
+            otherDrugs: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0}
+          },
+          vision: {
+            color: {description:'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', val:12, waiver:false},
+          },
+          speech: {description: 'Must possess Clarity of Speech', val: true},
+          doncafScreening: {description: 'Be interviewed, screened, and accepted by RA NPA and District PA Chief or District PA OFficer', val: true},
+        } //requirements
+      },
+      {     ///CH
+        pefCode: 'CH',
+        description: 'MEDIA OPTION',
+        mos: [{mos: '4600', description: '0000 MOS for RS'}, {mos: '4612', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Five (5) Year Term of Enlistment (TOE)', val: 5},
+          usCitizen: {val: true},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level)', val: 'SECRET'},
+          gt: {description: 'GT Score of 100 on the ASVAB', val: 100, waiver: 3},
+          moral: {
+            conduct: {description: 'No Conduct or Drug waivers above RS to include misconduct offenses waived at RS.',maxAtRs: 0, maxAboveRs: 0},
+            marijuana: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0},
+            otherDrugs: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0}
+          },
+          vision: {
+            color: {description:'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', val:12, waiver:false},
+          },
+          additionalScreening: {description: 'Applicants must submit their portfolio to the Combat Camera Management, MCB Quantico, VA', val: true}
+        } //requirements
+      },
+      {     ///CJ
+        pefCode: 'CJ',
+        description: 'LOGISTICS OPTION',
+        mos: [{mos: '0400', description: '0000 MOS for RS'}, {mos: '2300', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Four (4) Year Term of Enlistment (TOE)', val: 4},
+          usCitizen: {val: true},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS.', val: 'SECRET'},
+          gt: {description: 'GT Score of 100 on the ASVAB', val: 100, waiver: 3},
+          moral: {
+            conduct: {description: 'No Conduct or Drug waivers above RS', maxAtRs:0, maxAboveRs: 0},
+            marijuana: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0},
+            otherDrugs: {description: 'No Conduct or Drug waivers above RS', maxAboveRs: 0}
+          }
+        } //requirements
+      },
+      {     ///CK
+        pefCode: 'CK',
+        description: 'FIRE DIRECTION/CONTROL SPECIALIST',
+        mos: [{mos: '0800', description: '0000 MOS for RS'}, {mos: '7300', description: 'XXXX MOS for RS'}],
+        disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
+          'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
+        requirements: {
+          toe: {description: 'Four (4) Year Term of Enlistment (TOE)', val: 4},
+          usCitizen: {val: true},
+          sex: {description: 'Male Only', val: 'M'},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level)', val: 'SECRET'},
+          gt: {description: 'GT Score of 105 on the ASVAB', val: 105, waiver: 3},
+          moral: {
+            conduct: {description: 'No Conduct or Drug waivers above RS to include misconduct offenses waived at RS',maxAtRs: 0, maxAboveRs: 0},
+            marijuana: {description: 'No Conduct or Drug waivers above RS to include misconduct offenses waived at RS', maxAboveRs: 0},
+            otherDrugs: {description: 'No Conduct or Drug waivers above RS to include misconduct offenses waived at RS', maxAboveRs: 0}
+          },
+          vision: {
+            correctable: {description:'Overall correctable to 20/20 (distant)', val:true, waiver:false},
+            color: {description:'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', val:12, waiver:false},
+          }
         } //requirements
       }
 

@@ -27,6 +27,7 @@ var PefRequirementSchema = new mongoose.Schema({
       min:Number,
       max:Number,
       optional:Boolean,   //only some MOSs in a PEF may have height requirements
+      waivable:Boolean,
       waiver:Number
     },
     weight: {
@@ -34,6 +35,7 @@ var PefRequirementSchema = new mongoose.Schema({
       min:Number,
       max:Number,
       optional:Boolean,   //only some MOSs in a PEF may have weight requirements
+      waivable:Boolean,
       waiver:Number
     },
     driving: {
@@ -58,6 +60,7 @@ var PefRequirementSchema = new mongoose.Schema({
     flightPhysical: {description:String, val:Boolean, waiver:Boolean},
     speech:{description:String, val:Boolean, waiver:Boolean},
     doncafScreening: {description:String, val:Boolean},
+    additionalScreening: {description:String, val:Boolean},
     pftClass1: {description:String, val:Boolean, waiver:Boolean},
     prpScreen: {description:String, maxUnfavorableResponses:Number, waiver:Boolean}
     } //requirements
