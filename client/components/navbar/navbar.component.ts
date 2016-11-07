@@ -9,6 +9,10 @@ export class NavbarComponent {
     'state': 'main'
   },
     {
+      'title': 'PEF Detail',
+      'state': 'pefDetail'
+    },
+    {
       'title': 'Test PEF',
       'state': 'samplepef'
     }

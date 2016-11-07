@@ -18,6 +18,7 @@ import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
 import main from './main/main.component';
 import samplepef from './samplepef/samplepef.component';
+import pefDetail from './pefDetail/pefDetail.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 
@@ -28,8 +29,6 @@ angular.module('mcrissDemoApp', [
   ngCookies,
   ngResource,
   ngSanitize,
-
-
   uiRouter,
   uiBootstrap,
 
@@ -39,6 +38,7 @@ angular.module('mcrissDemoApp', [
   footer,
   main,
   samplepef,
+  pefDetail,
   constants,
   util
 ])

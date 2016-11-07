@@ -6,12 +6,12 @@ import request from 'supertest';
 var newPefRequirement;
 
 describe('PefRequirement API:', function() {
-  describe('GET /api/pef_requirements', function() {
+  describe('GET /api/pefRequirements', function() {
     var pefRequirements;
 
     beforeEach(function(done) {
       request(app)
-        .get('/api/pef_requirements')
+        .get('/api/pefRequirements')
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
@@ -28,10 +28,10 @@ describe('PefRequirement API:', function() {
     });
   });
 
-  describe('POST /api/pef_requirements', function() {
+  describe('POST /api/pefRequirements', function() {
     beforeEach(function(done) {
       request(app)
-        .post('/api/pef_requirements')
+        .post('/api/pefRequirements')
         .send({
           name: 'New PefRequirement',
           info: 'This is the brand new pefRequirement!!!'
@@ -53,12 +53,12 @@ describe('PefRequirement API:', function() {
     });
   });
 
-  describe('GET /api/pef_requirements/:id', function() {
+  describe('GET /api/pefRequirements/:id', function() {
     var pefRequirement;
 
     beforeEach(function(done) {
       request(app)
-        .get(`/api/pef_requirements/${newPefRequirement._id}`)
+        .get(`/api/pefRequirements/${newPefRequirement._id}`)
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
@@ -80,12 +80,12 @@ describe('PefRequirement API:', function() {
     });
   });
 
-  describe('PUT /api/pef_requirements/:id', function() {
+  describe('PUT /api/pefRequirements/:id', function() {
     var updatedPefRequirement;
 
     beforeEach(function(done) {
       request(app)
-        .put(`/api/pef_requirements/${newPefRequirement._id}`)
+        .put(`/api/pefRequirements/${newPefRequirement._id}`)
         .send({
           name: 'Updated PefRequirement',
           info: 'This is the updated pefRequirement!!!'
@@ -112,7 +112,7 @@ describe('PefRequirement API:', function() {
 
     it('should respond with the updated pefRequirement on a subsequent GET', function(done) {
       request(app)
-        .get(`/api/pef_requirements/${newPefRequirement._id}`)
+        .get(`/api/pefRequirements/${newPefRequirement._id}`)
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
@@ -129,12 +129,12 @@ describe('PefRequirement API:', function() {
     });
   });
 
-  describe('PATCH /api/pef_requirements/:id', function() {
+  describe('PATCH /api/pefRequirements/:id', function() {
     var patchedPefRequirement;
 
     beforeEach(function(done) {
       request(app)
-        .patch(`/api/pef_requirements/${newPefRequirement._id}`)
+        .patch(`/api/pefRequirements/${newPefRequirement._id}`)
         .send([
           { op: 'replace', path: '/name', value: 'Patched PefRequirement' },
           { op: 'replace', path: '/info', value: 'This is the patched pefRequirement!!!' }
@@ -160,10 +160,10 @@ describe('PefRequirement API:', function() {
     });
   });
 
-  describe('DELETE /api/pef_requirements/:id', function() {
+  describe('DELETE /api/pefRequirements/:id', function() {
     it('should respond with 204 on successful removal', function(done) {
       request(app)
-        .delete(`/api/pef_requirements/${newPefRequirement._id}`)
+        .delete(`/api/pefRequirements/${newPefRequirement._id}`)
         .expect(204)
         .end(err => {
           if(err) {
@@ -175,7 +175,7 @@ describe('PefRequirement API:', function() {
 
     it('should respond with 404 when pefRequirement does not exist', function(done) {
       request(app)
-        .delete(`/api/pef_requirements/${newPefRequirement._id}`)
+        .delete(`/api/pefRequirements/${newPefRequirement._id}`)
         .expect(404)
         .end(err => {
           if(err) {

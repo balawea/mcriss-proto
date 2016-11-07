@@ -26,7 +26,7 @@ var pefRequirementIndex = proxyquire('./index.js', {
       return routerStub;
     }
   },
-  './pef_requirement.controller': pefRequirementCtrlStub
+  './pefRequirement.controller': pefRequirementCtrlStub
 });
 
 describe('PefRequirement API Router:', function() {
@@ -34,7 +34,7 @@ describe('PefRequirement API Router:', function() {
     expect(pefRequirementIndex).to.equal(routerStub);
   });
 
-  describe('GET /api/pef_requirements', function() {
+  describe('GET /api/pefRequirements', function() {
     it('should route to pefRequirement.controller.index', function() {
       expect(routerStub.get
         .withArgs('/', 'pefRequirementCtrl.index')
@@ -42,7 +42,7 @@ describe('PefRequirement API Router:', function() {
     });
   });
 
-  describe('GET /api/pef_requirements/:id', function() {
+  describe('GET /api/pefRequirements/:id', function() {
     it('should route to pefRequirement.controller.show', function() {
       expect(routerStub.get
         .withArgs('/:id', 'pefRequirementCtrl.show')
@@ -50,7 +50,7 @@ describe('PefRequirement API Router:', function() {
     });
   });
 
-  describe('POST /api/pef_requirements', function() {
+  describe('POST /api/pefRequirements', function() {
     it('should route to pefRequirement.controller.create', function() {
       expect(routerStub.post
         .withArgs('/', 'pefRequirementCtrl.create')
@@ -58,7 +58,7 @@ describe('PefRequirement API Router:', function() {
     });
   });
 
-  describe('PUT /api/pef_requirements/:id', function() {
+  describe('PUT /api/pefRequirements/:id', function() {
     it('should route to pefRequirement.controller.upsert', function() {
       expect(routerStub.put
         .withArgs('/:id', 'pefRequirementCtrl.upsert')
@@ -66,7 +66,7 @@ describe('PefRequirement API Router:', function() {
     });
   });
 
-  describe('PATCH /api/pef_requirements/:id', function() {
+  describe('PATCH /api/pefRequirements/:id', function() {
     it('should route to pefRequirement.controller.patch', function() {
       expect(routerStub.patch
         .withArgs('/:id', 'pefRequirementCtrl.patch')
@@ -74,7 +74,7 @@ describe('PefRequirement API Router:', function() {
     });
   });
 
-  describe('DELETE /api/pef_requirements/:id', function() {
+  describe('DELETE /api/pefRequirements/:id', function() {
     it('should route to pefRequirement.controller.destroy', function() {
       expect(routerStub.delete
         .withArgs('/:id', 'pefRequirementCtrl.destroy')

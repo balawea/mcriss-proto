@@ -1,8 +1,7 @@
 'use strict';
 
 var express = require('express');
-var controller = require('./pef_requirement.controller');
-
+var controller = require('./pefRequirement.controller');
 var router = express.Router();
 
 router.get('/', controller.index);

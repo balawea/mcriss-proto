@@ -2,16 +2,13 @@
 const angular = require('angular');
 const uiRouter = require('angular-ui-router');
 const noUiSlider = require('nouislider');
-
 import routes from './samplepef.routes';
 
 export class SamplepefComponent {
-  private message : string;
   $http;
   recruit;
   id;
   clslider;
-  elslider;
 
   /*@ngInject*/
   constructor($http, $location) {
@@ -32,21 +29,6 @@ export class SamplepefComponent {
         density: 2
       }
     });
-
-    this.elslider = noUiSlider.create(document.getElementById('elslider'), {
-      start:0,
-      connect: true,
-      step: 1,
-      tooltips: true,
-      range: {
-        'min': 0,
-        'max': 100
-      },
-      pips: {
-        mode: 'steps',
-        density: 4
-      }
-    });
 */
 
   }   //ctor
@@ -61,7 +43,7 @@ export class SamplepefComponent {
 } //class
 
 
-export default angular.module('mcrissProtoApp.samplepef', [uiRouter])
+export default angular.module('mcrissDemoApp.samplepef', [uiRouter])
   .config(routes)
   .component('samplepef', {
     template: require('./samplepef.html'),

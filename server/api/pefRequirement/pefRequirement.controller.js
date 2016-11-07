@@ -1,17 +1,17 @@
 /**
  * Using Rails-like standard naming convention for endpoints.
- * GET     /api/pef_requirements              ->  index
- * POST    /api/pef_requirements              ->  create
- * GET     /api/pef_requirements/:id          ->  show
- * PUT     /api/pef_requirements/:id          ->  upsert
- * PATCH   /api/pef_requirements/:id          ->  patch
- * DELETE  /api/pef_requirements/:id          ->  destroy
+ * GET     /api/pefRequirements              ->  index
+ * POST    /api/pefRequirements              ->  create
+ * GET     /api/pefRequirements/:id          ->  show
+ * PUT     /api/pefRequirements/:id          ->  upsert
+ * PATCH   /api/pefRequirements/:id          ->  patch
+ * DELETE  /api/pefRequirements/:id          ->  destroy
  */
 
 'use strict';
 
 import jsonpatch from 'fast-json-patch';
-import PefRequirement from './pef_requirement.model';
+import PefRequirement from './pefRequirement.model';
 
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;

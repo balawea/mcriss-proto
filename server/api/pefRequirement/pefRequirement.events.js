@@ -5,7 +5,7 @@
 'use strict';
 
 import {EventEmitter} from 'events';
-import PefRequirement from './pef_requirement.model';
+import PefRequirement from './pefRequirement.model';
 var PefRequirementEvents = new EventEmitter();
 
 // Set max event listeners (0 == unlimited)

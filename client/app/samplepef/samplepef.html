@@ -9,8 +9,9 @@
 
 <!-- dob, height, weight, cit -->
 <div class="col-sm-3">
-  <div class="well">
+  <div class="well" uib-tooltip="DEMOGRAPHICS">
     <h5><i class="fa fa-user fa-2x text-primary"></i> DOB {{vm.recruit.Dob | date : 'yyyyMMdd'}}</h5>
+
     <div class="panel panel-default small-fixed-panel pull-left">
       <div class="panel-bar"></div>
       <div class="panel-body">
@@ -42,14 +43,24 @@
         </label>
       </div>
     </div>
-  </div>
 
+    <div class="form-group">
+      <label for="toe" class="col-sm-5 control-label">Term of Enlistment</label>
+      <div class="col-sm-3">
+        <select name="name" id="toe" class="form-control">
+          <option>{{vm.recruit.TOE}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
 </div>
 
 <!-- driving -->
 <div class="col-sm-3">
   <div class="well">
-    <div class="text-center">
+    <div class="text-center" uib-tooltip="DRIVING">
       <span class="fa-stack fa-4x text-primary">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-car fa-stack-1x fa-inverse"></i>
@@ -80,7 +91,7 @@
 <!-- misconduct -->
 <div class="col-sm-3">
   <div class="well">
-    <div class="text-center">
+    <div class="text-center"  uib-tooltip="MISCONDUCT">
       <span class="fa-stack fa-4x text-primary">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-gavel fa-stack-1x fa-inverse"></i>
@@ -112,7 +123,13 @@
 <!-- test scores -->
 <div class="col-sm-3">
   <div class="well">
-    <h5><i class="fa fa-lightbulb-o fa-3x text-primary"></i>  Test Scores</h5>
+    <div class="text-center" uib-tooltip="TEST SCORES">
+      <span class="fa-stack fa-4x text-primary">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+    <h5>Test Scores</h5>
 
     <div class="form-horizontal">
         <label>CL:
@@ -128,18 +145,16 @@
         <label>GT:
         <input type="text" value="{{vm.recruit.Gt}}"></label>
       </div>
-
       <div class="form-horizontal">
         <label>MM:
         <input type="text" value="{{vm.recruit.Mm}}"></label>
       </div>
-
   </div>
 </div>
 
 <!-- vision -->
 <div class="col-sm-3">
-  <div class="well">
+  <div class="well" uib-tooltip="VISION">
     <div class="text-center">
       <span class="fa-stack fa-4x text-primary">
         <i class="fa fa-circle fa-stack-2x"></i>
@@ -156,28 +171,17 @@
       <label class="col-md-5">Depth Perception:</label>
       <input type="text" value="{{vm.recruit.DepthPerception}}">
     </div>
-  </div>
-</div>
 
-<!-- TOE -->
-<div class="col-sm-3">
-  <div class="well">
-    <h5>Term of Enlistment</h5>
-
-    <div class="form-horizontal">
-
-      <div class="col-sm-3 col-sm-offset-3">
-        <div class="center-block">
-          <select name="name" id="toe" class="form-control">
-            <option>{{vm.recruit.TOE}}</option>
-          </select>
-        </div>
+    <div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" checked="{{vm.recruit.USCitizen}}" id="visioncorrectable">
+          Vision Correctable to 20/20
+        </label>
       </div>
     </div>
-    <div class="clearfix"></div>
 
-  </div>
-
+  </div>  <!-- well -->
 </div>
 
 <div class="clearfix"></div>
