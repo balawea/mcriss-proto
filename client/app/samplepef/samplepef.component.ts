@@ -1,4 +1,6 @@
+
 'use strict';
+
 const angular = require('angular');
 const uiRouter = require('angular-ui-router');
 const noUiSlider = require('nouislider');
@@ -8,39 +10,33 @@ export class SamplepefComponent {
   $http;
   recruit;
   id;
-  clslider;
+  p = []; //master list of pefs
+  pefs = [];  //pefs for display
+  code;
+  fErr;
+
 
   /*@ngInject*/
   constructor($http, $location) {
     this.$http = $http;
     this.id = $location.hash();
+  } //ctor
 
-    /*
-    this.clslider = noUiSlider.create(document.getElementById('clslider'), {
-      start:0,
-      connect: true,
-      step: 1,
-      range: {
-        'min': 0,
-        'max': 100
-      },
-      pips: {
-        mode: 'steps',
-        density: 2
-      }
-    });
-*/
-
-  }   //ctor
 
   /*@ngInject*/
   $onInit() {
     this.$http.get('/api/recruits/' + this.id).then(response => {
       this.recruit = response.data;
     });
+
+    this.$http.get('/api/pefRequirements/').then(response => {
+      this.pefs = this.p = response.data;
+    });
+
   }   //oninit
 
 } //class
+
 
 
 export default angular.module('mcrissDemoApp.samplepef', [uiRouter])

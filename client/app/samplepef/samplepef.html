@@ -1,33 +1,72 @@
-
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h2 class="page-header">{{vm.recruit.FirstName + " " + vm.recruit.LastName}}</h2>
+      <h2 class="page-header">{{vm.recruit.firstName + " " + vm.recruit.lastName}}</h2>
     </div>
   </div>
 </div>
 
-<!-- dob, height, weight, cit -->
-<div class="col-sm-3">
-  <div class="well" uib-tooltip="DEMOGRAPHICS">
-    <h5><i class="fa fa-user fa-2x text-primary"></i> DOB {{vm.recruit.Dob | date : 'yyyyMMdd'}}</h5>
+<!-- PEF Match-->
+<div class="col-sm-2">
+  <div class="well">
 
-    <div class="panel panel-default small-fixed-panel pull-left">
+    <!-- id filter -->
+    <div class="col-lg-12">
+      <div class="input-group">
+        <input type="text" class="form-control text-uppercase" placeholder="Search for..." ng-model="vm.code">
+      </div>
+    </div>
+
+    <hr/>
+
+
+    <!-- pef error filter-->
+    <div class="btn-group" data-toggle="buttons">
+      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=0" ng-class="{'active': vm.fErr===0}">0</button>
+      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=1" ng-class="{'active': vm.fErr===1}">1</button>
+      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=2" ng-class="{'active': vm.fErr===2}">2</button>
+      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=3" ng-class="{'active': vm.fErr===3}">3</button>
+      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=4" ng-class="{'active': vm.fErr===4}">4</button>
+      <button class="btn btn-primary active" type="radio" ng-click="vm.fErr=''" ng-class="{'active': vm.fErr===''}">All</button>
+    </div>
+
+    <hr/>
+    <!-- data table-->
+    <!-- filter:vm.code searches the entire model, need to restrict this (maybe) to just the pefcode and maybe description???   -->
+    <table class="table table-hover col-sm-12" ng-repeat="pef in vm.pefs | filter: {pefCode: vm.code, requirements: {toe: {val: vm.fErr}}}">
+      <tbody class="table">
+      <tr>
+        <td class="col-sm-5">{{pef.pefCode}}</td>
+        <td class="col-sm-3">{{pef.requirements.toe.val}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="clearfix"></div>
+  </div>  <!-- well-->
+</div> <!-- end pef match-->
+
+<!-- dob, height, weight, cit -->
+<div class="col-sm-2">
+  <div class="well" uib-tooltip="DEMOGRAPHICS">
+    <h5><i class="fa fa-user fa-2x text-primary"></i> DOB {{vm.recruit.dob | date : 'yyyyMMdd'}}</h5>
+
+    <div class="panel small-fixed-panel pull-left">
       <div class="panel-bar"></div>
       <div class="panel-body">
         <div class="text-center">
-          <h4>{{vm.recruit.Height}}</h4>
+          <h5>{{vm.recruit.height.val}} in.</h5>
           <h6>Height</h6>
         </div>
       </div>
     </div>
 
     <div class="leftmargin-20 pull-left">
-      <div class="panel panel-default small-fixed-panel">
+      <div class="panel small-fixed-panel">
         <div class="panel-bar"></div>
         <div class="panel-body">
           <div class="text-center">
-            <h4>{{vm.recruit.Weight}} lbs</h4>
+            <h5>{{vm.recruit.weight.val}} lbs</h5>
             <h6>Weight</h6>
           </div>
         </div>
@@ -38,17 +77,26 @@
     <div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" checked="{{vm.recruit.USCitizen}}" id="">
+          <input type="checkbox" checked="{{vm.recruit.usCitizen}}">
           U.S. Citizen
         </label>
       </div>
     </div>
 
+    <div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" checked="{{vm.recruit.usCitizenFamily}}">
+          U.S. Citizen (immediate family)
+        </label>
+      </div>
+    </div>
+
     <div class="form-group">
-      <label for="toe" class="col-sm-5 control-label">Term of Enlistment</label>
-      <div class="col-sm-3">
+      <label for="toe" class="col-sm-8 control-label">Term of Enlistment</label>
+      <div class="col-sm-4">
         <select name="name" id="toe" class="form-control">
-          <option>{{vm.recruit.TOE}}</option>
+          <option>{{vm.recruit.toe.val}}</option>
         </select>
       </div>
     </div>
@@ -58,7 +106,7 @@
 </div>
 
 <!-- driving -->
-<div class="col-sm-3">
+<div class="col-sm-2">
   <div class="well">
     <div class="text-center" uib-tooltip="DRIVING">
       <span class="fa-stack fa-4x text-primary">
@@ -69,19 +117,16 @@
     <div class="form-horizontal">
 
       <div class="form-group">
-        <label for="drivingoffenses" class="col-sm-5 control-label">Driving Offenses</label>
+        <label for="drivingoffenses" class="col-sm-7 control-label">Driving Offenses</label>
         <div class="col-sm-3">
           <select name="name" id="drivingoffenses" class="form-control">
-            <option value="">{{vm.recruit.DrivingOffensesCount}}</option>
+            <option value="">{{vm.recruit.driving.offenses.val}}</option>
           </select>
         </div>
       </div>
 
       <div class="checkbox">
-        <label>
-          <input type="checkbox" id="driverslicense" checked="{{vm.recruit.DriversLicense}}">
-          Drivers License
-        </label>
+        <label><input type="checkbox" checked="{{vm.recruit.driving.license.has}}">Drivers License</label>
       </div>
 
     </div>
@@ -89,29 +134,30 @@
 </div>
 
 <!-- misconduct -->
-<div class="col-sm-3">
+<div class="col-sm-2">
   <div class="well">
-    <div class="text-center"  uib-tooltip="MISCONDUCT">
+    <div class="text-center" uib-tooltip="MISCONDUCT">
       <span class="fa-stack fa-4x text-primary">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-gavel fa-stack-1x fa-inverse"></i>
       </span>
-     </div>
+    </div>
 
     <div class="form-horizontal">
       <div class="form-group">
-        <label for="misconductoffenses" class="col-sm-5 control-label">Misconduct Offenses</label>
+        <label for="misconductoffenses" class="col-sm-8 control-label">Misconduct Offenses</label>
         <div class="col-sm-3">
           <select id="misconductoffenses" class="form-control">
-            <option value="">{{vm.recruit.MisconductCount}}</option>
+            <option value="">{{vm.recruit.moral.conduct.val}}</option>
           </select>
         </div>
       </div>
+
       <div class="form-group">
-        <label for="drugoffenses" class="col-sm-5 control-label">Drug Offenses</label>
+        <label for="drugoffenses" class="col-sm-6 control-label">Drug Offenses</label>
         <div class="col-sm-3">
           <select id="drugoffenses" class="form-control">
-            <option>{{vm.recruit.DrugUseCount}}</option>
+            <option>{{vm.recruit.moral.otherDrugs.val}}</option>
           </select>
         </div>
       </div>
@@ -121,7 +167,7 @@
 </div>
 
 <!-- test scores -->
-<div class="col-sm-3">
+<div class="col-sm-2">
   <div class="well">
     <div class="text-center" uib-tooltip="TEST SCORES">
       <span class="fa-stack fa-4x text-primary">
@@ -131,31 +177,43 @@
     </div>
     <h5>Test Scores</h5>
 
-    <div class="form-horizontal">
-        <label>CL:
-        <input type="text" value="{{vm.recruit.Cl}}"></label>
-      </div>
+    <div class="col-sm-12">
+      <label class="col-sm-2">CL: </label>
+      <input class="col-sm-2" type="text" value="{{vm.recruit.cl.val}}">
+    </div>
+    <div class="col-sm-12">
+      <label class="col-sm-2">EL: </label>
+      <input class="col-sm-2" type="text" value="{{vm.recruit.el.val}}">
+    </div>
+    <div class="col-sm-12">
+      <label class="col-sm-2">GT: </label>
+      <input class="col-sm-2" type="text" value="{{vm.recruit.gt.val}}">
+    </div>
+    <div class="col-sm-12">
+      <label class="col-sm-2">MM: </label>
+      <input class="col-sm-2" type="text" value="{{vm.recruit.mm.val}}">
+    </div>
+    <div class="col-sm-12">
+      <label class="col-sm-2">VE: </label>
+      <input class="col-sm-2" type="text" value="{{vm.recruit.ve.val}}">
+    </div>
+    <div class="col-sm-12">
+      <label class="col-sm-2">QT: </label>
+      <input class="col-sm-2" type="text" value="{{vm.recruit.qt.val}}">
+    </div>
+    <div class="col-sm-12">
+      <label class="col-sm-3">DLAB: </label>
+      <input class="col-sm-2" type="text" value="{{vm.recruit.dlab.val}}">
+    </div>
 
-      <div class="form-horizontal">
-        <label>EL:
-        <input type="text" value="{{vm.recruit.El}}"></label>
-      </div>
-
-      <div class="form-horizontal">
-        <label>GT:
-        <input type="text" value="{{vm.recruit.Gt}}"></label>
-      </div>
-      <div class="form-horizontal">
-        <label>MM:
-        <input type="text" value="{{vm.recruit.Mm}}"></label>
-      </div>
+    <div class="clearfix"></div>
   </div>
 </div>
 
 <!-- vision -->
-<div class="col-sm-3">
-  <div class="well" uib-tooltip="VISION">
-    <div class="text-center">
+<div class="col-sm-2">
+  <div class="well">
+    <div class="text-center" uib-tooltip="VISION">
       <span class="fa-stack fa-4x text-primary">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
@@ -163,19 +221,18 @@
     </div>
 
     <div class="form-horizontal">
-      <label class="col-md-5">Color Perception:</label>
-      <input type="text" value="{{vm.recruit.ColorPerception}}">
+      <label class="col-md-8">Color Perception:</label>
+      <input class="col-sm-2" type="text" value="{{vm.recruit.vision.color.val}}">
     </div>
-
     <div class="form-horizontal">
-      <label class="col-md-5">Depth Perception:</label>
-      <input type="text" value="{{vm.recruit.DepthPerception}}">
+      <label class="col-md-8">Depth Perception:</label>
+      <input class="col-sm-2" type="text" value="{{vm.recruit.vision.depth.has}}">
     </div>
 
     <div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" checked="{{vm.recruit.USCitizen}}" id="visioncorrectable">
+          <input type="checkbox" checked="{{vm.recruit.vision.correctable.has}}">
           Vision Correctable to 20/20
         </label>
       </div>
@@ -185,4 +242,5 @@
 </div>
 
 <div class="clearfix"></div>
+
 
