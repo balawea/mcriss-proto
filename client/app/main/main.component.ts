@@ -4,10 +4,9 @@ import routing from './main.routes';
 
 export class MainController {
   $http;
-  awesomeThings = [];
-  newThing = '';
   recruits = [];
   pefs = [];
+  thing;
 
   /*@ngInject*/
   constructor($http) {
@@ -25,10 +24,10 @@ export class MainController {
 
   }
 
-  addThing() {
-    if (this.newThing) {
-      this.$http.post('/api/things', { name: this.newThing });
-      this.newThing = '';
+  updateThing() {
+    if (this.thing) {
+      this.$http.post('/api/things', { name: this.thing });
+      this.thing = '';
     }
   }
 

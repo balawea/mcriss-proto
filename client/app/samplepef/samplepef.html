@@ -19,7 +19,6 @@
 
     <hr/>
 
-
     <!-- pef error filter-->
     <div class="btn-group" data-toggle="buttons">
       <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=0" ng-class="{'active': vm.fErr===0}">0</button>
@@ -27,18 +26,19 @@
       <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=2" ng-class="{'active': vm.fErr===2}">2</button>
       <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=3" ng-class="{'active': vm.fErr===3}">3</button>
       <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=4" ng-class="{'active': vm.fErr===4}">4</button>
-      <button class="btn btn-primary active" type="radio" ng-click="vm.fErr=''" ng-class="{'active': vm.fErr===''}">All</button>
+      <button class="btn btn-primary" type="radio" ng-click="vm.fErr=''" ng-class="{'active': vm.fErr===''}">All</button>
     </div>
 
     <hr/>
+
     <!-- data table-->
     <!-- filter:vm.code searches the entire model, need to restrict this (maybe) to just the pefcode and maybe description???   -->
-    <table class="table table-hover col-sm-12" ng-repeat="pef in vm.pefs | filter: {pefCode: vm.code, requirements: {toe: {val: vm.fErr}}}">
+    <table class="table table-hover col-sm-12" ng-repeat="pef in vm.pefs | filter: {pefCode: vm.code, errs: vm.fErr}">
       <tbody class="table">
       <tr>
-        <td class="col-sm-5">{{pef.pefCode}}</td>
-        <td class="col-sm-3">{{pef.requirements.toe.val}}</td>
-      </tr>
+        <td class="col-sm-10">{{pef.pefCode}}</td>
+        <td class="col-sm-2"><span class="badge" ng-class="{'badge-success' : pef.errs === 0, 'badge-danger' : pef.errs > 0}">{{pef.errs}}</span></td>
+     </tr>
       </tbody>
     </table>
 
@@ -126,7 +126,7 @@
       </div>
 
       <div class="checkbox">
-        <label><input type="checkbox" checked="{{vm.recruit.driving.license.has}}">Drivers License</label>
+        <label><input type="checkbox" checked="{{vm.recruit.driving.license.has}}"> Drivers License</label>
       </div>
 
     </div>
@@ -242,5 +242,4 @@
 </div>
 
 <div class="clearfix"></div>
-
 

@@ -23,6 +23,24 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   vertical-align: middle;
 }
 
+.badge-danger {
+  background-color: #d43f3a;
+}
+.badge-warning {
+  background-color: #d58512;
+}
+
+.badge-success {
+  background-color: #398439;
+}
+
+.badge-info {
+  background-color: #269abc;
+}
+
+.badge-inverse {
+  background-color: #333333;
+}
 
 .panel.small-fixed-panel{
   width:100px;
@@ -36,6 +54,8 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     width:4px;
     margin:10px 0;
   }
+
+
 }
 
 @for $i from 1 through 6 {

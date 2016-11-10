@@ -2,7 +2,6 @@
 
 import mongoose from 'mongoose';
 
-
 var RecruitSchema = new mongoose.Schema({
   firstName:String,
   lastName:String,
@@ -39,8 +38,8 @@ var RecruitSchema = new mongoose.Schema({
   vision: {
     correctable: {has:Boolean},
     depth: {has:Boolean},
-    color: {min:Number},
-    acuity: {min1:Number, min2:Number}
+    color: {val:Number},
+    acuity: {val:Number, val1:Number, val2:Number}
   },
   waterQual: {has:Boolean},
   flightPhysical: {has:Boolean},
@@ -48,7 +47,7 @@ var RecruitSchema = new mongoose.Schema({
   doncafScreening: {has:Boolean},
   additionalScreening: {has:Boolean},
   pftClass1: {has:Boolean},
-  prpScreen: {max:Number}
+  prpScreen: {val:Number}
 });
 
 

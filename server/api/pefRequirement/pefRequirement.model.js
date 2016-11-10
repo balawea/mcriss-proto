@@ -61,7 +61,7 @@ var PefRequirementSchema = new mongoose.Schema({
       correctable: {description:String, has:Boolean, waivable:Boolean},
       depth: {description:String, has:Boolean, waivable:Boolean},
       color: {description:String, min:Number, waivable:Boolean},
-      acuity: {description:String, min1:Number, min2:Number, waivable:Boolean}
+      acuity: {description:String, max:Number, max1:Number, max2:Number, waivable:Boolean}
     },
     waterQual: {description:String, has:Boolean, optional:Boolean, waiver:Boolean},
     flightPhysical: {description:String, has:Boolean, waiver:Boolean},
