@@ -5,8 +5,6 @@ const uiRouter = require('angular-ui-router');
 const noUiSlider = require('nouislider');
 import routes from './samplepef.routes';
 
-//TODO: all button sticking between gui and f12
-
 export class SamplepefComponent {
   $http;
   recruit;
@@ -15,6 +13,7 @@ export class SamplepefComponent {
   pefs = [];  //pefs for display
   code;
   fErr;
+  fCategory;
 
   /*@ngInject*/
   constructor($http, $location) {
@@ -32,15 +31,17 @@ export class SamplepefComponent {
       this.p = response.data;
       this.pefs = getErrs(this.p, this.recruit);
     });
+
   }   //oninit
 
 } //class
 
 
+//combine with getPefErrors
 function getErrs(pefs, recr) {
   for (let pef of pefs) {
-    pef.errs = getPefErrors(pef.requirements, recr);
-    //console.log(pef.pefCode + '  ' + pef.errs);
+    pef.errs = getPefErrors(pef.requirements, recr);  //actual error count for display (red error badge)
+    pef.errCategory = (pef.errs < 4) ? pef.errs : 4;     //error category, will match the error filter buttons
   }
   return pefs;
 }
@@ -49,7 +50,6 @@ function getPefErrors(pef, recr) {
   let errs = 0;
   let rec = recr;
   let rval;
-  let foo;
 
   compareObjects(pef, recr);
 
@@ -57,38 +57,21 @@ function getPefErrors(pef, recr) {
 
     for (let [pkey, pval] of Object.entries(pef)) {
       rval = (!!recr) ? recr[pkey] : undefined;
-//      console.log('  ' + pkey);
-      // console.log(pval);
-      // console.log(recr);
-      // console.log(rval);
 
       if (typeof(pval) == "object") {
-        // console.log('    recursion for ' + pkey);
-        // console.log(recr);
-        // console.log(rval);
         compareObjects(pval, rval);
       }
 
-      //for pef obj KEYS named "val" or "has", check for strict equality against the recruit obj VALUES.
-      //"has" VALUES are bool, "val" VALUES are strings or ints.
       if ((pkey == "val" || pkey == "has") && (pval !== rval)) {
         ++errs;
-        // console.log('  COMPARISON FAIL on pkey:' + pkey + ' ' + pval + ' != ' + rval);
-        // console.log('     errs AFTER COMPARISON FAIL: ' + errs);
         continue;
       }
 
-      //for pef obj KEYS named "max" or "min", verify that recruit object VALUES (under recruit object KEY named "val")
-      //are within bounds. pef and recruit object VALUES are ints.
       rval = (!!recr) ? recr["val"] : undefined;
       if ((pkey == "max" && (rval == undefined || rval > pval)) || (pkey == "min" && (rval == undefined || rval < pval))) {
         ++errs;
-        // console.log('  COMPARISON FAIL on pkey:' + pkey + ' ' + pval + ' != ' + rval);
-        // console.log('    errs AFTER COMPARISON FAIL: ' + errs);
-        continue;
       }
 
-      //handle weirdos, min1 and min2, maxAtRs, etc. That asvab OR score thing.
     }
   }
   return errs;

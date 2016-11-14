@@ -43,9 +43,10 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .panel.small-fixed-panel{
-  width:100px;
+  width:90px;
   display: flex;
   .panel-body{
+    padding:10px;
     flex:1;
   }
 
@@ -54,8 +55,30 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     width:4px;
     margin:10px 0;
   }
+}
 
+.fa-check-green {
+  @extend .fa-check;
+  color: limegreen;
+}
 
+.panel.panel-block{
+  display: flex;
+}
+
+.table-lean {
+  @extend .table;
+  margin:0;
+}
+
+.table-hover-dk tbody tr:hover td {
+  @extend .table-hover;
+  background: silver;
+}
+
+.well-lblue {
+  @extend .well;
+  background-color: lightblue;
 }
 
 @for $i from 1 through 6 {
@@ -64,7 +87,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   .leftmargin-#{$i*5} { margin-left: 5px * $i; }
   .rightmargin-#{$i*5} { margin-right: 5px * $i; }
 }
-
 
 // Component styles are injected through gulp
 /* inject:scss */

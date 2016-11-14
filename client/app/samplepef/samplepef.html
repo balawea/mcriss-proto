@@ -6,240 +6,355 @@
   </div>
 </div>
 
-<!-- PEF Match-->
-<div class="col-sm-2">
-  <div class="well">
 
-    <!-- id filter -->
-    <div class="col-lg-12">
-      <div class="input-group">
-        <input type="text" class="form-control text-uppercase" placeholder="Search for..." ng-model="vm.code">
-      </div>
-    </div>
-
-    <hr/>
-
-    <!-- pef error filter-->
-    <div class="btn-group" data-toggle="buttons">
-      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=0" ng-class="{'active': vm.fErr===0}">0</button>
-      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=1" ng-class="{'active': vm.fErr===1}">1</button>
-      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=2" ng-class="{'active': vm.fErr===2}">2</button>
-      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=3" ng-class="{'active': vm.fErr===3}">3</button>
-      <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fErr=4" ng-class="{'active': vm.fErr===4}">4</button>
-      <button class="btn btn-primary" type="radio" ng-click="vm.fErr=''" ng-class="{'active': vm.fErr===''}">All</button>
-    </div>
-
-    <hr/>
-
-    <!-- data table-->
-    <!-- filter:vm.code searches the entire model, need to restrict this (maybe) to just the pefcode and maybe description???   -->
-    <table class="table table-hover col-sm-12" ng-repeat="pef in vm.pefs | filter: {pefCode: vm.code, errs: vm.fErr}">
-      <tbody class="table">
-      <tr>
-        <td class="col-sm-10">{{pef.pefCode}}</td>
-        <td class="col-sm-2"><span class="badge" ng-class="{'badge-success' : pef.errs === 0, 'badge-danger' : pef.errs > 0}">{{pef.errs}}</span></td>
-     </tr>
-      </tbody>
-    </table>
-
-    <div class="clearfix"></div>
-  </div>  <!-- well-->
-</div> <!-- end pef match-->
-
-<!-- dob, height, weight, cit -->
-<div class="col-sm-2">
-  <div class="well" uib-tooltip="DEMOGRAPHICS">
-    <h5><i class="fa fa-user fa-2x text-primary"></i> DOB {{vm.recruit.dob | date : 'yyyyMMdd'}}</h5>
-
-    <div class="panel small-fixed-panel pull-left">
-      <div class="panel-bar"></div>
-      <div class="panel-body">
-        <div class="text-center">
-          <h5>{{vm.recruit.height.val}} in.</h5>
-          <h6>Height</h6>
+<div class="container-fluid">
+  <!-- PEF Match-->
+  <div class="col-xs-12 col-sm-2">
+    <div class="well well-lblue">
+      <!-- id filter -->
+      <div class="col-lg-12">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search PEFs" ng-model="pefText">
         </div>
       </div>
-    </div>
 
-    <div class="leftmargin-20 pull-left">
-      <div class="panel small-fixed-panel">
-        <div class="panel-bar"></div>
-        <div class="panel-body">
-          <div class="text-center">
-            <h5>{{vm.recruit.weight.val}} lbs</h5>
-            <h6>Weight</h6>
+      <hr/>
+
+      <!-- pef error filter-->
+      <div class="horizontal">
+        <div class="btn-group" data-toggle="buttons">
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=0" ng-class="{'active': vm.fCategory===0}">
+            0
+          </button>
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=1" ng-class="{'active': vm.fCategory===1}">
+            1
+          </button>
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=2" ng-class="{'active': vm.fCategory===2}">
+            2
+          </button>
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=3" ng-class="{'active': vm.fCategory===3}">
+            3
+          </button>
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=4" ng-class="{'active': vm.fCategory===4}">4+</button>
+          <button class="btn btn-primary" type="radio" ng-click="vm.fCategory=''" ng-class="{'active': vm.fCategory===''}">All
+          </button>
+        </div>
+      </div>
+
+      <hr/>
+
+
+      <table class="table table-hover-dk table-lean col-sm-12"
+             ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText}">
+        <tbody class="table">
+        <tr>
+          <td class="animate-repeat col-sm-10">{{pef.pefCode}}</td>
+          <td class="animate-repeat col-sm-2"><span class="badge badge-danger" ng-if="pef.errs > 0">{{pef.errs}}</span>
+            <span class="text-primary" ng-if="pef.errs===0"><i class="fa fa-check-green fa-2x"></i></span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="clearfix"></div>
+    </div>  <!-- well-->
+  </div>
+
+
+  <div class="col-xs-12 col-sm-10">
+
+    <div class="row">
+
+      <!-- dob, height, weight, cit -->
+      <div class="col-lg-3">
+        <div class="well well-lg" uib-tooltip="DEMOGRAPHICS">
+          <h5><i class="fa fa-user fa-2x text-primary"></i> DOB {{vm.recruit.dob | date : 'yyyyMMdd'}}</h5>
+
+          <div class="panel small-fixed-panel pull-left">
+            <div class="panel-bar"></div>
+            <div class="panel-body">
+              <div class="text-center">
+                <h5>{{vm.recruit.height.val}} in.</h5>
+                <h6>Height</h6>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="clearfix"></div>
-    <div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" checked="{{vm.recruit.usCitizen}}">
-          U.S. Citizen
-        </label>
-      </div>
-    </div>
+          <div class="leftmargin-20 pull-left">
+            <div class="panel small-fixed-panel">
+              <div class="panel-bar"></div>
+              <div class="panel-body">
+                <div class="text-center">
+                  <h5>{{vm.recruit.weight.val}} lbs</h5>
+                  <h6>Weight</h6>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" checked="{{vm.recruit.usCitizenFamily}}">
-          U.S. Citizen (immediate family)
-        </label>
-      </div>
-    </div>
+          <div class="clearfix"></div>
 
-    <div class="form-group">
-      <label for="toe" class="col-sm-8 control-label">Term of Enlistment</label>
-      <div class="col-sm-4">
-        <select name="name" id="toe" class="form-control">
-          <option>{{vm.recruit.toe.val}}</option>
-        </select>
-      </div>
-    </div>
+          <div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="{{vm.recruit.usCitizen}}">
+                U.S. Citizen
+              </label>
+            </div>
+          </div>
 
-    <div class="clearfix"></div>
-  </div>
-</div>
+          <div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="{{vm.recruit.usCitizenFamily}}">
+                U.S. Citizen (immediate family)
+              </label>
+            </div>
+          </div>
 
-<!-- driving -->
-<div class="col-sm-2">
-  <div class="well">
-    <div class="text-center" uib-tooltip="DRIVING">
-      <span class="fa-stack fa-4x text-primary">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-car fa-stack-1x fa-inverse"></i>
-      </span>
-    </div>
-    <div class="form-horizontal">
-
-      <div class="form-group">
-        <label for="drivingoffenses" class="col-sm-7 control-label">Driving Offenses</label>
-        <div class="col-sm-3">
-          <select name="name" id="drivingoffenses" class="form-control">
-            <option value="">{{vm.recruit.driving.offenses.val}}</option>
-          </select>
+          <div class="form-group">
+            <label for="toe" class="col-sm-8 control-label">Term of Enlistment</label>
+            <div class="col-sm-4">
+              <select name="name" id="toe" class="form-control">
+                <option>{{vm.recruit.toe.val}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="clearfix"></div>
         </div>
       </div>
 
-      <div class="checkbox">
-        <label><input type="checkbox" checked="{{vm.recruit.driving.license.has}}"> Drivers License</label>
+      <!-- education -->
+      <div class="col-lg-3">
+        <div class="well">
+          <div class="text-center" uib-tooltip="EDUCATION">
+            <span class="fa-stack fa-4x text-primary">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+
+          <div>
+            <div class="form-horizontal">
+              <div class="radio">
+
+                <label><input disabled type="radio" class="col-sm-1" ng-checked="vm.recruit.tierGrad.val===1"> Tier 1 (High School)</label>
+                <label><input disabled type="radio" ng-checked="vm.recruit.tierGrad.val===2"> Tier 2 (Home School)</label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="{{vm.recruit.algebra.has}}">1 Year Algebra or Higher</label>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+
+        </div>  <!-- well -->
       </div>
 
-    </div>
-  </div>
-</div>
-
-<!-- misconduct -->
-<div class="col-sm-2">
-  <div class="well">
-    <div class="text-center" uib-tooltip="MISCONDUCT">
-      <span class="fa-stack fa-4x text-primary">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-gavel fa-stack-1x fa-inverse"></i>
-      </span>
-    </div>
-
-    <div class="form-horizontal">
-      <div class="form-group">
-        <label for="misconductoffenses" class="col-sm-8 control-label">Misconduct Offenses</label>
-        <div class="col-sm-3">
-          <select id="misconductoffenses" class="form-control">
-            <option value="">{{vm.recruit.moral.conduct.val}}</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="drugoffenses" class="col-sm-6 control-label">Drug Offenses</label>
-        <div class="col-sm-3">
-          <select id="drugoffenses" class="form-control">
-            <option>{{vm.recruit.moral.otherDrugs.val}}</option>
-          </select>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- test scores -->
-<div class="col-sm-2">
-  <div class="well">
-    <div class="text-center" uib-tooltip="TEST SCORES">
+      <!-- test scores -->
+      <div class="col-lg-3">
+        <div class="well">
+          <div class="text-center" uib-tooltip="TEST SCORES">
       <span class="fa-stack fa-4x text-primary">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
       </span>
-    </div>
-    <h5>Test Scores</h5>
+          </div>
 
-    <div class="col-sm-12">
-      <label class="col-sm-2">CL: </label>
-      <input class="col-sm-2" type="text" value="{{vm.recruit.cl.val}}">
-    </div>
-    <div class="col-sm-12">
-      <label class="col-sm-2">EL: </label>
-      <input class="col-sm-2" type="text" value="{{vm.recruit.el.val}}">
-    </div>
-    <div class="col-sm-12">
-      <label class="col-sm-2">GT: </label>
-      <input class="col-sm-2" type="text" value="{{vm.recruit.gt.val}}">
-    </div>
-    <div class="col-sm-12">
-      <label class="col-sm-2">MM: </label>
-      <input class="col-sm-2" type="text" value="{{vm.recruit.mm.val}}">
-    </div>
-    <div class="col-sm-12">
-      <label class="col-sm-2">VE: </label>
-      <input class="col-sm-2" type="text" value="{{vm.recruit.ve.val}}">
-    </div>
-    <div class="col-sm-12">
-      <label class="col-sm-2">QT: </label>
-      <input class="col-sm-2" type="text" value="{{vm.recruit.qt.val}}">
-    </div>
-    <div class="col-sm-12">
-      <label class="col-sm-3">DLAB: </label>
-      <input class="col-sm-2" type="text" value="{{vm.recruit.dlab.val}}">
-    </div>
+          <div class="col-sm-12">
+            <label class="col-sm-5">CL: </label>
+            <input class="col-sm-2" type="text" value="{{vm.recruit.cl.val}}">
+          </div>
+          <div class="col-sm-12">
+            <label class="col-sm-5">EL: </label>
+            <input class="col-sm-2" type="text" value="{{vm.recruit.el.val}}">
+          </div>
+          <div class="col-sm-12">
+            <label class="col-sm-5">GT: </label>
+            <input class="col-sm-2" type="text" value="{{vm.recruit.gt.val}}">
+          </div>
+          <div class="col-sm-12">
+            <label class="col-sm-5">MM: </label>
+            <input class="col-sm-2" type="text" value="{{vm.recruit.mm.val}}">
+          </div>
+          <div class="col-sm-12">
+            <label class="col-sm-5">VE: </label>
+            <input class="col-sm-2" type="text" value="{{vm.recruit.ve.val}}">
+          </div>
+          <div class="col-sm-12">
+            <label class="col-sm-5">QT: </label>
+            <input class="col-sm-2" type="text" value="{{vm.recruit.qt.val}}">
+          </div>
+          <div class="col-sm-12">
+            <label class="col-sm-5">DLAB: </label>
+            <input class="col-sm-2" type="text" value="{{vm.recruit.dlab.val}}">
+          </div>
 
-    <div class="clearfix"></div>
-  </div>
-</div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
 
-<!-- vision -->
-<div class="col-sm-2">
-  <div class="well">
-    <div class="text-center" uib-tooltip="VISION">
+      <!-- vision -->
+      <div class="col-lg-3">
+        <div class="well">
+          <div class="text-center" uib-tooltip="VISION">
       <span class="fa-stack fa-4x text-primary">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
       </span>
+          </div>
+
+          <div>
+            <div class="form-horizontal">
+              <label class="col-md-8">Color Perception:</label>
+              <input class="col-sm-2" type="text" value="{{vm.recruit.vision.color.val}}">
+            </div>
+          </div>
+
+          <div>
+            <div class="form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Acuity: 20/</label>
+                <input type="text" class="col-sm-2" id="min1" ng-model="vm.recruit.vision.acuity.val1">
+                <label class="col-sm-2 control-label">20/</label>
+                <input type="text" class="col-sm-2" id="min2" ng-model="vm.recruit.vision.acuity.val2">
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="{{vm.recruit.vision.depth.has}}">Normal Depth Perception</label>
+            </div>
+          </div>
+
+          <div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="{{vm.recruit.vision.correctable.has}}">Vision Correctable to
+                20/20</label>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>  <!-- well -->
+      </div>
+
+
     </div>
 
-    <div class="form-horizontal">
-      <label class="col-md-8">Color Perception:</label>
-      <input class="col-sm-2" type="text" value="{{vm.recruit.vision.color.val}}">
-    </div>
-    <div class="form-horizontal">
-      <label class="col-md-8">Depth Perception:</label>
-      <input class="col-sm-2" type="text" value="{{vm.recruit.vision.depth.has}}">
-    </div>
+    <div class="row">
 
-    <div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" checked="{{vm.recruit.vision.correctable.has}}">
-          Vision Correctable to 20/20
-        </label>
+      <!-- driving -->
+      <div class="col-lg-3">
+        <div class="well">
+          <div class="text-center" uib-tooltip="DRIVING">
+            <span class="fa-stack fa-4x text-primary">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+          <div class="form-horizontal">
+            <label for="trafficViolations" class="col-sm-8 control-label">Traffic Violations</label>
+            <input type="text" id="trafficViolations" class="col-sm-1" value="{{vm.recruit.driving.violations.val}}">
+          </div>
+
+          <div class="form-horizontal">
+            <label for="drivingoffenses" class="col-sm-8 control-label">Driving Offenses</label>
+            <input id="drivingoffenses" type="text" class="col-sm-1" value="{{vm.recruit.driving.offenses.val}}">
+          </div>
+
+          <div class="checkbox col-sm-8">
+            <label><input type="checkbox" checked="{{vm.recruit.driving.license.has}}"> Drivers License</label>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <!-- misconduct -->
+      <div class="col-lg-3">
+        <div class="well">
+          <div class="text-center" uib-tooltip="MISCONDUCT">
+            <span class="fa-stack fa-4x text-primary">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-gavel fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+
+          <div class="form-horizontal">
+            <label for="misconductoffenses" class="col-sm-8 control-label">Misconduct Offenses</label>
+            <input id="misconductoffenses" type="text" class="col-sm-1" value="{{vm.recruit.moral.conduct.val}}">
+          </div>
+
+          <div class="form-horizontal">
+            <label for="marijuanaoffenses" class="col-sm-8 control-label">Marijuana Offenses</label>
+            <input class="col-sm-1" type="text" id="marijuanaoffenses" value="{{vm.recruit.moral.marijuana.val}}">
+          </div>
+
+          <div class="form-horizontal">
+            <label for="drugoffenses" class="col-sm-8 control-label">Other Drug Offenses</label>
+            <input class="col-sm-1" type="text" id="drugoffenses" value="{{vm.recruit.moral.otherDrugs.val}}">
+          </div>
+
+          <div class="clearfix"></div>
+
+        </div>
+      </div>
+
+      <!-- quals -->
+      <div class="col-lg-3">
+        <div class="well">
+          <div class="text-center" uib-tooltip="QUALIFICATIONS">
+      <span class="fa-stack fa-4x text-primary">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-trophy fa-stack-1x fa-inverse"></i>
+      </span>
+          </div>
+
+          <div>
+            <div class="checkbox">
+              <label><input type="checkbox" checked="{{vm.recruit.waterQual.has}}">WS-B(+) Water Survival
+                Certification</label>
+            </div>
+          </div>
+
+          <div>
+            <div class="checkbox">
+              <label><input type="checkbox" checked="{{vm.recruit.flightPhysical.has}}">Flight Physical</label>
+            </div>
+          </div>
+
+          <div>
+            <div class="checkbox">
+              <label><input type="checkbox" checked="{{vm.recruit.speech.has}}">Clarity of Speech</label>
+            </div>
+          </div>
+
+          <div>
+            <div class="checkbox">
+              <label><input type="checkbox" checked="{{vm.recruit.pftClass1.has}}">1st Class PFT Score</label>
+            </div>
+          </div>
+
+          <div>
+            <div class="checkbox">
+              <label><input type="checkbox" checked="{{vm.recruit.vision.depth.has}}">PRP Screen Unfavorable
+                Responses</label>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>  <!-- well -->
       </div>
     </div>
+    <div class="row">
+    </div>
 
-  </div>  <!-- well -->
+  </div>
 </div>
 
 <div class="clearfix"></div>
-

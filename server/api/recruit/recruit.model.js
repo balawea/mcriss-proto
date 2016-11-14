@@ -33,7 +33,7 @@ var RecruitSchema = new mongoose.Schema({
     marijuana: {val:Number, valAtRs:Number, valAboveRs:Number, valBeforeDep:Number},
     otherDrugs: {val:Number, valAtRs:Number, valAboveRs:Number, valBeforeDep:Number}
   },
-  tierGrad: {val:Number},// 1 =highschool grad, 2= homeschooler, 3=either
+  tierGrad: {val:Number},// 1 =highschool grad, 2= homeschooler
   algebra: {has:Boolean},
   vision: {
     correctable: {has:Boolean},

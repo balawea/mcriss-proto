@@ -55,7 +55,7 @@ var PefRequirementSchema = new mongoose.Schema({
       marijuana: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean},
       otherDrugs: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean}
     },
-    tierGrad: {description:String, val:Number, waivable:Boolean},// 1 =highschool grad, 2= homeschooler, 3=either
+    tierGrad: {description:String, max:Number, waivable:Boolean},// 1=Highschool grad, 2=homeschooler. Using "max" as a simplification since rules never exclude tier 1 grads.
     algebra: {description:String, has:Boolean, waivable:Boolean},
     vision: {
       correctable: {description:String, has:Boolean, waivable:Boolean},
@@ -66,8 +66,8 @@ var PefRequirementSchema = new mongoose.Schema({
     waterQual: {description:String, has:Boolean, optional:Boolean, waiver:Boolean},
     flightPhysical: {description:String, has:Boolean, waiver:Boolean},
     speech:{description:String, has:Boolean, waiver:Boolean},
-    doncafScreening: {description:String, has:Boolean},
-    additionalScreening: {description:String, has:Boolean},
+    doncafScreening: {description:String, info:Boolean},
+    additionalScreening: {description:String, info:Boolean},
     pftClass1: {description:String, has:Boolean, waiver:Boolean},
     prpScreen: {description:String, max:Number, waiver:Boolean}
     } //requirements

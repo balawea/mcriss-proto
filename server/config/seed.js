@@ -23,6 +23,7 @@ Recruit.find({}).remove()
         sex: {val: 'M'},
         height: {val: 72},
         weight: {val: 181},
+        tierGrad: {val: 1},
         toe: {val: 5},
         afqt: {val: 87},
         cl: {val: 98},
@@ -55,6 +56,7 @@ Recruit.find({}).remove()
         sex: {val: 'F'},
         height: {val: 68},
         weight: {val: 151},
+        tierGrad: {val: 1},
         toe: {val: 4},
         afqt: {val: 83},
         cl: {val: 105},
@@ -86,6 +88,7 @@ Recruit.find({}).remove()
         sex: {val: 'M'},
         height: {val: 66},
         weight: {val: 141},
+        tierGrad: {val: 1},
         toe: {val: 4},
         clearance: {val: 'SECRET'},
         driving: {
@@ -122,6 +125,7 @@ Recruit.find({}).remove()
         sex: {val: 'M'},
         height: {val: 62},
         weight: {val: 131},
+        tierGrad: {val: 2},
         toe: {val: 5},
         afqt: {val: 103},
         cl: {val: 97},
@@ -158,6 +162,7 @@ Recruit.find({}).remove()
         sex: {val: 'M'},
         height: {val: 73},
         weight: {val: 171},
+        tierGrad: {val: 2},
         toe: {val: 4},
         afqt: {val: 88},
         cl: {val: 82},
@@ -193,8 +198,9 @@ Recruit.find({}).remove()
         usCitizen: {has: false},
         usCitizenFamily: {has: false},
         sex: {val: 'F'},
-        height: {val: 70},
+        height: {val: 58},
         weight: {val: 171},
+        tierGrad: {val: 3},
         toe: {val: 5},
         afqt: {val: 88},
         cl: {val: 82},
@@ -230,7 +236,9 @@ Recruit.find({}).remove()
         usCitizenFamily: {has: true},
         sex: {val: 'M'},
         height: {val: 75},
-        weight: {val: 191},
+        weight: {val: 210},
+        tierGrad: {val: 1},
+        toe: {val: 4},
         afqt: {val: 80},
         cl: {val: 80},
         gt: {val: 84},
@@ -239,7 +247,6 @@ Recruit.find({}).remove()
         qt: {val: 101},
         ve: {val: 45},
         dlab: {val: 80},
-        toe: {val: 4},
         driving: {
           license: {has: false},
           violations: {val: 4}
@@ -263,7 +270,7 @@ PefReq.find({}).remove()
 
 /*
       { //// TEST
-        pefCode: 'ACUITY',
+        pefCode: 'MINMAX',
         description: 'ENLISTED AIRCREW',
         mos: [
           {mos: '6100', description: '6100 Aircraft Maintenance (Rotary Wing)'}, {mos: '6172', description: '6172 Helicopter Crew Chief CH-46'},
@@ -273,8 +280,11 @@ PefReq.find({}).remove()
         disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
           'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
         requirements: {
-          vision: {
-            acuity: {description: 'Vision no worse than 20/70 (distant) in one eye and 20/100 (distant) in the other', max: 170, max1: 70, max2: 100, waivable: false}
+          height: {
+            min:59, max: 79, optional:true
+          },
+          weight: {
+            min:150, max: 180, optional:false
           }
         } //requirements
       },
@@ -610,7 +620,7 @@ PefReq.find({}).remove()
           vision: {
             color: {description: 'Pass normal color perception (NCP) test with PIP (12 out of 14 correct) or FALANT. Verify by DD 2808. No Waivers', min: 12, waivable: false},
           },
-          additionalScreening: {description: 'Applicants must submit their portfolio to the Combat Camera Management, MCB Quantico, VA', has: true}
+          additionalScreening: {description: 'Applicants must submit their portfolio to the Combat Camera Management, MCB Quantico, VA', info: true}
         } //requirements
       },
 
