@@ -1,15 +1,10 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h2 class="page-header">{{vm.recruit.firstName + " " + vm.recruit.lastName}}</h2>
-    </div>
+  <div class="row row-profile">
+    <h3>{{vm.recruit.firstName + " " + vm.recruit.lastName}}</h3>
   </div>
-</div>
 
-
-<div class="container-fluid">
   <!-- PEF Match-->
-  <div class="col-xs-12 col-sm-2">
+  <div class="col-lg-3">
     <div class="well well-lblue">
       <!-- id filter -->
       <div class="col-lg-12">
@@ -23,19 +18,16 @@
       <!-- pef error filter-->
       <div class="horizontal">
         <div class="btn-group" data-toggle="buttons">
-          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=0" ng-class="{'active': vm.fCategory===0}">
-            0
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=0" ng-class="{'active': vm.fCategory===0}"> 0
           </button>
-          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=1" ng-class="{'active': vm.fCategory===1}">
-            1
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=1" ng-class="{'active': vm.fCategory===1}"> 1
           </button>
-          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=2" ng-class="{'active': vm.fCategory===2}">
-            2
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=2" ng-class="{'active': vm.fCategory===2}"> 2
           </button>
-          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=3" ng-class="{'active': vm.fCategory===3}">
-            3
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=3" ng-class="{'active': vm.fCategory===3}"> 3
           </button>
-          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=4" ng-class="{'active': vm.fCategory===4}">4+</button>
+          <button class="btn btn-primary col-sm-1" type="radio" ng-click="vm.fCategory=4" ng-class="{'active': vm.fCategory===4}">4+
+          </button>
           <button class="btn btn-primary" type="radio" ng-click="vm.fCategory=''" ng-class="{'active': vm.fCategory===''}">All
           </button>
         </div>
@@ -43,13 +35,12 @@
 
       <hr/>
 
-
       <table class="table table-hover-dk table-lean col-sm-12"
              ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText}">
         <tbody class="table">
-        <tr>
-          <td class="animate-repeat col-sm-10">{{pef.pefCode}}</td>
-          <td class="animate-repeat col-sm-2"><span class="badge badge-danger" ng-if="pef.errs > 0">{{pef.errs}}</span>
+        <tr ng-click="vm.selectedPef=pef" ng-class="{'info': pef==vm.selectedPef }">
+          <td class="col-sm-10">{{pef.pefCode}}</td>
+          <td class="col-sm-2"><span class="badge badge-danger" ng-if="pef.errs > 0">{{pef.errs}}</span>
             <span class="text-primary" ng-if="pef.errs===0"><i class="fa fa-check-green fa-2x"></i></span>
           </td>
         </tr>
@@ -60,18 +51,24 @@
     </div>  <!-- well-->
   </div>
 
-
-  <div class="col-xs-12 col-sm-10">
+  <div class="col-xs-12 col-lg-9">
 
     <div class="row">
+      <div class="row row-profile">
+        <div class="col-lg-8" ng-if="vm.selectedPef!=undefined"><h4>{{vm.selectedPef.pefCode + ' - ' + vm.selectedPef.description}}</h4></div>
+      </div>
+
+      <div class="clearfix"></div>
 
       <!-- dob, height, weight, cit -->
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="well well-lg" uib-tooltip="DEMOGRAPHICS">
-          <h5><i class="fa fa-user fa-2x text-primary"></i> DOB {{vm.recruit.dob | date : 'yyyyMMdd'}}</h5>
 
-          <div class="panel small-fixed-panel pull-left">
+          <h5><i class="fa fa-user fa-2x text-primary"></i>{{vm.recruit.dob}}</h5>
+
+          <div class="panel small-fixed-panel pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.height.flag}">
             <div class="panel-bar"></div>
+
             <div class="panel-body">
               <div class="text-center">
                 <h5>{{vm.recruit.height.val}} in.</h5>
@@ -81,11 +78,11 @@
           </div>
 
           <div class="leftmargin-20 pull-left">
-            <div class="panel small-fixed-panel">
+            <div class="panel small-fixed-panel" ng-class="{'text-danger' : vm.selectedPef.requirements.weight.flag}">
               <div class="panel-bar"></div>
               <div class="panel-body">
                 <div class="text-center">
-                  <h5>{{vm.recruit.weight.val}} lbs</h5>
+                  <h5 class="">{{vm.recruit.weight.val}} lbs</h5>
                   <h6>Weight</h6>
                 </div>
               </div>
@@ -94,38 +91,36 @@
 
           <div class="clearfix"></div>
 
-          <div>
-            <div class="checkbox">
+            <div class="checkbox" ng-class="{'text-danger' : vm.selectedPef.requirements.usCitizen.flag}">
               <label>
-                <input type="checkbox" checked="{{vm.recruit.usCitizen}}">
+                <input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.usCitizen.has">
                 U.S. Citizen
               </label>
             </div>
-          </div>
 
-          <div>
-            <div class="checkbox">
+            <div class="checkbox" ng-class="{'text-danger' : vm.selectedPef.requirements.usCitizenFamily.flag}">
               <label>
-                <input type="checkbox" checked="{{vm.recruit.usCitizenFamily}}">
-                U.S. Citizen (immediate family)
+                <input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.usCitizenFamily.has">
+                U.S. Citizen (family)
               </label>
             </div>
+
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.toe.flag}">
+            <label for="toe" class="col-lg-10">Term of Enlistment</label>
+            <input id="toe" type="text" class="col-lg-2" value="{{vm.recruit.toe.val}}">
           </div>
 
-          <div class="form-group">
-            <label for="toe" class="col-sm-8 control-label">Term of Enlistment</label>
-            <div class="col-sm-4">
-              <select name="name" id="toe" class="form-control">
-                <option>{{vm.recruit.toe.val}}</option>
-              </select>
-            </div>
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.clearance.flag}">
+            <label for="clearance" class="col-lg-5 control-label">Clearance</label>
+            <input id="clearance" type="text" class="col-lg-7" value="{{vm.recruit.clearance.val}}">
           </div>
+
           <div class="clearfix"></div>
-        </div>
+          </div>
       </div>
 
       <!-- education -->
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="well">
           <div class="text-center" uib-tooltip="EDUCATION">
             <span class="fa-stack fa-4x text-primary">
@@ -134,62 +129,56 @@
             </span>
           </div>
 
-          <div>
-            <div class="form-horizontal">
-              <div class="radio">
-
-                <label><input disabled type="radio" class="col-sm-1" ng-checked="vm.recruit.tierGrad.val===1"> Tier 1 (High School)</label>
-                <label><input disabled type="radio" ng-checked="vm.recruit.tierGrad.val===2"> Tier 2 (Home School)</label>
-              </div>
-            </div>
+          <div class="checkbox col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.tierGrad.flag}">
+            <label><input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.tierGrad.val===1">Tier 1 (High School)</label>
+            <label><input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.tierGrad.val===2">Tier 2 (Home School)</label>
           </div>
 
-          <div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" checked="{{vm.recruit.algebra.has}}">1 Year Algebra or Higher</label>
-            </div>
+          <div class="checkbox col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.algebra.flag}">
+            <label>
+              <input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.algebra.has">1 Year Algebra or Higher</label>
           </div>
+
           <div class="clearfix"></div>
 
         </div>  <!-- well -->
       </div>
 
       <!-- test scores -->
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="well">
           <div class="text-center" uib-tooltip="TEST SCORES">
-      <span class="fa-stack fa-4x text-primary">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
-      </span>
+            <span class="fa-stack fa-4x text-primary">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+            </span>
           </div>
 
-          <div class="col-sm-12">
-            <label class="col-sm-5">CL: </label>
-            <input class="col-sm-2" type="text" value="{{vm.recruit.cl.val}}">
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.cl.flag===true}">
+            <label class="col-lg-5">CL: </label>
+            <input class="col-lg-2" type="text" value="{{vm.recruit.cl.val}}">
           </div>
-          <div class="col-sm-12">
-            <label class="col-sm-5">EL: </label>
-            <input class="col-sm-2" type="text" value="{{vm.recruit.el.val}}">
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.el.flag===true}">
+            <label class="col-lg-5">EL: </label>
+            <input class="col-lg-2" type="text" value="{{vm.recruit.el.val}}">
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-12" ng-class="{'text-danger' : vm.selectedPef.requirements.gt.flag===true}">
             <label class="col-sm-5">GT: </label>
             <input class="col-sm-2" type="text" value="{{vm.recruit.gt.val}}">
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-12" ng-class="{'text-danger' : vm.selectedPef.requirements.mm.flag===true}">
             <label class="col-sm-5">MM: </label>
             <input class="col-sm-2" type="text" value="{{vm.recruit.mm.val}}">
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-12" ng-class="{'text-danger' : vm.selectedPef.requirements.ve.flag===true}">
             <label class="col-sm-5">VE: </label>
             <input class="col-sm-2" type="text" value="{{vm.recruit.ve.val}}">
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-12" ng-class="{'text-danger' : vm.selectedPef.requirements.qt.flag===true}">
             <label class="col-sm-5">QT: </label>
             <input class="col-sm-2" type="text" value="{{vm.recruit.qt.val}}">
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-12" ng-class="{'text-danger' : vm.selectedPef.requirements.dlab.flag===true}">
             <label class="col-sm-5">DLAB: </label>
             <input class="col-sm-2" type="text" value="{{vm.recruit.dlab.val}}">
           </div>
@@ -198,8 +187,12 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="row">
+
       <!-- vision -->
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="well">
           <div class="text-center" uib-tooltip="VISION">
       <span class="fa-stack fa-4x text-primary">
@@ -209,48 +202,36 @@
           </div>
 
           <div>
-            <div class="form-horizontal">
-              <label class="col-md-8">Color Perception:</label>
-              <input class="col-sm-2" type="text" value="{{vm.recruit.vision.color.val}}">
+            <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.color.flag}"
+            uib-tooltip="{{vm.selectedPef.requirements.vision.color.description}}">
+              <label class="col-lg-10">Color Perception:</label>
+              <input class="col-lg-2" type="text" value="{{vm.recruit.vision.color.val}}">
             </div>
           </div>
 
-          <div>
-            <div class="form-horizontal">
-              <div class="form-group">
-                <label class="col-sm-5 control-label">Acuity: 20/</label>
-                <input type="text" class="col-sm-2" id="min1" ng-model="vm.recruit.vision.acuity.val1">
-                <label class="col-sm-2 control-label">20/</label>
-                <input type="text" class="col-sm-2" id="min2" ng-model="vm.recruit.vision.acuity.val2">
-              </div>
-            </div>
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.acuity.flag}">
+            <label class="col-lg-6 control-label">Acuity 20/</label>
+              <input type="text" class="col-lg-2" id="min1" ng-model="vm.recruit.vision.acuity.val1">
+            <label class="col-lg-2 control-label">20/</label>
+            <input type="text" class="col-lg-2" id="min2" ng-model="vm.recruit.vision.acuity.val2">
           </div>
 
-          <div>
-            <div class="checkbox">
+            <div class="checkbox col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.depth.flag}">
               <label>
-                <input type="checkbox" checked="{{vm.recruit.vision.depth.has}}">Normal Depth Perception</label>
+                <input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.vision.depth.has">Normal Depth Perception</label>
             </div>
-          </div>
 
-          <div>
-            <div class="checkbox">
+            <div class="checkbox col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.correctable.flag}">
               <label>
-                <input type="checkbox" checked="{{vm.recruit.vision.correctable.has}}">Vision Correctable to
-                20/20</label>
+                <input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.vision.correctable.has">Correctable to 20/20</label>
             </div>
-          </div>
+
           <div class="clearfix"></div>
         </div>  <!-- well -->
       </div>
 
-
-    </div>
-
-    <div class="row">
-
       <!-- driving -->
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="well">
           <div class="text-center" uib-tooltip="DRIVING">
             <span class="fa-stack fa-4x text-primary">
@@ -258,18 +239,22 @@
               <i class="fa fa-car fa-stack-1x fa-inverse"></i>
             </span>
           </div>
-          <div class="form-horizontal">
-            <label for="trafficViolations" class="col-sm-8 control-label">Traffic Violations</label>
-            <input type="text" id="trafficViolations" class="col-sm-1" value="{{vm.recruit.driving.violations.val}}">
+
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.driving.violations.flag}">
+              <label for="trafficViolations" class="col-lg-9 control-label">
+                Traffic Violations</label>
+              <input type="text" id="trafficViolations" class="col-lg-2" value="{{vm.recruit.driving.violations.val}}">
           </div>
 
-          <div class="form-horizontal">
-            <label for="drivingoffenses" class="col-sm-8 control-label">Driving Offenses</label>
-            <input id="drivingoffenses" type="text" class="col-sm-1" value="{{vm.recruit.driving.offenses.val}}">
-          </div>
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.driving.offenses.flag}">
+              <label for="drivingoffenses" class="col-lg-9 control-label">
+                Driving Offenses</label>
+              <input id="drivingoffenses" type="text" class="col-lg-2" value="{{vm.recruit.driving.offenses.val}}">
+            </div>
 
-          <div class="checkbox col-sm-8">
-            <label><input type="checkbox" checked="{{vm.recruit.driving.license.has}}"> Drivers License</label>
+          <div class="checkbox col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.driving.license.flag}">
+              <label><input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.driving.license.has">
+                Drivers License</label>
           </div>
 
           <div class="clearfix"></div>
@@ -277,7 +262,7 @@
       </div>
 
       <!-- misconduct -->
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="well">
           <div class="text-center" uib-tooltip="MISCONDUCT">
             <span class="fa-stack fa-4x text-primary">
@@ -286,28 +271,31 @@
             </span>
           </div>
 
-          <div class="form-horizontal">
-            <label for="misconductoffenses" class="col-sm-8 control-label">Misconduct Offenses</label>
-            <input id="misconductoffenses" type="text" class="col-sm-1" value="{{vm.recruit.moral.conduct.val}}">
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.moral.conduct.flag}">
+            <label for="misconductoffenses" class="col-lg-10 control-label">Conduct Offenses:</label>
+            <input id="misconductoffenses" type="text" class="col-lg-2" value="{{vm.recruit.moral.conduct.val}}">
           </div>
 
-          <div class="form-horizontal">
-            <label for="marijuanaoffenses" class="col-sm-8 control-label">Marijuana Offenses</label>
-            <input class="col-sm-1" type="text" id="marijuanaoffenses" value="{{vm.recruit.moral.marijuana.val}}">
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.moral.marijuana.flag}">
+            <label for="marijuanaoffenses" class="col-lg-10 control-label">Marijuana Offenses:</label>
+            <input class="col-lg-2" type="text" id="marijuanaoffenses" value="{{vm.recruit.moral.marijuana.val}}">
           </div>
 
-          <div class="form-horizontal">
-            <label for="drugoffenses" class="col-sm-8 control-label">Other Drug Offenses</label>
-            <input class="col-sm-1" type="text" id="drugoffenses" value="{{vm.recruit.moral.otherDrugs.val}}">
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.moral.otherDrugs.flag}">
+            <label for="drugoffenses" class="col-lg-10 control-label">Other Drug Offenses:</label>
+            <input class="col-lg-2" type="text" id="drugoffenses" value="{{vm.recruit.moral.otherDrugs.val}}">
           </div>
 
           <div class="clearfix"></div>
 
         </div>
       </div>
+    </div>
+
+    <div class="row">
 
       <!-- quals -->
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="well">
           <div class="text-center" uib-tooltip="QUALIFICATIONS">
       <span class="fa-stack fa-4x text-primary">
@@ -316,44 +304,32 @@
       </span>
           </div>
 
-          <div>
-            <div class="checkbox">
-              <label><input type="checkbox" checked="{{vm.recruit.waterQual.has}}">WS-B(+) Water Survival
-                Certification</label>
+          <div class="checkbox" ng-class="{'text-danger' : vm.selectedPef.requirements.waterQual.flag}">
+              <label><input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.waterQual.has">WS-B(+) Water Surv. Cert</label>
             </div>
+
+          <div class="checkbox" ng-class="{'text-danger' : vm.selectedPef.requirements.flightPhysical.flag}">
+              <label><input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.flightPhysical.has">Flight Physical</label>
+            </div>
+
+          <div class="checkbox" ng-class="{'text-danger' : vm.selectedPef.requirements.speech.flag}">
+              <label><input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.speech.has">Clarity of Speech</label>
           </div>
 
-          <div>
-            <div class="checkbox">
-              <label><input type="checkbox" checked="{{vm.recruit.flightPhysical.has}}">Flight Physical</label>
-            </div>
+          <div class="checkbox" ng-class="{'text-danger' : vm.selectedPef.requirements.pftClass1.flag}">
+              <label><input type="checkbox" class="col-lg-1" ng-checked="vm.recruit.pftClass1.has">1st Class PFT Score</label>
           </div>
 
-          <div>
-            <div class="checkbox">
-              <label><input type="checkbox" checked="{{vm.recruit.speech.has}}">Clarity of Speech</label>
-            </div>
+          <div class="col-lg-12" ng-class="{'text-danger' : vm.selectedPef.requirements.prpScreen.flag}">
+              <label class="col-lg-11">PRP Unfav. Responses</label>
+            <input type="text" class="col-lg-1" value="{{vm.recruit.prpScreen.val}}">
           </div>
 
-          <div>
-            <div class="checkbox">
-              <label><input type="checkbox" checked="{{vm.recruit.pftClass1.has}}">1st Class PFT Score</label>
-            </div>
-          </div>
-
-          <div>
-            <div class="checkbox">
-              <label><input type="checkbox" checked="{{vm.recruit.vision.depth.has}}">PRP Screen Unfavorable
-                Responses</label>
-            </div>
-          </div>
           <div class="clearfix"></div>
         </div>  <!-- well -->
       </div>
-    </div>
-    <div class="row">
-    </div>
 
+    </div>
   </div>
 </div>
 

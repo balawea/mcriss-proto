@@ -21,13 +21,13 @@ var PefRequirementSchema = new mongoose.Schema({
     sex: {description:String, val:String},
     age: {description:String, min:Number, max:Number, waivable:Boolean},
     clearance: {description:String, val: String},
-    gt: {description:String, min:Number, waiver:Number},
-    cl: {description:String, min:Number, waiver:Number},
-    el: {description:String, min:Number, waiver:Number},
-    mm: {description:String, min:Number, waiver:Number},
-    ve: {description:String, min:Number, waiver:Number},
-    qt: {description:String, min:Number, waiver:Number},
-    dlab: {description:String, min:Number, waiver:Number},
+    gt: {description:String, min:Number, waivable:Boolean, waiver:Number},
+    cl: {description:String, min:Number, waivable:Boolean, waiver:Number},
+    el: {description:String, min:Number, waivable:Boolean, waiver:Number},
+    mm: {description:String, min:Number, waivable:Boolean, waiver:Number},
+    ve: {description:String, min:Number, waivable:Boolean, waiver:Number},
+    qt: {description:String, min:Number, waivable:Boolean, waiver:Number},
+    dlab: {description:String, min:Number, waivable:Boolean, waiver:Number},
 //    asvabOrList: {description:String, gt:Number, cl:Number, el:Number, mm:Number, ve:Number, qt:Number}, //Logical OR: exceeding any one of the included scores makes a match
     height: {
       description:String,
@@ -63,13 +63,13 @@ var PefRequirementSchema = new mongoose.Schema({
       color: {description:String, min:Number, waivable:Boolean},
       acuity: {description:String, max:Number, max1:Number, max2:Number, waivable:Boolean}
     },
-    waterQual: {description:String, has:Boolean, optional:Boolean, waiver:Boolean},
-    flightPhysical: {description:String, has:Boolean, waiver:Boolean},
-    speech:{description:String, has:Boolean, waiver:Boolean},
+    waterQual: {description:String, has:Boolean, optional:Boolean, waivable:Boolean},
+    flightPhysical: {description:String, has:Boolean, waivable:Boolean},
+    speech:{description:String, has:Boolean, waivable:Boolean},
     doncafScreening: {description:String, info:Boolean},
     additionalScreening: {description:String, info:Boolean},
-    pftClass1: {description:String, has:Boolean, waiver:Boolean},
-    prpScreen: {description:String, max:Number, waiver:Boolean}
+    pftClass1: {description:String, has:Boolean, waivable:Boolean},
+    prpScreen: {description:String, max:Number, waivable:Boolean}
     } //requirements
 
 });

@@ -42,6 +42,21 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   background-color: #333333;
 }
 
+.text-danger {
+  color: #d43f3a;
+  background-color: lightpink;
+  outline-color: #d43f3a;
+  outline-width: 2px;
+  outline-style: dashed;
+}
+.text-warning {
+  color: #d58512;
+}
+
+.text-success {
+  color: #398439;
+}
+
 .panel.small-fixed-panel{
   width:90px;
   display: flex;
@@ -73,12 +88,26 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 .table-hover-dk tbody tr:hover td {
   @extend .table-hover;
-  background: silver;
+  background: lightgray;
 }
 
 .well-lblue {
   @extend .well;
   background-color: lightblue;
+}
+
+
+.input {
+  -moz-appearance: none;
+}
+
+
+.row-profile {
+  @extend .row;
+  margin-left: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: 75px;
 }
 
 @for $i from 1 through 6 {

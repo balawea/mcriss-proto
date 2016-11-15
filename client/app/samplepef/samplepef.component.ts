@@ -14,6 +14,8 @@ export class SamplepefComponent {
   code;
   fErr;
   fCategory;
+  selectedPef;
+
 
   /*@ngInject*/
   constructor($http, $location) {
@@ -23,13 +25,18 @@ export class SamplepefComponent {
 
   /*@ngInject*/
   $onInit() {
+/*
     this.$http.get('/api/recruits/' + this.id).then(response => {
       this.recruit = response.data;
     });
+*/
 
-    this.$http.get('/api/pefRequirements/').then(response => {
-      this.p = response.data;
-      this.pefs = getErrs(this.p, this.recruit);
+    this.$http.get('/api/pefRequirements/').then(responsePef => {
+      this.$http.get('/api/recruits/' + this.id).then(responseRec => {
+        this.recruit = responseRec.data;
+        this.p = responsePef.data;
+        this.pefs = getErrs(this.p, this.recruit);
+      });
     });
 
   }   //oninit
@@ -43,6 +50,9 @@ function getErrs(pefs, recr) {
     pef.errs = getPefErrors(pef.requirements, recr);  //actual error count for display (red error badge)
     pef.errCategory = (pef.errs < 4) ? pef.errs : 4;     //error category, will match the error filter buttons
   }
+
+  console.log(recr);
+
   return pefs;
 }
 
@@ -54,7 +64,6 @@ function getPefErrors(pef, recr) {
   compareObjects(pef, recr);
 
   function compareObjects(pef, recr) {
-
     for (let [pkey, pval] of Object.entries(pef)) {
       rval = (!!recr) ? recr[pkey] : undefined;
 
@@ -64,11 +73,13 @@ function getPefErrors(pef, recr) {
 
       if ((pkey == "val" || pkey == "has") && (pval !== rval)) {
         ++errs;
+        pef.flag=true;
         continue;
       }
 
       rval = (!!recr) ? recr["val"] : undefined;
       if ((pkey == "max" && (rval == undefined || rval > pval)) || (pkey == "min" && (rval == undefined || rval < pval))) {
+        pef.flag=true;
         ++errs;
       }
 
@@ -76,7 +87,6 @@ function getPefErrors(pef, recr) {
   }
   return errs;
 }
-
 
 export default angular.module('mcrissDemoApp.samplepef', [uiRouter])
   .config(routes)

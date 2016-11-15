@@ -16,10 +16,11 @@ Recruit.find({}).remove()
         firstName: 'Howard',
         lastName: 'James',
         middleInitial: 'L',
-        dob: '12/11/1989',
+        dob: '12//11//1989',
         active: true,
         usCitizen: {has: true},
         usCitizenFamily: {has: true},
+        clearance: {val: 'SECRET'},
         sex: {val: 'M'},
         height: {val: 72},
         weight: {val: 181},
@@ -35,7 +36,13 @@ Recruit.find({}).remove()
         dlab: {val: 80},
         driving: {
           license: {has: false},
-          offenses: {val: 1}
+          offenses: {val: 0},
+          violations: {val: 5}
+        },
+        moral: {
+          conduct: {val: 2},
+          otherDrugs: {val: 3},
+          marijuana: {val: 0}
         },
         vision: {
           correctable: {has: true},
@@ -53,10 +60,12 @@ Recruit.find({}).remove()
         dob: '08/20/1977',
         usCitizen: {has: true},
         usCitizenFamily: {has: true},
+        clearance: {val: 'NONE'},
         sex: {val: 'F'},
         height: {val: 68},
         weight: {val: 151},
         tierGrad: {val: 1},
+        algebra: {has: false},
         toe: {val: 4},
         afqt: {val: 83},
         cl: {val: 105},
@@ -67,14 +76,20 @@ Recruit.find({}).remove()
         ve: {val: 82},
         dlab: {val: 90},
         driving: {
-          license: {has: true},
-          offenses: {val: 1}
+          license: {has: false},
+          offenses: {val: 0},
+          violations: {val: 0}
         },
         vision: {
           correctable: {has: true},
           depth: {has: true},
           color: {val: 11},
           acuity: {val:120, val1: 100, val2: 20}
+        },
+        moral: {
+          conduct: {val: 2},
+          otherDrugs: {val: 0},
+          marijuana: {val: 1}
         }
       },
 
@@ -82,25 +97,16 @@ Recruit.find({}).remove()
         firstName: 'Ashley',
         lastName: 'Martinez',
         middleInitial: 'A',
-        dob: '03/16/70',
+        active: true,
+        dob: '03//16//70',
         usCitizen: {has: true},
         usCitizenFamily: {has: true},
         sex: {val: 'M'},
         height: {val: 66},
         weight: {val: 141},
+        clearance: {val: 'TOP SECRET'},
         tierGrad: {val: 1},
         toe: {val: 4},
-        clearance: {val: 'SECRET'},
-        driving: {
-          license: {has: true},
-          offenses: {val: 1}
-        },
-        vision: {
-          correctable: {has: true},
-          depth: {has: true},
-          color: {val: 10},
-          acuity: {val: 50, val1: 30, val2: 20}
-        },
         afqt: {val: 90},
         cl: {val: 104},
         gt: {val: 109},
@@ -109,9 +115,24 @@ Recruit.find({}).remove()
         qt: {val: 91},
         ve: {val: 61},
         dlab: {val: 90},
+        driving: {
+          license: {has: true},
+          offenses: {val: 3},
+          violations: {val: 2}
+        },
+        vision: {
+          correctable: {has: true},
+          depth: {has: true},
+          color: {val: 10},
+          acuity: {val: 50, val1: 30, val2: 20}
+        },
+        moral: {
+          conduct: {val: 0},
+          otherDrugs: {val: 0},
+          marijuana: {val: 0}
+        },
         algebra: {has: true},
-        speech: {has: true},
-        active: true
+        speech: {has: true}
       },
 
       {
@@ -122,6 +143,7 @@ Recruit.find({}).remove()
         dob: '10/07/1986',
         usCitizen: {has: true},
         usCitizenFamily: {has: false},
+        clearance: {val: 'NONE'},
         sex: {val: 'M'},
         height: {val: 62},
         weight: {val: 131},
@@ -137,10 +159,12 @@ Recruit.find({}).remove()
         dlab: {val: 90},
         driving: {
           license: {has: true},
-          offenses: {val: 1}
+          offenses: {val: 0},
+          violations: {val: 0}
         },
         moral: {
           conduct: {val: 1, valAtRs: 1},
+          otherDrugs: {val: 0},
           marijuana: {val: 3, valAtRs: 0}
         },
         vision: {
@@ -159,6 +183,7 @@ Recruit.find({}).remove()
         dob: '11/17/1945',
         usCitizen: {has: true},
         usCitizenFamily: {has: true},
+        clearance: {val: 'SECRET'},
         sex: {val: 'M'},
         height: {val: 73},
         weight: {val: 171},
@@ -174,6 +199,7 @@ Recruit.find({}).remove()
         dlab: {val: 90},
         driving: {
           license: {has: true},
+          offenses: {val: 0},
           violations: {val: 2}
         },
         moral: {
@@ -197,6 +223,7 @@ Recruit.find({}).remove()
         dob: '04/17/1972',
         usCitizen: {has: false},
         usCitizenFamily: {has: false},
+        clearance: {val: 'NONE'},
         sex: {val: 'F'},
         height: {val: 58},
         weight: {val: 171},
@@ -216,7 +243,9 @@ Recruit.find({}).remove()
           violations: {val: 2}
         },
         moral: {
-          marijuana: {val: 3}
+          marijuana: {val: 3},
+          conduct: {val: 3},
+          otherDrugs: {val: 2}
         },
         vision: {
           correctable: {has: false},
@@ -234,6 +263,7 @@ Recruit.find({}).remove()
         dob: '09/02/1965',
         usCitizen: {has: true},
         usCitizenFamily: {has: true},
+        clearance: {val: 'TOP SECRET'},
         sex: {val: 'M'},
         height: {val: 75},
         weight: {val: 210},
@@ -249,10 +279,13 @@ Recruit.find({}).remove()
         dlab: {val: 80},
         driving: {
           license: {has: false},
+          offenses: {val: 1},
           violations: {val: 4}
         },
         moral: {
-          conduct: {val: 3}
+          conduct: {val: 0},
+          marijuana: {val: 0},
+          otherDrugs: {val: 2}
         },
         vision: {
           correctable: {has: true},
@@ -260,6 +293,50 @@ Recruit.find({}).remove()
           color: {val: 14},
           acuity: {val: 120, val1: 60, val2: 60}
         }
+      },
+
+      {
+        firstName: 'Tiny',
+        lastName: 'Baby',
+        middleInitial: '',
+        active: false,
+        dob: '09/02/2016',
+        usCitizen: {has: false},
+        usCitizenFamily: {has: false},
+        clearance: {val: 'NONE'},
+        sex: {val: 'M'},
+        height: {val: 19},
+        weight: {val: 7},
+        tierGrad: {val: 0},
+        toe: {val: 0},
+        afqt: {val: 20},
+        cl: {val: 8},
+        gt: {val: 14},
+        el: {val: 11},
+        mm: {val: 59},
+        qt: {val: 10},
+        ve: {val: 4},
+        dlab: {val: 7},
+        driving: {
+          license: {has: false},
+          offenses: {val: 11},
+          violations: {val: 4}
+        },
+        moral: {
+          conduct: {val: 6},
+          marijuana: {val: 0},
+          otherDrugs: {val: 0}
+        },
+        vision: {
+          correctable: {has: false},
+          depth: {has: false},
+          color: {val: 6},
+          acuity: {val: 220, val1: 60, val2: 60}
+        },
+        pftClass1: {has:false},
+        prpScreen: {val: 11},
+        waterQual: {has: false},
+        flightPhysical: {has: false}
       }
     );
   });
@@ -268,10 +345,9 @@ PefReq.find({}).remove()
   .then(() => {
     PefReq.create(
 
-/*
-      { //// TEST
-        pefCode: 'MINMAX',
-        description: 'ENLISTED AIRCREW',
+      { //// FULL TSET
+        pefCode: 'FULL TEST',
+        description: 'Mission Impossible - all fields required',
         mos: [
           {mos: '6100', description: '6100 Aircraft Maintenance (Rotary Wing)'}, {mos: '6172', description: '6172 Helicopter Crew Chief CH-46'},
           {mos: '6173', description: '6173 Helicopter Crew Chief CH-53'}, {mos: '6174', description: '6174 Helicopter Crew Chief AH/UH-1'},
@@ -280,15 +356,62 @@ PefReq.find({}).remove()
         disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
           'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
         requirements: {
+          toe: {description: 'Twenty-five Year Term of Enlistment (toe)', val: 25},
+          usCitizen: {description: 'Must NOT be a U.S. Citizen (no waiver)', has: false},
+          usCitizenFamily: {description: 'All family members must NOT be U.S. Citizens (no waiver)', has: false, waivable: false},
+          clearance: {description: 'Eligible for SECRET Clearance.', val: 'TOP SECRET'},
+          gt: {description: 'GT 1107', min: 1107},
+          mm: {description: 'MM 1055', min: 1055},
+          ve: {description: 'MM 1055', min: 1055},
+          qt: {description: 'MM 1055', min: 1055},
+          cl: {description: 'MM 1055', min: 1055},
+          el: {description: 'MM 1065', min: 1065},
+          dlab: {description: 'MM 1065', min: 1065},
+          tierGrad: {description:'Must be Tier 0', max:0},
+          algebra: {description:'Must not have taken algebra', has:false},
+          driving: {
+            license: {has: false},
+            offenses: {description: '-1 convictions of driving offenses other than Traffic Violations', max: -1, maxAboveRs: 0},
+            violations: {description: '-1 convictions of driving offenses other than Traffic Violations', max: -1, waivable: true}
+          },
           height: {
-            min:59, max: 79, optional:true
+            description: 'Minimum height 80 inches (Actual height, no waivers). Maximum height 97 inches (Actual height, no waivers).',
+            min: 80,
+            max: 97,
+            optional: false,
+            waivable: false
           },
           weight: {
-            min:150, max: 180, optional:false
-          }
+            description: 'Minimum weight 250 inches (Actual height, no waivers). Maximum weight 375 inches (Actual weight, no waivers).',
+            min: 350,
+            max: 375,
+            optional: false,
+            waivable: false
+          },
+          moral: {
+            conduct: {description: 'No Conduct waivers above Recruiting Station Level', max:-1},
+            marijuana: {description: 'No Drug waivers above Recruiting Station Level', max:-1},
+            otherDrugs: {description: 'No Drug waivers above Recruiting Station Level', max:-1}
+          },
+          vision: {
+            correctable: {description: 'Overall correctable to 20/20 (distant)', has: false},
+            depth: {description: 'Does not have normal depth perception', has: false},
+            color: {description: 'PASS normal color perception (NCP) with 15 out of 14', min: 15},
+            acuity: {description: 'Vision no worse than 20/70 (distant) in one eye and 20/100 (distant) in the other', max: 0, max1: 20, max2: 20}
+          },
+          waterQual: {
+            description: 'Must have WS-B(+) Water Survival Qualification. Must perform the following: Crawl (25 yards), breast stroke (25 yards), ' +
+            'side stroke (25 yards), elementary back stroke (25 yards), vertical fall from 12 foot platform, underwater swim without breaking surface (15 yards), ' +
+            'tread water 2 1/2 minutes, front float 2 1/2 minutes', has: false, optional: false
+          },
+          flightPhysical: {description: 'Must fail rigorous flight physical', has: false},
+          pftClass1:{description:'Must not be PFT 1st Class', has:false},
+          speech: {description: 'Must not have Clarity of Speech', has: false},
+          prpScreen:{description:'Must FAIL PRP screen', max:0},
+          doncafScreening: {description: 'Be interviewed, screened, and REJECTED by RA NPA and District PA Chief or District PA OFficer', has: false},
+          additionalScreening: {description: 'Does not agree to required additional screening', has: false}
         } //requirements
       },
-*/
 
       {     ///AE
         pefCode: 'AE',
