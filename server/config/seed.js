@@ -15,49 +15,89 @@ Recruit.find({}).remove()
       {
         firstName: 'Howard',
         lastName: 'James',
-        middleInitial: 'L',
-        dob: '12//11//1989',
+        middleName: 'Leonard',
+        dob: new Date('12/11/1989'),
         active: true,
-        usCitizen: {has: true},
-        usCitizenFamily: {has: true},
-        clearance: {val: 'SECRET'},
-        sex: {val: 'M'},
-        height: {val: 72},
-        weight: {val: 181},
-        tierGrad: {val: 1},
-        toe: {val: 5},
-        afqt: {val: 87},
-        cl: {val: 98},
-        gt: {val: 92},
-        el: {val: 84},
-        mm: {val: 109},
-        qt: {val: 91},
-        ve: {val: 80},
-        dlab: {val: 80},
-        driving: {
-          license: {has: false},
-          offenses: {val: 0},
-          violations: {val: 5}
+        match: {
+          usCitizen: {has: true},
+          usCitizenFamily: {has: true},
+          clearance: {val: 'SECRET'},
+          sex: {val: 'M'},
+          height: {val: 72},
+          weight: {val: 181},
+          tierGrad: {val: 1},
+          toe: {val: 5},
+          afqt: {val: 87},
+          cl: {val: 98},
+          gt: {val: 92},
+          el: {val: 84},
+          mm: {val: 109},
+          qt: {val: 91},
+          ve: {val: 80},
+          dlab: {val: 80},
+          driving: {
+            license: {has: false},
+            offenses: {val: 0},
+            violations: {val: 5}
+          },
+          moral: {
+            conduct: {val: 2},
+            otherDrugs: {val: 3},
+            marijuana: {val: 0}
+          },
+          vision: {
+            correctable: {has: true},
+            depth: {has: true},
+            color: {val: 13},
+            acuity: {val: 160, val1: 80, val2: 80}
+          }
         },
-        moral: {
-          conduct: {val: 2},
-          otherDrugs: {val: 3},
-          marijuana: {val: 0}
+        personal: {
+          ssn: 'XXX-XX-1224',
+          address: {street: '1522 Western Rd. #448B', city: 'Manchester', state: 'MD', zip: 21102, country: 'United States'},
+          hor: {street: '481 North Hemlock Ct.', city: 'Windsor Mill', state: 'MD', zip: 21244, country: 'United States'},
+          citz: 'Native Born',
+          sex: 'Male',
+          ethnicity: 'Not Hispanic or Latino',
+          marital: 'Divorced',
+          dependents: 1,
+          race: 'White',
+          religion: 'Catholic',
+          education: 'BS',
+          language: 'N/A',
+          licenseNum: 'MD41488909082',
+          birthPlace: 'Egg Harbor Township, NJ, United States'
         },
-        vision: {
-          correctable: {has: true},
-          depth: {has: true},
-          color: {val: 13},
-          acuity: {val: 160, val1: 80, val2: 80}
+        exams: {
+          afqt: 87,
+          gs: 83,
+          ar: 85,
+          wk: 90,
+          pc: 94,
+          mk: 91,
+          as: 77,
+          mc: 81,
+          ao: 89,
+          ei: 92,
+          es: '14',
+          recruiterId: '101185',
+          stnId: '812',
+          pef: 'N/A',
+          teMosAfs: '12256',
+          waiver: 'N/A',
+          payGrade: 'N/A',
+          svcAnnexCode: 'N/A',
+          mso: 'N/A',
+          adObligation: 'N/A'
         }
       },
 
       {
         firstName: 'Valerie',
         lastName: 'Kuo',
-        middleInitial: 'R',
         active: true,
-        dob: '08/20/1977',
+        dob: new Date('08/20/1987'),
+        match: {
         usCitizen: {has: true},
         usCitizenFamily: {has: true},
         clearance: {val: 'NONE'},
@@ -67,7 +107,7 @@ Recruit.find({}).remove()
         tierGrad: {val: 1},
         algebra: {has: false},
         toe: {val: 4},
-        afqt: {val: 83},
+        afqt: {val: 94},
         cl: {val: 105},
         gt: {val: 98},
         el: {val: 84},
@@ -92,252 +132,571 @@ Recruit.find({}).remove()
           marijuana: {val: 1}
         }
       },
+        personal: {
+      ssn: 'XXX-XX-7561',
+        address: {street: '3885 Broad Blvd.', city: 'Windsor Mill', state: 'MD', zip: 21244, country: 'United States'},
+        hor: {street: '3885 Broad Blvd.', city: 'Windsor Mill', state: 'MD', zip: 21244, country: 'United States'},
+        citz: 'Native Born',
+        sex: 'Male',
+        ethnicity: 'Not Hispanic or Latino',
+        marital: 'Single',
+        dependents: 0,
+        race: 'Asian',
+        religion: 'Buddhist',
+        education: 'MA',
+        language: 'Mandarin, French',
+        licenseNum: 'MD0038585902',
+        birthPlace: 'San Bernadino, CA, United States'
+      },
+        exams: {
+      afqt: 95,
+        gs: 83,
+        ar: 100,
+        wk: 90,
+        pc: 94,
+        mk: 91,
+        as: 97,
+        mc: 81,
+        ao: 89,
+        ei: 92,
+        es: '14',
+        recruiterId: '101185',
+        stnId: '819',
+        pef: 'CB',
+        teMosAfs: '12256',
+        waiver: 'N/A',
+        payGrade: 'N/A',
+        svcAnnexCode: 'N/A',
+        mso: 'N/A',
+        adObligation: 'N/A'
+    }
+      },
 
       {
         firstName: 'Ashley',
         lastName: 'Martinez',
-        middleInitial: 'A',
+        middleName: 'Ana',
         active: true,
-        dob: '03//16//70',
-        usCitizen: {has: true},
-        usCitizenFamily: {has: true},
-        sex: {val: 'M'},
-        height: {val: 66},
-        weight: {val: 141},
-        clearance: {val: 'TOP SECRET'},
-        tierGrad: {val: 1},
-        toe: {val: 4},
-        afqt: {val: 90},
-        cl: {val: 104},
-        gt: {val: 109},
-        el: {val: 118},
-        mm: {val: 111},
-        qt: {val: 91},
-        ve: {val: 61},
-        dlab: {val: 90},
-        driving: {
-          license: {has: true},
-          offenses: {val: 3},
-          violations: {val: 2}
+        dob: new Date('03/16/70'),
+        match: {
+          usCitizen: {has: true},
+          usCitizenFamily: {has: true},
+          sex: {val: 'M'},
+          height: {val: 66},
+          weight: {val: 141},
+          clearance: {val: 'TOP SECRET'},
+          tierGrad: {val: 1},
+          toe: {val: 4},
+          afqt: {val: 97},
+          cl: {val: 104},
+          gt: {val: 109},
+          el: {val: 118},
+          mm: {val: 111},
+          qt: {val: 91},
+          ve: {val: 61},
+          dlab: {val: 90},
+          driving: {
+            license: {has: true},
+            offenses: {val: 3},
+            violations: {val: 2}
+          },
+          vision: {
+            correctable: {has: true},
+            depth: {has: true},
+            color: {val: 10},
+            acuity: {val: 50, val1: 30, val2: 20}
+          },
+          moral: {
+            conduct: {val: 0},
+            otherDrugs: {val: 0},
+            marijuana: {val: 0}
+          },
+          algebra: {has: true},
+          speech: {has: true}
         },
-        vision: {
-          correctable: {has: true},
-          depth: {has: true},
-          color: {val: 10},
-          acuity: {val: 50, val1: 30, val2: 20}
+        personal: {
+          ssn: 'XXX-XX-2880',
+          address: {street: '39775 Bengal Rd.', city: 'Manchester', state: 'MD', zip: 21244, country: 'United States'},
+          hor: {street: '10119 Heath Ct.', city: 'Chantilly', state: 'VA', zip: 20155, country: 'United States'},
+          citz: 'Native Born',
+          sex: 'Female',
+          ethnicity: 'Hispanic or Latino',
+          marital: 'Married',
+          dependents: 3,
+          race: 'American Indian or Alaska Native',
+          religion: 'Presbytarian',
+          education: 'BS',
+          language: 'Mandarin',
+          licenseNum: 'MD4402845573958',
+          birthPlace: 'Chantilly, VA, United States'
         },
-        moral: {
-          conduct: {val: 0},
-          otherDrugs: {val: 0},
-          marijuana: {val: 0}
-        },
-        algebra: {has: true},
-        speech: {has: true}
+        exams: {
+          afqt: 87,
+          gs: 83,
+          ar: 85,
+          wk: 90,
+          pc: 94,
+          mk: 91,
+          as: 77,
+          mc: 81,
+          ao: 89,
+          ei: 92,
+          es: '14',
+          recruiterId: '101185',
+          stnId: '812',
+          pef: 'N/A',
+          teMosAfs: '12256',
+          waiver: 'N/A',
+          payGrade: 'N/A',
+          svcAnnexCode: 'N/A',
+          mso: 'N/A',
+          adObligation: 'N/A'
+        }
       },
 
       {
         firstName: 'Andrew',
         lastName: 'Junior',
-        middleInitial: 'N',
+        middleName: 'Newman',
         active: true,
-        dob: '10/07/1986',
-        usCitizen: {has: true},
-        usCitizenFamily: {has: false},
-        clearance: {val: 'NONE'},
-        sex: {val: 'M'},
-        height: {val: 62},
-        weight: {val: 131},
-        tierGrad: {val: 2},
-        toe: {val: 5},
-        afqt: {val: 103},
-        cl: {val: 97},
-        gt: {val: 116},
-        el: {val: 128},
-        mm: {val: 121},
-        qt: {val: 101},
-        ve: {val: 81},
-        dlab: {val: 90},
-        driving: {
-          license: {has: true},
-          offenses: {val: 0},
-          violations: {val: 0}
+        dob: new Date('10/07/1986'),
+        match: {
+          usCitizen: {has: true},
+          usCitizenFamily: {has: false},
+          clearance: {val: 'NONE'},
+          sex: {val: 'M'},
+          height: {val: 62},
+          weight: {val: 131},
+          tierGrad: {val: 2},
+          toe: {val: 5},
+          afqt: {val: 103},
+          cl: {val: 97},
+          gt: {val: 116},
+          el: {val: 128},
+          mm: {val: 121},
+          qt: {val: 101},
+          ve: {val: 81},
+          dlab: {val: 90},
+          driving: {
+            license: {has: true},
+            offenses: {val: 0},
+            violations: {val: 0}
+          },
+          moral: {
+            conduct: {val: 1, valAtRs: 1},
+            otherDrugs: {val: 0},
+            marijuana: {val: 3, valAtRs: 0}
+          },
+          vision: {
+            correctable: {has: true},
+            depth: {has: true},
+            color: {val: 14},
+            acuity: {val: 40, val1: 20, val2: 20}
+          }
         },
-        moral: {
-          conduct: {val: 1, valAtRs: 1},
-          otherDrugs: {val: 0},
-          marijuana: {val: 3, valAtRs: 0}
+        personal: {
+          ssn: 'XXX-XX-9384',
+          address: {street: '2855 Masala Rd. #84', city: 'Towson', state: 'MD', zip: 21102, country: 'United States'},
+          hor: {street: '2855 Masala Rd. #84', city: 'Towson', state: 'MD', zip: 21102, country: 'United States'},
+          citz: 'Native Born',
+          sex: 'Male',
+          ethnicity: 'Hispanic or Latino',
+          marital: 'Single',
+          dependents: 0,
+          race: 'White',
+          religion: 'N/A',
+          education: 'MA',
+          language: 'Spanish, German',
+          licenseNum: 'MD19957023583',
+          birthPlace: 'Towson, MD, United States'
         },
-        vision: {
-          correctable: {has: true},
-          depth: {has: true},
-          color: {val: 14},
-          acuity: {val: 40, val1: 20, val2: 20}
+        exams: {
+          afqt: 95,
+          gs: 83,
+          ar: 85,
+          wk: 90,
+          pc: 94,
+          mk: 91,
+          as: 77,
+          mc: 81,
+          ao: 89,
+          ei: 92,
+          es: '14',
+          recruiterId: '101185',
+          stnId: '812',
+          pef: 'N/A',
+          teMosAfs: '12256',
+          waiver: 'N/A',
+          payGrade: 'N/A',
+          svcAnnexCode: 'N/A',
+          mso: 'N/A',
+          adObligation: 'N/A'
         }
       },
 
       {
         firstName: 'Milton',
         lastName: 'Bradley',
-        middleInitial: 'J',
+        middleName: 'J',
         active: false,
-        dob: '11/17/1945',
-        usCitizen: {has: true},
-        usCitizenFamily: {has: true},
-        clearance: {val: 'SECRET'},
-        sex: {val: 'M'},
-        height: {val: 73},
-        weight: {val: 171},
-        tierGrad: {val: 2},
-        toe: {val: 4},
-        afqt: {val: 88},
-        cl: {val: 82},
-        gt: {val: 84},
-        el: {val: 102},
-        mm: {val: 96},
-        qt: {val: 101},
-        ve: {val: 42},
-        dlab: {val: 90},
-        driving: {
-          license: {has: true},
-          offenses: {val: 0},
-          violations: {val: 2}
+        dob: new Date('11/17/1945'),
+        match: {
+          usCitizen: {has: true},
+          usCitizenFamily: {has: true},
+          clearance: {val: 'SECRET'},
+          sex: {val: 'M'},
+          height: {val: 73},
+          weight: {val: 171},
+          tierGrad: {val: 2},
+          toe: {val: 4},
+          afqt: {val: 88},
+          cl: {val: 82},
+          gt: {val: 84},
+          el: {val: 102},
+          mm: {val: 96},
+          qt: {val: 101},
+          ve: {val: 42},
+          dlab: {val: 90},
+          driving: {
+            license: {has: true},
+            offenses: {val: 0},
+            violations: {val: 2}
+          },
+          moral: {
+            conduct: {val: 0, valAtRs: 1},
+            marijuana: {val: 3, valBeforeDep: 1},
+            otherDrugs: {val: 1, valAfterRs: 1}
+          },
+          vision: {
+            correctable: {has: false},
+            depth: {has: false},
+            color: {val: 14},
+            acuity: {val: 120, val1: 20, val2: 100}
+          }
         },
-        moral: {
-          conduct: {val: 0, valAtRs: 1},
-          marijuana: {val: 3, valBeforeDep: 1},
-          otherDrugs: {val: 1, valAfterRs: 1}
+        personal: {
+          ssn: 'XXX-XX-0900',
+          address: {street: '224 Severna Ln.', city: 'Manchester', state: 'MD', zip: 21102, country: 'United States'},
+          hor: {street: '224 Severna Ln.', city: 'Manchester', state: 'MD', zip: 21102, country: 'United States'},
+          citz: 'Native Born',
+          sex: 'Male',
+          ethnicity: 'Not Hispanic or Latino',
+          marital: 'Married',
+          dependents: 2,
+          race: 'American Indian or Alaska Native',
+          religion: 'Pentecostal',
+          education: 'BS',
+          language: 'N/A',
+          licenseNum: 'MD92775927701',
+          birthPlace: 'Princeton, NJ, United States'
         },
-        vision: {
-          correctable: {has: false},
-          depth: {has: false},
-          color: {val: 14},
-          acuity: {val: 120, val1: 20, val2: 100}
+        exams: {
+          afqt: 88,
+          gs: 81,
+          ar: 85,
+          wk: 90,
+          pc: 94,
+          mk: 98,
+          as: 100,
+          mc: 71,
+          ao: 79,
+          ei: 82,
+          es: '14',
+          recruiterId: '101185',
+          stnId: '632',
+          pef: 'AF',
+          teMosAfs: '14156',
+          waiver: 'N/A',
+          payGrade: 'N/A',
+          svcAnnexCode: 'N/A',
+          mso: 'N/A',
+          adObligation: 'N/A'
         }
       },
 
       {
         firstName: 'Charlotte',
         lastName: 'Early',
-        middleInitial: 'O',
+        middleName: 'O\'hara',
         active: false,
-        dob: '04/17/1972',
-        usCitizen: {has: false},
-        usCitizenFamily: {has: false},
-        clearance: {val: 'NONE'},
-        sex: {val: 'F'},
-        height: {val: 58},
-        weight: {val: 171},
-        tierGrad: {val: 3},
-        toe: {val: 5},
-        afqt: {val: 88},
-        cl: {val: 82},
-        gt: {val: 84},
-        el: {val: 102},
-        mm: {val: 96},
-        qt: {val: 101},
-        ve: {val: 42},
-        dlab: {val: 90},
-        driving: {
-          license: {has: true},
-          offenses: {val: 1},
-          violations: {val: 2}
+        dob: new Date('04/17/1972'),
+        match: {
+          usCitizen: {has: false},
+          usCitizenFamily: {has: false},
+          clearance: {val: 'NONE'},
+          sex: {val: 'F'},
+          height: {val: 58},
+          weight: {val: 171},
+          tierGrad: {val: 3},
+          toe: {val: 5},
+          afqt: {val: 88},
+          cl: {val: 82},
+          gt: {val: 84},
+          el: {val: 102},
+          mm: {val: 96},
+          qt: {val: 101},
+          ve: {val: 42},
+          dlab: {val: 90},
+          driving: {
+            license: {has: true},
+            offenses: {val: 1},
+            violations: {val: 2}
+          },
+          moral: {
+            marijuana: {val: 3},
+            conduct: {val: 3},
+            otherDrugs: {val: 2}
+          },
+          vision: {
+            correctable: {has: false},
+            depth: {has: false},
+            color: {val: 14},
+            acuity: {val: 220, val1: 120, val2: 100}
+          }
         },
-        moral: {
-          marijuana: {val: 3},
-          conduct: {val: 3},
-          otherDrugs: {val: 2}
+        personal: {
+          address: {street: '1992 Hobarth Rd. #28', city: 'Arlington', state: 'VA', zip: 20115, country: 'United States'},
+          hor: {street: '19084 S. Sydney Rd.', city: 'Falls Church', state: 'VA', zip: 20111, country: 'United States'},
+          citz: 'Canadian',
+          sex: 'Female',
+          ethnicity: 'Not Hispanic or Latino',
+          marital: 'Married',
+          dependents: 4,
+          race: 'White',
+          religion: 'N/A',
+          education: 'GED',
+          language: 'French',
+          birthPlace: 'Toronto, Ontario, Canada'
         },
-        vision: {
-          correctable: {has: false},
-          depth: {has: false},
-          color: {val: 14},
-          acuity: {val: 220, val1: 120, val2: 100}
+        exams: {
+          afqt: 80,
+          gs: 75,
+          ar: 61,
+          wk: 85,
+          pc: 82,
+          mk: 81,
+          as: 67,
+          mc: 91,
+          ao: 84,
+          es: '11',
+          recruiterId: '17289',
+          stnId: '957',
+          pef: 'N/A',
+          teMosAfs: '12846',
+          waiver: 'N/A',
+          payGrade: 'N/A',
+          svcAnnexCode: 'N/A',
+          mso: 'N/A',
+          adObligation: 'N/A'
         }
       },
 
       {
         firstName: 'William',
         lastName: 'Franklin',
-        middleInitial: '',
+        middleName: 'Walter',
         active: true,
-        dob: '09/02/1965',
-        usCitizen: {has: true},
-        usCitizenFamily: {has: true},
-        clearance: {val: 'TOP SECRET'},
-        sex: {val: 'M'},
-        height: {val: 75},
-        weight: {val: 210},
-        tierGrad: {val: 1},
-        toe: {val: 4},
-        afqt: {val: 80},
-        cl: {val: 80},
-        gt: {val: 84},
-        el: {val: 111},
-        mm: {val: 95},
-        qt: {val: 101},
-        ve: {val: 45},
-        dlab: {val: 80},
-        driving: {
-          license: {has: false},
-          offenses: {val: 1},
-          violations: {val: 4}
+        dob: new Date('09/02/1965'),
+        match: {
+          usCitizen: {has: true},
+          usCitizenFamily: {has: true},
+          clearance: {val: 'TOP SECRET'},
+          sex: {val: 'M'},
+          height: {val: 75},
+          weight: {val: 210},
+          tierGrad: {val: 1},
+          toe: {val: 4},
+          afqt: {val: 80},
+          cl: {val: 80},
+          gt: {val: 84},
+          el: {val: 111},
+          mm: {val: 95},
+          qt: {val: 101},
+          ve: {val: 45},
+          dlab: {val: 80},
+          driving: {
+            license: {has: false},
+            offenses: {val: 1},
+            violations: {val: 4}
+          },
+          moral: {
+            conduct: {val: 0},
+            marijuana: {val: 0},
+            otherDrugs: {val: 2}
+          },
+          vision: {
+            correctable: {has: true},
+            depth: {has: false},
+            color: {val: 14},
+            acuity: {val: 120, val1: 60, val2: 60}
+          }
+        },  //match
+        personal: {
+          ssn: 'XXX-XX-0028',
+          address: {street: '150 Kepler Ct.', city: 'Manchester', state: 'MD', zip: 21102, country: 'United States'},
+          hor: {street: '150 Kepler Ct.', city: 'Manchester', state: 'MD', zip: 21102, country: 'United States'},
+          citz: 'Native Born',
+          sex: 'Male',
+          ethnicity: 'Not Hispanic or Latino',
+          marital: 'Married',
+          dependents: 1,
+          race: 'Black',
+          religion: 'N/A',
+          education: 'BS',
+          language: 'Portugese',
+          licenseNum: 'MD41492775822',
+          birthPlace: 'Fairfax, VA, United States'
         },
-        moral: {
-          conduct: {val: 0},
-          marijuana: {val: 0},
-          otherDrugs: {val: 2}
-        },
-        vision: {
-          correctable: {has: true},
-          depth: {has: false},
-          color: {val: 14},
-          acuity: {val: 120, val1: 60, val2: 60}
+        exams: {
+          afqt: 92,
+          gs: 83,
+          ar: 85,
+          wk: 94,
+          pc: 90,
+          mk: 88,
+          as: 75,
+          mc: 81,
+          ao: 89,
+          ei: 90,
+          es: '14',
+          recruiterId: '101185',
+          stnId: '662',
+          pef: 'CA',
+          teMosAfs: '12258',
+          waiver: 'N/A',
+          payGrade: 'N/A',
+          svcAnnexCode: 'N/A',
+          mso: 'N/A',
+          adObligation: 'N/A'
         }
       },
 
       {
         firstName: 'Tiny',
         lastName: 'Baby',
-        middleInitial: '',
+        middleName: 'Little',
         active: false,
         dob: '09/02/2016',
-        usCitizen: {has: false},
-        usCitizenFamily: {has: false},
-        clearance: {val: 'NONE'},
-        sex: {val: 'M'},
-        height: {val: 19},
-        weight: {val: 7},
-        tierGrad: {val: 0},
-        toe: {val: 0},
-        afqt: {val: 20},
-        cl: {val: 8},
-        gt: {val: 14},
-        el: {val: 11},
-        mm: {val: 59},
-        qt: {val: 10},
-        ve: {val: 4},
-        dlab: {val: 7},
-        driving: {
-          license: {has: false},
-          offenses: {val: 11},
-          violations: {val: 4}
+        match: {
+          usCitizen: {has: false},
+          usCitizenFamily: {has: false},
+          clearance: {val: 'NONE'},
+          sex: {val: 'M'},
+          height: {val: 19},
+          weight: {val: 7},
+          tierGrad: {val: 0},
+          toe: {val: 0},
+          afqt: {val: 20},
+          cl: {val: 8},
+          gt: {val: 14},
+          el: {val: 11},
+          mm: {val: 59},
+          qt: {val: 10},
+          ve: {val: 4},
+          dlab: {val: 7},
+          driving: {
+            license: {has: false},
+            offenses: {val: 11},
+            violations: {val: 4}
+          },
+          moral: {
+            conduct: {val: 6},
+            marijuana: {val: 0},
+            otherDrugs: {val: 0}
+          },
+          vision: {
+            correctable: {has: false},
+            depth: {has: false},
+            color: {val: 6},
+            acuity: {val: 220, val1: 60, val2: 60}
+          },
+          pftClass1: {has:false},
+          prpScreen: {val: 11},
+          waterQual: {has: false},
+          flightPhysical: {has: false}
         },
-        moral: {
-          conduct: {val: 6},
-          marijuana: {val: 0},
-          otherDrugs: {val: 0}
+        personal: {
+          ssn: 'XXX-XX-9337',
+          address: {street: '42018 Braddock Pike Rd.', city: 'Lancaster', state: 'MD', zip: 21102, country: 'United States'},
+          hor: {street: '42018 Braddock Pike Rd.', city: 'Lancaster', state: 'MD', zip: 21102, country: 'United States'},
+          citz: 'Native Born',
+          sex: 'Male',
+          ethnicity: 'Hispanic or Latino',
+          marital: 'Single',
+          dependents: 0,
+          race: 'White',
+          religion: 'N/A',
+          language: 'N/A',
+          birthPlace: 'Lancaster, MD, United States'
         },
-        vision: {
-          correctable: {has: false},
-          depth: {has: false},
-          color: {val: 6},
-          acuity: {val: 220, val1: 60, val2: 60}
-        },
-        pftClass1: {has:false},
-        prpScreen: {val: 11},
-        waterQual: {has: false},
-        flightPhysical: {has: false}
+        exams: {
+          afqt: 80,
+          gs: 83,
+          ar: 85,
+          wk: 80,
+          pc: 90,
+          mk: 82,
+          as: 80,
+          mc: 71,
+          ao: 79,
+          ei: 82,
+          es: '14',
+          recruiterId: '101185',
+          stnId: '815',
+          pef: 'N/A',
+          teMosAfs: '12256',
+          waiver: 'N/A',
+          payGrade: 'N/A',
+          svcAnnexCode: 'N/A',
+          mso: 'N/A',
+          adObligation: 'N/A'
+        }
+      },
+
+      {
+      firstName: 'No',
+      lastName: 'Name',
+      active: true,
+      dob: '09/02/1995',
+      match: {
+    },
+      personal: {
+        ssn: 'XXX-XX-9337',
+          address: {street: '42018 Braddock Pike Rd.', city: 'Lancaster', state: 'MD', zip: 21102, country: 'United States'},
+        hor: {street: '42018 Braddock Pike Rd.', city: 'Lancaster', state: 'MD', zip: 21102, country: 'United States'},
+        citz: 'Native Born',
+          sex: 'Male',
+          ethnicity: 'Hispanic or Latino',
+          marital: 'Single',
+          dependents: 0,
+          race: 'White',
+          religion: 'N/A',
+          language: 'N/A',
+          birthPlace: 'Lancaster, MD, United States'
+      },
+      exams: {
+        afqt: 80,
+          gs: 83,
+          ar: 85,
+          wk: 80,
+          pc: 90,
+          mk: 82,
+          as: 80,
+          mc: 71,
+          ao: 79,
+          ei: 82,
+          es: '14',
+          recruiterId: '101185',
+          stnId: '815',
+          pef: 'N/A',
+          teMosAfs: '12256',
+          waiver: 'N/A',
+          payGrade: 'N/A',
+          svcAnnexCode: 'N/A',
+          mso: 'N/A',
+          adObligation: 'N/A'
       }
+    }
     );
   });
 
@@ -356,10 +715,12 @@ PefReq.find({}).remove()
         disqualifications: ['Use drugs while in Delayed Entry Program', 'Fail a required course of training and fail to obtain the MOS Assigned', 'Is disciplined at any time due to behavior',
           'Cannot acquire the appropriate security clearance', 'Have lied about education or other qualifications for program or enlistment', 'Fail to meet required mental, physical or conduct standards'],
         requirements: {
+          age: {description:'Min age 140, max age 375', min:140, max:375},
+          sex: {description:'Candidate must be a Vulcan', val:'V'},
           toe: {description: 'Twenty-five Year Term of Enlistment (toe)', val: 25},
           usCitizen: {description: 'Must NOT be a U.S. Citizen (no waiver)', has: false},
           usCitizenFamily: {description: 'All family members must NOT be U.S. Citizens (no waiver)', has: false, waivable: false},
-          clearance: {description: 'Eligible for SECRET Clearance.', val: 'TOP SECRET'},
+          clearance: {description: 'Eligible for SECRET Clearance.', val: 'TOP SECRET 5'},
           gt: {description: 'GT 1107', min: 1107},
           mm: {description: 'MM 1055', min: 1055},
           ve: {description: 'MM 1055', min: 1055},
@@ -367,10 +728,10 @@ PefReq.find({}).remove()
           cl: {description: 'MM 1055', min: 1055},
           el: {description: 'MM 1065', min: 1065},
           dlab: {description: 'MM 1065', min: 1065},
-          tierGrad: {description:'Must be Tier 0', max:0},
-          algebra: {description:'Must not have taken algebra', has:false},
+          tierGrad: {description:'Must be Tier 0', max:-1},
+          algebra: {description:'Must not have taken algebra', has:true},
           driving: {
-            license: {has: false},
+            license: {has: true},
             offenses: {description: '-1 convictions of driving offenses other than Traffic Violations', max: -1, maxAboveRs: 0},
             violations: {description: '-1 convictions of driving offenses other than Traffic Violations', max: -1, waivable: true}
           },
@@ -394,22 +755,22 @@ PefReq.find({}).remove()
             otherDrugs: {description: 'No Drug waivers above Recruiting Station Level', max:-1}
           },
           vision: {
-            correctable: {description: 'Overall correctable to 20/20 (distant)', has: false},
-            depth: {description: 'Does not have normal depth perception', has: false},
+            correctable: {description: 'Overall correctable to 20/20 (distant)', has: true},
+            depth: {description: 'Does not have normal depth perception', has: true},
             color: {description: 'PASS normal color perception (NCP) with 15 out of 14', min: 15},
             acuity: {description: 'Vision no worse than 20/70 (distant) in one eye and 20/100 (distant) in the other', max: 0, max1: 20, max2: 20}
           },
           waterQual: {
             description: 'Must have WS-B(+) Water Survival Qualification. Must perform the following: Crawl (25 yards), breast stroke (25 yards), ' +
             'side stroke (25 yards), elementary back stroke (25 yards), vertical fall from 12 foot platform, underwater swim without breaking surface (15 yards), ' +
-            'tread water 2 1/2 minutes, front float 2 1/2 minutes', has: false, optional: false
+            'tread water 2 1/2 minutes, front float 2 1/2 minutes', has: true, optional: false
           },
-          flightPhysical: {description: 'Must fail rigorous flight physical', has: false},
-          pftClass1:{description:'Must not be PFT 1st Class', has:false},
-          speech: {description: 'Must not have Clarity of Speech', has: false},
-          prpScreen:{description:'Must FAIL PRP screen', max:0},
-          doncafScreening: {description: 'Be interviewed, screened, and REJECTED by RA NPA and District PA Chief or District PA OFficer', has: false},
-          additionalScreening: {description: 'Does not agree to required additional screening', has: false}
+          flightPhysical: {description: 'Must fail rigorous flight physical', has: true},
+          pftClass1:{description:'Must not be PFT 1st Class', has:true},
+          speech: {description: 'Must not have Clarity of Speech', has: true},
+          prpScreen:{description:'Must FAIL PRP screen', max:-1},
+          doncafScreening: {description: 'Be interviewed, screened, and REJECTED by RA NPA and District PA Chief or District PA OFficer', has: true},
+          additionalScreening: {description: 'Agrees to required additional screening', has: true}
         } //requirements
       },
 

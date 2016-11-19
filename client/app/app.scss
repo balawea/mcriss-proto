@@ -24,14 +24,16 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .badge-danger {
-  background-color: #d43f3a;
+//  background-color: #d43f3a;
+  background-color: #e51f4a;
 }
+
 .badge-warning {
-  background-color: #d58512;
+  background-color: #fda313;
 }
 
 .badge-success {
-  background-color: #398439;
+  background-color: #33e730;
 }
 
 .badge-info {
@@ -42,13 +44,18 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   background-color: #333333;
 }
 
+.selected {
+  background-color: #c6dbef;
+}
+
 .text-danger {
-  color: #d43f3a;
-  background-color: lightpink;
-  outline-color: #d43f3a;
+  color: #b7193b;
+  background-color: #ffa2bb;
+  outline-color: #e51f4a; //d43f3a
   outline-width: 2px;
   outline-style: dashed;
 }
+
 .text-warning {
   color: #d58512;
 }
@@ -57,8 +64,13 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   color: #398439;
 }
 
+.fa-check-green {
+  @extend .fa-check;
+  color: limegreen;
+}
+
 .panel.small-fixed-panel{
-  width:90px;
+  width: 100px;
   display: flex;
   .panel-body{
     padding:10px;
@@ -72,42 +84,88 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   }
 }
 
-.fa-check-green {
-  @extend .fa-check;
-  color: limegreen;
+.panel.widget-panel{
+  width:260px;
+  display: inline-table;
+  float: left;
+  margin: 10px;
+  .panel-body{
+    padding:10px;
+    flex:1;
+  }
+  .panel-footer{
+    font-size: smaller;
+  }
 }
 
-.panel.panel-block{
-  display: flex;
+.panel.profile-panel{
+  margin-botton: 15px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 0px;
+  height: 60px;
+  width: 100%;
+  .panel-body{
+    padding:10px;
+    flex:1;
+  }
 }
-
-.table-lean {
-  @extend .table;
-  margin:0;
-}
-
-.table-hover-dk tbody tr:hover td {
-  @extend .table-hover;
-  background: lightgray;
-}
-
-.well-lblue {
-  @extend .well;
-  background-color: lightblue;
-}
-
-
-.input {
-  -moz-appearance: none;
-}
-
 
 .row-profile {
-  @extend .row;
-  margin-left: 15px;
   padding-bottom: 10px;
   padding-top: 10px;
-  height: 75px;
+  height: 60px;
+}
+
+.well-black {
+  @extend .well;
+  float: left;
+  background-color: #3a3a3a;
+  width: 270px;
+  margin-right: 10px;
+//  display: inline-block;
+}
+
+.well-widget {
+  @extend .well;
+  border-color: #a0a0a0;
+  border: solid;
+  border-width: thin;
+  width: 260px;
+}
+
+.list-group-item {
+  padding: 8px;
+}
+
+.row-header {
+  margin-left: 15px;
+  padding-bottom: 10px;
+  padding-top: 0px;
+  height: 80px;
+}
+
+.div-flag {
+  height: 23px;
+  margin-bottom: 10px;
+}
+
+.text-12 {
+  font-size:12px;
+  padding-left: 5px;
+  margin-left: 10px;
+  line-height: normal;
+}
+
+.label-border {
+  border-color: #a0a0a0;
+  border: solid;
+  border-width: thin;
+  min-height: 25px;
+  min-width: 20px;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 @for $i from 1 through 6 {
