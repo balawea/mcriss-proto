@@ -15,7 +15,7 @@ export class SamplepefComponent {
   fErr;
   fCategory;
   selectedPef;
-
+  req;
 
   /*@ngInject*/
   constructor($http, $location) {
@@ -25,33 +25,28 @@ export class SamplepefComponent {
 
   /*@ngInject*/
   $onInit() {
-/*
-    this.$http.get('/api/recruits/' + this.id).then(response => {
-      this.recruit = response.data;
-    });
-*/
-
     this.$http.get('/api/pefRequirements/').then(responsePef => {
+      this.p = responsePef.data;
+
       this.$http.get('/api/recruits/' + this.id).then(responseRec => {
-        this.recruit = responseRec.data;
-        this.p = responsePef.data;
+        let fullrecruit = responseRec.data;
+        this.recruit = fullrecruit['match'] || {}; //pull only "match" object data for comparison
+        this.recruit.fullName = fullrecruit.fullName;
+        this.recruit.age = {};
+        this.recruit.age.val = fullrecruit.age.val;
         this.pefs = getErrs(this.p, this.recruit);
       });
     });
 
   }   //oninit
-
 } //class
-
 
 //combine with getPefErrors
 function getErrs(pefs, recr) {
   for (let pef of pefs) {
-    pef.errs = getPefErrors(pef.requirements, recr);  //actual error count for display (red error badge)
+    pef.errs = getPefErrors(pef.requirements, recr);  //actual error count for display
     pef.errCategory = (pef.errs < 4) ? pef.errs : 4;     //error category, will match the error filter buttons
   }
-
-  console.log(recr);
 
   return pefs;
 }
@@ -64,7 +59,9 @@ function getPefErrors(pef, recr) {
   compareObjects(pef, recr);
 
   function compareObjects(pef, recr) {
-    for (let [pkey, pval] of Object.entries(pef)) {
+    for (let pkey in pef) {
+      let pval = pef[pkey];
+
       rval = (!!recr) ? recr[pkey] : undefined;
 
       if (typeof(pval) == "object") {
@@ -82,7 +79,6 @@ function getPefErrors(pef, recr) {
         pef.flag=true;
         ++errs;
       }
-
     }
   }
   return errs;

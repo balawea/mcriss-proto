@@ -82,10 +82,29 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     width:4px;
     margin:10px 0;
   }
+
+  .panel-footer{
+    font-size: smaller;
+  }
+
 }
 
 .panel.widget-panel{
   width:260px;
+  display: inline-table;
+  float: left;
+  margin: 10px;
+  .panel-body{
+    padding:10px;
+    flex:1;
+  }
+  .panel-footer{
+    font-size: smaller;
+  }
+}
+
+.panel.widget-panel-small{
+  width:220px;
   display: inline-table;
   float: left;
   margin: 10px;

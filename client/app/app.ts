@@ -19,6 +19,7 @@ import footer from '../components/footer/footer.component';
 import main from './main/main.component';
 import samplepef from './samplepef/samplepef.component';
 import pefDetail from './pefDetail/pefDetail.component';
+import recruiterview from './recruiterview/recruiterview.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 
@@ -39,6 +40,7 @@ angular.module('mcrissDemoApp', [
   main,
   samplepef,
   pefDetail,
+  recruiterview,
   constants,
   util
 ])

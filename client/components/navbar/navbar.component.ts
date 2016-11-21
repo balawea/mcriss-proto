@@ -15,6 +15,10 @@ export class NavbarComponent {
     {
       'title': 'Test PEF',
       'state': 'samplepef'
+    },
+    {
+      'title': 'Recruiter View',
+      'state': 'recruiterview'
     }
   ];
   isLoggedIn: Function;

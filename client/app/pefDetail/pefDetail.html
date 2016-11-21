@@ -23,8 +23,7 @@
               <p class="help-block" ng-show="form.pefCode.$error.mongoose">{{ vm.errors.pefCode }}</p>
             </div>
 
-            <div class="form-group"
-                 ng-class="{ 'has-success': form.description.$valid, 'has-error': form.description.$invalid}">
+            <div class="form-group" ng-class="{ 'has-success': form.description.$valid, 'has-error': form.description.$invalid}">
               <label>Description</label>
 
               <input name="description" class="form-control" ng-model="vm.pef.description" required/>
