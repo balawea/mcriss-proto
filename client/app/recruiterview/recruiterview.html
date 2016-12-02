@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="page-header"><i class="fa fa-bars pull-left"></i>My Candidates:</h2>
+      <ul class="nav nav-tabs nav-stacked col-md-3 col-lg-3 col-sm-6" ng-repeat="recruit in vm.recruits">
+        <li>
+            <!-- demog -->
+          <div class="panel widget-panel-small">
+            <div class="panel-body">
+              <a href="/samplepef#{{recruit._id}}">
+              <div class="text-center">
+                <span class="fa-stack fa-4x">
+                  <i class="fa fa-user fa-stack-2x"></i>
+                </span>
+               <hr/>
+                <h5>{{recruit.firstName + ' ' + recruit.lastName}}</h5>
+                DOB: {{recruit.dob | date: 'MM/dd/yyyy'}}<br/>
+                SSN: {{recruit.personal.ssn}}<br/>
+                Age: {{recruit.age.val}}
+              </div>
+            </a>
+          </div>
+        </div>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

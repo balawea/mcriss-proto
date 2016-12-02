@@ -20,7 +20,24 @@ var UserSchema = new Schema({
     required: true
   },
   provider: String,
-  salt: String
+  salt: String,
+
+  //recruiter specific stuff
+  recruiterId : String,
+  goals : {m1: [{pef: String, actual: Number, target: Number}],
+           m2: [{pef: String, actual: Number, target: Number}],
+           m3: [{pef: String, actual: Number, target: Number}],
+           m4: [{pef: String, actual: Number, target: Number}],
+           m5: [{pef: String, actual: Number, target: Number}],
+           m6: [{pef: String, actual: Number, target: Number}],
+           m7: [{pef: String, actual: Number, target: Number}],
+           m8: [{pef: String, actual: Number, target: Number}],
+           m9: [{pef: String, actual: Number, target: Number}],
+           m10: [{pef: String, actual: Number, target: Number}],
+           m11: [{pef: String, actual: Number, target: Number}],
+           m12: [{pef: String, actual: Number, target: Number}]
+  },
+  priorityPefs: []
 });
 
 /**

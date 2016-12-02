@@ -10,8 +10,8 @@ var RecruitSchema = new mongoose.Schema({
   status: String,
   contact: [{date: Date, location: String, method:String, poc: String}],
   dob: Date,
+  assignedPef: { pefCode: String, id: String},
   match: {
-    assignedPef: String,
     toe: {val: Number},
     usCitizen: {has: Boolean},
     usCitizenFamily: {has: Boolean},
@@ -23,6 +23,7 @@ var RecruitSchema = new mongoose.Schema({
     mm: {val:Number},
     ve: {val:Number},
     qt: {val:Number},
+    st: {val:Number},  //Skilled Technical GS+VE+MK+MC. Are we using this???
     dlab: {val:Number},
     //    asvabOrList: {gt:Number, cl:Number, el:Number, mm:Number, ve:Number, qt:Number}, //Logical OR: exceeding any one of the included scores makes a match
     height: { val:Number},
@@ -71,21 +72,22 @@ var RecruitSchema = new mongoose.Schema({
   },
   exams: {
     afqt: Number,
+    aptitude: String,
     gs: Number,
     ar: Number,
     wk: Number,
     pc: Number,
-    mk: Number,
     as: Number,
+    mk: Number,
     mc: Number,
-    ao: Number,
     ei: Number,
+    ve: Number,
+    ao: Number, // ???
     dep: Date,
     activeDutyDateProjected: Date,
     es: String, //number??? what is this?
     recruiterId: String,
     stnId: String,
-    pef: String,
     teMosAfs: String,
     waiver: String,
     payGrade: String,
@@ -107,7 +109,20 @@ RecruitSchema.virtual('fullName').get(function() {
   return this.firstName + ' ' + (this.middleName || '') + ' ' + this.lastName;
 });
 
+RecruitSchema.virtual('faddress').get(function() {
+  let addr = this.personal.address;
+  return addr.street + '\n' + addr.city + ', ' + addr.state + ' ' + addr.zip + '\n' + addr.country;
+});
+
+RecruitSchema.virtual('fhor').get(function() {
+  let addr = this.personal.hor;
+  return addr.street + '\n' + addr.city + ', ' + addr.state + ' ' + addr.zip + '\n' + addr.country;
+});
+
+//RecruitSchema.virtual('pef.code').set(function (code) {
+//  this.assignedPef.code = code;
+//});
+
 //TODO fxn to return most recent contact object.
-//TODO fxn to format addresses.
 
 export default mongoose.model('Recruit', RecruitSchema);

@@ -1,0 +1,11 @@
+// teeny labels
+.lb-xs {
+  font-size: 10px !important;
+}
+
+.label-wrap {
+    @expand: form-control;
+    white-space: pre-wrap;
+    height: 69px;
+    width: 209px;
+}

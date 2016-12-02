@@ -1,0 +1,375 @@
+<div class="container">
+  <div class="row row-header">
+    <h3><i class="fa fa-bars pull-left"></i> PEF Admin</h3>
+  </div>
+
+  <!-- PEF List-->
+  <div class="col-xs-12 col-sm-3">
+    <div class="well-black">
+
+      <!-- id filter -->
+      <div class="input-group">
+        <input type="text" placeholder=" Search PEFs" ng-model="pefText">
+      </div>
+
+      <hr/>
+
+      <!-- pef list -->
+      <ul class="list-group">
+        <li class="list-group-item" ng-class="{'selected': pef===vm.selectedPef}" ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText}"
+            ng-click="vm.selectedPef=pef; vm.layout()" >{{pef.pefCode}}
+          <span class="text-primary pull-right" ng-show="vm.isAdmin()"><i class="fa fa-pencil fa-2x"></i></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  
+    <!-- Selected PEF -->
+  <div class="col-xs-12 col-sm-9">
+    <div class="panel profile-panel" >
+      <div class="panel-body">
+         <span>
+        <h4>{{vm.selectedPef.pefCode + ' ' + vm.selectedPef.description}}</h4>
+         </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WIDGETS - MASONRY GRID-->
+  <div class="col-xs-12 col-sm-9">
+    <div id="grid" class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 275}'>
+
+      <!-- PERSONAL -->
+      <div class="grid-item" ng-if="vm.hideDemog!=true">
+        <div class="panel widget-panel">
+        <div class="panel-body">
+          <div class="text-left">
+            <span>
+            <i class="fa fa-2x fa-street-view text-primary"></i><strong> Personal Attributes</strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideDemog=true; vm.layout()"></i>
+          </span>
+          </div>
+
+          <!-- age-->
+          <div class="panel widget-panel-small pull-left" ng-if="vm.hideAge!=true">
+            <div class="panel-header">Age *
+              <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideAge=true; vm.layout()"></i></span>
+            </div>
+            <div class="panel-body">
+              <input class="text-border-md" ng-readonly="!vm.isAdmin()" placeholder="(min)" ng-model="vm.selectedPef.requirements.age.min"></label>
+              <label class="margin5">yo </label>
+              <input class="text-border-md" ng-readonly="!vm.isAdmin()" placeholder="(max)" ng-model="vm.selectedPef.requirements.age.max"></label>
+              <label class="margin5">yo </label>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label><input type="checkbox" ng-model="vm.selectedPef.requirements.age.waivable"> waivable?
+            </span>
+            <div ng-if="vm.selectedPef.requirements.age.waivable===true">
+              <label class="margin5">+/-</label>
+              <input class="text-border-sm" ng-readonly="!vm.isAdmin()" placeholder="(max)" ng-model="vm.selectedPef.requirements.age.waiver"></label>
+              <label class="margin5"> years </label>
+            </div>
+          </div>
+        </div>
+
+          <!-- gender-->
+          <div class="panel widget-panel-small pull-left" ng-if="vm.hideSex!=true">
+            <div class="panel-header">Gender *
+              <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideSex=true; vm.layout()"></i></span>
+            </div>
+            <div class="panel-body">
+              <select ng-readonly="1===2" value="{{vm.selectedPef.requirements.age.min}}" class="text-border-lg">
+              <option>Select One</option>
+              <option>Male Only</option>
+              <option>Female Only</option>
+              </select>
+            </div>
+        </div>
+
+        <!-- ht wt-->
+        <div class="panel widget-panel-small pull-left" ng-if="vm.hideHtWt!=true">
+          <div class="panel-header">Height & Weight
+            <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideHtWt=true; vm.layout()"></i></span>
+          </div>
+          <div class="panel-body">
+            <span>
+              <div class="panel small95">
+                <div class="panel-bar"></div>
+                <div class="panel-body">
+                <input class="text-border-sm" ng-readonly="!vm.isAdmin()" placeholder="(min)" ng-model="vm.selectedPef.requirements.height.min"></label>
+                <label> in</label>
+                <input class="text-border-sm" ng-readonly="!vm.isAdmin()" placeholder="(max)" ng-model="vm.selectedPef.requirements.height.max"></label>
+                <label> in</label>
+                </div>
+                <div class="panel-footer">
+                  <span>
+                    <label><input type="checkbox" ng-model="vm.selectedPef.requirements.height.waivable">waivable?
+                  </span>
+                  <div ng-if="vm.selectedPef.requirements.height.waivable===true">
+                    <label class="margin5">+/-</label>
+                    <input class="text-border-sm" ng-readonly="!vm.isAdmin()" placeholder="(ins)" ng-model="vm.selectedPef.requirements.height.waiver"></label>
+<!--                      <label class="margin5">in</label>-->
+                  </div>
+                </div>
+              </div>
+              <div class="panel small95">
+                <div class="panel-bar"></div>
+                <div class="panel-body">
+                <input class="text-border-sm" ng-readonly="!vm.isAdmin()" placeholder="(min)" ng-model="vm.selectedPef.requirements.weight.min"></label>
+                <label> lb</label>
+                <input class="text-border-sm" ng-readonly="!vm.isAdmin()" placeholder="(max)" ng-model="vm.selectedPef.requirements.weight.max"></label>
+                <label> lb</label>
+                </div>
+                <div class="panel-footer">
+                  <span>
+                    <label><input type="checkbox" ng-model="vm.selectedPef.requirements.weight.waivable">waivable?
+                  </span>
+                  <div ng-if="vm.selectedPef.requirements.weight.waivable===true">
+                    <label class="margin5">+/-</label>
+                    <input class="text-border-sm" ng-readonly="!vm.isAdmin()" placeholder="(lbs)" ng-model="vm.selectedPef.requirements.weight.waiver"></label>
+<!--                      <label class="margin5">lbs</label>-->
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+  
+        </div>
+
+<!--          <div class="clearfix"></div>-->
+        </div> <!-- widget panel body-->
+
+        </div> <!-- widget panel-->
+      </div>
+
+      <!-- education -->
+      <div class="grid-item" ng-if="vm.hideEdu!=true">
+        <div class="panel widget-panel">
+        <div class="panel-body">
+
+          <div class="text-left">
+            <span>
+            <i class="fa fa-2x fa-graduation-cap text-primary"></i><strong> Education</strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideEdu=true; vm.layout()"></i>
+          </span>
+          </div>
+
+          <div class="checkbox">
+            <label><input type="checkbox" ng-checked="vm.selectedPef.requirements.tierGrad.val===1"  ng-readonly="!vm.isAdmin()">Tier 1 (High School)</label>
+            <label><input type="checkbox" ng-checked="vm.selectedPef.requirements.tierGrad.val===2">Tier 2 (Home School)</label>
+          </div>
+
+          <div class="div-flag">
+            <label>
+              <input type="checkbox" ng-checked="vm.selectedPef.requirements.algebra.has">1 Year Algebra or Higher</label>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+      <!-- TOE  -->
+      <div class="grid-item" ng-if="vm.hideToe!=true">
+        <div class="panel widget-panel">
+        <div class="panel-body">
+
+          <div class="text-left">
+            <span><strong>Term of Enlistment</strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideToe=true; vm.layout()"></i>
+            </span>
+          </div>
+
+          <div>
+            <label class="pull-left">
+              <input class="text-border-md" ng-readonly="!vm.isAdmin()" placeholder="(min)" ng-model="vm.selectedPef.requirements.toe.min"> years</label>
+          </div>
+
+        </div>
+      </div>
+      </div>
+
+      <!-- test scores -->
+      <div class="grid-item" ng-if="vm.hideScores!=true">
+        <div class="panel widget-panel">
+        <div class="panel-body">
+
+          <div class="text-left">
+            <span>
+            <i class="fa fa-2x fa-lightbulb-o text-primary"></i><strong> Test Scores</strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideScores=true; vm.layout()"></i>
+          </span>
+          </div>
+
+          <div class="text-center">
+            <label>CL: </label>
+            <input class="text-border-md" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.cl.min">
+          </div>
+          <div class="text-center">
+            <label>EL: </label>
+            <input class="text-border-md" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.el.min">
+          </div>
+          <div class="text-center">
+            <label>GT: </label>
+            <input class="text-border-md" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.gt.min">
+          </div>
+          <div class="text-center">
+            <label>MM: </label>
+            <input class="text-border-md" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.mm.min">
+          </div>
+          <div class="text-center">
+            <label>VE: </label>
+            <input class="text-border-md" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.ve.min">
+          </div>
+          <div class="text-center">
+            <label>QT: </label>
+            <input class="text-border-md" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.qt.min">
+          </div>
+          <div class="text-center">
+            <label>DLAB: </label>
+            <input class="text-border-md" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.dlab.min">
+          </div>
+
+        </div>
+      </div>
+      </div>
+
+      <!-- vision -->
+      <div class="grid-item" ng-if="vm.hideVision!=true">
+        <div class="panel widget-panel">
+        <div class="panel-body">
+          <div class="text-left">
+            <span>
+            <i class="fa fa-2x fa-eye text-primary"></i><strong> Vision </strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideVision=true; vm.layout()"></i>
+          </span>
+          </div>
+
+          <div>
+            <div class="div-flag">
+              <label class="pull-left">Color Perception:</label>
+            <input class="text-border-sm" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.vision.color.min"></label>
+            </div>
+          </div>
+
+          <div class="div-flag">
+            <label class="control-label pull-left">Acuity 20/</label>
+            <input class="text-border-sm pull-left" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.vision.acuity.max1"></label>
+            <label class="col-lg-2 ">20/</label>
+            <input class="text-border-sm" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.vision.acuity.max2"></label>
+          </div>
+
+          <div class="div-flag">
+            <label>
+              <input type="checkbox" ng-disabled="!vm.isAdmin()" ng-checked="vm.selectedPef.requirements.vision.depth.has">Normal Depth Perception</label>
+          </div>
+
+          <div class="div-flag">
+            <label>
+              <input type="checkbox" ng-readonly="!vm.isAdmin()" ng-checked="vm.selectedPef.requirements.vision.correctable.has">Correctable to 20/20</label>
+          </div>
+
+        </div>
+      </div>
+      </div>
+
+      <!-- driving -->
+      <div class="grid-item" ng-if="vm.hideDriving!=true">
+        <div class="panel widget-panel">
+        <div class="panel-body">
+          <div class="text-left">
+            <span>
+            <i class="fa fa-2x fa-car text-primary"></i><strong> Driving </strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideDriving=true; vm.layout()"></i>
+          </span>
+          </div>
+
+          <div class="div-flag">
+            <label class="col-xs-7"> Traffic Violations:</label>
+            <input class="text-border-sm" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.driving.violations.max"></label>
+          </div>
+
+          <div class="div-flag">
+            <label class="col-xs-7">Driving Offenses:</label>
+            <input class="text-border-sm" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.driving.offenses.max"></label>
+          </div>
+
+          <div class="div-flag">
+            <label><input type="checkbox" ng-disabled="!vm.isAdmin()" ng-checked="vm.selectedPef.requirements.driving.license.has">Drivers License</label>
+          </div>
+
+        </div>
+      </div>
+      </div>
+
+      <!-- offenses -->
+      <div class="grid-item" ng-if="vm.hideOffenses!=true">
+        <div class="panel widget-panel">
+        <div class="panel-body">
+          <div class="text-left">
+            <span>
+            <i class="fa fa-2x fa-gavel text-primary"></i><strong> Offenses </strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideOffenses=true; vm.layout()"></i>
+          </span>
+          </div>
+
+          <div class="div-flag">
+            <label class="col-xs-8">Conduct Offenses:</label>
+            <input class="text-border-sm" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.moral.conduct.max"></label>
+          </div>
+
+          <div class="div-flag">
+            <label class="col-xs-8">Marijuana Offenses:</label>
+            <input class="text-border-sm" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.moral.marijuana.max"></label>
+          </div>
+
+          <div class="div-flag">
+            <label class="col-xs-8">Other Drug Offenses:</label>
+            <input class="text-border-sm" ng-readonly="!vm.isAdmin()" ng-model="vm.selectedPef.requirements.moral.otherDrugs.max"></label>
+          </div>
+
+        </div>
+      </div>
+      </div>
+
+      <!-- certifications -->
+      <div class="grid-item" ng-if="vm.hideCerts!=true">
+        <div class="panel widget-panel">
+        <div class="panel-body">
+          <div class="text-left">
+            <span>
+            <i class="fa fa-2x fa-trophy text-primary"></i><strong> Certifications </strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideCerts=true; vm.layout()"></i>
+          </span>
+          </div>
+
+          <div class="div-flag">
+            <label><input type="checkbox" ng-checked="vm.selectedPef.requirements.waterQual.has">WS-B(+) Water Surv. Cert</label>
+          </div>
+
+          <div class="div-flag">
+            <label><input type="checkbox" ng-checked="vm.selectedPef.requirements.flightPhysical.has">Flight Physical</label>
+          </div>
+
+          <div class="div-flag">
+            <label><input type="checkbox" ng-checked="vm.selectedPef.requirements.speech.has">Clarity of Speech</label>
+          </div>
+
+          <div class="div-flag">
+            <label><input type="checkbox" ng-checked="vm.selectedPef.requirements.pftClass1.has">1st Class PFT Score</label>
+          </div>
+
+          <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.prpScreen.flag}">
+            <label class="pull-left">PRP Unfav. Responses: </label>
+            <label class="label-border" id="min3">{{vm.selectedPef.requirements.prpScreen.max}}</label>
+          </div>
+
+        </div>  <!-- well -->
+      </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>  <!-- container -->

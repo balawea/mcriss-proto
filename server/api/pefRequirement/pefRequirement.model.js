@@ -14,12 +14,14 @@ var PefRequirementSchema = new mongoose.Schema({
   description: String,
   mos: [{mos:String, description:String}],
   disqualifications: [],
+  allocation: Number,
+  shipDates: [],
   requirements: {
-    toe: {description: String, val: Number},
+    toe: {description: String, min: Number},
     usCitizen: {description:String, has: Boolean},
     usCitizenFamily: {description:String, has: Boolean},
     sex: {description:String, val:String},
-    age: {description:String, min:Number, max:Number, waivable:Boolean},
+    age: {description:String, min:Number, max:Number, waivable:Boolean, waiver:Number},
     clearance: {description:String, val: String},
     gt: {description:String, min:Number, waivable:Boolean, waiver:Number},
     cl: {description:String, min:Number, waivable:Boolean, waiver:Number},
@@ -47,13 +49,13 @@ var PefRequirementSchema = new mongoose.Schema({
     },
     driving: {
       license: {description: String, has: Boolean, waivable: Boolean},
-      offenses: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, waivable:Boolean},
-      violations: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxAtDep:Number, maxBeforeDep:Number, waivable:Boolean}
+      offenses: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, waivable:Boolean, waiver:Number},
+      violations: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxAtDep:Number, maxBeforeDep:Number, waivable:Boolean, waiver:Number}
     },
     moral: {
-      conduct: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, optional:Boolean, waivable:Boolean},
-      marijuana: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean},
-      otherDrugs: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean}
+      conduct: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, optional:Boolean, waivable:Boolean, waiver:Number},
+      marijuana: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean, waiver:Number},
+      otherDrugs: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean, waiver:Number}
     },
     tierGrad: {description:String, max:Number, waivable:Boolean},// 1=Highschool grad, 2=homeschooler. Using "max" as a simplification since rules never exclude tier 1 grads.
     algebra: {description:String, has:Boolean, waivable:Boolean},

@@ -21,7 +21,6 @@ export class MainController {
     this.$http.get('/api/pefRequirements').then(response => {
       this.pefs = response.data;
     });
-
   }
 
   updateThing() {

@@ -19,6 +19,14 @@ export class NavbarComponent {
     {
       'title': 'Recruiter View',
       'state': 'recruiterview'
+    },
+    {
+      'title': 'PEF View',
+      'state': 'pefview'
+    },
+    {
+      'title': 'Candidate Profile',
+      'state': 'candidateprofile'
     }
   ];
   isLoggedIn: Function;
@@ -32,7 +40,6 @@ export class NavbarComponent {
     this.isAdmin = Auth.isAdminSync;
     this.getCurrentUser = Auth.getCurrentUserSync;
   }
-
 }
 
 export default angular.module('directives.navbar', [])

@@ -3,19 +3,22 @@
 const angular = require('angular');
 const uiRouter = require('angular-ui-router');
 const noUiSlider = require('nouislider');
+const Masonry = require('masonry-layout');
+
 import routes from './samplepef.routes';
 
 export class SamplepefComponent {
   $http;
   recruit;
   id;
-  p = []; //master list of pefs
-  pefs = [];  //pefs for display
-  code;
+  p = [];
+  pefs = [];
   fErr;
   fCategory;
   selectedPef;
   req;
+  fullrecruit;
+
 
   /*@ngInject*/
   constructor($http, $location) {
@@ -26,20 +29,59 @@ export class SamplepefComponent {
   /*@ngInject*/
   $onInit() {
     this.$http.get('/api/pefRequirements/').then(responsePef => {
+      let match = 'match';
       this.p = responsePef.data;
-
       this.$http.get('/api/recruits/' + this.id).then(responseRec => {
-        let fullrecruit = responseRec.data;
-        this.recruit = fullrecruit['match'] || {}; //pull only "match" object data for comparison
-        this.recruit.fullName = fullrecruit.fullName;
-        this.recruit.age = {};
-        this.recruit.age.val = fullrecruit.age.val;
+        this.fullrecruit = responseRec.data;
+        this.recruit = this.fullrecruit[match] || {}; //pull only "match" object data for comparison
+        this.recruit.fullName = this.fullrecruit.fullName;
+        this.recruit.age = {val: this.fullrecruit.age.val};
         this.pefs = getErrs(this.p, this.recruit);
+      })
+      .then(foo => {
+        var msnry = new Masonry( '.grid', {
+          itemSelector: '.grid-item',
+          columnWidth: 275,
+          transitionDuration: '0.8s'
+        });
+
+        //re-lay the tiles. Otherwise they overlap on load.
+        msnry.reloadItems();
+        console.log('INIT');
       });
     });
 
   }   //oninit
+
+  toggleAssignment() {
+    if (this.selectedPef) {
+      if (this.isAssigned(this.selectedPef)) {
+        this.fullrecruit.assignedPef = {};
+      }
+      else{
+        this.fullrecruit.assignedPef = {pefCode: this.selectedPef.pefCode, id: this.selectedPef._id};
+      }
+      this.$http.put('/api/recruits/' + this.id, this.fullrecruit);
+    }
+  }
+
+
+  canAssign(pef) {
+    if (pef) {
+      return pef.errs === 0 && this.isAssigned(pef) === false;
+    }
+    return false;
+  }
+
+  isAssigned(pef) {
+    if (pef && this.fullrecruit.assignedPef) {
+      return pef.pefCode === this.fullrecruit.assignedPef.pefCode;
+    }
+    return false;
+  }
+
 } //class
+
 
 //combine with getPefErrors
 function getErrs(pefs, recr) {
@@ -51,12 +93,11 @@ function getErrs(pefs, recr) {
   return pefs;
 }
 
-function getPefErrors(pef, recr) {
+function getPefErrors(p, r) {
   let errs = 0;
-  let rec = recr;
   let rval;
 
-  compareObjects(pef, recr);
+  compareObjects(p, r);
 
   function compareObjects(pef, recr) {
     for (let pkey in pef) {
