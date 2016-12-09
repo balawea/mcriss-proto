@@ -29,7 +29,7 @@ PefReq.find({}).remove()
           toe: {description: 'Twenty-five Year Term of Enlistment (toe)', min: 25},
           usCitizen: {description: 'Must NOT be a U.S. Citizen (no waiver)', has: false},
           usCitizenFamily: {description: 'All family members must NOT be U.S. Citizens (no waiver)', has: false, waivable: false},
-          clearance: {description: 'Eligible for SECRET Clearance.', val: 'TOP SECRET 5'},
+          clearance: {description: 'Eligible for TOP SECRET Clearance.', min: 2},
           gt: {description: 'GT 1107', min: 1107},
           mm: {description: 'MM 1055', min: 1055},
           ve: {description: 'MM 1055', min: 1055},
@@ -41,22 +41,24 @@ PefReq.find({}).remove()
           algebra: {description:'Must not have taken algebra', has:true},
           driving: {
             license: {has: true},
-            offenses: {description: '-1 convictions of driving offenses other than Traffic Violations', max: -1, maxAboveRs: 0},
-            violations: {description: '-1 convictions of driving offenses other than Traffic Violations', max: -1, waivable: true}
+            offenses: {description: '-1 convictions of driving offenses other than Traffic Violations', max: -1, maxAboveRs: 0, waivable:true, waiver:2},
+            violations: {description: '-1 convictions of driving offenses other than Traffic Violations', max: -1, waivable:true, waiver:2}
           },
           height: {
             description: 'Minimum height 80 inches (Actual height, no waivers). Maximum height 97 inches (Actual height, no waivers).',
             min: 80,
             max: 97,
             optional: false,
-            waivable: false
+            waivable: true,
+            waiver: 2
           },
           weight: {
             description: 'Minimum weight 250 inches (Actual height, no waivers). Maximum weight 375 inches (Actual weight, no waivers).',
             min: 350,
             max: 375,
             optional: false,
-            waivable: false
+            waivable: true,
+            waiver: 20
           },
           moral: {
             conduct: {description: 'No Conduct waivers above Recruiting Station Level', max:-1},
@@ -83,6 +85,52 @@ PefReq.find({}).remove()
         } //requirements
       },
 
+      
+      {
+        pefCode: 'TEST WAIVABLES',
+        description: '',
+        allocation: 455,
+        shipDates: [],
+        requirements: {
+          age: {description:'Must be at least 19, waivable', min:40, waivable:true, waiver:25},
+          sex: {description:'Must be Special, waivable', val:'S', waivable:true},
+          toe: {description:'TOE = 30 years, waivable', min:30, waivable:true, waiver:30},
+          gt: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
+          cl: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
+          el: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
+          mm: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
+          ve: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
+          qt: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
+          dlab: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
+      //    asvabOrList: {description:String, gt:Number, cl:Number, el:Number, mm:Number, ve:Number, qt:Number}, //Logical OR: exceeding any one of the included scores makes a match
+          height: {description:'Must be really short, waivable', min:27, max:45, optional:true, waivable:true, waiver:60},
+          weight: {description:'Must be really skinny, waivable', min:27, max:45, optional:true, waivable:true, waiver:200},
+          driving: {
+            license: {description: 'Must have it, waivable', has: true, waivable: true},
+            offenses: {description: 'Max offenses/violations, waivable', max:-1, waivable:true, waiver:10},
+            violations: {description: 'Max offenses/violations, waivable', max:-1, waivable:true, waiver:10},
+          },
+          moral: {
+            conduct: {description: 'Max offenses/violations, waivable', max:-1, waivable:true, waiver:10},
+            marijuana: {description: 'Max offenses/violations, waivable', max:-1, waivable:true, waiver:10},
+            otherDrugs: {description: 'Max offenses/violations, waivable', max:-1, waivable:true, waiver:10},
+          },
+          tierGrad: {description:'this tier required, waivable', max:1, waivable:true},// 1=Highschool grad, 2=homeschooler. Using "max" as a simplification since rules never exclude tier 1 grads.
+          algebra: {description:'must have algebra, waivable', has:true, waivable:true},
+          vision: {
+            correctable: {description:'This is required, but waivable', has:true, waivable:true},
+            depth: {description:'This is required, but waivable', has:true, waivable:true},
+            color: {description:'This is required, but waivable', has:true, waivable:true},
+            acuity: {description:'Acuity max', max:170, max1:70, max2:100, waivable:true}
+          },
+          waterQual: {description:'Waterqual is required', has:true, waivable:true},
+          flightPhysical: {description:'flightphys is required', has:true, waivable:true},
+          speech: {description:'speech is required', has:true, waivable:true},
+          pftClass1: {description:'pfrclass1 is required', has:true, waivable:true},
+          prpScreen: {description:'prpscreen is required', max:-1, waivable:true, waiver:10},
+          } //requirements
+      },
+        
       {     ///AE
         pefCode: 'AE',
         description: 'AVIATION SUPPORT',
@@ -96,7 +144,7 @@ PefReq.find({}).remove()
         requirements: {
           toe: {description: 'Four (4) Year Term of Enlistment (toe)', min: 4},
           usCitizen: {has: true},
-          clearance: {description: 'Eligible for a SECRET Clearance', val: 'SECRET'},
+          clearance: {description: 'Eligible for a SECRET Clearance', min: 1},
           gt: {description: 'GT 105', min: 105, waiver: 3},
           mm: {description: 'MM 95', min: 95, waiver: 3},
           height: {
@@ -149,7 +197,7 @@ PefReq.find({}).remove()
         requirements: {
           toe: {description: 'Five Year Term of Enlistment (toe)', min: 5},
           usCitizen: {description: 'U.S. Citizen (no waiver)', has: true},
-          clearance: {description: 'Eligible for SECRET Clearance.', val: 'SECRET'},
+          clearance: {description: 'Eligible for SECRET Clearance.', min: 1},
           gt: {description: 'GT 110', min: 110, waiver: 3},
           mm: {description: 'MM 105', min: 105, waiver: 3},
           moral: {
@@ -182,7 +230,7 @@ PefReq.find({}).remove()
           usCitizen: {has: true},
           clearance: {
             description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS.',
-            val: 'SECRET'
+            min: 1
           },
           gt: {description: 'GT Score of 105 on the ASVAB.', min: 105, waiver: 3},
           moral: {
@@ -209,7 +257,7 @@ PefReq.find({}).remove()
         requirements: {
           toe: {description: 'Five (5) Year Term of Enlistment (toe)', min: 5},
           usCitizen: {has: true},
-          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS).', val: 'SECRET'},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS).', min: 1},
           el: {description: 'EL Score of 105 on the ASVAB', min: 105, waiver: 3},
           moral: {
             conduct: {description: 'No Conduct or Drug waivers above RS', max:0, maxAboveRs: 0, waivable: false},
@@ -236,7 +284,7 @@ PefReq.find({}).remove()
         requirements: {
           toe: {description: 'Five (5) Year Term of Enlistment (toe)', min: 5},
           usCitizen: {has: true},
-          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS.', val: 'SECRET'},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS.', min: 1},
           el: {description: 'EL Score of 115 on the ASVAB', min: 115, waiver: 3},
           moral: {
             conduct: {description: 'No Conduct or Drug waivers above RS', max:0, maxAtRs: 0, maxAboveRs: 0},
@@ -380,7 +428,7 @@ PefReq.find({}).remove()
         requirements: {
           toe: {description: 'Four (4) Year Term of Enlistment (toe)', min: 4},
           usCitizen: {has: true},
-          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level)', val: 'SECRET'},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level)', min: 1},
           gt: {description: 'GT Score of 110 on the ASVAB', min: 110, waiver: 0},
           ve: {description: 'VE Score of 45 on the ASVAB', min: 45, waiver: 0},
           moral: {
@@ -405,7 +453,7 @@ PefReq.find({}).remove()
         requirements: {
           toe: {description: 'Five (5) Year Term of Enlistment (toe)', min: 5},
           usCitizen: {has: true},
-          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level)', val: 'SECRET'},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level)', min: 1},
           gt: {description: 'GT Score of 100 on the ASVAB', min: 100, waiver: 3},
           moral: {
             conduct: {description: 'No Conduct or Drug waivers above RS to include misconduct offenses waived at RS.', max:0, maxAtRs: 0, maxAboveRs: 0},
@@ -428,7 +476,7 @@ PefReq.find({}).remove()
         requirements: {
           toe: {description: 'Four (4) Year Term of Enlistment (toe)', min: 4},
           usCitizen: {has: true},
-          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS)', val: 'SECRET'},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS)', min: 1},
           gt: {description: 'GT Score of 100 on the ASVAB', min: 100, waiver: 3},
           moral: {
             conduct: {description: 'No Conduct or Drug waivers above RS', max:0, maxAtRs: 0, maxAboveRs: 0},
@@ -448,7 +496,7 @@ PefReq.find({}).remove()
           toe: {description: 'Four (4) Year Term of Enlistment (toe)', min: 4},
           usCitizen: {has: true},
           sex: {description: 'Male Only', val: 'M'},
-          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level)', val: 'SECRET'},
+          clearance: {description: 'Eligible for SECRET Clearance (No Conduct or Drug waivers above RS, to include misconduct offenses waived at the RS Level)', min: 1},
           gt: {description: 'GT Score of 105 on the ASVAB', min: 105, waiver: 3},
           moral: {
             conduct: {description: 'No Conduct or Drug waivers above RS to include misconduct offenses waived at RS.', max:0, maxAtRs: 0, maxAboveRs: 0},
@@ -480,7 +528,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 72},
           weight: {val: 181},
@@ -562,12 +610,12 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'NONE'},
+          clearance: {val: 1},
           sex: {val: 'F'},
           height: {val: 68},
           weight: {val: 151},
           tierGrad: {val: 1},
-          algebra: {has: false},
+          algebra: {has:true},
           toe: {val: 4},
           afqt: {val: 94},
           cl: {val: 105},
@@ -649,7 +697,7 @@ Recruit.find({}).remove()
           sex: {val: 'M'},
           height: {val: 66},
           weight: {val: 141},
-          clearance: {val: 'TOP SECRET'},
+          clearance: {val: 2},
           tierGrad: {val: 1},
           toe: {val: 4},
           afqt: {val: 97},
@@ -731,7 +779,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: false},
-          clearance: {val: 'NONE'},
+          clearance: {val: 0},
           sex: {val: 'M'},
           height: {val: 62},
           weight: {val: 131},
@@ -813,7 +861,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 73},
           weight: {val: 171},
@@ -896,7 +944,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 66},
           weight: {val: 136},
@@ -981,7 +1029,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 68},
           weight: {val: 170},
@@ -1063,7 +1111,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: false},
           usCitizenFamily: {has: false},
-          clearance: {val: 'NONE'},
+          clearance: {val: 0},
           sex: {val: 'F'},
           height: {val: 58},
           weight: {val: 174},
@@ -1142,7 +1190,7 @@ Recruit.find({}).remove()
         match : {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'TOP SECRET'},
+          clearance: {val: 2},
           sex: {val: 'M'},
           height: {val: 75},
           weight: {val: 210},
@@ -1222,7 +1270,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 72},
           weight: {val: 189},
@@ -1303,7 +1351,7 @@ Recruit.find({}).remove()
         match : {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'NONE'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 68},
           weight: {val: 151},
@@ -1389,7 +1437,7 @@ Recruit.find({}).remove()
           sex: {val: 'M'},
           height: {val: 66},
           weight: {val: 147},
-          clearance: {val: 'TOP SECRET'},
+          clearance: {val: 2},
           tierGrad: {val: 1},
           toe: {val: 4},
           afqt: {val: 97},
@@ -1470,10 +1518,10 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: false},
-          clearance: {val: 'NONE'},
+          clearance: {val: 1},
           sex: {val: 'M'},
-          height: {val: 62},
-          weight: {val: 139},
+          height: {val: 67},
+          weight: {val: 179},
           tierGrad: {val: 2},
           toe: {val: 5},
           afqt: {val: 94},
@@ -1492,7 +1540,7 @@ Recruit.find({}).remove()
           moral: {
             conduct: {val: 0, valAtRs: 1},
             otherDrugs: {val: 0},
-            marijuana: {val: 0, valAtRs: 0}
+            marijuana: {val: 1, valAtRs: 0}
           },
           vision: {
             correctable: {has: true},
@@ -1500,7 +1548,13 @@ Recruit.find({}).remove()
             color: {val: 14},
             acuity: {val: 40, val1: 20, val2: 20}
           },
-          prpScreen: {val:0}
+          speech: {has: true},
+          algebra: {has: true},
+          tierGrad: {val: 1},
+          flightPhysical: {has: true},
+          pftClass1: {has: true},
+          waterQual: {has: true},
+          prpScreen: {val: 0}
         },
         personal: {
           ssn: 'XXX-XX-9384',
@@ -1553,15 +1607,15 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 73},
           weight: {val: 171},
-          tierGrad: {val: 2},
+          tierGrad: {val: 1},
           toe: {val: 4},
-          afqt: {val: 88},
-          cl: {val: 82},
-          gt: {val: 84},
+          afqt: {val: 89},
+          cl: {val: 96},
+          gt: {val: 98},
           el: {val: 102},
           mm: {val: 96},
           qt: {val: 101},
@@ -1574,15 +1628,22 @@ Recruit.find({}).remove()
           },
           moral: {
             conduct: {val: 0, valAtRs: 1},
-            marijuana: {val: 3, valBeforeDep: 1},
-            otherDrugs: {val: 1, valAfterRs: 1}
+            marijuana: {val: 0, valBeforeDep: 1},
+            otherDrugs: {val: 0, valAfterRs: 1}
           },
           vision: {
-            correctable: {has: false},
-            depth: {has: false},
+            correctable: {has: true},
+            depth: {has: true},
             color: {val: 14},
             acuity: {val: 120, val1: 20, val2: 100}
-          }
+          },
+          speech: {has: true},
+          algebra: {has: true},
+          tierGrad: {val: 1},
+          flightPhysical: {has: true},
+          pftClass1: {has:true},
+          waterQual: {has: true},
+          prpScreen: {val: 0}
         },
         personal: {
           ssn: 'XXX-XX-0900',
@@ -1636,7 +1697,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 62},
           weight: {val: 132},
@@ -1725,7 +1786,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'F'},
           height: {val: 71},
           weight: {val: 150},
@@ -1807,7 +1868,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: false},
-          clearance: {val: 'NONE'},
+          clearance: {val: 0},
           sex: {val: 'F'},
           height: {val: 58},
           weight: {val: 122},
@@ -1886,7 +1947,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'TOP SECRET'},
+          clearance: {val: 2},
           sex: {val: 'M'},
           height: {val: 75},
           weight: {val: 210},
@@ -1966,16 +2027,16 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'F'},
           height: {val: 67},
           weight: {val: 165},
           tierGrad: {val: 1},
           toe: {val: 5},
-          afqt: {val: 87},
+          afqt: {val: 96},
           cl: {val: 122},
-          gt: {val: 96},
-          el: {val: 84},
+          gt: {val: 114},
+          el: {val: 104},
           mm: {val: 109},
           qt: {val: 91},
           ve: {val: 80},
@@ -2052,7 +2113,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'NONE'},
+          clearance: {val: 1},
           sex: {val: 'F'},
           height: {val: 68},
           weight: {val: 140},
@@ -2142,7 +2203,7 @@ Recruit.find({}).remove()
           sex: {val: 'F'},
           height: {val: 66},
           weight: {val: 141},
-          clearance: {val: 'TOP SECRET'},
+          clearance: {val: 2},
           tierGrad: {val: 1},
           toe: {val: 4},
           afqt: {val: 97},
@@ -2224,7 +2285,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: false},
-          clearance: {val: 'NONE'},
+          clearance: {val: 0},
           sex: {val: 'M'},
           height: {val: 62},
           weight: {val: 130},
@@ -2306,7 +2367,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 73},
           weight: {val: 170},
@@ -2390,7 +2451,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'SECRET'},
+          clearance: {val: 1},
           sex: {val: 'M'},
           height: {val: 68},
           weight: {val: 155},
@@ -2472,7 +2533,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'NONE'},
+          clearance: {val: 0},
           sex: {val: 'M'},
           height: {val: 65},
           weight: {val: 175},
@@ -2554,7 +2615,6 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'NONE'},
           sex: {val: 'F'},
           height: {val: 69},
           weight: {val: 168},
@@ -2632,7 +2692,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          clearance: {val: 'TOP SECRET'},
+          clearance: {val: 2},
           sex: {val: 'F'},
           height: {val: 66},
           weight: {val: 140},
@@ -2714,7 +2774,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: false},
           usCitizenFamily: {has: false},
-          clearance: {val: 'NONE'},
+          clearance: {val: 0},
           sex: {val: 'M'},
           height: {val: 19},
           weight: {val: 7},

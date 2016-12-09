@@ -17,12 +17,12 @@ var PefRequirementSchema = new mongoose.Schema({
   allocation: Number,
   shipDates: [],
   requirements: {
-    toe: {description: String, min: Number},
-    usCitizen: {description:String, has: Boolean},
+    toe: {description: String, min: Number, waivable:Boolean, waiver:Number},
+    usCitizen: {description:String, has: Boolean},  //not ever waivable
     usCitizenFamily: {description:String, has: Boolean},
-    sex: {description:String, val:String},
+    sex: {description:String, val:String, waivable:Boolean},
     age: {description:String, min:Number, max:Number, waivable:Boolean, waiver:Number},
-    clearance: {description:String, val: String},
+    clearance: {description:String, min: Number}, //not ever waivable
     gt: {description:String, min:Number, waivable:Boolean, waiver:Number},
     cl: {description:String, min:Number, waivable:Boolean, waiver:Number},
     el: {description:String, min:Number, waivable:Boolean, waiver:Number},
@@ -57,13 +57,13 @@ var PefRequirementSchema = new mongoose.Schema({
       marijuana: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean, waiver:Number},
       otherDrugs: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean, waiver:Number}
     },
-    tierGrad: {description:String, max:Number, waivable:Boolean},// 1=Highschool grad, 2=homeschooler. Using "max" as a simplification since rules never exclude tier 1 grads.
+    tierGrad: {description:String, max:Number, waivable:Boolean, waiver:Number},// 1=Highschool grad, 2=homeschooler. Using "max" as a simplification since rules never exclude tier 1 grads.
     algebra: {description:String, has:Boolean, waivable:Boolean},
     vision: {
       correctable: {description:String, has:Boolean, waivable:Boolean},
       depth: {description:String, has:Boolean, waivable:Boolean},
-      color: {description:String, min:Number, waivable:Boolean},
-      acuity: {description:String, max:Number, max1:Number, max2:Number, waivable:Boolean}
+      color: {description:String, min:Number, waivable:Boolean, waiver:Number},
+      acuity: {description:String, max:Number, max1:Number, max2:Number, waivable:Boolean, waiver:Number}
     },
     waterQual: {description:String, has:Boolean, optional:Boolean, waivable:Boolean},
     flightPhysical: {description:String, has:Boolean, waivable:Boolean},
@@ -71,7 +71,7 @@ var PefRequirementSchema = new mongoose.Schema({
     doncafScreening: {description:String, info:Boolean},
     additionalScreening: {description:String, info:Boolean},
     pftClass1: {description:String, has:Boolean, waivable:Boolean},
-    prpScreen: {description:String, max:Number, waivable:Boolean}
+    prpScreen: {description:String, max:Number, waivable:Boolean, waiver:Number}
     } //requirements
 
 });

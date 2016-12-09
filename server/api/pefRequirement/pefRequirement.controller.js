@@ -28,6 +28,9 @@ function patchUpdates(patches) {
     try {
       jsonpatch.apply(entity, patches, /*validate*/ true);
     } catch(err) {
+      //apb
+      console.log('Error on PUT!');
+      console.log(err);
       return Promise.reject(err);
     }
 
