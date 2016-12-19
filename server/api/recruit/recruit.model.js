@@ -10,7 +10,8 @@ var RecruitSchema = new mongoose.Schema({
   status: String,
   contact: [{date: Date, location: String, method:String, poc: String}],
   dob: Date,
-  assignedPef: { pefCode: String, id: String},
+  assignedPef: { pefCode: String, id: String, recruiter: String},
+  flaggedPefs: [{ pefCode: String, notes: String, recruiter: String, isBookmarked: Boolean}],
   match: {
     toe: {val: Number},
     usCitizen: {has: Boolean},
@@ -119,9 +120,6 @@ RecruitSchema.virtual('fhor').get(function() {
   return addr.street + '\n' + addr.city + ', ' + addr.state + ' ' + addr.zip + '\n' + addr.country;
 });
 
-//RecruitSchema.virtual('pef.code').set(function (code) {
-//  this.assignedPef.code = code;
-//});
 
 //TODO fxn to return most recent contact object.
 

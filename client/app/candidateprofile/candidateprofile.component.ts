@@ -6,14 +6,22 @@ import routes from './candidateprofile.routes';
 export class CandidateprofileComponent {
   $http;
   $location;
+  $state;
+  root;
   recruit;
   id;
 
   /*@ngInject*/
-  constructor($http, $location) {
-    this.$http = $http;
+  constructor($http, $location, $rootScope, $state) {
+    this.$http = $http; 
     this.$location = $location;
     this.id = $location.hash();
+    this.root = $rootScope;
+    this.$state = $state;
+
+    //if no hash (no applicant selected), go to recruiterview to choose an applicant.
+    if (this.id==='')
+      this.$state.go('recruiterview');
 
   } //ctor
     
@@ -21,9 +29,14 @@ export class CandidateprofileComponent {
   $onInit() {
     this.$http.get('/api/recruits/' + this.id).then(responseRec => {
       let fullrecruit = responseRec.data;
-      this.recruit = fullrecruit['personal'] || {};
-      this.recruit.age = {};
-      this.recruit.age.val = fullrecruit.age.val;
+      let personal = 'personal';
+      this.recruit = fullrecruit[personal] || {};
+      this.recruit.age = { val: fullrecruit.age.val};
+      this.recruit.status = fullrecruit.status;
+      this.recruit.dob = fullrecruit.dob;
+      this.recruit.fullName = fullrecruit.fullName;
+      
+      this.root.$broadcast('SELECT_RECRUIT', this.recruit);
     });
   } //init
 

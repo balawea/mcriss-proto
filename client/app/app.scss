@@ -35,6 +35,11 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   vertical-align: middle;
 }
 
+.btn-filter {
+  @extend .btn-sm;
+  width: 34px;
+}
+
 .badge-danger {
 //  background-color: #d43f3a;
   background-color: #e52430 //e51f4a;
@@ -93,8 +98,23 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .fa-exclamation-triangle{
-  @extend .fa-check;
+  @extend .fa-exclamation-triangle;
   color: #e52430;
+}
+
+.fa-bars-white{
+  @extend .fa-bars;
+  color: whitesmoke;
+}
+
+.fa-cog-white{
+  @extend .fa-cog;
+  color: whitesmoke;
+}
+
+.fa-sign-out-white{
+  @extend .fa-sign-out;
+  color: whitesmoke;
 }
 
 //PANELS
@@ -119,6 +139,11 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     height: 20px;
     width: 100px;
   }
+}
+
+.usmc {
+  width: 52px;
+  height: 54px;
 }
 
 .panel.small95{
@@ -194,6 +219,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   display: inline-table;
   float: left;
   margin: 10px;
+
   .panel-body{
     padding-top: 5px;
     padding-left: 0px;
@@ -202,9 +228,9 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     flex:1;
   }
   .panel-footer{
-    padding: 0px 10px;
+    padding: 0px 15px;
     margin: 0px;
-    height: 20px;
+//    height: 20px;
   }
 }
 
@@ -212,6 +238,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   display: inline-table;
   float: left;
   margin: 10px;
+  margin-top: 0px;
   height: 70px;
   width: 100%;
   .panel-header{
@@ -250,6 +277,28 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   padding-right: 5px;
 }
 
+.text-border-sm40 {
+  border-color: #a0a0a0;
+  border: solid;
+  border-width: thin;
+  height: 25px;
+  width: 40px;
+  margin-left: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.text-border-sm30 {
+  border-color: #a0a0a0;
+  border: solid;
+  border-width: thin;
+  height: 25px;
+  width: 30px;
+  margin-left: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .text-border-sm {
   border-color: #a0a0a0;
   border: solid;
@@ -267,7 +316,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   border-width: thin;
   height: 25px;
   width: 55px;
-//  margin-left: 10px;
+  //  margin-left: 10px;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -278,7 +327,18 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   border-width: thin;
   height: 25px;
   width: 100px;
-//  margin-left: 10px;
+  //  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.text-border-150 {
+  border-color: #a0a0a0;
+  border: solid;
+  border-width: thin;
+  height: 25px;
+  width: 150px;
+  //  margin-left: 10px;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -304,6 +364,13 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   font-weight: 500;
 }
 
+.subheader-text {
+  margin: 0px 10px;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 300;
+}
+
 .margin0 {
   margin: 0px;
 }
@@ -324,9 +391,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 .well-block {
   @extend .well;
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   width: 260px;
 }
 
@@ -354,9 +419,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .label-border {
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   height: 23px;
   min-width: 20px;
   margin-left: 10px;
@@ -366,6 +429,47 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 .lb-sm {
   font-size: 10px;
+}
+
+.nav-navy {
+  background: #000031;
+  margin: 0px 10px;
+  border-bottom: 1px darkred solid;
+  color: whitesmoke;
+}
+
+.nav-white {
+  margin: 0px 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px darkred solid;
+  height: 55px;
+  font-weight: 300;
+}
+
+.padtop15 {
+  padding-top: 15px;
+}
+
+.padtop10 {
+  padding-top: 10px;
+}
+
+
+.headerfont {
+  font-size: 30px;
+//  font-weight: 500;
+  font-style: normal;
+}
+
+.headerfont-sm  {
+  font-size: 20px;
+  font-style: normal;
+
+  .a {
+  font-size: 20px;
+  font-style: normal;
+  color: whitesmoke;
+  }
 }
 
 
@@ -386,6 +490,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 @import 'pefDetail/pefDetail';
 @import 'pefview/pefview';
 @import 'recruiterview/recruiterview';
+@import 'samplepef - Copy/samplepef';
 @import 'samplepef/samplepef';
 @import '../components/footer/footer';
 @import '../components/modal/modal';

@@ -21,7 +21,6 @@ export class ExamsComponent {
       this.recruit = fullrecruit['exams'] || {};
       let apef = fullrecruit.assignedPef || {};
       this.recruit.pef = apef.pefCode;
-        console.log(apef);
     });
   } //init
 }

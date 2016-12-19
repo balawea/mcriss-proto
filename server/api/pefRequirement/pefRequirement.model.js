@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 /*
 * nodes named:
 * "has" are bools that MUST equal the corresponding field in the recruit model,
-* "val" are strings or numbers that MUST equal ditto
+* "val" are strings or numbers that the recruit field MUST equal
 * "min" or "max" are numbers that represent bounds that the corresponding "val" field in recruit must fall within.
 * */
 
@@ -57,7 +57,8 @@ var PefRequirementSchema = new mongoose.Schema({
       marijuana: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean, waiver:Number},
       otherDrugs: {description: String, max:Number, maxAtRs:Number, maxAboveRs:Number, maxBeforeDep:Number, waivable:Boolean, waiver:Number}
     },
-    tierGrad: {description:String, max:Number, waivable:Boolean, waiver:Number},// 1=Highschool grad, 2=homeschooler. Using "max" as a simplification since rules never exclude tier 1 grads.
+    // Tier 1=Highschool, Tier 2=homeschool. Using "max" as a simplification since rules never exclude tier 1 grads.
+    tierGrad: {description:String, max:Number, waivable:Boolean, waiver:Number},
     algebra: {description:String, has:Boolean, waivable:Boolean},
     vision: {
       correctable: {description:String, has:Boolean, waivable:Boolean},

@@ -95,13 +95,13 @@ PefReq.find({}).remove()
           age: {description:'Must be at least 19, waivable', min:40, waivable:true, waiver:25},
           sex: {description:'Must be Special, waivable', val:'S', waivable:true},
           toe: {description:'TOE = 30 years, waivable', min:30, waivable:true, waiver:30},
-          gt: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
-          cl: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
-          el: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
-          mm: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
-          ve: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
-          qt: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
-          dlab: {description:'Score of 100 required, waivable', min:100, waivable:true, waiver:50},
+          gt: {description:'Score of 150 required, waivable', min:150, waivable:true, waiver:100},
+          cl: {description:'Score of 150 required, waivable', min:150, waivable:true, waiver:100},
+          el: {description:'Score of 150 required, waivable', min:150, waivable:true, waiver:100},
+          mm: {description:'Score of 150 required, waivable', min:150, waivable:true, waiver:100},
+          ve: {description:'Score of 150 required, waivable', min:150, waivable:true, waiver:100},
+          qt: {description:'Score of 150 required, waivable', min:150, waivable:true, waiver:100},
+          dlab: {description:'Score of 150 required, waivable', min:150, waivable:true, waiver:100},
       //    asvabOrList: {description:String, gt:Number, cl:Number, el:Number, mm:Number, ve:Number, qt:Number}, //Logical OR: exceeding any one of the included scores makes a match
           height: {description:'Must be really short, waivable', min:27, max:45, optional:true, waivable:true, waiver:60},
           weight: {description:'Must be really skinny, waivable', min:27, max:45, optional:true, waivable:true, waiver:200},
@@ -115,19 +115,19 @@ PefReq.find({}).remove()
             marijuana: {description: 'Max offenses/violations, waivable', max:-1, waivable:true, waiver:10},
             otherDrugs: {description: 'Max offenses/violations, waivable', max:-1, waivable:true, waiver:10},
           },
-          tierGrad: {description:'this tier required, waivable', max:1, waivable:true},// 1=Highschool grad, 2=homeschooler. Using "max" as a simplification since rules never exclude tier 1 grads.
+          tierGrad: {description:'this tier required, waivable', max:0, waivable:true, waiver:3},// 1=Highschool grad, 2=homeschooler. Using "max" as a simplification since rules never exclude tier 1 grads.
           algebra: {description:'must have algebra, waivable', has:true, waivable:true},
           vision: {
             correctable: {description:'This is required, but waivable', has:true, waivable:true},
             depth: {description:'This is required, but waivable', has:true, waivable:true},
-            color: {description:'This is required, but waivable', has:true, waivable:true},
-            acuity: {description:'Acuity max', max:170, max1:70, max2:100, waivable:true}
+            color: {description:'Color perception, 15 min required, but waivable', min:15, waivable:true, waiver:8},
+            acuity: {description:'Acuity max 70/100. Waivable', max:170, max1:70, max2:100, waivable:true, waiver:100}
           },
-          waterQual: {description:'Waterqual is required', has:true, waivable:true},
-          flightPhysical: {description:'flightphys is required', has:true, waivable:true},
-          speech: {description:'speech is required', has:true, waivable:true},
-          pftClass1: {description:'pfrclass1 is required', has:true, waivable:true},
-          prpScreen: {description:'prpscreen is required', max:-1, waivable:true, waiver:10},
+          waterQual: {description:'Waterqual is required. Waivable', has:true, waivable:true},
+          flightPhysical: {description:'flightphys is required. Waivable', has:true, waivable:true},
+          speech: {description:'speech is required. Waivable', has:true, waivable:true},
+          pftClass1: {description:'pfrclass1 is required. Waivable', has:true, waivable:true},
+          prpScreen: {description:'prpscreen is required with at most -1 negative responses. Waivable', max:-1, waivable:true, waiver:10},
           } //requirements
       },
         
@@ -156,8 +156,8 @@ PefReq.find({}).remove()
           },
           driving: {
             license: {has: true, waivable: true},
-            offenses: {description: 'No convictions of driving offenses other than Traffic Violations', max: 0, maxAboveRs: 0},
-            violations: {description: 'No convictions of driving offenses other than Traffic Violations', max: 0, waivable: true}
+            offenses: {description: 'No convictions or Driving Offenses other than Traffic Violations', max: 0, maxAboveRs: 0},
+            violations: {description: 'No convictions or Driving Offenses other than Traffic Violations', max: 0, waivable: true}
           },
           moral: {
             conduct: {
@@ -359,7 +359,7 @@ PefReq.find({}).remove()
         requirements: {
           toe: {description: 'Four (4) Year Term of Enlistment (toe)', min: 4},
           height: {
-            description: 'height requirement minimum 59 inches, no waivers',
+            description: 'Height requirement minimum 59 inches, no waivers',
             min: 59,
             optional: false,   //only some MOSs in a PEF may have height requirements
             waivable: false,
@@ -694,7 +694,7 @@ Recruit.find({}).remove()
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
-          sex: {val: 'M'},
+          sex: {val: 'F'},
           height: {val: 66},
           weight: {val: 141},
           clearance: {val: 2},
@@ -866,7 +866,7 @@ Recruit.find({}).remove()
           height: {val: 73},
           weight: {val: 171},
           tierGrad: {val: 2},
-          toe: {val: 4},
+          toe: {val: 3},
           afqt: {val: 88},
           cl: {val: 82},
           gt: {val: 84},
@@ -1439,7 +1439,7 @@ Recruit.find({}).remove()
           weight: {val: 147},
           clearance: {val: 2},
           tierGrad: {val: 1},
-          toe: {val: 4},
+          toe: {val: 6},
           afqt: {val: 97},
           cl: {val: 104},
           gt: {val: 109},
@@ -1517,16 +1517,16 @@ Recruit.find({}).remove()
         dob: new Date('10/07/1999'),
         match: {
           usCitizen: {has: true},
-          usCitizenFamily: {has: false},
-          clearance: {val: 1},
+          usCitizenFamily: {has: true},
+          clearance: {val: 2},
           sex: {val: 'M'},
           height: {val: 67},
           weight: {val: 179},
           tierGrad: {val: 2},
-          toe: {val: 5},
+          toe: {val: 6},
           afqt: {val: 94},
-          cl: {val: 97},
-          gt: {val: 116},
+          cl: {val: 114},
+          gt: {val: 119},
           el: {val: 128},
           mm: {val: 121},
           qt: {val: 101},
@@ -1538,9 +1538,9 @@ Recruit.find({}).remove()
             violations: {val: 0}
           },
           moral: {
-            conduct: {val: 0, valAtRs: 1},
+            conduct: {val: 0},
             otherDrugs: {val: 0},
-            marijuana: {val: 1, valAtRs: 0}
+            marijuana: {val: 0, valAtRs: 1}
           },
           vision: {
             correctable: {has: true},
@@ -1702,7 +1702,7 @@ Recruit.find({}).remove()
           height: {val: 62},
           weight: {val: 132},
           tierGrad: {val: 2},
-          toe: {val: 5},
+          toe: {val: 6},
           afqt: {val: 93},
           cl: {val: 101},
           gt: {val: 116},
@@ -1791,7 +1791,7 @@ Recruit.find({}).remove()
           height: {val: 71},
           weight: {val: 150},
           tierGrad: {val: 1},
-          toe: {val: 4},
+          toe: {val: 5},
           afqt: {val: 72},
           cl: {val: 72},
           gt: {val: 72},
@@ -2119,7 +2119,7 @@ Recruit.find({}).remove()
           weight: {val: 140},
           tierGrad: {val: 1},
           algebra: {has: false},
-          toe: {val: 4},
+          toe: {val: 6},
           afqt: {val: 94},
           cl: {val: 105},
           gt: {val: 98},
@@ -2205,7 +2205,7 @@ Recruit.find({}).remove()
           weight: {val: 141},
           clearance: {val: 2},
           tierGrad: {val: 1},
-          toe: {val: 4},
+          toe: {val: 6},
           afqt: {val: 97},
           cl: {val: 104},
           gt: {val: 109},
@@ -2372,7 +2372,7 @@ Recruit.find({}).remove()
           height: {val: 73},
           weight: {val: 170},
           tierGrad: {val: 2},
-          toe: {val: 4},
+          toe: {val: 3},
           afqt: {val: 88},
           cl: {val: 82},
           gt: {val: 84},

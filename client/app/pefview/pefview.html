@@ -1,6 +1,7 @@
+<navbar></navbar>
 <div class="container">
   <div class="row row-header">
-    <h3><i class="fa fa-bars pull-left"></i> PEF Admin</h3>
+<!--    <h3><i class="fa fa-bars pull-left"></i> PEF Admin</h3>-->
   </div>
 
   <!-- PEF List-->
@@ -14,7 +15,7 @@
 
       <hr/>
 
-      <!-- pef list -->
+      <!-- SELECT PEF -->
       <ul class="list-group">
         <li class="list-group-item" ng-class="{'selected': pef===vm.selectedPef}" ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText}"
             ng-click="vm.select(pef)">{{pef.pefCode}}
@@ -26,10 +27,11 @@
 
     <!-- Selected PEF Header -->
   <div class="col-xs-12 col-sm-9">
-    <div class="panel profile-panel" >
+    <div class="panel profile-panel">
       <div class="panel-header">
         <div class="col-xs-1 pull-right"><a ng-click="vm.save()">SAVE</a></div>
         <div class="col-xs-1 pull-right"><a ng-click="vm.cancel()">CANCEL</a></div>
+        <div class="col-xs-1 pull-right"><a ng-click="vm.restore()">RESTORE</a></div>
       </div>
       <div class="panel-body">
          <span>
@@ -40,17 +42,17 @@
   </div>
 
   <!-- BLOCKS - MASONRY GRID-->
-  <div class="col-xs-12 col-sm-9">
+  <div class="col-xs-12 col-sm-9" masonry reload-on-show id="grid">
     <div id="grid" class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 275}'>
 
       <!-- 0 PERSONAL -->
-      <div class="grid-item" name="personal">
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.per">
         <div class="panel block-panel">
         <div class="panel-body">
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-street-view text-primary"></i><strong class="margin10"> Personal Attributes</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(0)"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('per')"></i>
           </span>
               <hr>
           </div>
@@ -58,7 +60,7 @@
           <!-- age-->
           <div class="panel block-panel-small pull-left" ng-if="vm.hideAge!=true">
             <div class="panel-header">Age
-              <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideAge=true;vm.layout()"></i></span>
+<!--              <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideAge=true;vm.layout(vm.msnry)"></i></span>-->
             </div>
             <div class="panel-body">
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.age.min">
@@ -68,23 +70,23 @@
             </div>
           <div class="panel-footer">
             <span>
-              <label class="margin0"><input type="checkbox" ng-click="vm.layout()" ng-model="vm.selectedPef.requirements.age.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+              <label class="margin0"><input type="checkbox" ng-click="vm.layout(vm.msnry)" ng-model="vm.selectedPef.requirements.age.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
             </span>
             <div ng-if="vm.selectedPef.requirements.age.waivable===true">
               <label class="margin5">+/-</label>
-              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.age.waiver"></label>
+              <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.age.waiver"></label>
               <label class="margin5"> years </label>
             </div>
           </div>
         </div>
 
           <!-- gender-->
-          <div class="panel block-panel-small pull-left" ng-if="vm.hideSex!=true" ng->
+          <div class="panel block-panel-small pull-left" ng-if="vm.hideSex!=true">
             <div class="panel-header">Gender
-              <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideSex=true;vm.layout()"></i></span>
+<!--              <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideSex=true;vm.layout(vm.msnry)"></i></span>-->
             </div>
             <div class="panel-body">
-              <select ng-model="vm.selectedPef.requirements.sex.val" ng-disabled="vm.isReadOnly()" class="text-border-lg">
+              <select ng-model="vm.selectedPef.requirements.sex.val" ng-disabled="vm.isReadOnly()" class="text-border-lg text-12">
               <option>Select One</option>
               <option ng-selected="vm.selectedPef.requirements.sex.val==='M'" value="M">Male Only</option>
               <option ng-selected="vm.selectedPef.requirements.sex.val==='F'" value="F">Female Only</option>
@@ -92,7 +94,7 @@
             </div>
           <div class="panel-footer">
             <span>
-              <label class="margin0"><input type="checkbox" ng-click="vm.layout()" ng-model="vm.selectedPef.requirements.sex.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.sex.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
             </span>
           </div>
         </div>
@@ -100,7 +102,7 @@
         <!-- ht wt-->
         <div class="panel block-panel-small pull-left" ng-if="vm.hideHtWt!=true">
           <div class="panel-header">Height & Weight
-            <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideHtWt=true;vm.layout()"></i></span>
+<!--            <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideHtWt=true;vm.layout(vm.msnry)"></i></span>-->
           </div>
           <div class="panel-body">
             <span>
@@ -115,7 +117,7 @@
                 </div>
                 <div class="panel-footer">
                   <span>
-                    <label class="margin0"><input type="checkbox" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()" ng-model="vm.selectedPef.requirements.height.waivable"> waivable</label>
+                    <label class="margin0"><input type="checkbox" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)" ng-model="vm.selectedPef.requirements.height.waivable"> waivable</label>
                   </span>
                   <div ng-if="vm.selectedPef.requirements.height.waivable===true">
                     <label class="margin5">+/-</label>
@@ -134,7 +136,7 @@
                 </div>
                 <div class="panel-footer">
                   <span>
-                    <label class="margin0"><input type="checkbox" ng-click="vm.layout()" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.weight.waivable"> waivable</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.layout(vm.msnry)" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.weight.waivable"> waivable</label>
                   </span>
                   <div ng-if="vm.selectedPef.requirements.weight.waivable===true">
                     <label class="margin5">+/-</label>
@@ -153,46 +155,71 @@
       </div>
 
       <!-- 1 education -->
-      <div class="grid-item" name="education">
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.edu">
         <div class="panel block-panel">
         <div class="panel-body">
 
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-graduation-cap text-primary"></i><strong class="margin10"> Education</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(1)"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('edu')"></i>
           </span>
               <hr>
           </div>
 
           <div>
-            <label>Grad Type: 
-              <select ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.tierGrad.max" class="text-border-lg">
-                <option>Select One</option>
-                <option ng-selected="vm.selectedPef.requirements.tierGrad.max=='1'" value="1">Tier 1 (High School)</option>
-                <option ng-selected="vm.selectedPef.requirements.tierGrad.max=='2'" value="2">Tier 2 (Home School)</option>
-              </select>
-              </label>
           </div>
 
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" ng-model="vm.selectedPef.requirements.algebra.has" ng-disabled="vm.isReadOnly()">1 Year Algebra or Higher</label>
+        <div class="panel block-panel-small-0 pull-left">
+          <div class="panel-body">
+            <div class="col-xs-12">
+
+              <label>Grad Type: 
+                <select ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.tierGrad.max" class="text-border-lg text-12">
+                  <option>Select One</option>
+                  <option ng-selected="vm.selectedPef.requirements.tierGrad.max==='1'" value="1">Tier 1 (High School)</option>
+                  <option ng-selected="vm.selectedPef.requirements.tierGrad.max==='2'" value="2">Tier 2 (Home School)</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.tierGrad.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
           </div>
         </div>
+
+
+        <div class="panel block-panel-small-0 pull-left">
+          <div class="panel-body">
+            <div class="col-xs-12">
+              <label><input type="checkbox" ng-model="vm.selectedPef.requirements.algebra.has" ng-disabled="vm.isReadOnly()">1 Year Algebra or Higher</label> 
+              </label>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.algebra.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
+          </div>
+        </div>
+          
+          
+          </div>
 
       </div>
       </div>
 
       <!-- 2 TOE  -->
-      <div class="grid-item">
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.toe">
         <div class="panel block-panel">
         <div class="panel-body">
 
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-calendar text-primary"></i><strong class="margin10"> Term of Enlistment</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(2)"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('toe')"></i>
             </span>
               <hr>
           </div>
@@ -207,14 +234,14 @@
       </div>
 
       <!-- 3 CITIZENSHIP  -->
-      <div class="grid-item">
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.cit">
         <div class="panel block-panel">
         <div class="panel-body">
 
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-id-card-o text-primary"></i><strong class="margin10"> US Citizenship</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(3)"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('cit')"></i>
             </span>
               <hr>
           </div>
@@ -231,77 +258,56 @@
       </div>
       </div>
 
-  
       <!-- 4 Clearance -->
-      <div class="grid-item" name="clearance">
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.cle">
         <div class="panel block-panel">
         <div class="panel-body">
 
           <div class="text-left">
             <span>
-            <i class="fa fa-2x fa-check-square-o text-primary"></i><strong class="margin10"> Clearance</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(4)"></i>
+            <i class="fa fa-2x fa-search text-primary"></i><strong class="margin10"> Clearance</strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('cle')"></i>
           </span>
               <hr>
           </div>
 
-          <div>
-            <label>Type: 
-              <select ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.clearance.min" class="text-border-lg">
-                <option>Select One</option>
-                <option ng-selected="vm.selectedPef.requirements.clearance.min===1" value="1">SECRET</option>
-                <option ng-selected="vm.selectedPef.requirements.clearance.min===2" value="2">TOP SECRET</option>
-              </select>
-              </label>
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div class="col-xs-12">
+
+                <label>Level 
+                  <select ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.clearance.min" class="text-border-100 text-12">
+                    <option>Select One</option>
+                    <option ng-selected="vm.selectedPef.requirements.clearance.min===1" value="1">SECRET</option>
+                    <option ng-selected="vm.selectedPef.requirements.clearance.min===2" value="2">TOP SECRET</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <span>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.clearance.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+              </span>
+            </div>
           </div>
+
         </div>
 
       </div>
       </div>
 
       <!-- 4 test scores -->
-      <div class="grid-item">
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.sco">
         <div class="panel block-panel">
         <div class="panel-body">
 
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-lightbulb-o text-primary"></i><strong class="margin10"> Test Scores</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(5)"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('sco')"></i>
           </span>
               <hr>
           </div>
-
-<!--
-          <div class="text-center">
-            <label>CL: </label>
-            <input class="text-border-md" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.cl.min">
-          </div>
-          <div class="text-center">
-            <label>EL: </label>
-            <input class="text-border-md" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.el.min">
-          </div>
-          <div class="text-center">
-            <label>GT: </label>
-            <input class="text-border-md" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.gt.min">
-          </div>
-          <div class="text-center">
-            <label>MM: </label>
-            <input class="text-border-md" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.mm.min">
-          </div>
-          <div class="text-center">
-            <label>VE: </label>
-            <input class="text-border-md" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.ve.min">
-          </div>
-          <div class="text-center">
-            <label>QT: </label>
-            <input class="text-border-md" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.qt.min">
-          </div>
-          <div class="text-center">
-            <label>DLAB: </label>
-            <input class="text-border-md" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.dlab.min">
-          </div>
--->
                     
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
@@ -311,11 +317,11 @@
 
             <div class="panel-footer">
               <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.cl.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.cl.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
               </span>
               <div ng-if="vm.selectedPef.requirements.cl.waivable===true">
                 <label class="col-xs-8">Amount:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.cl.waiver">
+                <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.cl.waiver">
               </div>
             </div>
           </div>
@@ -329,11 +335,11 @@
 
             <div class="panel-footer">
               <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.el.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.el.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
               </span>
               <div ng-if="vm.selectedPef.requirements.el.waivable===true">
                 <label class="col-xs-8">Amount:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.el.waiver">
+                <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.el.waiver">
               </div>
             </div>
           </div>
@@ -346,11 +352,11 @@
 
             <div class="panel-footer">
               <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.gt.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.gt.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
               </span>
               <div ng-if="vm.selectedPef.requirements.gt.waivable===true">
                 <label class="col-xs-8">Amount:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.gt.waiver">
+                <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.gt.waiver">
               </div>
             </div>
           </div>
@@ -363,11 +369,11 @@
 
             <div class="panel-footer">
               <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.mm.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.mm.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
               </span>
               <div ng-if="vm.selectedPef.requirements.mm.waivable===true">
                 <label class="col-xs-8">Amount:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.mm.waiver">
+                <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.mm.waiver">
               </div>
             </div>
           </div>
@@ -380,11 +386,11 @@
 
             <div class="panel-footer">
               <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.ve.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.ve.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
               </span>
               <div ng-if="vm.selectedPef.requirements.ve.waivable===true">
                 <label class="col-xs-8">Amount:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.ve.waiver">
+                <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.ve.waiver">
               </div>
             </div>
           </div>
@@ -397,11 +403,11 @@
 
             <div class="panel-footer">
               <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.qt.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.qt.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
               </span>
               <div ng-if="vm.selectedPef.requirements.qt.waivable===true">
                 <label class="col-xs-8">Amount:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.qt.waiver">
+                <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.qt.waiver">
               </div>
             </div>
           </div>
@@ -414,11 +420,11 @@
 
             <div class="panel-footer">
               <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.dlab.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.dlab.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
               </span>
               <div ng-if="vm.selectedPef.requirements.dlab.waivable===true">
                 <label class="col-xs-8">Amount:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.dlab.waiver">
+                <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.dlab.waiver">
               </div>
             </div>
           </div>
@@ -426,86 +432,122 @@
       </div>
       </div>
 
-      <!-- 5 vision -->
-      <div class="grid-item">
+      <!--  vision -->
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.vis">
         <div class="panel block-panel">
         <div class="panel-body">
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-eye text-primary"></i><strong class="margin10"> Vision </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(6)"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('vis')"></i>
           </span>
               <hr>
           </div>
 
-          <div>
-            <div class="div-flag">
-              <label class="pull-left">Color Perception:</label>
-            <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.color.min"></label>
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div class="col-xs-12">
+                <label>Color Perception</label>
+                  <input class="text-border-sm30" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.color.min">
+              </div>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-click="vm.layout(vm.msnry)" ng-model="vm.selectedPef.requirements.vision.color.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
+            <div ng-if="vm.selectedPef.requirements.vision.color.waivable===true">
+              <label class="col-xs-8">Amount:</label>
+              <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.color.waiver">
             </div>
           </div>
+        </div>
 
-          <div>
-            <label class="control-label pull-left">Acuity 20/</label>
-            <input class="text-border-sm pull-left" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max1"></label>
-            <label class="col-lg-2 ">20/</label>
-            <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max2"></label>
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div  class="col-xs-12">
+                <label class="control-label pull-left">Acuity 20/
+                <input class="text-border-sm40" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max1"> 20/ 
+                <input class="text-border-sm40" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max2"></label>
+              </div>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.vision.acuity.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
           </div>
+        </div>
 
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.depth.has">Normal Depth Perception</label>
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div  class="col-xs-12">
+                <label>
+                  <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.depth.has">Normal Depth Perception</label>
+              </div>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.vision.depth.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
           </div>
-
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.correctable.has">Correctable to 20/20</label>
+        </div>
+  
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div  class="col-xs-12">
+                <label>
+                  <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.correctable.has">Correctable to 20/20</label>
+              </div>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.vision.correctable.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
           </div>
-
+        </div>
+  
         </div>
       </div>
       </div>
 
-      <!-- 6 driving -->
-      <div class="grid-item">
+      <!--  driving -->
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.dri">
         <div class="panel block-panel">
         <div class="panel-body">
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-car text-primary"></i><strong class="margin10"> Driving </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(7)"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('dri')"></i>
           </span>
               <hr>
           </div>
 
 
-          <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true">
+          <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
               <div  class="col-xs-12">
                 <label>
-                <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()" ng-model="vm.selectedPef.requirements.driving.license.has">Driver's License</label>
+                <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.driving.license.has">Driver's License</label>
               </div>
             </div>
           <div class="panel-footer">
             <span>
-              <label class="margin0"><input type="checkbox" ng-click="vm.layout()" ng-model="vm.selectedPef.requirements.driving.license.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.driving.license.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
             </span>
           </div>
-        </div>          
+        </div>
           
-          
-          <div class="panel block-panel-small pull-left">
+          <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
             <label class="col-xs-8">Traffic Violations</label>
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.driving.violations.max">
             </div>
           <div class="panel-footer">
             <span>
-              <label><input type="checkbox" ng-model="vm.selectedPef.requirements.driving.violations.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable</label>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.driving.violations.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
             </span>
             <div ng-if="vm.selectedPef.requirements.driving.violations.waivable===true">
-              <label class="col-xs-8">Max violations:</label>
-              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.driving.violations.waiver">
+              <label class="col-xs-8">Amount:</label>
+              <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.driving.violations.waiver">
             </div>
           </div>
         </div>
@@ -518,11 +560,11 @@
           
           <div class="panel-footer">
             <span>
-              <label><input type="checkbox" ng-model="vm.selectedPef.requirements.driving.offenses.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.driving.offenses.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
             </span>
             <div ng-if="vm.selectedPef.requirements.driving.offenses.waivable===true">
-              <label class="col-xs-8">Max offenses:</label>
-              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.driving.offenses.waiver">
+              <label class="col-xs-8">Amount:</label>
+              <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.driving.offenses.waiver">
             </div>
           </div>
         </div>
@@ -530,35 +572,17 @@
       </div>
       </div>
 
-      <!-- 7 moral -->
-      <div class="grid-item">
+      <!--  moral -->
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.mor">
         <div class="panel block-panel">
         <div class="panel-body">
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-gavel text-primary"></i><strong class="margin10"> Moral </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(8)"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('mor')"></i>
           </span>
               <hr>
           </div>
-
-<!--
-          <div class="div-flag">
-            <label class="col-xs-8">Conduct Offenses:</label>
-            <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.moral.conduct.max">
-          </div>
-
-          <div class="div-flag">
-            <label class="col-xs-8">Marijuana Offenses:</label>
-            <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.moral.marijuana.max">
-          </div>
-
-          <div class="div-flag">
-            <label class="col-xs-8">Other Drug Offenses:</label>
-            <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.moral.otherDrugs.max">
-          </div>
-
--->
           
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
@@ -568,46 +592,46 @@
 
             <div class="panel-footer">
               <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.moral.conduct.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.moral.conduct.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
               </span>
               <div ng-if="vm.selectedPef.requirements.moral.conduct.waivable===true">
-                <label class="col-xs-8">Max offenses:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.moral.conduct.waiver">
+                <label class="col-xs-8">Amount:</label>
+                <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.moral.conduct.waiver">
               </div>
             </div>
           </div>
 
           
-          <div class="panel block-panel-small-0 pull-left">
-            <div class="panel-body">
-            <label class="col-xs-8">Marijuana</label>
-              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.moral.marijuana.max">
-            </div>
+        <div class="panel block-panel-small-0 pull-left">
+          <div class="panel-body">
+          <label class="col-xs-8">Marijuana</label>
+            <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.moral.marijuana.max">
+          </div>
 
-            <div class="panel-footer">
-              <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.moral.marijuana.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
-              </span>
-              <div ng-if="vm.selectedPef.requirements.moral.marijuana.waivable===true">
-                <label class="col-xs-8">Max offenses:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.moral.marijuana.waiver">
-              </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.moral.marijuana.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
+            </span>
+            <div ng-if="vm.selectedPef.requirements.moral.marijuana.waivable===true">
+              <label class="col-xs-8">Amount:</label>
+              <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.moral.marijuana.waiver">
             </div>
           </div>
+        </div>
           
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
             <label class="col-xs-8">Other Drugs</label>
-              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.moral.otherDrug.max">
+              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.moral.otherDrugs.max">
             </div>
 
             <div class="panel-footer">
               <span>
-                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.moral.otherDrug.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout()"> waivable?</label>
+                <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.moral.otherDrugs.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
               </span>
-              <div ng-if="vm.selectedPef.requirements.moral.otherDrug.waivable===true">
-                <label class="col-xs-8">Max offenses:</label>
-                <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.moral.otherDrug.waiver">
+              <div ng-if="vm.selectedPef.requirements.moral.otherDrugs.waivable===true">
+                <label class="col-xs-8">Amount:</label>
+                <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.moral.otherDrugs.waiver">
               </div>
             </div>
           </div>
@@ -615,43 +639,107 @@
       </div>
       </div>
 
-      <!-- 8 certifications -->
-      <div class="grid-item">
+      <!-- certifications -->
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.cer">
         <div class="panel block-panel">
         <div class="panel-body">
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-certificate text-primary"></i><strong class="margin10"> Certifications </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.remove(9)"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('cer')"></i>
           </span>
               <hr>
           </div>
 
-          <div class="checkbox">
-            <label><input type="checkbox" ng-model="vm.selectedPef.requirements.waterQual.has" ng-disabled="vm.isReadOnly()">WS-B(+) Water Surv. Cert</label>
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div  class="col-xs-12">
+                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.waterQual.has" ng-disabled="vm.isReadOnly()">WS-B(+) Water Surv. Cert</label>
+              </div>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.waterQual.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
           </div>
+        </div>
 
-          <div class="checkbox">
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div  class="col-xs-12">
             <label><input type="checkbox" ng-model="vm.selectedPef.requirements.flightPhysical.has" ng-disabled="vm.isReadOnly()">Flight Physical</label>
+              </div>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.flightPhysical.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
           </div>
-
-          <div class="checkbox">
-            <label><input type="checkbox" ng-model="vm.selectedPef.requirements.speech.has" ng-disabled="vm.isReadOnly()">Clarity of Speech</label>
-          </div>
-
-          <div class="checkbox">
+        </div>
+            
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div  class="col-xs-12">
             <label><input type="checkbox" ng-model="vm.selectedPef.requirements.pftClass1.has" ng-disabled="vm.isReadOnly()">1st Class PFT Score</label>
+              </div>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.pftClass1.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
           </div>
+        </div>
+          
 
-          <div>
-            <label class="pull-left">PRP Unfav. Responses: </label>
-            <input class="text-border-sm" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.prpScreen.max">
-          </div>
-
-        </div>  <!-- well -->
+          </div>  <!-- well -->
       </div>
-      </div>  <!-- certs -->
+      </div>
 
+      <!--  additional screening/quals -->
+      <div class="grid-item" ng-show="vm.selectedPef.pefvis.scr">
+        <div class="panel block-panel">
+        <div class="panel-body">
+          <div class="text-left">
+            <span>
+            <i class="fa fa-2x fa-check-square-o text-primary"></i><strong class="margin10"> Screenings </strong>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('scr')"></i>
+          </span>
+              <hr>
+          </div>
+            
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div  class="col-xs-12">
+                <label><input type="checkbox" ng-model="vm.selectedPef.requirements.speech.has" ng-disabled="vm.isReadOnly()">Clarity of Speech</label>
+              </div>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.speech.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
+          </div>
+        </div>
+
+        <div class="panel block-panel-small-0 pull-left">
+          <div class="panel-body">
+          <label class="col-xs-7">PRP Responses</label>
+            <input class="text-border-sm30" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.prpScreen.max">
+          </div>
+
+        <div class="panel-footer">
+          <span>
+            <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.prpScreen.waivable" ng-disabled="vm.isReadOnly()" ng-click="vm.layout(vm.msnry)"> waivable</label>
+          </span>
+          <div ng-if="vm.selectedPef.requirements.prpScreen.waivable===true">
+            <label class="col-xs-8">Amount:</label>
+            <input class="text-border-xs" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.prpScreen.waiver">
+          </div>
+        </div>
+      </div>
+
+    </div>  <!-- well -->
+      </div>
+      </div>
 
     </div>
   </div>

@@ -4,7 +4,7 @@ export default function($stateProvider) {
   'ngInject';
   $stateProvider
     .state('recruiterview', {
-      url: '/recruiterview',
+      url: '/',
       template: '<recruiterview></recruiterview>'
     });
 }

@@ -1,9 +1,8 @@
+<navbar></navbar>
+<pagehead></pagehead>
 <div class="container">
-  <div class="row row-header">
-    <h3>{{vm.recruit.fullName}}</h3>
-  </div>
 
-    <!-- PEF Match-->
+  <!-- PEF Match-->
     <div class="col-xs-12 col-sm-3">
       <div class="well-black">
 
@@ -11,37 +10,25 @@
         <div class="input-group">
           <input type="text" class="text-center" placeholder=" Search PEFs" ng-model="pefText">
         </div>
-
         <hr/>
 
         <!-- pef error filter-->
         <div class="horizontal">
           <div class="btn-group" data-toggle="buttons">
-            <button class="btn btn-primary btn-sm" type="radio" ng-click="vm.fCategory=0"
-                    ng-class="{'active': vm.fCategory===0}"> 0
-            </button>
-            <button class="btn btn-primary btn-sm" type="radio" ng-click="vm.fCategory=1"
-                    ng-class="{'active': vm.fCategory===1}"> 1
-            </button>
-            <button class="btn btn-primary btn-sm" type="radio" ng-click="vm.fCategory=2"
-                    ng-class="{'active': vm.fCategory===2}"> 2
-            </button>
-            <button class="btn btn-primary btn-sm" type="radio" ng-click="vm.fCategory=3"
-                    ng-class="{'active': vm.fCategory===3}"> 3
-            </button>
-            <button class="btn btn-primary btn-sm" type="radio" ng-click="vm.fCategory=4"
-                    ng-class="{'active': vm.fCategory===4}">4+
-            </button>
-            <button class="btn btn-primary btn-sm" type="radio" ng-click="vm.fCategory=''"
-                    ng-class="{'active': vm.fCategory===''}">All
-            </button>
+            <button class="btn btn-primary btn-filter" type="radio" ng-click="vm.fCategory=0;vm.bkmarks=undefined" ng-class="{'active': vm.fCategory===0}">0</button>
+            <button class="btn btn-primary btn-filter" type="radio" ng-click="vm.fCategory=1;vm.bkmarks=undefined" ng-class="{'active': vm.fCategory===1}">1</button>
+            <button class="btn btn-primary btn-filter" type="radio" ng-click="vm.fCategory=2;vm.bkmarks=undefined" ng-class="{'active': vm.fCategory===2}">2</button>
+            <button class="btn btn-primary btn-filter" type="radio" ng-click="vm.fCategory=3;vm.bkmarks=undefined" ng-class="{'active': vm.fCategory===3}">3+</button>
+            <button class="btn btn-primary btn-filter" type="radio" ng-click="vm.fCategory=undefined; vm.bkmarks=true" ng-class="{'active': vm.bkmarks===true}">
+            <i class="fa fa-bookmark"></i></button>
+            <button class="btn btn-primary btn-sm" type="radio" ng-click="vm.fCategory='';vm.bkmarks=undefined" ng-class="{'active': vm.fCategory===''}">All</button>
           </div>
         </div>
 
         <hr/>
 
         <ul class="list-group">
-          <li class="list-group-item" ng-click="vm.select(pef)" ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText}"
+          <li class="list-group-item" ng-click="vm.select(pef)" ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText, isBookmarked: vm.bkmarks}"
           ng-class="{'selected': pef===vm.selectedPef}">{{pef.pefCode}}
             <span class="badge badge-danger" ng-if="pef.errs > 0">{{pef.errs}}</span>
             <span class="text-primary pull-right" ng-if="pef.errs===0">
@@ -54,13 +41,23 @@
       </div>
     </div>
 
+  
+  <!-- ---------------------------------------------------------------------------------------------------------------  -->
+  <!-- ---------------------------------------------------------------------------------------------------------------  -->
+  <!-- ---------------------------------------------------------------------------------------------------------------  -->
+  <!-- ---------------------------------------------------------------------------------------------------------------  -->
+  
+  
   <!-- Selected PEF Header-->
   <div class="col-xs-12 col-sm-9">
     <div class="panel profile-panel" >
       <div class="panel-body">
         <span ng-if="vm.selectedPef">
       <h4>{{vm.selectedPef.pefCode + ' - ' + vm.selectedPef.description}}
-        <button type="button" ng-if="vm.canAssign(vm.selectedPef)" class="btn btn-primary pull-right" ng-click="vm.toggleAssignment()">ASSIGN PEF</button>
+        <span class="fa fa-1x text-primary pull-right" ng-class="{'fa-bookmark': vm.selectedPef.isBookmarked, 'fa-bookmark-o': !vm.selectedPef.isBookmarked}" uib-tooltip="Bookmark" 
+              ng-click="vm.toggleBookmark()" ng-show="vm.selectedPef!==undefined"></span>
+
+        <button type="button" ng-if="vm.canAssign(vm.selectedPef)" class="btn btn-success pull-right" ng-click="vm.toggleAssignment()">ASSIGN CANDIDATE</button>
         <span class="fa fa-star text-primary" ng-if="vm.isAssigned(vm.selectedPef)" uib-tooltip="Assigned" ng-click="vm.toggleAssignment()"></span></h4>
         </span>
       </div>
@@ -92,15 +89,15 @@
               <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.age.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.age.description}}"></i></span>
             </div>
           <div class="panel-footer" ng-show="vm.selectedPef.requirements.age.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.age.flag===true}">
-              <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.age)" ng-checked="vm.selectedPef.requirements.age.iswaived"> waived</label>
+              <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.age)" ng-checked="vm.selectedPef.requirements.age.iswaived"> waived</label>
           </div>
         </div>
 
   <!-- SEX -->
           <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.sex.flag}">
             <div class="panel-body">
-              <label class="col-xs-5">Gender</label>
-              <select ng-model="vm.recruit.sex.val" ng-disabled="true" class="text-border-100">
+              <label class="col-xs-4">Gender</label>
+              <select ng-model="vm.recruit.sex.val" ng-disabled="true" class="text-border-100 text-12">
                 <option ng-selected="vm.recruit.sex.val==='M'" value="M">Male</option>
                 <option ng-selected="vm.recruit.sex.val==='F'" value="F">Female</option>
               </select>
@@ -108,7 +105,7 @@
             <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.sex.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.sex.description}}"></i></span>
             </div>
             <div class="panel-footer" ng-show="vm.selectedPef.requirements.sex.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.sex.flag===true}">
-              <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.sex)" ng-checked="vm.selectedPef.requirements.sex.iswaived"> waived</label>
+              <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.sex)" ng-checked="vm.selectedPef.requirements.sex.iswaived"> waived</label>
             </div>
         </div>
 
@@ -160,15 +157,15 @@
                 <hr>
             </div>
 
-              <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.driving.license.flag}">
+              <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.tierGrad.flag}">
                 <div class="panel-body">
-                <label class="col-xs-10">
-                  <input disabled type="checkbox" ng-checked="{{vm.recruit.driving.license.has}}">Tier Grad</label>
+                <label class="col-xs-10">Tier 
+                  <input class="text-border-xs" ng-readonly="true" ng-model="vm.recruit.tierGrad.val"> Grad</label>
                   <span ng-if="vm.selectedPef.requirements.tierGrad.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.tierGrad.description}}"></i></span>
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.tierGrad.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.tierGrad.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.tierGrad.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.tierGrad.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.tierGrad)" ng-checked="vm.selectedPef.requirements.tierGrad.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.tierGrad)" ng-checked="vm.selectedPef.requirements.tierGrad.iswaived"> waived</label>
                 </div>
               </div>
             
@@ -180,11 +177,9 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.algebra.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.algebra.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.algebra.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.algebra.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.algebra)" ng-checked="vm.selectedPef.requirements.algebra.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.algebra)" ng-checked="vm.selectedPef.requirements.algebra.iswaived"> waived</label>
                 </div>
               </div>
-
-            
           </div>
         </div>
       </div>
@@ -209,7 +204,7 @@
               <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.toe.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.toe.description}}"></i></span>
             </div>
             <div class="panel-footer" ng-show="vm.selectedPef.requirements.toe.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.toe.flag===true}">
-                <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.toe)" ng-checked="vm.selectedPef.requirements.toe.iswaived"> waived</label>
+                <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.toe)" ng-checked="vm.selectedPef.requirements.toe.iswaived"> waived</label>
             </div>
           </div>
 
@@ -237,7 +232,7 @@
                 <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.usCitizen.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.usCitizen.description}}"></i></span>
               </div>
               <div class="panel-footer" ng-show="vm.selectedPef.requirements.usCitizen.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.usCitizen.flag===true}">
-                  <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.usCitizen)" ng-checked="vm.selectedPef.requirements.usCitizen.iswaived"> waived</label>
+                  <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.usCitizen)" ng-checked="vm.selectedPef.requirements.usCitizen.iswaived"> waived</label>
               </div>
             </div>
 
@@ -249,7 +244,7 @@
               <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.usCitizenFamily.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.usCitizenFamily.description}}"></i></span>
             </div>
             <div class="panel-footer" ng-show="vm.selectedPef.requirements.usCitizenFamily.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.usCitizenFamily.flag===true}">
-                <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.usCitizenFamily)" ng-checked="vm.selectedPef.requirements.usCitizenFamily.iswaived"> waived</label>
+                <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.usCitizenFamily)" ng-checked="vm.selectedPef.requirements.usCitizenFamily.iswaived"> waived</label>
             </div>
           </div>
           
@@ -265,15 +260,15 @@
 
           <div class="text-left">
             <span>
-            <i class="fa fa-2x fa-check-square-o text-primary"></i><strong class="margin10"> Clearance</strong>
+            <i class="fa fa-2x fa-search text-primary"></i><strong class="margin10"> Clearance</strong>
           </span>
               <hr>
           </div>
           
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body" ng-class="{'text-danger' : vm.selectedPef.requirements.clearance.flag}">
-            <label class="col-xs-5">Level </label>
-              <select ng-disabled="true" ng-model="vm.recruit.clearance.val" class="text-border-150">
+            <label class="col-xs-3">Level </label>
+              <select ng-disabled="true" ng-model="vm.recruit.clearance.val" class="text-border-100 text-12">
                 <option ng-selected="vm.recruit.clearance.val===1" value="1">SECRET</option>
                 <option ng-selected="vm.recruit.clearance.val===2" value="2">TOP SECRET</option>
               </select>
@@ -281,12 +276,9 @@
             <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.clearance.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.clearance.description}}"></i></span>
             </div>
           <div class="panel-footer" ng-show="vm.selectedPef.requirements.clearance.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.clearance.flag===true}">
-              <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.clearance)" ng-checked="vm.selectedPef.requirements.clearance.iswaived"> waived</label>
+              <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.clearance)" ng-checked="vm.selectedPef.requirements.clearance.iswaived"> waived</label>
           </div>
         </div>
-
-          
-          
         </div>
       </div>
       </div>
@@ -302,36 +294,98 @@
               <hr>
             </div>
 
-            <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.cl.flag===true}">
-              <label class="col-sm-5">CL: </label>
-              <label class="label-border">{{vm.recruit.cl.val}}</label>
+          <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true" ng-class="{'text-danger' : vm.selectedPef.requirements.cl.flag}">
+            <div class="panel-body">
+            <label class="col-xs-7">CL: </label>
+              <input class="text-border-sm" ng-readonly="true" ng-model="vm.recruit.cl.val">
+              <!-- TODO: simplify this ng-if and ng-class-->
+              <span ng-if="vm.selectedPef.requirements.cl.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.cl.description}}"></i></span>
+              <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.cl.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.cl.description}}"></i></span>
             </div>
-            <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.el.flag===true}">
-              <label class="col-sm-5">EL: </label>
-              <label class="label-border">{{vm.recruit.el.val}}</label>
+            <div class="panel-footer" ng-show="vm.selectedPef.requirements.cl.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.cl.flag===true}">
+                <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.cl)" ng-checked="vm.selectedPef.requirements.cl.iswaived"> waived</label>
             </div>
-            <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.gt.flag===true}">
-              <label class="col-sm-5">GT: </label>
-              <label class="label-border">{{vm.recruit.gt.val}}</label>
-            </div>
-            <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.mm.flag===true}">
-              <label class="col-sm-5">MM: </label>
-              <label class="label-border">{{vm.recruit.mm.val}}</label>
-            </div>
-            <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.ve.flag===true}">
-              <label class="col-sm-5">VE: </label>
-              <label class="label-border">{{vm.recruit.ve.val}}</label>
-            </div>
-            <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.qt.flag===true}">
-              <label class="col-sm-5">QT: </label>
-              <label class="label-border">{{vm.recruit.qt.val}}</label>
-            </div>
-            <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.dlab.flag===true}">
-              <label class="col-sm-5">DLAB: </label>
-              <label class="label-border">{{vm.recruit.dlab.val}}</label>
-            </div>
+          </div>
+            
 
-            <div class="clearfix"></div>
+          <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true" ng-class="{'text-danger' : vm.selectedPef.requirements.el.flag}">
+            <div class="panel-body">
+            <label class="col-xs-7">EL: </label>
+              <input class="text-border-sm" ng-readonly="true" ng-model="vm.recruit.el.val">
+              <!-- TODO: simplify this ng-if and ng-class-->
+              <span ng-if="vm.selectedPef.requirements.el.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.el.description}}"></i></span>
+              <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.el.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.el.description}}"></i></span>
+            </div>
+            <div class="panel-footer" ng-show="vm.selectedPef.requirements.el.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.el.flag===true}">
+                <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.el)" ng-checked="vm.selectedPef.requirements.el.iswaived"> waived</label>
+            </div>
+          </div>
+
+          <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true" ng-class="{'text-danger' : vm.selectedPef.requirements.gt.flag}">
+            <div class="panel-body">
+            <label class="col-xs-7">GT: </label>
+              <input class="text-border-sm" ng-readonly="true" ng-model="vm.recruit.gt.val">
+              <!-- TODO: simplify this ng-if and ng-class-->
+              <span ng-if="vm.selectedPef.requirements.gt.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.gt.description}}"></i></span>
+              <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.gt.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.gt.description}}"></i></span>
+            </div>
+            <div class="panel-footer" ng-show="vm.selectedPef.requirements.gt.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.gt.flag===true}">
+                <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.gt)" ng-checked="vm.selectedPef.requirements.gt.iswaived"> waived</label>
+            </div>
+          </div>
+
+          <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true" ng-class="{'text-danger' : vm.selectedPef.requirements.mm.flag}">
+            <div class="panel-body">
+            <label class="col-xs-7">MM: </label>
+              <input class="text-border-sm" ng-readonly="true" ng-model="vm.recruit.mm.val">
+              <!-- TODO: simplify this ng-if and ng-class-->
+              <span ng-if="vm.selectedPef.requirements.mm.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.mm.description}}"></i></span>
+              <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.mm.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.mm.description}}"></i></span>
+            </div>
+            <div class="panel-footer" ng-show="vm.selectedPef.requirements.mm.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.mm.flag===true}">
+                <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.mm)" ng-checked="vm.selectedPef.requirements.mm.iswaived"> waived</label>
+            </div>
+          </div>
+
+          <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true" ng-class="{'text-danger' : vm.selectedPef.requirements.ve.flag}">
+            <div class="panel-body">
+            <label class="col-xs-7">VE: </label>
+              <input class="text-border-sm" ng-readonly="true" ng-model="vm.recruit.ve.val">
+              <!-- TODO: simplify this ng-if and ng-class-->
+              <span ng-if="vm.selectedPef.requirements.ve.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.ve.description}}"></i></span>
+              <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.ve.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.ve.description}}"></i></span>
+            </div>
+            <div class="panel-footer" ng-show="vm.selectedPef.requirements.ve.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.ve.flag===true}">
+                <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.ve)" ng-checked="vm.selectedPef.requirements.ve.iswaived"> waived</label>
+            </div>
+          </div>
+
+          <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true" ng-class="{'text-danger' : vm.selectedPef.requirements.qt.flag}">
+            <div class="panel-body">
+            <label class="col-xs-7">QT: </label>
+              <input class="text-border-sm" ng-readonly="true" ng-model="vm.recruit.qt.val">
+              <!-- TODO: simplify this ng-if and ng-class-->
+              <span ng-if="vm.selectedPef.requirements.qt.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.qt.description}}"></i></span>
+              <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.qt.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.qt.description}}"></i></span>
+            </div>
+            <div class="panel-footer" ng-show="vm.selectedPef.requirements.qt.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.qt.flag===true}">
+                <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.qt)" ng-checked="vm.selectedPef.requirements.qt.iswaived"> waived</label>
+            </div>
+          </div>
+
+          <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true" ng-class="{'text-danger' : vm.selectedPef.requirements.dlab.flag}">
+            <div class="panel-body">
+            <label class="col-xs-7">DLAB: </label>
+              <input class="text-border-sm" ng-readonly="true" ng-model="vm.recruit.dlab.val">
+              <!-- TODO: simplify this ng-if and ng-class-->
+              <span ng-if="vm.selectedPef.requirements.dlab.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.dlab.description}}"></i></span>
+              <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.dlab.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.dlab.description}}"></i></span>
+            </div>
+            <div class="panel-footer" ng-show="vm.selectedPef.requirements.dlab.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.dlab.flag===true}">
+                <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.dlab)" ng-checked="vm.selectedPef.requirements.dlab.iswaived"> waived</label>
+            </div>
+          </div>
+
           </div>
         </div>
       </div>
@@ -346,20 +400,42 @@
               </span>
                   <hr>
               </div>
-
-                <div>
-                  <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.color.flag}" uib-tooltip="{{vm.selectedPef.requirements.vision.color.description}}">
-                    <label class="pull-left">Color Perception:</label>
-                    <label class="label-border">{{vm.recruit.vision.color.val}}</label>
-                  </div>
+            
+              <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.color.flag}">
+                <div class="panel-body">
+                <label class="col-xs-10">Color Perception
+                  <input class="text-border-sm40" ng-readonly="true" ng-model="vm.recruit.vision.color.val"></label>
+                  <span ng-if="vm.selectedPef.requirements.vision.color.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.color.description}}"></i></span>
+                  <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.vision.color.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.color.description}}"></i></span>
                 </div>
+                <div class="panel-footer" ng-show="vm.selectedPef.requirements.vision.color.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.vision.color.flag===true}">
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.vision.color)" ng-checked="vm.selectedPef.requirements.vision.color.iswaived"> waived</label>
+                </div>
+              </div>
 
-                <div class="div-flag" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.acuity.flag}">
-                    <label class="control-label pull-left">Acuity 20/</label>
-                  <label class="label-border pull-left" id="min1">{{vm.recruit.vision.acuity.val1}}</label>
-                  <label class="col-lg-2 ">20/</label>
-                  <label class="label-border" id="min2">{{vm.recruit.vision.acuity.val2}}</label>
-                </div>            
+              <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.acuity.flag}">
+                <div class="panel-body">
+                  <label class="col-xs-10">Acuity Eye 1: 20/
+                  <label class="label-border">{{vm.recruit.vision.acuity.val1}}</label></label>
+                  <span ng-if="vm.selectedPef.requirements.vision.acuity.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}"></i></span>
+                  <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.vision.acuity.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}"></i></span>
+                </div>
+                <div class="panel-footer" ng-show="vm.selectedPef.requirements.vision.acuity.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.vision.acuity.flag===true}">
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.vision.acuity)" ng-checked="vm.selectedPef.requirements.vision.acuity.iswaived"> waived</label>
+                </div>
+              </div>
+
+              <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.acuity.flag}">
+                <div class="panel-body">
+                  <label class="col-xs-10">Acuity Eye 2: 20/
+                  <label class="label-border">{{vm.recruit.vision.acuity.val2}}</label></label>
+                  <span ng-if="vm.selectedPef.requirements.vision.acuity.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}"></i></span>
+                  <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.vision.acuity.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}"></i></span>
+                </div>
+                <div class="panel-footer" ng-show="vm.selectedPef.requirements.vision.acuity.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.vision.acuity.flag===true}">
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.vision.acuity)" ng-checked="vm.selectedPef.requirements.vision.acuity.iswaived"> waived</label>
+                </div>
+              </div>
 
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.depth.flag}">
                 <div class="panel-body">
@@ -369,10 +445,10 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.vision.depth.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.depth.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.vision.depth.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.vision.depth.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.vision.depth)" ng-checked="vm.selectedPef.requirements.vision.depth.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.vision.depth)" ng-checked="vm.selectedPef.requirements.vision.depth.iswaived"> waived</label>
                 </div>
               </div>
-            
+
 
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.correctable.flag}">
                 <div class="panel-body">
@@ -382,9 +458,11 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.vision.correctable.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.correctable.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.vision.correctable.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.vision.correctable.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.vision.correctable)" ng-checked="vm.selectedPef.requirements.vision.correctable.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.vision.correctable)" ng-checked="vm.selectedPef.requirements.vision.correctable.iswaived"> waived</label>
                 </div>
               </div>
+
+            
             </div>
           </div>
 
@@ -408,7 +486,7 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.driving.violations.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.driving.violations.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.driving.violations.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.driving.violations.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.driving.violations)" ng-checked="vm.selectedPef.requirements.driving.violations.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.driving.violations)" ng-checked="vm.selectedPef.requirements.driving.violations.iswaived"> waived</label>
                 </div>
               </div>
 
@@ -420,7 +498,7 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.driving.offenses.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.driving.offenses.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.driving.offenses.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.driving.offenses.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.driving.offenses)" ng-checked="vm.selectedPef.requirements.driving.offenses.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.driving.offenses)" ng-checked="vm.selectedPef.requirements.driving.offenses.iswaived"> waived</label>
                 </div>
               </div>
 
@@ -432,7 +510,7 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.driving.license.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.driving.license.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.driving.license.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.driving.license.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.driving.license)" ng-checked="vm.selectedPef.requirements.driving.license.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.driving.license)" ng-checked="vm.selectedPef.requirements.driving.license.iswaived"> waived</label>
                 </div>
               </div>
 
@@ -460,7 +538,7 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.moral.conduct.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.moral.conduct.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.moral.conduct.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.moral.conduct.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.moral.conduct)" ng-checked="vm.selectedPef.requirements.moral.conduct.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.moral.conduct)" ng-checked="vm.selectedPef.requirements.moral.conduct.iswaived"> waived</label>
                 </div>
               </div>
 
@@ -472,7 +550,7 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.moral.marijuana.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.moral.marijuana.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.moral.marijuana.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.moral.marijuana.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.moral.marijuana)" ng-checked="vm.selectedPef.requirements.moral.marijuana.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.moral.marijuana)" ng-checked="vm.selectedPef.requirements.moral.marijuana.iswaived"> waived</label>
                 </div>
               </div>
             
@@ -484,7 +562,7 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.moral.otherDrugs.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.moral.otherDrugs.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.moral.otherDrugs.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.moral.otherDrugs.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.moral.otherDrugs)" ng-checked="vm.selectedPef.requirements.moral.otherDrugs.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.moral.otherDrugs)" ng-checked="vm.selectedPef.requirements.moral.otherDrugs.iswaived"> waived</label>
                 </div>
               </div>
             
@@ -512,7 +590,7 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.waterQual.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.waterQual.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.waterQual.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.waterQual.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.waterQual)" ng-checked="vm.selectedPef.requirements.waterQual.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.waterQual)" ng-checked="vm.selectedPef.requirements.waterQual.iswaived"> waived</label>
                 </div>
               </div>
             
@@ -524,9 +602,37 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.flightPhysical.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.flightPhysical.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.flightPhysical.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.flightPhysical.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.flightPhysical)" ng-checked="vm.selectedPef.requirements.flightPhysical.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.flightPhysical)" ng-checked="vm.selectedPef.requirements.flightPhysical.iswaived"> waived</label>
                 </div>
               </div>
+            
+            <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.pftClass1.flag}">
+                <div class="panel-body">
+                <label class="col-xs-10">
+                  <input ng-disabled="true" type="checkbox" ng-model="vm.recruit.pftClass1.has">1st Class PFT Score</label>
+                  <span ng-if="vm.selectedPef.requirements.pftClass1.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.pftClass1.description}}"></i></span>
+                  <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.pftClass1.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.pftClass1.description}}"></i></span>
+                </div>
+                <div class="panel-footer" ng-show="vm.selectedPef.requirements.pftClass1.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.pftClass1.flag===true}">
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.pftClass1)" ng-checked="vm.selectedPef.requirements.pftClass1.iswaived"> waived</label>
+                </div>
+              </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- quals -->
+      <div class="grid-item grid-item--quals">
+        <div class="panel block-panel">
+          <div class="panel-body">
+            <div class="text-left">
+              <span>
+                <i class="fa fa-2x fa-check-square-o text-primary"></i><strong class="margin10"> Screening </strong>
+              </span>
+              <hr>
+            </div>
             
             <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.speech.flag}">
                 <div class="panel-body">
@@ -536,38 +642,26 @@
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.speech.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.speech.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.speech.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.speech.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.speech)" ng-checked="vm.selectedPef.requirements.speech.iswaived"> waived</label>
-                </div>
-              </div>
-
-            <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.pftClass1.flag}">
-                <div class="panel-body">
-                <label class="col-xs-10">
-                  <input ng-disabled="true" type="checkbox" ng-model="vm.recruit.pftClass1.has">1st Class PFT Score</label>
-                  <span ng-if="vm.selectedPef.requirements.pftClass1.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.pftClass1.description}}"></i></span>
-                  <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.pftClass1.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.pftClass1.description}}"></i></span>
-                </div>
-                <div class="panel-footer" ng-show="vm.selectedPef.requirements.pftClass1.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.pftClass1.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.pftClass1)" ng-checked="vm.selectedPef.requirements.pftClass1.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.speech)" ng-checked="vm.selectedPef.requirements.speech.iswaived"> waived</label>
                 </div>
               </div>
             
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.prpScreen.flag}">
                 <div class="panel-body">
-                <label class="col-xs-9">PRP Unfav. Count</label>
+                <label class="col-xs-9">PRP Responses</label>
                   <label class="label-border">{{vm.recruit.prpScreen.val}}</label> 
                   <span ng-if="vm.selectedPef.requirements.prpScreen.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.prpScreen.description}}"></i></span>
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.prpScreen.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.prpScreen.description}}"></i></span>
                 </div>
                 <div class="panel-footer" ng-show="vm.selectedPef.requirements.prpScreen.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.prpScreen.flag===true}">
-                    <label><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.prpScreen)" ng-checked="vm.selectedPef.requirements.prpScreen.iswaived"> waived</label>
+                    <label class="margin0"><input type="checkbox" ng-click="vm.waive(vm.selectedPef.requirements.prpScreen)" ng-checked="vm.selectedPef.requirements.prpScreen.iswaived"> waived</label>
                 </div>
               </div>
 
           </div>
         </div>
 
-      </div>  <!-- QUALS widg -->
+      </div>    
     </div>  <!-- MASONRY -->
 
   </div>  
