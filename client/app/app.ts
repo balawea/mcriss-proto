@@ -15,14 +15,14 @@ import _Auth from '../components/auth/auth.module';
 import account from './account';
 import admin from './admin';
 import navbar from '../components/navbar/navbar.component';
-import pagehead from '../components/pagehead/pagehead.component';
+import recruitbanner from '../components/recruitbanner/recruitbanner.component';
 import footer from '../components/footer/footer.component';
 import main from './main/main.component';
 import samplepef from './samplepef/samplepef.component';
-import pefDetail from './pefDetail/pefDetail.component';
 import recruiterview from './recruiterview/recruiterview.component';
 import pefview from './pefview/pefview.component';
 import candidateprofile from './candidateprofile/candidateprofile.component';
+import allocationview from './allocationview/allocationview.component';
 import personal from './candidateprofile/personal/personal.component';
 import exams from './candidateprofile/exams/exams.component';
 import constants from './app.constants';
@@ -39,14 +39,14 @@ angular.module('mcrissDemoApp', [
 
   _Auth,
   account,
-  admin,  navbar, pagehead,
+  admin,  navbar, recruitbanner,
   footer,
   main,
   samplepef,
-  pefDetail,
   recruiterview,
   pefview,
   candidateprofile,
+  allocationview,
   personal,
   exams,
   constants,

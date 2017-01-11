@@ -15,20 +15,18 @@ export class PersonalComponent {
     this.id = $location.hash();
   } //ctor
     
-    
   /*@ngInject*/
   $onInit() {
     this.$http.get('/api/recruits/' + this.id).then(responseRec => {
       let fullrecruit = responseRec.data;
-        
       this.recruit = fullrecruit.personal || {};
-      this.recruit.age = {val: fullrecruit.age.val};
       this.recruit.dob = fullrecruit.dob;
       this.recruit.formattedAddr = fullrecruit.faddress;
       this.recruit.formattedHor = fullrecruit.fhor;
       this.recruit.firstName = fullrecruit.firstName;
       this.recruit.lastName = fullrecruit.lastName;
       this.recruit.middleName = fullrecruit.middleName;
+      this.recruit.sex = fullrecruit.match.sex.val;
     });
   } //init
 } //class

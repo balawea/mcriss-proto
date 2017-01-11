@@ -15,6 +15,7 @@ var UserSchema = new Schema({
     type: String,
     default: 'user'
   },
+  rs: String,
   password: {
     type: String,
     required: true
@@ -50,6 +51,7 @@ UserSchema
   .get(function() {
     return {
       name: this.name,
+      rs: this.rs,
       role: this.role
     };
   });

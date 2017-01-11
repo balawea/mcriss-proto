@@ -4,32 +4,39 @@
     </div>
 
     <!--   Title and Icons   -->
-    <div uib-collapse="$ctrl.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+    <div uib-collapse="$ctrl.isCollapsed" class="navbar-collapse collapse padright15" id="navbar-main">
 
       <ul class="nav navbar-nav">
         <li ui-sref-active="active"><p class="navbar-text"><a ui-sref="recruiterview">
           <span class="fa fa-3x pull-left" ng-class="{'fa-bars-white': !hoverbar, 'fa-bars': hoverbar}" ng-mouseenter="hoverbar=true" ng-mouseleave="hoverbar=false"></span></a></p></li>
 
         <li class="padtop10"><img src="assets/images/usmc.png" class="usmc" alt="MCRISS"></li>
-        <li class="padtop10"><i class="headerfont margin10">{{$ctrl.title}}</i></li>
-      </ul> 
-
-      <!--<ul class="nav navbar-nav">
-        <li ng-repeat="item in $ctrl.menu" ui-sref-active="active">
-            <a ui-sref="{{item.state}}">{{item.title}}</a>
-        </li>
-        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
-      </ul>-->
+        <li class="padtop10"><i class="headerfont margin10">{{title}}</i></li>
+      </ul>
 
       <!--   Search (optional), Notification icon, Recruiter Name & Pic   -->
       <ul class="nav navbar-nav navbar-right headerfont-sm">
         <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><p class="navbar-text"><a ui-sref="signup">Sign up</a></p></li>
         <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><p class="navbar-text"><a ui-sref="login">Login</a></p></li>
-        <li ng-show="$ctrl.isLoggedIn()"><p class="navbar-text">{{ $ctrl.getCurrentUser().name }}</p> </li>
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="settings">
+  
+        <li ng-show="$ctrl.isLoggedIn()"><p class="navbar-text">{{$ctrl.getCurrentUser().rs}} | {{$ctrl.getCurrentUser().name}}</p></li>
+
+<!--        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><p class="navbar-text"><a ui-sref="admin">Users</a></p></li>-->
+
+        <!-- ALLOCATIONS -->
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="allocationview" uib-tooltip="Allocations">
+          <span class="fa pull-left" ng-class="{'fa-line-chart':hoveralloc, 'fa-line-chart-white': !hoveralloc}" ng-mouseenter="hoveralloc=true" ng-mouseleave="hoveralloc=false"></span></a></p></li>
+        
+        <!-- VIEW/EDIT PEFS -->
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="pefview" uib-tooltip="PEF View">
+          <span class="fa pull-left" ng-class="{'fa-pencil-square-o':hoveredit, 'fa-pencil-square-o-white': !hoveredit}" ng-mouseenter="hoveredit=true" ng-mouseleave="hoveredit=false"></span></a></p></li>
+        
+        <!-- SETTINGS -->
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="settings" uib-tooltip="Settings">
           <span class="fa pull-left" ng-class="{'fa-cog':hovercog, 'fa-cog-white': !hovercog}" ng-mouseenter="hovercog=true" ng-mouseleave="hovercog=false"></span></a></p></li>
 
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="logout">
+        <!-- LOGOUT -->
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="logout" uib-tooltip="Logout">
           <span class="fa pull-left" ng-class="{'fa-sign-out':hoverlogout, 'fa-sign-out-white': !hoverlogout}" ng-mouseenter="hoverlogout=true" ng-mouseleave="hoverlogout=false"></span></a></p></li>
       </ul>
     </div>

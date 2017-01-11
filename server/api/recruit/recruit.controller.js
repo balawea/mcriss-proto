@@ -6,6 +6,8 @@
  * PUT     /api/recruits/:id          ->  upsert
  * PATCH   /api/recruits/:id          ->  patch
  * DELETE  /api/recruits/:id          ->  destroy
+
+
  */
 
 'use strict';
@@ -68,6 +70,24 @@ export function index(req, res) {
   return recruit.find().exec()
     .then(respondWithResult(res))
     .catch(handleError(res));
+}
+
+//get lite recruit objects for recruiterview tiles
+export function lite(req, res) {
+  return recruit.lite().exec()
+    .then(respondWithResult(res))
+    .catch(handleError(res));
+}
+
+//get lite recruits under a specific recruiter
+export function findbyrec(req, res) {
+  var recId = req.params.recid;
+
+  return recruit.findbyrec(recId).exec()
+    .then(handleEntityNotFound(res))
+    .then(respondWithResult(res))
+    .catch(handleError(res));
+
 }
 
 // Gets a single recruit from the DB

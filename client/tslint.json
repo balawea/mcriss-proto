@@ -31,18 +31,18 @@
     "no-unused-variable": true,
     "no-unreachable": true,
     "no-use-before-declare": true,
-    "one-line": [true,
+    "one-line": [false,
       "check-open-brace",
       "check-catch",
       "check-else",
       "check-whitespace"
     ],
-    "quotemark": [true, "single"],
+    "quotemark": [false, "single"],
     "radix": true,
     "semicolon": true,
     "trailing-comma": false,
     "triple-equals": [true, "allow-null-check"],
-    "typedef-whitespace": [true, {
+    "typedef-whitespace": [false, {
       "call-signature": "nospace",
       "index-signature": "nospace",
       "parameter": "nospace",
@@ -50,7 +50,7 @@
       "variable-declaration": "nospace"
     }],
     "variable-name": false,
-    "whitespace": [true,
+    "whitespace": [false,
       "check-branch",
       "check-decl",
       "check-operator",

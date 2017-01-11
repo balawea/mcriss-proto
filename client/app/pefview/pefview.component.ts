@@ -3,7 +3,7 @@ const angular = require('angular');
 const noUiSlider = require('nouislider');
 const uiRouter = require('angular-ui-router');
 const Masonry = require('masonry-layout');
-
+const swal = require('sweetalert');
 import routes from './pefview.routes';
 
 export class PefviewComponent {
@@ -14,10 +14,10 @@ export class PefviewComponent {
   selectedPef;
   selectedPefId;
   req;
-  isEditing;
   elems;
   msnry;
   isAdmin: Function;
+  modeColor;
 
   /*@ngInject*/
   constructor($http, $location, $timeout, Auth) {
@@ -29,12 +29,11 @@ export class PefviewComponent {
 
   /*@ngInject*/
   $onInit() {
-    this.isEditing = false;
-
     this.$http.get('/api/pefRequirements/')
       .then(responsePef => {
         this.pefs = responsePef.data;
-        this.setVisibility(this.pefs);
+        this.initPefs(this.pefs);
+        this.pefs.sort(this.byPefCode);
         this.select(this.pefs[0]);
         return this.pefs;
       })
@@ -42,47 +41,52 @@ export class PefviewComponent {
       this.msnry = new Masonry( '.grid', {
         itemSelector: '.grid-item',
         columnWidth: 275,
-        transitionDuration: '0.8s'
+        transitionDuration: '0.5s'
       })
-      
+
       this.layout(this.msnry);
     })
-
   }   //oninit
 
+  byPefCode(a, b) {
+    let acode = a.pefCode.toUpperCase();
+    let bcode = b.pefCode.toUpperCase();
+
+    if (acode < bcode)
+      return -1;
+    else
+      return 1;
+  }
+
   isReadOnly(){
-    let res = !(this.isAdmin() && this.isEditing === true);
+    let res = !this.isAdmin() || ((this.selectedPef || {}).isEditing || false) === false;
+    this.modeColor = res ? 'text-gray' : 'text-primary';
+    
     return res;
   }
 
   select(pef) {
+    if (!!this.selectedPef && this.selectedPef != pef)
+      this.selectedPef.isEditing = false;
+
     this.selectedPef = pef;
     this.layout(this.msnry);
   }
 
   layout(msnry) {
-    this.$timeout(function() {
-      msnry.layout();
-    }, 200, false);
+    if (!!msnry) {
+      this.$timeout(function() {
+        msnry.layout();
+      }, 300, false);
+    }
   }
 
-  refresh(msnry) {
-    this.$timeout(function() {
-
-      msnry = new Masonry( '.grid', {
-        itemSelector: '.grid-item',
-        columnWidth: 275,
-        transitionDuration: '0.8s'
-      });
-    }, 200, false);
-  }
-
-  hide(obj) {
+  hideTiles(obj) {
     this.selectedPef.pefvis[obj] = false;
     this.layout(this.msnry);
   }
 
-  restore() {
+  restoreTiles() {
     for (let pkey in this.selectedPef.pefvis) {
       this.selectedPef.pefvis[pkey] = true;
     }
@@ -91,38 +95,109 @@ export class PefviewComponent {
 
   save() {
     if (this.selectedPef) {
-      this.$http.put('/api/pefRequirements/' + this.selectedPef._id, this.selectedPef);
-      this.isEditing = false;
-      console.info('saved');
+      
+      console.log(this.selectedPef);
+
+      //hack
+      if (((this.selectedPef.requirements.sex || {}).val || '') === '')
+        this.selectedPef.requirements.sex = undefined;
+      if (((this.selectedPef.requirements.tierGrad || {}).max || '') === '')
+        this.selectedPef.requirements.tierGrad = undefined;
+      if (((this.selectedPef.requirements.clearance || {}).min || '') === '')
+        this.selectedPef.requirements.clearance = undefined;
+      
+      this.$http.put(`/api/pefRequirements/${this.selectedPef._id}`, this.selectedPef)
+      .then(res => {
+        if (res.statusText==="OK") {
+          console.info('saved');
+          swal("Success", `PEF ${this.selectedPef.pefCode} has been saved.`, "success");
+        }
+        else {
+          console.error('save error');
+          swal("Error", `Save failed with status: ${res.status}`, "error");
+        }
+        this.selectedPef.isEditing = false;
+      });
     }
   }
 
-    //to cancel edits on a single pef, need to fetch it and replace it in the pefs array.
-    //The problem with that is that multiple pefs may have been edited in the meantime.
+  //cancel edits on a single pef, replace it in the pefs array with the original from the db.
   cancel() {
     if (this.selectedPef) {
-      this.selectedPefId = this.selectedPef._id;
-      this.$http.get('/api/pefRequirements/' + this.selectedPef._id)
+      this.$http.get(`/api/pefRequirements/${this.selectedPef._id}`)
       .then(pef => {
-
+        var oldpef;
         for(let i=0;i<this.pefs.length;i++){
-          if(this.pefs[i]._id === this.selectedPefId){
-            this.pefs.splice(i, 1, pef.data);
-            this.select(this.pefs[i]);
+          if(this.pefs[i]._id === this.selectedPef._id){
+            oldpef = this.initPefs([pef.data]);
+            this.pefs.splice(i, 1, oldpef[0]);
+            this.selectedPef = this.pefs[i];
+            console.info('canceled');
           }
         }
       });
 
-      console.info('canceled');
     }
   }
 
-  setVisibility(pefs) {
+  //Init brick visibility obj for each pef
+  //Set isEditing to false.
+  //Might dynamically hide unused tiles here.
+  initPefs(pefs) {
     for (let pef of pefs) {
-      pef.pefvis = {per: true, edu: true, toe: true, cle: true, sco: true, cit: true, vis: true, dri: true, mor: true, cer: true, scr: true};
+      pef.isEditing = false;
+//      let vis = pef.pefvis;
+//      
+//      for (let pkey in vis) {
+//        if (!vis[pkey])
+//          this.hideTiles()
+//        
+//      }
+      //start with all visible
+      //pef.pefvis = {per: true, edu: true, toe: true, cle: true, sco: true, cit: true, vis: true, dri: true, mor: true, cer: true, scr: true};
     }
     return pefs;
   }
+
+  editDesc(name, node) {
+    if (this.selectedPef && !this.isReadOnly()) {
+      // "node" will come in as "ssn" or "driving.license" where "p" = this.selectedPef.requirements.
+      // The description data will be nested in "node", so drill down through "p" to get a reference to it.
+      let p = this.selectedPef.requirements;
+      var nodes = node.split('.');
+      for (let n of nodes) {
+        if (!p[n]) {
+          p[n] = {};
+        }
+          p = p[n];
+      }
+
+      this.getDesc(name, p, (inputVal) => {
+
+        if (inputVal !== false) {
+          p.description = inputVal;
+        }
+      }, p);
+    }
+  }//
+
+  getDesc(name, p, callback) {
+    if (p) {
+      swal({
+        title: `Set ${name} description`,
+        inputValue: p.description || '',
+        type: "input",
+        showCancelButton: true,
+        allowEscapeKey: true,
+        allowEscapeClick: true,
+        closeOnConfirm: true,
+        animation: "slide-from-top"
+      },
+      function(inputValue){
+        callback(inputValue);
+      });
+    }
+  }//
 
 } // class
 

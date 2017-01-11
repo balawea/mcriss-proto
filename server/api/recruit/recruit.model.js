@@ -3,14 +3,16 @@
 import mongoose from 'mongoose';
 
 var RecruitSchema = new mongoose.Schema({
-  firstName:String,
-  lastName:String,
-  middleName:String,
-  active:Boolean,
+  firstName: String,
+  lastName: String,
+  middleName: String,
+  active: Boolean,
   status: String,
+  notif: {daysuntil: Number, activity: String, active: Boolean, resolution: String, note: String},
   contact: [{date: Date, location: String, method:String, poc: String}],
   dob: Date,
-  assignedPef: { pefCode: String, id: String, recruiter: String},
+  recruiter: {recruiterId: String, fullname: String},
+  assignedPef: { pefCode: String, id: String, recruiter: String, month:Number},
   flaggedPefs: [{ pefCode: String, notes: String, recruiter: String, isBookmarked: Boolean}],
   match: {
     toe: {val: Number},
@@ -31,21 +33,23 @@ var RecruitSchema = new mongoose.Schema({
     weight: { val:Number},
     driving: {
       license: {has: Boolean},
-      offenses: {val:Number, valAtRs:Number, valAboveRs:Number},
-      violations: {val:Number, valAtRs:Number, valAboveRs:Number, valAtDep:Number, valBeforeDep:Number}
+      offenses: {val: Number, valAtRs: Number, valAboveRs: Number},
+      violations: {val: Number, valAtRs: Number, valAboveRs: Number, valAtDep: Number, valBeforeDep: Number}
     },
     moral: {
-      conduct: {val:Number, valAtRs:Number, valAboveRs:Number, valBeforeDep:Number},
-      marijuana: {val:Number, valAtRs:Number, valAboveRs:Number, valBeforeDep:Number},
-      otherDrugs: {val:Number, valAtRs:Number, valAboveRs:Number, valBeforeDep:Number}
+      conduct: {val: Number, valAtRs: Number, valAboveRs: Number, valBeforeDep: Number},
+      marijuana: {val: Number, valAtRs: Number, valAboveRs: Number, valBeforeDep: Number},
+      otherDrugs: {val: Number, valAtRs: Number, valAboveRs: Number, valBeforeDep: Number}
     },
-    tierGrad: {val:Number},// 1 =highschool grad, 2= homeschooler
-    algebra: {has:Boolean},
+    tierGrad: {val: Number},// 1 =highschool grad, 2= homeschooler
+    algebra: {has: Boolean},
     vision: {
-      correctable: {has:Boolean},
-      depth: {has:Boolean},
-      color: {val:Number},
-      acuity: {val:Number, val1:Number, val2:Number}
+      correctable: {has: Boolean},
+      depth: {has: Boolean},
+      color: {val: Number},
+      acuity: {val: Number, val1: Number, val2: Number},
+      acuity1: {val: Number},
+      acuity2: {val: Number}
     },
     waterQual: {has:Boolean},
     flightPhysical: {has:Boolean},
@@ -87,7 +91,6 @@ var RecruitSchema = new mongoose.Schema({
     dep: Date,
     activeDutyDateProjected: Date,
     es: String, //number??? what is this?
-    recruiterId: String,
     stnId: String,
     teMosAfs: String,
     waiver: String,
@@ -120,7 +123,12 @@ RecruitSchema.virtual('fhor').get(function() {
   return addr.street + '\n' + addr.city + ', ' + addr.state + ' ' + addr.zip + '\n' + addr.country;
 });
 
+RecruitSchema.statics.findbyrec = function (req) {
+  return this.find({"recruiter.recruiterId": req}, {"firstName": 1, "lastName": 1, "notif": 1, "status": 1, "match.sex.val": 1, "personal.ssn": 1, "assignedPef.pefCode": 1, "dob": 1, "exams.pef": 1});
+};
 
-//TODO fxn to return most recent contact object.
+RecruitSchema.statics.lite = function (req) {
+  return this.find({}, {"firstName": 1, "lastName": 1, "notif": 1, "status": 1, "match.sex.val": 1, "personal.ssn": 1, "assignedPef.pefCode": 1, "dob": 1});
+};
 
 export default mongoose.model('Recruit', RecruitSchema);

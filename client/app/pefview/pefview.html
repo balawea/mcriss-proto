@@ -1,8 +1,5 @@
-<navbar></navbar>
 <div class="container">
-  <div class="row row-header">
-<!--    <h3><i class="fa fa-bars pull-left"></i> PEF Admin</h3>-->
-  </div>
+  <div class="div-flag"></div>
 
   <!-- PEF List-->
   <div class="col-xs-12 col-sm-3">
@@ -10,16 +7,17 @@
 
       <!-- id filter -->
       <div class="input-group">
-        <input type="text" placeholder=" Search PEFs" ng-model="pefText">
+        <span class="searchicon"><i class="fa fa-2x fa-search"></i></span>
+        <input type="text" class="text-center" placeholder="Search PEFs" ng-model="pefText">
       </div>
 
-      <hr/>
+      <hr class="marginvertical15"/>
 
       <!-- SELECT PEF -->
       <ul class="list-group">
         <li class="list-group-item" ng-class="{'selected': pef===vm.selectedPef}" ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText}"
-            ng-click="vm.select(pef)">{{pef.pefCode}}
-          <span class="text-primary pull-right" ng-show="vm.isAdmin()"><a class="fa fa-pencil fa-2x" ng-click="vm.isEditing=!vm.isEditing"></a></span>
+            ng-click="vm.select(pef)"><strong>{{pef.pefCode}}</strong>{{' - ' + pef.desc}}
+          <span class="text-primary pull-right" ng-show="vm.isAdmin()"><a class="fa fa-2x" ng-class="{'fa-pencil': pef.isEditing, 'fa-pencil-gray': !pef.isEditing}" ng-click="pef.isEditing=!pef.isEditing"></a></span>
         </li>
       </ul>
     </div>
@@ -29,13 +27,13 @@
   <div class="col-xs-12 col-sm-9">
     <div class="panel profile-panel">
       <div class="panel-header">
-        <div class="col-xs-1 pull-right"><a ng-click="vm.save()">SAVE</a></div>
-        <div class="col-xs-1 pull-right"><a ng-click="vm.cancel()">CANCEL</a></div>
-        <div class="col-xs-1 pull-right"><a ng-click="vm.restore()">RESTORE</a></div>
+        <div class="fxnlink" ng-if="vm.selectedPef.isEditing"><a class="awhite" ng-click="vm.save()">SAVE</a></div>
+        <div class="fxnlink" ng-if="vm.selectedPef.isEditing"><a class="awhite" ng-click="vm.cancel()">CANCEL</a></div>
+        <div class="fxnlink" ng-if="vm.isAdmin()"><a class="awhite" ng-click="vm.restoreTiles()">RESTORE</a></div>
       </div>
       <div class="panel-body">
          <span>
-        <h4>{{vm.selectedPef.pefCode + ' ' + vm.selectedPef.description}}</h4>
+        <h4>{{vm.selectedPef.pefCode + ' - ' + vm.selectedPef.description}}</h4>
          </span>
       </div>
     </div>
@@ -52,15 +50,16 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-street-view text-primary"></i><strong class="margin10"> Personal Attributes</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('per')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('per')"></i>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
           <!-- age-->
-          <div class="panel block-panel-small pull-left" ng-if="vm.hideAge!=true">
+          <div class="panel block-panel-small pull-left">
             <div class="panel-header">Age
 <!--              <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideAge=true;vm.layout(vm.msnry)"></i></span>-->
+              <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.age.description}}" ng-click="vm.editDesc('Age', 'age')"></i></span>
             </div>
             <div class="panel-body">
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.age.min">
@@ -81,13 +80,14 @@
         </div>
 
           <!-- gender-->
-          <div class="panel block-panel-small pull-left" ng-if="vm.hideSex!=true">
+          <div class="panel block-panel-small pull-left">
             <div class="panel-header">Gender
 <!--              <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideSex=true;vm.layout(vm.msnry)"></i></span>-->
+              <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.sex.description}}" ng-click="vm.editDesc('Gender', 'sex')"></i></span>
             </div>
             <div class="panel-body">
               <select ng-model="vm.selectedPef.requirements.sex.val" ng-disabled="vm.isReadOnly()" class="text-border-lg text-12">
-              <option>Select One</option>
+                <option></option>
               <option ng-selected="vm.selectedPef.requirements.sex.val==='M'" value="M">Male Only</option>
               <option ng-selected="vm.selectedPef.requirements.sex.val==='F'" value="F">Female Only</option>
               </select>
@@ -100,7 +100,7 @@
         </div>
 
         <!-- ht wt-->
-        <div class="panel block-panel-small pull-left" ng-if="vm.hideHtWt!=true">
+        <div class="panel block-panel-small pull-left">
           <div class="panel-header">Height & Weight
 <!--            <span><i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hideHtWt=true;vm.layout(vm.msnry)"></i></span>-->
           </div>
@@ -110,6 +110,7 @@
                 <div class="panel-bar"></div>
                 <div class="panel-body">
                   <label class="lb-sm"><strong> Height</strong></label>
+              <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.height.description}}" ng-click="vm.editDesc('Height')"></i></span>
                 <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.height.min">
                 <label> in</label>
                 <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.height.max">
@@ -129,6 +130,7 @@
                 <div class="panel-bar"></div>
                 <div class="panel-body">
                   <label class="lb-sm"><strong> Weight</strong></label>
+              <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.weight.description}}" ng-click="vm.editDesc('Weight', 'weight')"></i></span>
                 <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.weight.min">
                 <label> lb</label>
                 <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.weight.max">
@@ -162,9 +164,9 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-graduation-cap text-primary"></i><strong class="margin10"> Education</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('edu')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('edu')"></i>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
           <div>
@@ -175,10 +177,11 @@
             <div class="col-xs-12">
 
               <label>Grad Type: 
+              <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.tierGrad.description}}" ng-click="vm.editDesc('Grad Tier', 'tierGrad')"></i></span>
                 <select ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.tierGrad.max" class="text-border-lg text-12">
-                  <option>Select One</option>
-                  <option ng-selected="vm.selectedPef.requirements.tierGrad.max==='1'" value="1">Tier 1 (High School)</option>
-                  <option ng-selected="vm.selectedPef.requirements.tierGrad.max==='2'" value="2">Tier 2 (Home School)</option>
+                  <option></option>
+                  <option ng-selected="vm.selectedPef.requirements.tierGrad.max===1" value="1">Tier 1 (High School)</option>
+                  <option ng-selected="vm.selectedPef.requirements.tierGrad.max===2" value="2">Tier 2 (Home School)</option>
                 </select>
               </label>
             </div>
@@ -196,6 +199,7 @@
             <div class="col-xs-12">
               <label><input type="checkbox" ng-model="vm.selectedPef.requirements.algebra.has" ng-disabled="vm.isReadOnly()">1 Year Algebra or Higher</label> 
               </label>
+              <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.algebra.description}}" ng-click="vm.editDesc('Algebra', 'algebra')"></i></span>
             </div>
           </div>
           <div class="panel-footer">
@@ -204,7 +208,6 @@
             </span>
           </div>
         </div>
-          
           
           </div>
 
@@ -219,14 +222,15 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-calendar text-primary"></i><strong class="margin10"> Term of Enlistment</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('toe')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('toe')"></i>
             </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
           <div class="checkbox">
             <label class="pull-left">
               <input class="margin5 text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.toe.min"> years</label>
+              <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.toe.description}}" ng-click="vm.editDesc('TOE', 'toe')"></i></span>
           </div>
 
         </div>
@@ -241,17 +245,19 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-id-card-o text-primary"></i><strong class="margin10"> US Citizenship</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('cit')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('cit')"></i>
             </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
-          <div class="checkbox">
-            <label><input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.usCitizen.has">Must be U.S. Citizen</label>
-          </div>
+          <div class="col-xs-12">
+            <label><input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.usCitizen.has">US Citizen (applicant)</label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.usCitizen.description}}" ng-click="vm.editDesc('Citizenship', 'usCitizen')"></i></span>
+        </div>
 
-          <div class="checkbox">
-            <label><input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.usCitizenFamily.has">Family must be U.S. Citizens</label>
+          <div class="col-xs-12">
+            <label><input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.usCitizenFamily.has">US Citizen (family)</label>
+              <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.usCitizenFamily.description}}" ng-click="vm.editDesc('Family Citizenship', 'usCitizenFamily')"></i></span>
           </div>
 
         </div>
@@ -266,21 +272,22 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-search text-primary"></i><strong class="margin10"> Clearance</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('cle')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('cle')"></i>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-              <div class="col-xs-12">
+              <div>
 
-                <label>Level 
+                <label class="col-xs-12">Level 
                   <select ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.clearance.min" class="text-border-100 text-12">
-                    <option>Select One</option>
+                    <option></option>
                     <option ng-selected="vm.selectedPef.requirements.clearance.min===1" value="1">SECRET</option>
                     <option ng-selected="vm.selectedPef.requirements.clearance.min===2" value="2">TOP SECRET</option>
                   </select>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.clearance.description}}" ng-click="vm.editDesc('Clearance', 'clearance')"></i></span>
                 </label>
               </div>
             </div>
@@ -304,16 +311,18 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-lightbulb-o text-primary"></i><strong class="margin10"> Test Scores</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('sco')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('sco')"></i>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
                     
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8"><strong>CL</strong></label>
+            <label class="col-xs-12"><strong>CL</strong>
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.cl.min">
-            </div>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.cl.description}}" ng-click="vm.editDesc('CL Score', 'cl')"></i></span>
+            </label>
+              </div>
 
             <div class="panel-footer">
               <span>
@@ -325,12 +334,13 @@
               </div>
             </div>
           </div>
-
                               
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8"><strong>EL</strong></label>
+            <label class="col-xs-12"><strong>EL</strong>
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.el.min">
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.el.description}}" ng-click="vm.editDesc('EL Score', 'el')"></i></span>
+              </label>
             </div>
 
             <div class="panel-footer">
@@ -346,9 +356,10 @@
                               
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8"><strong>GT</strong></label>
+            <label class="col-xs-12"><strong>GT</strong>
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.gt.min">
-            </div>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.gt.description}}" ng-click="vm.editDesc('GT Score', 'gt')"></i></span>
+              </label>            </div>
 
             <div class="panel-footer">
               <span>
@@ -363,9 +374,10 @@
                               
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8"><strong>MM</strong></label>
+            <label class="col-xs-12"><strong>MM</strong>
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.mm.min">
-            </div>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.mm.description}}" ng-click="vm.editDesc('MM Score', 'mm')"></i></span>
+</label>            </div>
 
             <div class="panel-footer">
               <span>
@@ -380,9 +392,10 @@
                               
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8"><strong>VE</strong></label>
+            <label class="col-xs-12"><strong>VE</strong>
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.ve.min">
-            </div>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.ve.description}}" ng-click="vm.editDesc('VE Score', 've')"></i></span>
+</label>            </div>
 
             <div class="panel-footer">
               <span>
@@ -397,9 +410,10 @@
                               
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8"><strong>QT</strong></label>
+            <label class="col-xs-12"><strong>QT</strong>
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.qt.min">
-            </div>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.qt.description}}" ng-click="vm.editDesc('QT Score', 'qt')"></i></span>
+</label>            </div>
 
             <div class="panel-footer">
               <span>
@@ -414,9 +428,10 @@
                               
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8"><strong>DLAB</strong></label>
+            <label class="col-xs-12"><strong>DLAB</strong>
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.dlab.min">
-            </div>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.dlab.description}}" ng-click="vm.editDesc('DLAB Score', 'dlab')"></i></span>
+</label>            </div>
 
             <div class="panel-footer">
               <span>
@@ -439,9 +454,9 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-eye text-primary"></i><strong class="margin10"> Vision </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('vis')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('vis')"></i>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
           <div class="panel block-panel-small-0 pull-left">
@@ -449,6 +464,7 @@
               <div class="col-xs-12">
                 <label>Color Perception</label>
                   <input class="text-border-sm30" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.color.min">
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.vision.color.description}}" ng-click="vm.editDesc('Color Perception', 'vision.color')"></i></span>
               </div>
             </div>
           <div class="panel-footer">
@@ -465,9 +481,9 @@
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
               <div  class="col-xs-12">
-                <label class="control-label pull-left">Acuity 20/
-                <input class="text-border-sm40" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max1"> 20/ 
-                <input class="text-border-sm40" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max2"></label>
+                <label class="control-label pull-left">Acuity Eye 1: 20/
+                <input class="text-border-sm40" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max1"></label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}" ng-click="vm.editDesc('Acuity', 'vision.acuity')"></i></span>
               </div>
             </div>
           <div class="panel-footer">
@@ -480,8 +496,24 @@
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
               <div  class="col-xs-12">
+                <label class="control-label pull-left">Acuity Eye 2: 20/
+                <input class="text-border-sm40" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max2"></label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}" ng-click="vm.editDesc('Acuity', 'vision.acuity')"></i></span>
+              </div>
+            </div>
+          <div class="panel-footer">
+            <span>
+              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.vision.acuity.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            </span>
+          </div>
+        </div>
+
+          <div class="panel block-panel-small-0 pull-left">
+            <div class="panel-body">
+              <div class="col-xs-12">
                 <label>
-                  <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.depth.has">Normal Depth Perception</label>
+                  <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.depth.has">Depth Perception</label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.vision.depth.description}}" ng-click="vm.editDesc('NDP', 'vision.depth')"></i></span>
               </div>
             </div>
           <div class="panel-footer">
@@ -496,6 +528,7 @@
               <div  class="col-xs-12">
                 <label>
                   <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.correctable.has">Correctable to 20/20</label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.vision.correctable.description}}" ng-click="vm.editDesc('Correctable', 'vision.correctable')"></i></span>
               </div>
             </div>
           <div class="panel-footer">
@@ -516,9 +549,9 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-car text-primary"></i><strong class="margin10"> Driving </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('dri')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('dri')"></i>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
 
@@ -527,6 +560,7 @@
               <div  class="col-xs-12">
                 <label>
                 <input type="checkbox" ng-disabled="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.driving.license.has">Driver's License</label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.driving.license.description}}" ng-click="vm.editDesc('Driver\'s License', 'driving.license')"></i></span>
               </div>
             </div>
           <div class="panel-footer">
@@ -538,8 +572,9 @@
           
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8">Traffic Violations</label>
+            <label class="col-xs-12">Traffic Violations
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.driving.violations.max">
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.driving.violations.description}}" ng-click="vm.editDesc('Traffic Violations', 'driving.violations')"></i></span></label>
             </div>
           <div class="panel-footer">
             <span>
@@ -554,8 +589,9 @@
 
         <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8">Driving Offenses</label>
+            <label class="col-xs-12">Driving Offenses
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.driving.offenses.max">
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.driving.offenses.description}}" ng-click="vm.editDesc('Driving Offenses', 'driving.offenses')"></i></span></label>
             </div>
           
           <div class="panel-footer">
@@ -579,15 +615,16 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-gavel text-primary"></i><strong class="margin10"> Moral </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('mor')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('mor')"></i>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
           
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8">Misconduct</label>
+            <label class="col-xs-12">Misconduct
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.moral.conduct.max">
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.moral.conduct.description}}" ng-click="vm.editDesc('Misconduct', 'moral.conduct')"></i></span></label>
             </div>
 
             <div class="panel-footer">
@@ -604,8 +641,9 @@
           
         <div class="panel block-panel-small-0 pull-left">
           <div class="panel-body">
-          <label class="col-xs-8">Marijuana</label>
+          <label class="col-xs-12">Marijuana
             <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.moral.marijuana.max">
+            <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.moral.marijuana.description}}" ng-click="vm.editDesc('Marijuana', 'moral.marijuana')"></i></span></label>
           </div>
 
           <div class="panel-footer">
@@ -621,8 +659,9 @@
           
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
-            <label class="col-xs-8">Other Drugs</label>
+            <label class="col-xs-12">Other Drugs
               <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.moral.otherDrugs.max">
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.moral.otherDrugs.description}}" ng-click="vm.editDesc('Other Drugs', 'moral.otherDrugs')"></i></span></label>
             </div>
 
             <div class="panel-footer">
@@ -646,15 +685,16 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-certificate text-primary"></i><strong class="margin10"> Certifications </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('cer')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('cer')"></i>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
               <div  class="col-xs-12">
                 <label><input type="checkbox" ng-model="vm.selectedPef.requirements.waterQual.has" ng-disabled="vm.isReadOnly()">WS-B(+) Water Surv. Cert</label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.waterQual.description}}" ng-click="vm.editDesc('Water Survival Certification', 'waterQual')"></i></span>
               </div>
             </div>
           <div class="panel-footer">
@@ -668,6 +708,7 @@
             <div class="panel-body">
               <div  class="col-xs-12">
             <label><input type="checkbox" ng-model="vm.selectedPef.requirements.flightPhysical.has" ng-disabled="vm.isReadOnly()">Flight Physical</label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.flightPhysical.description}}" ng-click="vm.editDesc('Flight Physical', 'flightPhysical')"></i></span>
               </div>
             </div>
           <div class="panel-footer">
@@ -681,6 +722,7 @@
             <div class="panel-body">
               <div  class="col-xs-12">
             <label><input type="checkbox" ng-model="vm.selectedPef.requirements.pftClass1.has" ng-disabled="vm.isReadOnly()">1st Class PFT Score</label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.pftClass1.description}}" ng-click="vm.editDesc('1st Class PFT Score', 'pftClass1')"></i></span>
               </div>
             </div>
           <div class="panel-footer">
@@ -702,15 +744,16 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-check-square-o text-primary"></i><strong class="margin10"> Screenings </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-click="vm.hide('scr')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('scr')"></i>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
             
           <div class="panel block-panel-small-0 pull-left">
             <div class="panel-body">
               <div  class="col-xs-12">
                 <label><input type="checkbox" ng-model="vm.selectedPef.requirements.speech.has" ng-disabled="vm.isReadOnly()">Clarity of Speech</label>
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.speech.description}}" ng-click="vm.editDesc('Clarity of Speech', 'speech')"></i></span>
               </div>
             </div>
           <div class="panel-footer">
@@ -722,8 +765,9 @@
 
         <div class="panel block-panel-small-0 pull-left">
           <div class="panel-body">
-          <label class="col-xs-7">PRP Responses</label>
+          <label class="col-xs-12">PRP Responses
             <input class="text-border-sm30" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.prpScreen.max">
+                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.prpScreen.description}}" ng-click="vm.editDesc('Negative PRP Responses', 'prpScreen')"></i></span></label>
           </div>
 
         <div class="panel-footer">

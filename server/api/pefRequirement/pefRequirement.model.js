@@ -12,6 +12,8 @@ import mongoose from 'mongoose';
 var PefRequirementSchema = new mongoose.Schema({
   pefCode: String,
   description: String,
+  desc: String,
+  pefvis: {per: Boolean, edu: Boolean, toe: Boolean, cle: Boolean, sco: Boolean, cit: Boolean, vis: Boolean, dri: Boolean, mor: Boolean, cer: Boolean, scr: Boolean},
   mos: [{mos:String, description:String}],
   disqualifications: [],
   allocation: Number,

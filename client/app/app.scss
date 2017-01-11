@@ -6,29 +6,36 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 @import "../assets/themes/paper/bootswatch";
 @import "~nouislider/distribute/nouislider";
 @import "../assets/styles/noUiSlider";
+@import "~sweetalert/dist/sweetalert";
+
+//@import "~sweetalert/dist/sweeetalert.css";
+
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
 
 /**
  * App-wide Styles
  */
 
-//.grid-item {
-//  float: left !important;
-//  height: 245px;
-//}
-
-//.grid-item--245 { height: 245px; }
-//.grid-item--toe { height: 75px; }
-//.grid-item--demog { height: 390px; }
-//.grid-item--scores { height: 377px; }
-//.grid-item--vision { height: 280px; }
-//.grid-item--quals { height: 310px; }
-
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+//hide the auto-generated tab line on candidateprofile.
+//We are using nav-pills there, but nav-tabs inserts itself as well.
+.nav-tabs {
+  display: none;
+}
+
+.nav-tabs-show {
+  @extend .nav-tabs;
+  display: block;
+}
+
+.aligncenter {
+  align-items: center;
 }
 
 .fa-2x,.fa-3x,.fa-4x {
@@ -43,6 +50,15 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 .badge-danger {
 //  background-color: #d43f3a;
   background-color: #e52430 //e51f4a;
+}
+
+.danger {
+//  background-color: #d43f3a;
+  color: #e52430 //e51f4a;
+}
+
+.foo {
+  color: #ff4466;
 }
 
 .badge-warning {
@@ -88,12 +104,41 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   color: #398439;
 }
 
+.navy {
+  color: #080840;
+}
+
 .text-gray {
   color: #d5d5d5;
 }
 
+.text48 {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+.text40 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.ltgray{
+  color: #bbbbbb;
+}
+
 .fa-check-green {
   @extend .fa-check;
+  color: limegreen;
+}
+
+.fa-square-green {
+  @extend .fa-square;
+  color: limegreen;
+}
+
+.fa-square-o-green {
+  @extend .fa-square-o;
   color: limegreen;
 }
 
@@ -115,6 +160,35 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 .fa-sign-out-white{
   @extend .fa-sign-out;
   color: whitesmoke;
+}
+
+.fa-pencil-square-o-white {
+  @extend .fa-pencil-square-o;
+  color: whitesmoke;
+}
+
+.fa-line-chart-white {
+  @extend .fa-line-chart;
+  color: whitesmoke;
+}
+
+.fa-pie-chart-white {
+  @extend .fa-pie-chart;
+  color: whitesmoke;
+}
+
+.fa-pencil-gray {
+  @extend .fa-pencil;
+  color: #d5d5d5;
+}
+
+.ltgray{
+  color: #bbbbbb;
+}
+
+.usmc {
+  width: 52px;
+  height: 54px;
 }
 
 //PANELS
@@ -139,11 +213,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     height: 20px;
     width: 100px;
   }
-}
-
-.usmc {
-  width: 52px;
-  height: 54px;
 }
 
 .panel.small95{
@@ -240,7 +309,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   margin: 10px;
   margin-top: 0px;
   height: 70px;
-  width: 100%;
+  width: 98%;
   .panel-header{
     padding: 5px;
     font-weight: 600;
@@ -265,11 +334,22 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   }
 }
 
+.bold {
+  font-weight: 500;
+}
+
+.text-border-tbl {
+  font-size: 13px !important;
+  border: 1px #a0a0a0 solid;
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
 .text-border-xs {
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   height: 25px;
   width: 25px;
   margin-left: 5px;
@@ -278,9 +358,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .text-border-sm40 {
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   height: 25px;
   width: 40px;
   margin-left: 5px;
@@ -289,9 +367,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .text-border-sm30 {
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   height: 25px;
   width: 30px;
   margin-left: 5px;
@@ -300,9 +376,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .text-border-sm {
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   height: 25px;
   width: 45px;
   margin-left: 5px;
@@ -311,9 +385,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .text-border-md {
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   height: 25px;
   width: 55px;
   //  margin-left: 10px;
@@ -322,9 +394,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .text-border-100 {
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   height: 25px;
   width: 100px;
   //  margin-left: 10px;
@@ -333,9 +403,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .text-border-150 {
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   height: 25px;
   width: 150px;
   //  margin-left: 10px;
@@ -344,9 +412,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .text-border-lg {
-  border-color: #a0a0a0;
-  border: solid;
-  border-width: thin;
+  border: 1px #a0a0a0 solid;
   height: 25px;
   width: 150px;
   margin-left: 10px;
@@ -354,14 +420,28 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   padding-right: 5px;
 }
 
+
 .margin5 {
   margin: 0px 5px;
+}
+
+.margin20 {
+  margin: 0px 20px;
 }
 
 .margin10 {
   margin: 0px 10px;
   font-size: 16px;
   font-weight: 500;
+}
+
+.marginbottom10 {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.marginvertical15 {
+  margin: 10px 0px;
 }
 
 .subheader-text {
@@ -372,7 +452,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 .margin0 {
-  margin: 0px;
+  margin: 0px !important;
 }
 
 .row-profile {
@@ -387,6 +467,16 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   background-color: #4c4c4c;
   width: 100%;
   margin-right: 10px;
+}
+
+.peflist {
+  overflow-y: scroll;
+  height: 80%;
+}
+
+.pef-text {
+  width: 85%;
+  text-align: center;
 }
 
 .well-block {
@@ -418,6 +508,13 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   line-height: normal;
 }
 
+.text-16 {
+  font-size:16px;
+//  padding-left: 5px;
+//  margin-left: 10px;
+//  line-height: normal;
+}
+
 .label-border {
   border: 1px #a0a0a0 solid;
   height: 23px;
@@ -431,19 +528,123 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   font-size: 10px;
 }
 
+.font-14 {
+  font-size: 13px;
+  font-style: normal;
+}
+
 .nav-navy {
-  background: #000031;
+  background: #080840;
   margin: 0px 10px;
-  border-bottom: 1px darkred solid;
+  border-bottom: 2px darkred solid;
   color: whitesmoke;
+}
+
+.nav-tile {
+  background: #080840;
+  margin: 0px;
+  color: whitesmoke;
+}
+
+.nav-tile-right {
+  margin: 0px;
+  height: 64px;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 .nav-white {
   margin: 0px 10px;
   margin-bottom: 10px;
-  border-bottom: 1px darkred solid;
+  border-bottom: 2px darkred solid;
   height: 55px;
   font-weight: 300;
+}
+
+.panel.rs-panel{
+  width:160px;
+//  display: inline-table;
+//  margin: 0px;
+//  padding: 0px;
+  @extend .google-visualization-orgchart-node;
+  border-bottom: 0px white none !important;
+  border-top: 0px white none !important;
+  border-style: none !important;
+  padding: 5px !important;
+  font-size: 13px !important;
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0px;
+
+  .panel-header{
+    text-align: center;
+    padding: 0px 10px;
+    font-weight: 600;
+  }
+  .panel-body{
+    padding: 0px 10px;
+    font-size: 13px !important;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  .panel-footer{
+    text-align: right;
+    font-size: 13px !important;
+    color: #0088bb;
+    padding: 5px 10px;
+    margin-bottom: 0px;
+  }
+}
+
+.text-rs-footer {
+  border: 1px #a0a0a0 solid;
+  background-color: #f5f5f5;
+  height: 20px;
+  width: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.rstest {
+  background: #0088bb;
+  margin: 5px 10px;
+  padding: 10px;
+  color: whitesmoke;
+}
+
+.google-visualization-orgchart-node.google-visualization-orgchart-node-medium {
+  @extend .google-visualization-orgchart-node;
+  border-bottom: 0px white none !important;
+  border-top: 0px white none !important;
+  border-style: none !important;
+  padding: 0px !important;
+  font-size: 13px !important;
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0px;
+}
+
+.google-visualization-orgchart-table * {
+  @extend .google-visualization-orgchart-table;
+  padding: 0px !important;
+}
+
+.a2:hover, .a2:focus, .a2:active {
+  color: #2196F3;
+  border-bottom: 2px darkred solid !important;
+}
+
+.awhite, .awhite:hover, .awhite:focus, .awhite:active {
+  color: whitesmoke;
+}
+
+.fxnlink {
+  float: right;
+  margin: 0px 5px;
+  padding: 0px;
+  width: 8%;
+  flex-grow: 1;
+}
+
+.gray {
+  color: gray;
 }
 
 .padtop15 {
@@ -454,6 +655,44 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   padding-top: 10px;
 }
 
+.padtop6 {
+  padding-top: 6px !important;
+}
+
+.padtop20 {
+  padding-top: 20px;
+}
+
+.padright15 {
+  padding-right: 15px !important;
+}
+
+.padleft15 {
+  padding-left: 15px !important;
+}
+
+.padbottom0 {
+  padding-bottom: 0px;
+}
+
+.padsides10 {
+  padding: 0px 10px !important;
+}
+
+.padsides0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.padding0 {
+  padding: 0px !important;
+}
+
+.searchicon {
+  color: whitesmoke;
+  margin-left: 6px;
+  float: right;
+}
 
 .headerfont {
   font-size: 30px;
@@ -472,7 +711,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   }
 }
 
-
 @for $i from 1 through 6 {
   .topmargin-#{$i*5} { margin-top: 5px * $i; }
   .bottommargin-#{$i*5} { margin-bottom: 5px * $i; }
@@ -487,12 +725,10 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 @import 'candidateprofile/exams/exams';
 @import 'candidateprofile/personal/personal';
 @import 'main/main';
-@import 'pefDetail/pefDetail';
 @import 'pefview/pefview';
 @import 'recruiterview/recruiterview';
-@import 'samplepef - Copy/samplepef';
 @import 'samplepef/samplepef';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
-@import '../components/pagehead/pagehead';
+@import '../components/recruitbanner/recruitbanner';
 /* endinject */

@@ -1,5 +1,4 @@
-<navbar></navbar>
-<pagehead></pagehead>
+
 <div class="container">
 
   <!-- PEF Match-->
@@ -8,9 +7,10 @@
 
         <!-- id filter -->
         <div class="input-group">
-          <input type="text" class="text-center" placeholder=" Search PEFs" ng-model="pefText">
+        <span class="searchicon"><i class="fa fa-2x fa-search"></i></span>
+          <input type="text" class="text-center" placeholder="Search PEFs" ng-model="pefText">
         </div>
-        <hr/>
+      <hr class="marginvertical15"/>
 
         <!-- pef error filter-->
         <div class="horizontal">
@@ -25,19 +25,21 @@
           </div>
         </div>
 
-        <hr/>
+      <hr class="marginvertical15"/>
 
-        <ul class="list-group">
-          <li class="list-group-item" ng-click="vm.select(pef)" ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText, isBookmarked: vm.bkmarks}"
-          ng-class="{'selected': pef===vm.selectedPef}">{{pef.pefCode}}
-            <span class="badge badge-danger" ng-if="pef.errs > 0">{{pef.errs}}</span>
-            <span class="text-primary pull-right" ng-if="pef.errs===0">
-              <i class="fa fa-check-green fa-2x" ng-if="vm.canAssign(pef)"></i>
-              <i class="fa fa-star fa-2x" ng-if="vm.isAssigned(pef)"></i>
-            </span>
-          </li>
-        </ul>
+        <div>
+          <ul class="list-group">
+            <li class="list-group-item" ng-click="vm.select(pef)" ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText, isBookmarked: vm.bkmarks}"
+            ng-class="{'selected': pef===vm.selectedPef}"><strong>{{pef.pefCode}}</strong>{{' - ' + pef.desc}}
 
+              <span class="badge badge-danger" ng-if="pef.errs > 0">{{pef.errs}}</span>
+              <span class="text-primary pull-right" ng-if="pef.errs<1">
+                <i class="fa fa-check-green fa-2x" ng-if="vm.canAssign(pef)"></i>
+                <i class="fa fa-star fa-2x" ng-if="vm.isAssigned(pef)"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -65,8 +67,8 @@
   </div>
 
   <!-- Masonry Grid -->
-  <div class="col-xs-12 col-sm-9">
-    <div id="grid" class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 275}'>
+  <div class="col-xs-12 col-sm-9 aligncenter">
+    <div id="grid" class="grid" data-masonry='{ "itemSelector": ".grid-item"}'>
 
       <!-- demog -->
       <div class="grid-item grid-item--demog">
@@ -76,7 +78,7 @@
               <span>
               <i class="fa fa-2x fa-street-view text-primary"></i><strong class="margin10"> Personal Attributes</strong>
             </span>
-              <hr>
+              <hr class="marginvertical15">
             </div>
 
   <!-- AGE -->
@@ -85,7 +87,8 @@
             <label class="col-xs-7">Age</label>
               <input class="text-border-sm" ng-readonly="true" ng-model="vm.recruit.age.val">
               <!-- TODO: simplify this ng-if and ng-class-->
-              <span ng-if="vm.selectedPef.requirements.age.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.age.description}}"></i></span>
+              <span ng-if="vm.selectedPef.requirements.age.flag===true">
+                <i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.age.description}}"></i></span>
               <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.age.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.age.description}}"></i></span>
             </div>
           <div class="panel-footer" ng-show="vm.selectedPef.requirements.age.canwaive===true" ng-class="{'footer-danger' : vm.selectedPef.requirements.age.flag===true}">
@@ -154,7 +157,7 @@
               <span>
               <i class="fa fa-2x fa-graduation-cap text-primary"></i><strong class="margin10"> Education</strong>
             </span>
-                <hr>
+                <hr class="marginvertical15">
             </div>
 
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.tierGrad.flag}">
@@ -192,7 +195,7 @@
               <span>
               <i class="fa fa-2x fa-calendar text-primary"></i><strong class="margin10"> Term of Enlistment</strong>
               </span>
-                <hr>
+                <hr class="marginvertical15">
             </div>
             
           <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true" ng-class="{'text-danger' : vm.selectedPef.requirements.toe.flag}">
@@ -221,7 +224,7 @@
             <span>
             <i class="fa fa-2x fa-id-card-o text-primary"></i><strong class="margin10"> US Citizenship</strong>
             </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
             <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.usCitizen.flag}">
@@ -262,7 +265,7 @@
             <span>
             <i class="fa fa-2x fa-search text-primary"></i><strong class="margin10"> Clearance</strong>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
           
           <div class="panel block-panel-small-0 pull-left">
@@ -291,7 +294,7 @@
               <span>
                 <i class="fa fa-2x fa-lightbulb-o text-primary"></i><strong class="margin10"> Test Scores</strong>
               </span>
-              <hr>
+              <hr class="marginvertical15">
             </div>
 
           <div class="panel block-panel-small-0 pull-left" ng-if="vm.hideAge!=true" ng-class="{'text-danger' : vm.selectedPef.requirements.cl.flag}">
@@ -398,7 +401,7 @@
               <span>
                 <i class="fa fa-2x fa-eye text-primary"></i><strong class="margin10"> Vision </strong>
               </span>
-                  <hr>
+                  <hr class="marginvertical15">
               </div>
             
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.color.flag}">
@@ -416,7 +419,7 @@
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.acuity.flag}">
                 <div class="panel-body">
                   <label class="col-xs-10">Acuity Eye 1: 20/
-                  <label class="label-border">{{vm.recruit.vision.acuity.val1}}</label></label>
+                  <input class="text-border-sm40" ng-readonly="true" ng-model="vm.recruit.vision.acuity.val1"></label>
                   <span ng-if="vm.selectedPef.requirements.vision.acuity.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}"></i></span>
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.vision.acuity.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}"></i></span>
                 </div>
@@ -428,7 +431,7 @@
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.vision.acuity.flag}">
                 <div class="panel-body">
                   <label class="col-xs-10">Acuity Eye 2: 20/
-                  <label class="label-border">{{vm.recruit.vision.acuity.val2}}</label></label>
+                  <input class="text-border-sm40" ng-readonly="true" ng-model="vm.recruit.vision.acuity.val2"></label>
                   <span ng-if="vm.selectedPef.requirements.vision.acuity.flag===true"><i class="fa fa-exclamation-triangle pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}"></i></span>
                   <span ng-if="!!vm.selectedPef && vm.selectedPef.requirements.vision.acuity.flag!==true"><i class="fa fa-check-green pull-right rightmargin-5" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}"></i></span>
                 </div>
@@ -475,7 +478,7 @@
               <div class="text-left">
               <span><i class="fa fa-2x fa-car text-primary"></i><strong class="margin10"> Driving </strong>
               </span>
-                  <hr>
+                  <hr class="marginvertical15">
               </div>
                           
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.driving.violations.flag}">
@@ -527,7 +530,7 @@
             <span>
             <i class="fa fa-2x fa-gavel text-primary"></i><strong class="margin10"> Moral </strong>
           </span>
-              <hr>
+              <hr class="marginvertical15">
           </div>
 
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.moral.conduct.flag}">
@@ -579,7 +582,7 @@
               <span>
                 <i class="fa fa-2x fa-certificate text-primary"></i><strong class="margin10"> Certifications </strong>
               </span>
-              <hr>
+              <hr class="marginvertical15">
             </div>
 
               <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.waterQual.flag}">
@@ -631,7 +634,7 @@
               <span>
                 <i class="fa fa-2x fa-check-square-o text-primary"></i><strong class="margin10"> Screening </strong>
               </span>
-              <hr>
+              <hr class="marginvertical15">
             </div>
             
             <div class="panel block-panel-small-0 pull-left" ng-class="{'text-danger' : vm.selectedPef.requirements.speech.flag}">

@@ -1,5 +1,4 @@
-<navbar></navbar>
-<pagehead></pagehead>
+
 <div class="container">
 
   <div class="panel panel-full">
@@ -15,7 +14,7 @@
     </div>
     <hr/>
 
-      <h5>Applicant Profile</h5>
+    <h5>Applicant Profile</h5>
 
     <ul class="nav nav-pills nav-stacked">
       <li ng-click="tb=0" ng-class="{'active': tb===0}"><a>I: Personal Data</a></li>
@@ -32,14 +31,14 @@
   </div>
     <div class="container col-sm-9">
         <uib-tabset active="tb">
-            <uib-tab index="0" ng-class="{'active': tb===0}"><personal></personal></uib-tab>
-            <uib-tab index="1" ng-class="{'active': tb===1}"><exams></exams></uib-tab>
-            <uib-tab index="2" ng-class="{'active': tb===2}">other stuff</uib-tab>
-            <uib-tab index="3" ng-class="{'active': tb===3}">cert</uib-tab>
-            <uib-tab index="4" ng-class="{'active': tb===4}">recert</uib-tab>
-            <uib-tab index="5" ng-class="{'active': tb===5}">remarks</uib-tab>
-            <uib-tab index="6" ng-class="{'active': tb===6}">statement</uib-tab>
-            <uib-tab index="7" ng-class="{'active': tb===7}">parental</uib-tab>
+            <uib-tab index="0"><personal></personal></uib-tab>
+            <uib-tab index="1"><exams></exams></uib-tab>
+            <uib-tab index="2">other stuff</uib-tab>
+            <uib-tab index="3">cert</uib-tab>
+            <uib-tab index="4">recert</uib-tab>
+            <uib-tab index="5">remarks</uib-tab>
+            <uib-tab index="6">statement</uib-tab>
+            <uib-tab index="7">parental</uib-tab>
         </uib-tabset>
     </div>
    </div>  <!-- panel body-->

@@ -35,8 +35,9 @@ export class CandidateprofileComponent {
       this.recruit.status = fullrecruit.status;
       this.recruit.dob = fullrecruit.dob;
       this.recruit.fullName = fullrecruit.fullName;
-      
-      this.root.$broadcast('SELECT_RECRUIT', this.recruit);
+
+      let profile = {id: fullrecruit._id, fullName: fullrecruit.fullName, age:fullrecruit.age.val, sex: fullrecruit.match.sex.val, status: fullrecruit.status, ssn: this.recruit.ssn}; 
+      this.root.$broadcast('SELECT_RECRUIT', profile);
     });
   } //init
 

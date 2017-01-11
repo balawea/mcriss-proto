@@ -3,48 +3,57 @@
 const angular = require('angular');
 
 export class NavbarComponent {
-  state;
-  title: string = '';
-  name: string = '';
-
-  menu = [
-    {'title': 'My Candidates', 'state': '/'},
-    {'title': 'My Candidates', 'state': '/recruiterview'},
-    {'title': 'Demo Main', 'state': '/main'},
-    {'title': 'Candidate PEF Assignment', 'state': '/samplepef'},
-    {'title': 'PEF Admin', 'state': '/pefview'},
-    {'title': 'Candidate Profile', 'state': '/candidateprofile'},
-    {'title': 'Delete Users', 'state': '/admin'},
-    {'title': 'Change Password', 'state': '/settings'}
-  ];
-
   isLoggedIn: Function;
   isAdmin: Function;
   getCurrentUser: Function;
   isCollapsed = true;
 
-  constructor($location, Auth) {
-    'ngInject';
+  /*@ngInject*/
+  constructor($location, $scope, $rootScope, $state, Auth) {
     this.isLoggedIn = Auth.isLoggedInSync;
+    $scope.isLoggedIn = Auth.isLoggedInSync;
     this.isAdmin = Auth.isAdminSync;
     this.getCurrentUser = Auth.getCurrentUserSync;
+    
+    //update the page header text on state change.
+    //have to save this to $scope? 
+    $rootScope.$on('$stateChangeSuccess', function(event, toState) {
+      $scope.title;
+      $scope.profileHeader;
+      $scope.name = toState.url;
+      $scope.menu = [
+          {'title': 'My Candidates', 'state': '/', profileHeader: false},
+          {'title': 'My Candidates', 'state': '/recruiterview', profileHeader: false},
+          {'title': 'Demo Main', 'state': '/main', profileHeader: false},
+          {'title': 'PEF Assignment', 'state': '/samplepef', profileHeader: true},
+          {'title': 'Program Management', 'state': '/pefview', profileHeader: false},
+          {'title': 'Candidate Profile', 'state': '/candidateprofile', profileHeader: true},
+          {'title': 'Allocation View', 'state': '/allocationview', profileHeader: false},
+          {'title': 'Login', 'state': '/login', profileHeader: false},
+          {'title': 'Change Password', 'state': '/settings', profileHeader: false},
+          {'title': 'Delete Users', 'state': '/admin', profileHeader: false},
+          {'title': 'Change Password', 'state': '/settings', profileHeader: false}
+        ];
+      
+      for (let i=0; i<$scope.menu.length;i++) {
+        if($scope.menu[i].state === $scope.name) {
+          $scope.title = $scope.menu[i].title;
+          $scope.profileHeader = $scope.menu[i].profileHeader;
+        }
+      }
+      
+//      if (!$scope.isLoggedIn())
+//        $state.go('login');
 
-    this.state = $location;
+      
+      //clear the recruit selection and header
+      if (!$scope.profileHeader)
+        $rootScope.$broadcast('SELECT_RECRUIT', undefined);
+
+    });
   }
 
-  /*@ngInject*/
-  $onInit() {
-    this.name = this.state.$$path;
-
-    for (let i=0; i<this.menu.length;i++) {
-      if(this.menu[i].state === this.name) {
-        this.title = this.menu[i].title;
-      }
-    }
-//    this.title = 'My Candidates';
-
-  } //oninit
-}
+}// class
 
 export default angular.module('directives.navbar', [])
   .component('navbar', {

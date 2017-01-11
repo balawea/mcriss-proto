@@ -8,6 +8,7 @@ export class ExamsComponent {
   $http;
   id;
 
+  /*@ngInject*/
   constructor($http, $location) {
     this.$http = $http;
     this.id = $location.hash();
@@ -21,6 +22,7 @@ export class ExamsComponent {
       this.recruit = fullrecruit['exams'] || {};
       let apef = fullrecruit.assignedPef || {};
       this.recruit.pef = apef.pefCode;
+      this.recruit.recruiter = fullrecruit.recruiter;
     });
   } //init
 }
