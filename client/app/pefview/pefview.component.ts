@@ -61,7 +61,7 @@ export class PefviewComponent {
   isReadOnly(){
     let res = !this.isAdmin() || ((this.selectedPef || {}).isEditing || false) === false;
     this.modeColor = res ? 'text-gray' : 'text-primary';
-    
+
     return res;
   }
 
@@ -95,7 +95,7 @@ export class PefviewComponent {
 
   save() {
     if (this.selectedPef) {
-      
+
       console.log(this.selectedPef);
 
       //hack
@@ -105,7 +105,7 @@ export class PefviewComponent {
         this.selectedPef.requirements.tierGrad = undefined;
       if (((this.selectedPef.requirements.clearance || {}).min || '') === '')
         this.selectedPef.requirements.clearance = undefined;
-      
+
       this.$http.put(`/api/pefRequirements/${this.selectedPef._id}`, this.selectedPef)
       .then(res => {
         if (res.statusText==="OK") {
@@ -147,11 +147,11 @@ export class PefviewComponent {
     for (let pef of pefs) {
       pef.isEditing = false;
 //      let vis = pef.pefvis;
-//      
+//
 //      for (let pkey in vis) {
 //        if (!vis[pkey])
 //          this.hideTiles()
-//        
+//
 //      }
       //start with all visible
       //pef.pefvis = {per: true, edu: true, toe: true, cle: true, sco: true, cit: true, vis: true, dri: true, mor: true, cer: true, scr: true};
@@ -161,7 +161,7 @@ export class PefviewComponent {
 
   editDesc(name, node) {
     if (this.selectedPef && !this.isReadOnly()) {
-      // "node" will come in as "ssn" or "driving.license" where "p" = this.selectedPef.requirements.
+      // "node" will come in as "ssn" or "driving.license", etc, where "p" = this.selectedPef.requirements.
       // The description data will be nested in "node", so drill down through "p" to get a reference to it.
       let p = this.selectedPef.requirements;
       var nodes = node.split('.');
