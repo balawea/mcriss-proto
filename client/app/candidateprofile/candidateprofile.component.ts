@@ -36,7 +36,8 @@ export class CandidateprofileComponent {
       this.recruit.dob = fullrecruit.dob;
       this.recruit.fullName = fullrecruit.fullName;
 
-      let profile = {id: fullrecruit._id, fullName: fullrecruit.fullName, age:fullrecruit.age.val, sex: fullrecruit.match.sex.val, status: fullrecruit.status, ssn: this.recruit.ssn}; 
+      let profile = {id: fullrecruit._id, fullName: fullrecruit.fullName, age:fullrecruit.age.val, sex: fullrecruit.match.sex.val, status: fullrecruit.status,
+                     ssn: this.recruit.ssn, pefCode:((fullrecruit.assignedPef || {}).pefCode || undefined), dutyType:((fullrecruit.dutyType || {}).desc || undefined)}; 
       this.root.$broadcast('SELECT_RECRUIT', profile);
     });
   } //init

@@ -101,11 +101,12 @@ export class RecruiterviewComponent {
       var apef = '[' + ((item.assignedPef || {}).pefCode || '').toLowerCase() + ']';
       var ssn = ((item.personal || {}).ssn || '');
       var age = item.age.val;
+      var duty = ((item.dutyType || {}).desc || '').toLowerCase();
       
       if (male === female === true)
         male = female = false;
 
-      txtmatch = (txt === undefined) || (item.firstName.toLowerCase().includes(txtlow) || item.lastName.toLowerCase().includes(txtlow) || item.status.toLowerCase().includes(txtlow) || apef.includes(txtlow) || ssn.includes(txtlow) || age === txtlow);
+      txtmatch = (txt === undefined) || (item.firstName.toLowerCase().includes(txtlow) || item.lastName.toLowerCase().includes(txtlow) || item.status.toLowerCase().includes(txtlow) || apef.includes(txtlow) || ssn.includes(txtlow) || age === txtlow || duty.includes(txtlow));
 
       alertmatch = (alerttype === undefined) || (item.notif != undefined) &&(item.notif.activity === alerttype);
       malematch = (male === false) || (item.match.sex.val === 'M');

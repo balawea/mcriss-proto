@@ -96,6 +96,10 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   outline-width: 2px;
 }
 
+.tile-small {
+  height: 224px;
+}
+
 .text-warning {
   color: #d58512;
 }
@@ -116,6 +120,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   font-size: 38px;
   font-weight: 500;
   line-height: 60px;
+  vertical-align: sub;
 }
 
 .text40 {
@@ -694,6 +699,11 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   float: right;
 }
 
+.searchicondark {
+  color: #a0a0a0;
+  margin-left: 6px;
+}
+
 .headerfont {
   font-size: 30px;
 //  font-weight: 500;
@@ -711,6 +721,17 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   }
 }
 
+.pagination {
+  @extend .pagination;
+  margin: 0px;
+  padding-left: 20px;
+  font-weight:500;
+}
+
+li:hover {
+ cursor:default;
+}
+
 @for $i from 1 through 6 {
   .topmargin-#{$i*5} { margin-top: 5px * $i; }
   .bottommargin-#{$i*5} { margin-bottom: 5px * $i; }
@@ -724,6 +745,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 @import 'candidateprofile/candidateprofile';
 @import 'candidateprofile/exams/exams';
 @import 'candidateprofile/personal/personal';
+@import 'grid/grid';
 @import 'main/main';
 @import 'pefview/pefview';
 @import 'recruiterview/recruiterview';

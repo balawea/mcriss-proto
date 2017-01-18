@@ -66,22 +66,30 @@ export class SamplepefComponent {
     if (this.selectedPef) {
       let assigning = !this.isAssigned(this.selectedPef);
       let haswaivers = this.hasWaivers(this.selectedPef);
+      let date = new Date();
 
       //months in seed data are FY based: Oct=0, Nov=1, etc. 
       //Init month to the current month
-      let month = (new Date().getMonth() + 3) % 12;
+      let monthInFyOrder = (date.getMonth() + 3) % 12;
+      //two digit natural month, ie 01, 06
+      let monthNatural = ("0" + (date.getMonth() + 1)).slice(-2);
+      let year = date.getFullYear();
+      let today = date.toLocaleDateString('en-US');
+      let mcroc = year + monthNatural + this.selectedPef.pefCode + '-' + today; //no idea if this is even close to right
 
       if (assigning) {
-        this.fullrecruit.assignedPef = {pefCode: this.selectedPef.pefCode, id: this.selectedPef._id, month: month};
+        this.fullrecruit.assignedPef = {pefCode: this.selectedPef.pefCode, id: this.selectedPef._id, month: monthInFyOrder};
         this.fullrecruit.exams.waiver = (haswaivers) ? "Requested" : "";
         this.selectedPef.errs = -1;
+        this.fullrecruit.mcroc = mcroc;
       }
       else {
-        month = this.fullrecruit.assignedPef.month;  //we are freeing up a seat. Apply it back to the month it was assigned in. 
+        monthInFyOrder = this.fullrecruit.assignedPef.month;  //we are freeing up a seat. Apply it back to the month it was assigned in. 
         this.fullrecruit.assignedPef = {};
         this.fullrecruit.exams.waiver = undefined;
         this.selectedPef.errs = 0;
         this.selectedPef.errCategory = 0;
+        this.fullrecruit.mcroc = undefined;
       }
       
       this.pefs.sort(this.byErrs);
@@ -108,9 +116,9 @@ export class SamplepefComponent {
         var actual = data.allocation[this.selectedPef.pefCode].actual;
 
         if (assigning)  //increment
-          actual['m'+month] += 1;
+          actual['m'+monthInFyOrder] += 1;
         else            //decrement
-          actual['m'+month] -= 1;
+          actual['m'+monthInFyOrder] -= 1;
         
         this.$http.put(`/api/rss/${data._id}`, data);
       });
@@ -224,7 +232,8 @@ export class SamplepefComponent {
   
   broadcastRecruit(recr) {
    //alert the pageheader controller to display the current recruit
-      let profile = {id: recr._id, fullName: recr.fullName, age: recr.age.val, sex: recr.match.sex.val, status: recr.status, ssn: recr.personal.ssn}; 
+      let profile = {id: recr._id, fullName: recr.fullName, age: recr.age.val, sex: recr.match.sex.val, status: recr.status,
+                     ssn: recr.personal.ssn, pefCode:((recr.assignedPef || {}).pefCode || undefined), dutyType:((recr.dutyType || {}).desc || undefined)}; 
       this.root.$broadcast('SELECT_RECRUIT', profile);
   }//
 } //class
@@ -290,11 +299,11 @@ function getPefErrors(p, r) {
       }
       
       if ((pkey === "waivable") && (pval === true)) {
-          isWaivable = true;
+        isWaivable = true;
       }
       
       if (pkey === "waiver") {
-          waiver = pval;
+        waiver = pval;
       }
 
       //Boolean fields
@@ -308,7 +317,7 @@ function getPefErrors(p, r) {
       }
 
       //Exact value fields. Mostly strings, but some numerics that are not waivable
-      if (pkey === "val" && pval !== rval) {
+      if ((!!pval) && pkey === "val" && pval !== rval) {
         ++errs;
         pef.flag = true;
         isErr = true;
@@ -320,7 +329,7 @@ function getPefErrors(p, r) {
 
       //minmax fields, always numeric
       //TODO: error handling for non-numeric data entered in pefview or seed.js
-      if ((pkey === "max" && (rval === undefined || rval > pval)) || (pkey === "min" && (rval === undefined || rval < pval))) {
+      if ((!!pval) && ((pkey === "max" && (rval === undefined || rval > pval)) || (pkey === "min" && (rval === undefined || rval < pval)))) {
         pef.flag=true;
         ++errs;
 
@@ -358,7 +367,6 @@ function getPefErrors(p, r) {
         pef.iswaived = isStarred;
         pef.flag = !isStarred;
 
-        
         if (isStarred)
           wcount++;
 

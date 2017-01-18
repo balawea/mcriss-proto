@@ -7,13 +7,14 @@ export class ExamsComponent {
   recruit;
   $http;
   id;
+  isAdmin: Function;
 
   /*@ngInject*/
-  constructor($http, $location) {
+  constructor($http, $location, Auth) {
     this.$http = $http;
     this.id = $location.hash();
+    this.isAdmin = Auth.isAdminSync;
   } //ctor
-    
     
   /*@ngInject*/
   $onInit() {
@@ -23,9 +24,16 @@ export class ExamsComponent {
       let apef = fullrecruit.assignedPef || {};
       this.recruit.pef = apef.pefCode;
       this.recruit.recruiter = fullrecruit.recruiter;
+      this.recruit.dutyType = fullrecruit.dutyType;
+      this.recruit.mcroc = fullrecruit.mcroc;
     });
   } //init
-}
+
+  saveDutyType() {
+    console.log('save duty type!');
+  }
+
+} //class
 
 export default angular.module('mcrissDemoApp.exams', [uiRouter])
   .config(routes)

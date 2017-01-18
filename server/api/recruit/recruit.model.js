@@ -8,6 +8,8 @@ var RecruitSchema = new mongoose.Schema({
   middleName: String,
   active: Boolean,
   status: String,
+  dutyType: {id: Number, desc: String}, //1=DMR active duty, 2=DMV ground, 3=DMV air
+  mcroc: String,
   notif: {daysuntil: Number, activity: String, active: Boolean, resolution: String, note: String},
   contact: [{date: Date, location: String, method:String, poc: String}],
   dob: Date,
@@ -28,7 +30,6 @@ var RecruitSchema = new mongoose.Schema({
     qt: {val:Number},
     st: {val:Number},  //Skilled Technical GS+VE+MK+MC. Are we using this???
     dlab: {val:Number},
-    //    asvabOrList: {gt:Number, cl:Number, el:Number, mm:Number, ve:Number, qt:Number}, //Logical OR: exceeding any one of the included scores makes a match
     height: { val:Number},
     weight: { val:Number},
     driving: {
@@ -106,7 +107,7 @@ var RecruitSchema = new mongoose.Schema({
 });
 
 RecruitSchema.virtual('age.val').get(function() {
-  return (Math.floor((Date.now() - new Date(this.dob))/31536000000));
+  return (Math.floor((Date.now() - new Date(this.dob))/31536000000)); //31536000000 = msecs/year
 });
 
 RecruitSchema.virtual('fullName').get(function() {
@@ -124,11 +125,11 @@ RecruitSchema.virtual('fhor').get(function() {
 });
 
 RecruitSchema.statics.findbyrec = function (req) {
-  return this.find({"recruiter.recruiterId": req}, {"firstName": 1, "lastName": 1, "notif": 1, "status": 1, "match.sex.val": 1, "personal.ssn": 1, "assignedPef.pefCode": 1, "dob": 1, "exams.pef": 1});
+  return this.find({"recruiter.recruiterId": req}, {"firstName": 1, "lastName": 1, "notif": 1, "status": 1, "match.sex.val": 1, "personal.ssn": 1, "assignedPef.pefCode": 1, "dob": 1, "exams.pef": 1, "dutyType.desc": 1, "mcroc": 1});
 };
 
 RecruitSchema.statics.lite = function (req) {
-  return this.find({}, {"firstName": 1, "lastName": 1, "notif": 1, "status": 1, "match.sex.val": 1, "personal.ssn": 1, "assignedPef.pefCode": 1, "dob": 1});
+  return this.find({}, {"firstName": 1, "lastName": 1, "notif": 1, "status": 1, "match.sex.val": 1, "personal.ssn": 1, "assignedPef.pefCode": 1, "dob": 1, "dutyType.desc": 1, "mcroc": 1});
 };
 
 export default mongoose.model('Recruit', RecruitSchema);

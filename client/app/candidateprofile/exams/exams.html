@@ -6,11 +6,11 @@
   <!-- ssn, name -->
   <tr class="row-top-border">
     <td class="col-sm-3"><div class="form-group">
-      <label class="lb-xs">Aptitude Test Results</label>
-      <label class="lb-16">{{c.recruit.ssn}}</label>
+      <label class="lb-xs">Aptitude Test Results</label><br>
+      <label class="lb-16"></label>
     </div></td>
     <td class="col-sm-2"><div>
-      <label class="lb-xs">AFTQ Percentile</label><br>
+      <label class="lb-xs">AFQT Percentile</label><br>
       <label class="text-center lb-24"><strong>{{c.recruit.afqt}}</strong></label>
     </div></td>
     <td class="col-sm-7">
@@ -34,7 +34,7 @@
   </tr>
 </table>
 
-  <!-- cit, sex, eth -->
+
 <table class="table-cp">
     <tr class="row-top-border">
     <td class="col-sm-2"><div class="form-group">
@@ -88,5 +88,27 @@
       <label class="lb-16">{{c.recruit.adObligation}}</label>
     </div></td>
   </tr>
-</table>
+  </table>
+  
+  <table class="table-cp">
+    <tr class="row-top-border">
+    <td class="col-sm-2"><div class="form-group">
+      <label class="lb-xs">Duty Type</label><br>
+      <select ng-model="c.recruit.dutyType" ng-disabled="!c.isAdmin()" class="text-border-lg text-12 margin0">
+      <option ng-selected="c.recruit.dutyType.id===1" value="DMR">DMR - Active Duty</option>
+      <option ng-selected="c.recruit.dutyType.id===2" value="DMV">DMV - Reserve Ground</option>
+      <option ng-selected="c.recruit.dutyType.id===3" value="DMV">DMV - Reserve Air</option>
+      </select>
+      <input type="button" ng-if="c.isAdmin()" ng-click="vm.saveDutyType" value="Save" class="btn btn-sm btn-primary">
+    </div></td>
+    <td class="col-sm-2"><div class="form-group">
+      <label class="lb-xs">MCROC</label><br>
+      <label class="lb-16">{{c.recruit.mcroc}}</label>
+    </div></td>
+      <td class="col-sm-2"></td>
+      <td class="col-sm-2"></td>
+  </tr>
+  
+  </table>
+  
 </div>

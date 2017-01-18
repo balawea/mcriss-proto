@@ -25,10 +25,11 @@ export class NavbarComponent {
           {'title': 'My Candidates', 'state': '/', profileHeader: false},
           {'title': 'My Candidates', 'state': '/recruiterview', profileHeader: false},
           {'title': 'Demo Main', 'state': '/main', profileHeader: false},
+          {'title': 'Big Data Demo', 'state': '/grid', profileHeader: false},
           {'title': 'PEF Assignment', 'state': '/samplepef', profileHeader: true},
           {'title': 'Program Management', 'state': '/pefview', profileHeader: false},
           {'title': 'Candidate Profile', 'state': '/candidateprofile', profileHeader: true},
-          {'title': 'Allocation View', 'state': '/allocationview', profileHeader: false},
+          {'title': 'Program Availability', 'state': '/allocationview', profileHeader: false},
           {'title': 'Login', 'state': '/login', profileHeader: false},
           {'title': 'Change Password', 'state': '/settings', profileHeader: false},
           {'title': 'Delete Users', 'state': '/admin', profileHeader: false},
@@ -41,10 +42,6 @@ export class NavbarComponent {
           $scope.profileHeader = $scope.menu[i].profileHeader;
         }
       }
-      
-//      if (!$scope.isLoggedIn())
-//        $state.go('login');
-
       
       //clear the recruit selection and header
       if (!$scope.profileHeader)

@@ -43,13 +43,11 @@
       </div>
     </div>
 
-  
   <!-- ---------------------------------------------------------------------------------------------------------------  -->
   <!-- ---------------------------------------------------------------------------------------------------------------  -->
   <!-- ---------------------------------------------------------------------------------------------------------------  -->
   <!-- ---------------------------------------------------------------------------------------------------------------  -->
-  
-  
+    
   <!-- Selected PEF Header-->
   <div class="col-xs-12 col-sm-9">
     <div class="panel profile-panel" >
@@ -57,9 +55,9 @@
         <span ng-if="vm.selectedPef">
       <h4>{{vm.selectedPef.pefCode + ' - ' + vm.selectedPef.description}}
         <span class="fa fa-1x text-primary pull-right" ng-class="{'fa-bookmark': vm.selectedPef.isBookmarked, 'fa-bookmark-o': !vm.selectedPef.isBookmarked}" uib-tooltip="Bookmark" 
-              ng-click="vm.toggleBookmark()" ng-show="vm.selectedPef!==undefined"></span>
+              ng-click="vm.toggleBookmark()" ng-if="vm.selectedPef!==undefined"></span>
 
-        <button type="button" ng-if="vm.canAssign(vm.selectedPef)" class="btn btn-success pull-right" ng-click="vm.toggleAssignment()">ASSIGN CANDIDATE</button>
+        <button type="button" ng-if="vm.canAssign(vm.selectedPef)" class="btn btn-success pull-right" ng-click="vm.toggleAssignment()">ASSIGN PEF</button>
         <span class="fa fa-star text-primary" ng-if="vm.isAssigned(vm.selectedPef)" uib-tooltip="Assigned" ng-click="vm.toggleAssignment()"></span></h4>
         </span>
       </div>

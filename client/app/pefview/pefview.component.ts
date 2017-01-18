@@ -98,14 +98,6 @@ export class PefviewComponent {
 
       console.log(this.selectedPef);
 
-      //hack
-      if (((this.selectedPef.requirements.sex || {}).val || '') === '')
-        this.selectedPef.requirements.sex = undefined;
-      if (((this.selectedPef.requirements.tierGrad || {}).max || '') === '')
-        this.selectedPef.requirements.tierGrad = undefined;
-      if (((this.selectedPef.requirements.clearance || {}).min || '') === '')
-        this.selectedPef.requirements.clearance = undefined;
-
       this.$http.put(`/api/pefRequirements/${this.selectedPef._id}`, this.selectedPef)
       .then(res => {
         if (res.statusText==="OK") {
@@ -146,15 +138,6 @@ export class PefviewComponent {
   initPefs(pefs) {
     for (let pef of pefs) {
       pef.isEditing = false;
-//      let vis = pef.pefvis;
-//
-//      for (let pkey in vis) {
-//        if (!vis[pkey])
-//          this.hideTiles()
-//
-//      }
-      //start with all visible
-      //pef.pefvis = {per: true, edu: true, toe: true, cle: true, sco: true, cit: true, vis: true, dri: true, mor: true, cer: true, scr: true};
     }
     return pefs;
   }
@@ -200,7 +183,6 @@ export class PefviewComponent {
   }//
 
 } // class
-
 
 export default angular.module('mcrissDemoApp.pefview', [uiRouter])
   .config(routes)

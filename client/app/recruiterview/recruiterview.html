@@ -42,22 +42,22 @@
       </span>
 
       <h2 class="page-header padbottom0"></h2>
-      <ul class="nav nav-tabs-show nav-stacked col-sm-2" ng-repeat="recruit in vm.recruits | filter: vm.filter(filtertxt, vm.alert, vm.male, vm.female, vm.starred) as recvisible">
+      <ul class="nav nav-tabs-show nav-stacked col-sm-2" ng-repeat="recruit in vm.recruits | filter: vm.filter(filtertxt, vm.alert, vm.male, vm.female, vm.starred) as recvisible track by recruit._id">
         <li>
-          <div class="panel widget-panel-small">
+          <div class="panel tile-small">
             <div class="panel-body">
-              <a href="/samplepef#{{recruit._id}}">
+              <a href="/candidateprofile#{{recruit._id}}">
               <div class="text-center">
                 <span class="fa-stack fa-2x">
                   <i class="fa fa-user fa-stack-2x"></i>
                 </span>
                 <span class="fa pull-right" ng-class="{'fa-phone-square': recruit.notif.activity==='TC', 'fa-envelope': recruit.notif.activity==='EM', 'fa-car': recruit.notif.activity==='HV', 'fa-briefcase': recruit.notif.activity==='OT', 'foo': recruit.notif.daysuntil===0, 'ltgray': recruit.notif.daysuntil>0}" uib-tooltip="{{recruit.notification}}" data-html="true"></span>
                 <hr class="marginvertical15"/>
-                <h6><strong>{{recruit.firstName + ' ' + recruit.lastName}}</strong></h6>
-                <div class="text12"><strong>{{recruit.status}}</strong>
-                  <span ng-if="recruit.assignedPef.pefCode" class="pull-right bold navy">[{{recruit.assignedPef.pefCode}}]</span></div>
-                </span>SSN4: {{recruit.personal.ssn}}</span><br/>
-                </span>Age: {{recruit.age.val}}</span> </span> Sex: <strong>{{recruit.match.sex.val}}</strong></span>
+                <h6 class="navy"><strong>{{::recruit.firstName}} {{::recruit.lastName}}</strong></h6>
+                <div class="text12"><strong>{{::recruit.dutyType.desc}} {{::recruit.status}}</strong></div>
+                <span>SSN4: {{::recruit.personal.ssn}}</span><br/>
+                <span>Age: {{::recruit.age.val}}</span> <span> Sex: {{::recruit.match.sex.val}}</span>
+                  <div class="text12 navy"><strong>{{::recruit.mcroc}}</strong></div>
               </div>
             </a>
           </div>

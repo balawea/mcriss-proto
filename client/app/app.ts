@@ -24,6 +24,7 @@ import pefview from './pefview/pefview.component';
 import candidateprofile from './candidateprofile/candidateprofile.component';
 import allocationview from './allocationview/allocationview.component';
 import personal from './candidateprofile/personal/personal.component';
+import grid from './grid/grid.component';
 import exams from './candidateprofile/exams/exams.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
@@ -39,9 +40,10 @@ angular.module('mcrissDemoApp', [
 
   _Auth,
   account,
-  admin,  navbar, recruitbanner,
+  admin, navbar, recruitbanner,
   footer,
   main,
+  grid,
   samplepef,
   recruiterview,
   pefview,

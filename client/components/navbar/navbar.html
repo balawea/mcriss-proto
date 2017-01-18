@@ -24,11 +24,11 @@
 <!--        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><p class="navbar-text"><a ui-sref="admin">Users</a></p></li>-->
 
         <!-- ALLOCATIONS -->
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="allocationview" uib-tooltip="Allocations">
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="allocationview" uib-tooltip="Program Availability">
           <span class="fa pull-left" ng-class="{'fa-line-chart':hoveralloc, 'fa-line-chart-white': !hoveralloc}" ng-mouseenter="hoveralloc=true" ng-mouseleave="hoveralloc=false"></span></a></p></li>
         
         <!-- VIEW/EDIT PEFS -->
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="pefview" uib-tooltip="PEF View">
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" class="padtop10"><p class="navbar-text"><a ui-sref="pefview" uib-tooltip="Program Management">
           <span class="fa pull-left" ng-class="{'fa-pencil-square-o':hoveredit, 'fa-pencil-square-o-white': !hoveredit}" ng-mouseenter="hoveredit=true" ng-mouseleave="hoveredit=false"></span></a></p></li>
         
         <!-- SETTINGS -->

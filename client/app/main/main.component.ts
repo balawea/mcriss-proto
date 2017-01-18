@@ -21,19 +21,8 @@ export class MainController {
     this.$http.get('/api/pefRequirements').then(response => {
       this.pefs = response.data;
     });
-  }
-
-  updateThing() {
-    if (this.thing) {
-      this.$http.post('/api/things', { name: this.thing });
-      this.thing = '';
-    }
-  }
-
-  deleteThing(thing) {
-    this.$http.delete('/api/things/' + thing._id);
-  }
-}
+  } //init
+} //class
 
 export default angular.module('mcrissDemoApp.main', [uiRouter])
     .config(routing)

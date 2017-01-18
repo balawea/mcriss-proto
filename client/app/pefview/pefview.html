@@ -16,7 +16,7 @@
       <!-- SELECT PEF -->
       <ul class="list-group">
         <li class="list-group-item" ng-class="{'selected': pef===vm.selectedPef}" ng-repeat="pef in vm.pefs | filter: {errCategory: vm.fCategory, pefCode: pefText}"
-            ng-click="vm.select(pef)"><strong>{{pef.pefCode}}</strong>{{' - ' + pef.desc}}
+            ng-click="vm.select(pef)"><strong>{{::pef.pefCode}}</strong>{{' - ' + pef.desc}}
           <span class="text-primary pull-right" ng-show="vm.isAdmin()"><a class="fa fa-2x" ng-class="{'fa-pencil': pef.isEditing, 'fa-pencil-gray': !pef.isEditing}" ng-click="pef.isEditing=!pef.isEditing"></a></span>
         </li>
       </ul>
@@ -29,7 +29,7 @@
       <div class="panel-header">
         <div class="fxnlink" ng-if="vm.selectedPef.isEditing"><a class="awhite" ng-click="vm.save()">SAVE</a></div>
         <div class="fxnlink" ng-if="vm.selectedPef.isEditing"><a class="awhite" ng-click="vm.cancel()">CANCEL</a></div>
-        <div class="fxnlink" ng-if="vm.isAdmin()"><a class="awhite" ng-click="vm.restoreTiles()">RESTORE</a></div>
+        <div class="fxnlink" ng-if="vm.selectedPef.isEditing"><a class="awhite" ng-click="vm.restoreTiles()">RESTORE</a></div>
       </div>
       <div class="panel-body">
          <span>
@@ -49,9 +49,9 @@
         <div class="panel-body">
           <div class="text-left">
             <span>
-            <i class="fa fa-2x fa-street-view text-primary"></i><strong class="margin10"> Personal Attributes</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('per')"></i>
-          </span>
+              <i class="fa fa-2x fa-street-view text-primary"></i><strong class="margin10"> Personal Attributes</strong>
+              <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('per')"></i>
+            </span>
               <hr class="marginvertical15">
           </div>
 
@@ -164,7 +164,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-graduation-cap text-primary"></i><strong class="margin10"> Education</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('edu')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('edu')"></i>
           </span>
               <hr class="marginvertical15">
           </div>
@@ -222,7 +222,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-calendar text-primary"></i><strong class="margin10"> Term of Enlistment</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('toe')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('toe')"></i>
             </span>
               <hr class="marginvertical15">
           </div>
@@ -245,7 +245,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-id-card-o text-primary"></i><strong class="margin10"> US Citizenship</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('cit')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('cit')"></i>
             </span>
               <hr class="marginvertical15">
           </div>
@@ -272,7 +272,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-search text-primary"></i><strong class="margin10"> Clearance</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('cle')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('cle')"></i>
           </span>
               <hr class="marginvertical15">
           </div>
@@ -311,7 +311,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-lightbulb-o text-primary"></i><strong class="margin10"> Test Scores</strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('sco')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('sco')"></i>
           </span>
               <hr class="marginvertical15">
           </div>
@@ -454,7 +454,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-eye text-primary"></i><strong class="margin10"> Vision </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('vis')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('vis')"></i>
           </span>
               <hr class="marginvertical15">
           </div>
@@ -549,7 +549,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-car text-primary"></i><strong class="margin10"> Driving </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('dri')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('dri')"></i>
           </span>
               <hr class="marginvertical15">
           </div>
@@ -615,7 +615,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-gavel text-primary"></i><strong class="margin10"> Moral </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('mor')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('mor')"></i>
           </span>
               <hr class="marginvertical15">
           </div>
@@ -685,7 +685,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-certificate text-primary"></i><strong class="margin10"> Certifications </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('cer')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('cer')"></i>
           </span>
               <hr class="marginvertical15">
           </div>
@@ -744,7 +744,7 @@
           <div class="text-left">
             <span>
             <i class="fa fa-2x fa-check-square-o text-primary"></i><strong class="margin10"> Screenings </strong>
-            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.isAdmin()" ng-click="vm.hideTiles('scr')"></i>
+            <i class="fa fa-times-rectangle-o text-gray pull-right" ng-if="vm.selectedPef.isEditing" ng-click="vm.hideTiles('scr')"></i>
           </span>
               <hr class="marginvertical15">
           </div>
