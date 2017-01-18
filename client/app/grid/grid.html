@@ -1,0 +1,47 @@
+
+<div class="container">
+  <div class="div-flag">
+  </div>
+  
+  <div class="col-xs-12 pull-left">
+    <div class="row">
+      <input type="text" class="text-center pull-left" placeholder="Search Recruits" ng-model="pefText" ng-model-options="{ debounce: 400 }">
+      <span class="searchicondark pull-left"><i class="fa fa-2x fa-search"></i></span>
+      <dir-pagination-controls class="pull-right" boundary-links="true"></dir-pagination-controls>
+    </div>
+    
+    <table class="table table-striped">
+      <thead>
+        <tr class="row">
+          <th>#</th>
+          <th ng-click="vm.sortBy('lastName')">Last Name <span class="fa fa-sort" ng-show="vm.sortColumn==='lastName'"></span></th>
+          <th ng-click="vm.sortBy('firstName')">First Name <span class="fa fa-sort" ng-show="vm.sortColumn==='firstName'"></span></th>
+          <th ng-click="vm.sortBy('middleName')">Middle Name <span class="fa fa-sort" ng-show="vm.sortColumn==='middleName'"></span></th>
+          <th ng-click="vm.sortBy('rs')">RS <span class="fa fa-sort" ng-show="vm.sortColumn==='rs'"></span></th>
+          <th ng-click="vm.sortBy('status')">Status <span class="fa fa-sort" ng-show="vm.sortColumn==='status'"></span></th>
+          <th ng-click="vm.sortBy('age')">Age <span class="fa fa-sort" ng-show="vm.sortColumn==='age'"></span></th>
+          <th ng-click="vm.sortBy('sex')">Sex <span class="fa fa-sort" ng-show="vm.sortColumn==='sex'"></span></th>
+          <th ng-click="vm.sortBy('ssn')">SSN4 <span class="fa fa-sort" ng-show="vm.sortColumn==='ssn'"></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row" dir-paginate="recruit in vm.recruits|orderBy:vm.sortColumn:vm.reverse|filter:vm.filter(pefText)|itemsPerPage:vm.itemsperpage track by recruit._id">
+          <td>{{((__default__currentPage-1)*vm.itemsperpage) + $index + 1}}</td>
+          <td><label>{{::recruit.lastName}}</label></td>
+          <td><label>{{::recruit.firstName}}</label></td>
+          <td><label>{{::recruit.middleName}}</label></td>
+          <td><label>{{::recruit.rs}}</label></td>
+          <td><label>{{::recruit.status}}</label></td>
+          <td><label>{{::recruit.age}}</label></td>
+          <td><label>{{::recruit.sex}}</label></td>
+          <td><label>{{::recruit.ssn}}</label></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+      <dir-pagination-controls class="pull-right" boundary-links="true"></dir-pagination-controls>
+    </div>
+    
+  </div>
+</div>

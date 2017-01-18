@@ -1,0 +1,147 @@
+
+<div class="container">
+  <div class="div-flag">
+  </div>
+  
+  <!-- PEF Match-->
+    <div class="col-xs-12 col-sm-3 pull-left">
+      <div class="well-black">
+
+        <!-- id filter -->
+        <div class="input-group">
+        <span class="searchicon"><i class="fa fa-2x fa-search"></i></span>
+          <input type="text" class="pef-text" placeholder="Search PEFs" ng-model="pefText">
+        </div>
+        <hr class="marginvertical15"/>
+
+        <ul class="list-group">
+          <li class="list-group-item" ng-click="vm.select(pef)" ng-repeat="pef in vm.pefs | filter: {pefCode: pefText}"
+          ng-class="{'selected': pef===vm.selectedPef}"><strong>{{pef.pefCode}}</strong>{{' - ' + pef.desc}}
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  
+  <!-- ---------------------------------------------------------------------------------------------------------------  -->
+  <!-- ---------------------------------------------------------------------------------------------------------------  -->
+  <!-- ---------------------------------------------------------------------------------------------------------------  -->
+  <!-- ---------------------------------------------------------------------------------------------------------------  -->
+
+  <div class="col-xs-12 col-sm-9 pull-left">
+
+    <div class="row">
+    <div class="panel block-panel">
+      <div class="col-xs-5 nav navbar nav-tile padding0">
+        <div><strong class="navbar-text text-16 margin5 padtop10">Frederick</strong></div>
+        <div class="navbar-text margin0 text-12 padleft15">Allocations</div>
+      </div>
+      <div class="col-xs-7 nav-tile-right text-center padsides0">
+        <span class="text48 navy">50</span>
+        <span class="text40">/ 80</span>
+      </div>
+    </div>
+
+    <div class="panel block-panel">
+      <div class="col-xs-5 nav navbar nav-tile padding0">
+        <div><strong class="navbar-text text-16 margin5 padtop10">ERR</strong></div>
+        <div class="navbar-text margin0 text-12 padleft15">Allocations</div>
+      </div>
+      <div class="col-xs-7 nav-tile-right text-center padsides0">
+        <span class="text48 navy">112</span>
+        <span class="text40">/ 210</span>
+      </div>
+    </div>
+
+    <div class="panel block-panel">
+      <div class="col-xs-5 nav navbar nav-tile padding0">
+        <div><strong class="navbar-text margin5 text-16 padtop10">MCRC</strong></div>
+        <div class="navbar-text margin0 text-12 padleft15">Allocations</div>
+      </div>
+      <div class="col-xs-7 nav-tile-right text-center padsides0">
+        <span class="text48 navy">250</span>
+        <span class="text40">/ 380</span>
+      </div>
+    </div>
+
+      
+</div>
+    
+
+    <hr>
+    
+    <div class="headerfont-sm">
+      Available Seats - <strong>{{vm.selectedPef.pefCode + ' - ' + vm.selectedPef.description}}</strong>
+  </div>
+    
+    <table class="table">
+      <thead>
+<!--        <tr><button class="pull-right btn btn-primary" type="radio" ng-click="vm.$state.reload()"><i class="fa fa-refresh"></i></button></tr>-->
+        <tr class="row">
+          <td><strong></strong></td>
+          <td><strong>Available</strong></td>
+          <td><strong>Roll-up</strong></td>
+          <td><strong>Oct</strong></td>
+          <td><strong>Nov</strong></td>
+          <td><strong>Dec</strong></td>
+          <td><strong>Jan</strong></td>
+          <td><strong>Feb</strong></td>
+          <td><strong>Mar</strong></td>
+          <td><strong>Apr</strong></td>
+          <td><strong>May</strong></td>
+          <td><strong>Jun</strong></td>
+          <td><strong>Jul</strong></td>
+          <td><strong>Aug</strong></td>
+          <td><strong>Sep</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+      <tr class="row text-center" ng-repeat="segment in vm.seatarray">
+        <td class="text-left"><strong ng-model="segment.name">{{::segment.name}}</strong></td>
+
+        <td><label>{{::segment.availableProgress}}</label></td>
+        <td><label>{{::segment.availableRU}}</label></td>
+        <td><label>{{::segment.available.m0}}</label>
+<!--          <input type=text class="text-border-tbl" ng-model="segment.plan.m0"></input>-->
+      </td>
+        <td><label>{{::segment.available.m1}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m1"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m2}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m2"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m3}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m3"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m4}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m4"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m5}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m5"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m6}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m6"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m7}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m7"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m8}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m8"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m9}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m9"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m10}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m10"></input>  -->
+        </td>
+        <td><label>{{::segment.available.m11}}</label>
+<!--        <input type=text class="text-border-tbl" ng-model="segment.plan.m11"></input>  -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>  <!-- outer container -->
+
