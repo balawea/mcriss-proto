@@ -46,9 +46,7 @@ module.exports = function makeWebpackConfig(options) {
                 'angular-aria',
                 'angular-cookies',
                 'angular-resource',
-
                 'angular-sanitize',
-
                 'angular-ui-bootstrap',
                 'angular-ui-router',
                 'lodash'
@@ -76,11 +74,16 @@ module.exports = function makeWebpackConfig(options) {
 
             // Filename for entry points
             // Only adds hash in build mode
-            filename: BUILD ? '[name].[hash].js' : '[name].bundle.js',
+
+          //APB add hash in DEV to validate caching
+            //filename: BUILD ? '[name].[hash].js' : '[name].bundle.js',
+          filename: BUILD ? '[name].[hash].js' : '[name].bundle.js',
 
             // Filename for non-entry points
             // Only adds hash in build mode
-            chunkFilename: BUILD ? '[name].[hash].js' : '[name].bundle.js'
+            //APB add hash in DEV to validate caching
+            //chunkFilename: BUILD ? '[name].[hash].js' : '[name].bundle.js'
+          chunkFilename: BUILD ? '[name].[hash].js' : '[name].bundle.js'
         };
     }
 
@@ -267,7 +270,7 @@ module.exports = function makeWebpackConfig(options) {
       new HtmlWebpackHarddiskPlugin()
     );
 
-    // Add build specific plugins
+    // Add build-specific plugins
     if(BUILD) {
         config.plugins.push(
             // Reference: http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin
@@ -302,13 +305,31 @@ module.exports = function makeWebpackConfig(options) {
 
     if(DEV) {
         config.plugins.push(
-            // Reference: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
-            // Define free global variables
-            new webpack.DefinePlugin({
-                'process.env': {
-                    NODE_ENV: '"development"'
-                }
-            })
+          //APB - minify in DEV
+
+          // Reference: http://webpack.github.io/docs/list-of-plugins.html#dedupeplugin
+          // Dedupe modules in the output
+          new webpack.optimize.DedupePlugin(),
+
+          // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
+          // Minify all javascript, switch loaders to minimizing mode
+          new webpack.optimize.UglifyJsPlugin({
+              mangle: false,
+              output: {
+                  comments: false
+              },
+              compress: {
+                  warnings: false
+              } 
+          }),
+
+          // Reference: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
+          // Define free global variables
+          new webpack.DefinePlugin({
+              'process.env': {
+                  NODE_ENV: '"development"'
+              }
+          })
         );
     }
 

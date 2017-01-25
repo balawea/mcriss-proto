@@ -2,7 +2,6 @@
 
 const angular = require('angular');
 const uiRouter = require('angular-ui-router');
-const noUiSlider = require('nouislider');
 const Masonry = require('masonry-layout');
 const swal = require('sweetalert');
 import routes from './samplepef.routes';
@@ -69,27 +68,28 @@ export class SamplepefComponent {
       let date = new Date();
 
       //months in seed data are FY based: Oct=0, Nov=1, etc. 
-      //Init month to the current month
       let monthInFyOrder = (date.getMonth() + 3) % 12;
       //two digit natural month, ie 01, 06
+
+      //FUTURE: priviledged users can grab/request seats from different months, so to
+      //implement that we could identify the correct MCROC year/month for that seat and apply it here.
       let monthNatural = ("0" + (date.getMonth() + 1)).slice(-2);
       let year = date.getFullYear();
       let today = date.toLocaleDateString('en-US');
-      let mcroc = year + monthNatural + this.selectedPef.pefCode + '-' + today; //no idea if this is even close to right
+      let bonuscode = '-XX-XXX-';
+      let mcroc = year + monthNatural + this.selectedPef.pefCode + bonuscode + today;
 
       if (assigning) {
         this.fullrecruit.assignedPef = {pefCode: this.selectedPef.pefCode, id: this.selectedPef._id, month: monthInFyOrder};
-        this.fullrecruit.exams.waiver = (haswaivers) ? "Requested" : "";
+        this.fullrecruit.exams.waiver = (haswaivers) ? "Requested" : undefined;
         this.selectedPef.errs = -1;
         this.fullrecruit.mcroc = mcroc;
       }
       else {
         monthInFyOrder = this.fullrecruit.assignedPef.month;  //we are freeing up a seat. Apply it back to the month it was assigned in. 
         this.fullrecruit.assignedPef = {};
-        this.fullrecruit.exams.waiver = undefined;
-        this.selectedPef.errs = 0;
-        this.selectedPef.errCategory = 0;
-        this.fullrecruit.mcroc = undefined;
+        this.fullrecruit.exams.waiver = this.fullrecruit.mcroc = undefined;
+        this.selectedPef.errs = this.selectedPef.errCategory = 0;
       }
       
       this.pefs.sort(this.byErrs);
@@ -151,6 +151,8 @@ export class SamplepefComponent {
   select(pef) {
     this.selectedPef = pef;
     this.layout();
+    
+    console.log(pef);
   }
 
   //delaying the call to refresh the masonry handle gives the digest time to update the DOM
@@ -181,12 +183,6 @@ export class SamplepefComponent {
     this.pefs.sort(this.byErrs);
   }
 
-  saveRecruit() {
-    if (this.selectedPef) {
-      this.$http.put(`/api/recruits/${this.id}`, this.fullrecruit);
-    }
-  }
-
   toggleBookmark() {
     if(this.selectedPef) {
       let bkmarked = !this.selectedPef.isBookmarked;
@@ -212,6 +208,7 @@ export class SamplepefComponent {
     }
   }//
 
+  //sort by error count and pef code
   byErrs(a, b) {
     let aerr = a.errs;
     let berr = b.errs;
@@ -223,18 +220,17 @@ export class SamplepefComponent {
     if (aerr > berr)
       return 1;
 
-    //if aerr = berr
     if (acode < bcode)
       return -1;
-    if (acode > bcode)
+    else
       return 1;
   }
   
   broadcastRecruit(recr) {
    //alert the pageheader controller to display the current recruit
-      let profile = {id: recr._id, fullName: recr.fullName, age: recr.age.val, sex: recr.match.sex.val, status: recr.status,
-                     ssn: recr.personal.ssn, pefCode:((recr.assignedPef || {}).pefCode || undefined), dutyType:((recr.dutyType || {}).desc || undefined)}; 
-      this.root.$broadcast('SELECT_RECRUIT', profile);
+    let profile = {id: recr._id, fullName: recr.fullName, age: recr.age.val, sex: recr.match.sex.val, status: recr.status,
+                   ssn: recr.personal.ssn, pefCode:((recr.assignedPef || {}).pefCode || undefined), dutyType:((recr.dutyType || {}).desc || undefined)}; 
+    this.root.$broadcast('SELECT_RECRUIT', profile);
   }//
 } //class
 
@@ -255,19 +251,8 @@ function getFlags(pefs, recr) {
 
 function getPefErrors(p, r) {
   let errs = 0;
-  let rval;
-  let isErr = false;
-  let isWaivable = false;
-  let waiver;
-  let pefval;
-  let recval;
-  let pefmin;
-  let pefmax;
   let isStarred = p.pefCode === r.pefCode;
   let wcount = 0;
-  let isWaivableExactValOrBoolean = false;
-  let isWaivableMinWithinWaiverAmount = false;
-  let isWaivableMaxWithinWaiverAmount = false;
 
   compareObjects(p, r);
 
@@ -277,29 +262,38 @@ function getPefErrors(p, r) {
   //Eg, pef.cl.min and recr.cl.val, or pef.toe.val and recr.toe.val.
   //Terminal pef nodes named "has" are always compared with "has" nodes, as in pef.algebra.has and recr.algebra.has.
   function compareObjects(pef, recr) {
+    let isErr = false;
+    let isWaivable = false;
+    let isWaivableExactValOrBoolean = false;
+    let isWaivableMinWithinWaiverAmount = false;
+    let isWaivableMaxWithinWaiverAmount = false;
+    let waiver;
+    let pefval;
+    let recval;
+    let pefmin;
+    let pefmax;
+    let rval;
+
     for (let pkey in pef) {
       let pval = pef[pkey];
+      
+      //skip null, empty, and undefined pef values, allow zeroes
+      if (!pval && pval !== 0)
+        continue;
 
-      rval = (!!recr) ? recr[pkey] : undefined;
+      //set rval to recr[val] to compare with min max pef fields, otherwise use the same field.
+      if (pkey === "min" || pkey === "max") {
+        rval = (recr) ? recr["val"] : undefined;
+      } else {
+        rval = (recr) ? recr[pkey] : undefined;
+      }
 
       if (typeof(pval) === "object") {
-        isErr = false;
-        isWaivable = false;
-        waiver = undefined;
-        pefval = undefined;
-        pefmin = undefined;
-        pefmax = undefined;
-        recval = undefined;
-        
-        isWaivableExactValOrBoolean = false;
-        isWaivableMinWithinWaiverAmount = false;
-        isWaivableMaxWithinWaiverAmount = false;
-
         compareObjects(pval, rval);
       }
       
-      if ((pkey === "waivable") && (pval === true)) {
-        isWaivable = true;
+      if ((pkey === "waivable")) {
+        isWaivable = pval;
       }
       
       if (pkey === "waiver") {
@@ -309,33 +303,23 @@ function getPefErrors(p, r) {
       //Boolean fields
       //pval===true excludes "negative" requirements like waterqual.has=false as can be set by checkbox values in pefview
       if (pkey === "has" && pval === true && pval !== rval) {
-        ++errs;
-        pef.flag = true;
-        isErr = true;
+        markError();
         pefval = pval;
         recval = rval;
       }
 
       //Exact value fields. Mostly strings, but some numerics that are not waivable
-      if ((!!pval) && pkey === "val" && pval !== rval) {
-        ++errs;
-        pef.flag = true;
-        isErr = true;
+      if (pkey === "val" && pval !== rval) {
+        markError();
         pefval = pval;
         recval = rval;
       }
-      
-      rval = (!!recr) ? recr["val"] : undefined;
 
       //minmax fields, always numeric
-      //TODO: error handling for non-numeric data entered in pefview or seed.js
-      if ((!!pval) && ((pkey === "max" && (rval === undefined || rval > pval)) || (pkey === "min" && (rval === undefined || rval < pval)))) {
-        pef.flag=true;
-        ++errs;
-
-        isErr = true;
+      if ((pkey === "max" && (rval === undefined || rval > pval)) || (pkey === "min" && (rval === undefined || rval < pval))) {
+        markError();
         recval = rval;
-      
+
         if (pkey === "max")
           pefmax = pval;
         else
@@ -344,23 +328,19 @@ function getPefErrors(p, r) {
 
       //For a waivable error on a boolean or exact value field (pefval), we know there will be no waiver amount to compare
       //since only min/max fields (pefmax or pefmin) can have a waiver amount in the model.
-      //Eg, drivers.license and sex might be waivable, but will not have a waiver amount.
       if (isErr && isWaivable && (pefval !== undefined)){
-        //Decrement the error counter here and implement a waivable issue count instead?
         isWaivableExactValOrBoolean = true;
       }
 
       //We need to see if the recruit value +/- the waiver amount is within range of the pef min/max fields.
-      //MIN
       if (isErr && isWaivable && (waiver !== undefined) && (recval !== undefined) && (pefmin !== undefined) && (recval + waiver >= pefmin)){
         isWaivableMinWithinWaiverAmount = true;
       }
 
-      //MAX
       if (isErr && isWaivable && (waiver !== undefined) && (recval !== undefined) && (pefmax !== undefined) && (recval - waiver <= pefmax)){
         isWaivableMaxWithinWaiverAmount = true;
       }
-
+      
       // Below: if we have all necessary parties populated at once, indicate whether the parent pef node is in a waivable state
       if (isWaivableExactValOrBoolean || isWaivableMinWithinWaiverAmount || isWaivableMaxWithinWaiverAmount) {
         pef.canwaive = true;
@@ -372,6 +352,14 @@ function getPefErrors(p, r) {
 
         continue;
       }
+      
+      function markError(){
+        if (pef.flag !== true) {
+          ++errs;
+          pef.flag = true;
+          isErr = true;
+        }
+      }
     } // for (let pkey in pef)
     
   } // CompareObjects
@@ -380,7 +368,6 @@ function getPefErrors(p, r) {
   if(isStarred){
     errs = -1;
   }
-
   
   return {e: errs, w: wcount};
 } //GetPefErrors

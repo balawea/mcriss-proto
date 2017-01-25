@@ -289,12 +289,13 @@ gulp.task('clean:tmp', () => del(['.tmp/**/*'], {dot: true}));
 
 gulp.task('start:client', cb => {
     whenServerReady(() => {
-      open('http://localhost:' + config.browserSyncPort);
+//APB      open('http://localhost:' + config.browserSyncPort);
         cb();
     });
 });
 
 gulp.task('start:server', () => {
+    //APB process.env.NODE_ENV = process.env.NODE_ENV || 'development';
     process.env.NODE_ENV = process.env.NODE_ENV || 'development';
     config = require(`./${serverPath}/config/environment`);
     nodemon(`-w ${serverPath} ${serverPath}`)
@@ -316,6 +317,7 @@ gulp.task('start:inspector', () => {
 });
 
 gulp.task('start:server:debug', () => {
+    //APB process.env.NODE_ENV = process.env.NODE_ENV || 'development';
     process.env.NODE_ENV = process.env.NODE_ENV || 'development';
     config = require(`./${serverPath}/config/environment`);
     nodemon(`-w ${serverPath} --debug=5858 --debug-brk ${serverPath}`)

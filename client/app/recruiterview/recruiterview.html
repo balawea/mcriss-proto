@@ -7,33 +7,34 @@
         <div class="horizontal padtop10">
           
           <span class="btn-group pull-right margin10" data-toggle="buttons">
-            <button class="btn btn-primary" type="radio" ng-click="vm.alert='EM'; vm.sort();" ng-class="{'active': vm.alert==='EM'}">
+            <button class="btn btn-primary" type="radio" ng-click="vm.alert = 'EM'; vm.sort();" ng-class="{'active': vm.alert === 'EM'}">
             <i class="fa fa-envelope"></i></button>
-            <button class="btn btn-primary" type="radio" ng-click="vm.alert='TC'; vm.sort();" ng-class="{'active': vm.alert==='TC'}">
+            <button class="btn btn-primary" type="radio" ng-click="vm.alert = 'TC'; vm.sort();" ng-class="{'active': vm.alert==='TC'}">
             <i class="fa fa-phone"></i></button>
-            <button class="btn btn-primary" type="radio" ng-click="vm.alert='HV'; vm.sort();" ng-class="{'active': vm.alert==='HV'}">
+            <button class="btn btn-primary" type="radio" ng-click="vm.alert = 'HV'; vm.sort();" ng-class="{'active': vm.alert === 'HV'}">
             <i class="fa fa-car"></i></button>
-            <button class="btn btn-primary" type="radio" ng-click="vm.alert='OT'; vm.sort();" ng-class="{'active': vm.alert==='OT'}">
+            <button class="btn btn-primary" type="radio" ng-click="vm.alert = 'OT'; vm.sort();" ng-class="{'active': vm.alert === 'OT'}">
             <i class="fa fa-briefcase"></i></button>
-            <button class="btn btn-primary" type="radio" ng-click="vm.alert=undefined; vm.sort();" ng-class="{'active': vm.alert===undefined}">
+            <button class="btn btn-primary" type="radio" ng-click="vm.alert = undefined; vm.sort();" ng-class="{'active': vm.alert === undefined}">
             <span class="text12">All</span></button>
           </span>
 
           <span class="btn-group pull-right margin10" data-toggle="buttons">
-            <button class="btn btn-primary" type="button" ng-click="vm.male=!vm.male; vm.sort();" ng-class="{'active': vm.male===true}">
+            <button class="btn btn-primary" type="button" ng-click="vm.male = !vm.male; vm.sort();" ng-class="{'active': vm.male === true}">
             <strong>M</strong></button>
-            <button class="btn btn-primary" type="button" ng-click="vm.female=!vm.female; vm.sort();" ng-class="{'active': vm.female===true}">
+            <button class="btn btn-primary" type="button" ng-click="vm.female = !vm.female; vm.sort();" ng-class="{'active': vm.female === true}">
             <strong>F</strong></button>
           </span>
 
           <span class="btn-group pull-right margin10" data-toggle="buttons">
-            <button class="btn btn-primary" type="button" ng-click="vm.starred=!vm.starred; vm.sort();" ng-class="{'active': vm.starred===true}">
+            <button class="btn btn-primary" type="button" ng-click="vm.starred = !vm.starred; vm.sort();" ng-class="{'active': vm.starred === true}">
             <i class="fa fa-star"></i></button>
           </span>
-
-        <span class="margin10">
-          <input type="text" class="text-center padtop6 pull-right" placeholder="Search Applicants" ng-model="filtertxt">
-        </span>
+          
+          <span class="pull-right margin10">
+            <span class="margin10"><i class="fa fa-2x fa-search searchicondark pull-right"></i></span>
+            <input type="text" class="text-center padtop6 pull-right" placeholder="Search Applicants" ng-model="filtertxt">
+          </span>
           
         </div>
       </div>
@@ -44,23 +45,26 @@
       <h2 class="page-header padbottom0"></h2>
       <ul class="nav nav-tabs-show nav-stacked col-sm-2" ng-repeat="recruit in vm.recruits | filter: vm.filter(filtertxt, vm.alert, vm.male, vm.female, vm.starred) as recvisible track by recruit._id">
         <li>
-          <div class="panel tile-small">
-            <div class="panel-body">
-              <a href="/candidateprofile#{{recruit._id}}">
-              <div class="text-center">
+          <div class="panel tile-recruit text-center">
+            <a href="/candidateprofile#{{::recruit._id}}">
+              <div class="panel-header">
                 <span class="fa-stack fa-2x">
                   <i class="fa fa-user fa-stack-2x"></i>
                 </span>
-                <span class="fa pull-right" ng-class="{'fa-phone-square': recruit.notif.activity==='TC', 'fa-envelope': recruit.notif.activity==='EM', 'fa-car': recruit.notif.activity==='HV', 'fa-briefcase': recruit.notif.activity==='OT', 'foo': recruit.notif.daysuntil===0, 'ltgray': recruit.notif.daysuntil>0}" uib-tooltip="{{recruit.notification}}" data-html="true"></span>
-                <hr class="marginvertical15"/>
+                <span class="fa pull-right" ng-class="{'fa-phone-square': recruit.notif.activity === 'TC', 'fa-envelope': recruit.notif.activity === 'EM', 'fa-car': recruit.notif.activity === 'HV', 'fa-briefcase': recruit.notif.activity === 'OT', 'danger': recruit.notif.daysuntil === 0, 'ltgray': recruit.notif.daysuntil>0}"
+                      uib-tooltip="{{::recruit.notification}}" data-html="true"></span>
+              </div>
+              <div class="panel-body">
+                <hr class="hrmargin5"/>
                 <h6 class="navy"><strong>{{::recruit.firstName}} {{::recruit.lastName}}</strong></h6>
                 <div class="text12"><strong>{{::recruit.dutyType.desc}} {{::recruit.status}}</strong></div>
                 <span>SSN4: {{::recruit.personal.ssn}}</span><br/>
                 <span>Age: {{::recruit.age.val}}</span> <span> Sex: {{::recruit.match.sex.val}}</span>
-                  <div class="text12 navy"><strong>{{::recruit.mcroc}}</strong></div>
+<!--                  <div class="text-bold8">{{::recruit.mcroc}}</div>-->
+                <hr class="hrmargin5"/>
               </div>
-            </a>
-          </div>
+              <div class="panel-footer">{{::recruit.mcroc}}</div>
+          </a>
         </div>
         </li>
       </ul>

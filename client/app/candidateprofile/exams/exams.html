@@ -11,22 +11,22 @@
     </div></td>
     <td class="col-sm-2"><div>
       <label class="lb-xs">AFQT Percentile</label><br>
-      <label class="text-center lb-24"><strong>{{c.recruit.afqt}}</strong></label>
+      <label class="text-center lb-24"><strong>{{::vm.recruit.afqt}}</strong></label>
     </div></td>
     <td class="col-sm-7">
         <table style="width: 100%">
             <tr class="lb-16">
-                <td>GS: <label><strong>{{c.recruit.gs}}</strong></label></td>
-                <td>AR: <label><strong>{{c.recruit.ar}}</strong></label></td>
-                <td>WK: <label><strong>{{c.recruit.wk}}</strong></label></td>
-                <td>PC: <label><strong>{{c.recruit.pc}}</strong></label></td>
-                <td>MK: <label><strong>{{c.recruit.mk}}</strong></label></td>
+                <td>GS: <label><strong>{{::vm.recruit.gs}}</strong></label></td>
+                <td>AR: <label><strong>{{::vm.recruit.ar}}</strong></label></td>
+                <td>WK: <label><strong>{{::vm.recruit.wk}}</strong></label></td>
+                <td>PC: <label><strong>{{::vm.recruit.pc}}</strong></label></td>
+                <td>MK: <label><strong>{{::vm.recruit.mk}}</strong></label></td>
             </tr>
             <tr class="lb-16">
-                <td>EI: <label><strong>{{c.recruit.ei}}</strong></label></td>
-                <td>AS: <label><strong>{{c.recruit.as}}</strong></label></td>
-                <td>MC: <label><strong>{{c.recruit.mc}}</strong></label></td>
-                <td>AO: <label><strong>{{c.recruit.ao}}</strong></label></td>
+                <td>EI: <label><strong>{{::vm.recruit.ei}}</strong></label></td>
+                <td>AS: <label><strong>{{::vm.recruit.as}}</strong></label></td>
+                <td>MC: <label><strong>{{::vm.recruit.mc}}</strong></label></td>
+                <td>AO: <label><strong>{{::vm.recruit.ao}}</strong></label></td>
             <td></td>
             </tr>
         </table>
@@ -39,73 +39,72 @@
     <tr class="row-top-border">
     <td class="col-sm-2"><div class="form-group">
       <label class="lb-xs">Date of Enlistment - DEP</label><br>
-      <label class="lb-16">{{c.recruit.dep | date: 'MM/dd/yyyy'}}</label>
+      <label class="lb-16">{{::vm.recruit.dep | date: 'MM/dd/yyyy'}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">Active Duty Date</label><br>
-      <label class="lb-16">{{c.recruit.activeDutyDateProjected | date: 'MM/dd/yyyy'}}</label>
+      <label class="lb-16">{{::vm.recruit.activeDutyDateProjected | date: 'MM/dd/yyyy'}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">ES</label><br>
-      <label class="lb-16">{{c.recruit.es}}</label>
+      <label class="lb-16">{{::vm.recruit.es}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">Recruiter ID</label><br>
-      <label class="lb-16">{{c.recruit.recruiter.recruiterId}}</label>
+      <label class="lb-16">{{::vm.recruit.recruiter.recruiterId}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">STN ID</label><br>
-      <label class="lb-16">{{c.recruit.stnId}}</label>
+      <label class="lb-16">{{::vm.recruit.stnId}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">PEF</label><br>
-      <label class="lb-16">{{c.recruit.pef}}</label>
+      <label class="lb-16">{{::vm.recruit.pef}}</label>
     </div></td>
   </tr>
   <tr>
     <td class="col-sm-2"><div class="form-group">
       <label class="lb-xs">TE MOS/AFS</label><br>
-      <label class="lb-16">{{c.recruit.teMosAfs}}</label>
+      <label class="lb-16">{{::vm.recruit.teMosAfs}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">Waiver</label><br>
-      <label class="lb-16">{{c.recruit.waiver}}</label>
+      <label class="lb-16">{{::vm.recruit.waiver}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">Pay Grade</label><br>
-      <label class="lb-16">{{c.recruit.payGrade}}</label>
+      <label class="lb-16">{{::vm.recruit.payGrade}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">SVC Annex Code</label><br>
-      <label class="lb-16">{{c.recruit.svcAnnexCode}}</label>
+      <label class="lb-16">{{::vm.recruit.svcAnnexCode}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">MSO</label><br>
-      <label class="lb-16">{{c.recruit.mso}}</label>
+      <label class="lb-16">{{::vm.recruit.mso}}</label>
     </div></td>
     <td class="col-sm-1"><div class="form-group">
       <label class="lb-xs">AD Obligation</label><br>
-      <label class="lb-16">{{c.recruit.adObligation}}</label>
+      <label class="lb-16">{{::vm.recruit.adObligation}}</label>
     </div></td>
   </tr>
   </table>
   
-  <table class="table-cp">
+  <table class="table-cp" ng-if="vm.recruit.status==='Contract/Poolee'">
     <tr class="row-top-border">
     <td class="col-sm-2"><div class="form-group">
       <label class="lb-xs">Duty Type</label><br>
-      <select ng-model="c.recruit.dutyType" ng-disabled="!c.isAdmin()" class="text-border-lg text-12 margin0">
-      <option ng-selected="c.recruit.dutyType.id===1" value="DMR">DMR - Active Duty</option>
-      <option ng-selected="c.recruit.dutyType.id===2" value="DMV">DMV - Reserve Ground</option>
-      <option ng-selected="c.recruit.dutyType.id===3" value="DMV">DMV - Reserve Air</option>
+      <select ng-model="vm.recruit.dutyType.id" ng-disabled="!vm.isAdmin()" class="text-border-lg text-12 margin0">
+      <option ng-selected="vm.recruit.dutyType.id===1" value=1>DMR - Active Duty</option>
+      <option ng-selected="vm.recruit.dutyType.id===2" value=2>DMV - Reserve Ground</option>
+      <option ng-selected="vm.recruit.dutyType.id===3" value=3>DMV - Reserve Air</option>
       </select>
-      <input type="button" ng-if="c.isAdmin()" ng-click="vm.saveDutyType" value="Save" class="btn btn-sm btn-primary">
+      <input type="button" ng-if="vm.isAdmin()" ng-click="vm.saveDutyType()" value="Save" class="btn btn-sm btn-primary">
     </div></td>
-    <td class="col-sm-2"><div class="form-group">
+    <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">MCROC</label><br>
-      <label class="lb-16">{{c.recruit.mcroc}}</label>
+      <label class="lb-16">{{vm.recruit.mcroc}}</label>
     </div></td>
-      <td class="col-sm-2"></td>
       <td class="col-sm-2"></td>
   </tr>
   

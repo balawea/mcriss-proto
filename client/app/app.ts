@@ -16,7 +16,6 @@ import account from './account';
 import admin from './admin';
 import navbar from '../components/navbar/navbar.component';
 import recruitbanner from '../components/recruitbanner/recruitbanner.component';
-import footer from '../components/footer/footer.component';
 import main from './main/main.component';
 import samplepef from './samplepef/samplepef.component';
 import recruiterview from './recruiterview/recruiterview.component';
@@ -28,6 +27,7 @@ import grid from './grid/grid.component';
 import exams from './candidateprofile/exams/exams.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
+import treeGrid from './treeGrid/treeGrid.directive';
 
 import './app.scss';
 
@@ -41,7 +41,6 @@ angular.module('mcrissDemoApp', [
   _Auth,
   account,
   admin, navbar, recruitbanner,
-  footer,
   main,
   grid,
   samplepef,
@@ -52,7 +51,8 @@ angular.module('mcrissDemoApp', [
   personal,
   exams,
   constants,
-  util
+  util,
+  treeGrid
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

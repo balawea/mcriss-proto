@@ -12,7 +12,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         notif: {daysuntil: 3, activity: 'TC', active: true, note: 'Home visit scheduled.'},
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -77,7 +77,7 @@ Recruit.find({}).remove()
           ei: 92,
           es: '14',
           dep: '05/05/2015',
-          activeDutyDateProjected: '04/25/2015',
+          activeDutyDateProjected: '10/12/2015',
           stnId: '812',
           pef: '',
           teMosAfs: '12256',
@@ -95,10 +95,11 @@ Recruit.find({}).remove()
         active: true,
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
+        mcroc: '201610CC-XX-XXX-07/21/2016',
         assignedPef: { pefCode: 'CC', recruiter: '17289', month:0},
         notif: {daysuntil: 0, activity: 'EM', active: true, note:'Send email on birthday.'},
         dob: '12/22/1998',
-        recruiter: {recruiterId: '17289'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -146,7 +147,6 @@ Recruit.find({}).remove()
           address: {street: '3885 Broad Blvd.', city: 'Windsor Mill', state: 'MD', zip: 21244, country: 'United States'},
           hor: {street: '3885 Broad Blvd.', city: 'Windsor Mill', state: 'MD', zip: 21244, country: 'United States'},
           citz: 'Native Born',
-          
           ethnicity: 'Not Hispanic or Latino',
           marital: 'Single',
           dependents: 0,
@@ -169,8 +169,8 @@ Recruit.find({}).remove()
           ao: 89,
           ei: 92,
           es: '14',
-          dep: '05/04/2016',
-          activeDutyDateProjected: '08/25/2016',
+          dep: '01/25/2017',
+          activeDutyDateProjected: '08/25/2017',
           stnId: '819',
           teMosAfs: '12256',
           waiver: '',
@@ -188,7 +188,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Approved',
         dob: '03/16/1995',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -233,7 +233,6 @@ Recruit.find({}).remove()
           address: {street: '39775 Bengal Rd.', city: 'Manchester', state: 'MD', zip: 21244, country: 'United States'},
           hor: {street: '10119 Heath Ct.', city: 'Chantilly', state: 'VA', zip: 20155, country: 'United States'},
           citz: 'Native Born',
-          
           ethnicity: 'Hispanic or Latino',
           marital: 'Married',
           dependents: 3,
@@ -277,7 +276,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1996',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: false},
@@ -324,7 +323,6 @@ Recruit.find({}).remove()
           address: {street: '2855 Masala Rd. #84', city: 'Towson', state: 'MD', zip: 21102, country: 'United States'},
           hor: {street: '2855 Masala Rd. #84', city: 'Towson', state: 'MD', zip: 21102, country: 'United States'},
           citz: 'Native Born',
-          
           ethnicity: 'Hispanic or Latino',
           marital: 'Single',
           dependents: 0,
@@ -368,7 +366,7 @@ Recruit.find({}).remove()
         status: 'Prospect',
         notif: {daysuntil: 8, activity: 'HV', active: true, note:'Home visit scheduled.'},
         dob: '11/17/1985',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -408,7 +406,6 @@ Recruit.find({}).remove()
           address: {street: '224 Severna Ln.', city: 'Manchester', state: 'MD', zip: 21102, country: 'United States'},
           hor: {street: '224 Severna Ln.', city: 'Manchester', state: 'MD', zip: 21102, country: 'United States'},
           citz: 'Native Born',
-          
           ethnicity: 'Not Hispanic or Latino',
           marital: 'Married',
           dependents: 2,
@@ -452,7 +449,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/17/1994',
-        recruiter: {recruiterId: '17289', fullname: 'Judy Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Judy Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -538,7 +535,7 @@ Recruit.find({}).remove()
         dutyType: {id:1, desc: 'DMV'},
         notif: {daysuntil: 14, activity: 'EM', active: true, note:'End of semester check-in.'},
         dob: '11/13/1997',
-        recruiter: {recruiterId: '17289', fullname: 'Judy Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Judy Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -626,7 +623,7 @@ Recruit.find({}).remove()
         active: false,
         status: 'MEPS DQ',
         dob: '04/17/1994',
-        recruiter: {recruiterId: '17289', fullname: 'Judy Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Judy Recruiter'},
         match: {
           usCitizen: {has: false},
           usCitizenFamily: {has: false},
@@ -704,7 +701,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Pending Info',
         dob: '09/02/1988',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match : {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -790,7 +787,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Contract/Poolee',
         dutyType: {id: 2, desc: 'DMV'},
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -874,7 +871,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Incomplete',
         dob: '02/20/1999',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match : {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -960,7 +957,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Approved',
         dob: '03/16/97',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1046,7 +1043,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1999',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1135,7 +1132,7 @@ Recruit.find({}).remove()
         status: 'Approved',
         notif: {daysuntil: 2, activity: 'HV', active: true, note:'Meeting/Presentation scheduled.'},
         dob: '01/30/1998',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1223,7 +1220,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Approved',
         dob: '10/17/1998',
-        recruiter: {recruiterId: '17289', fullname: 'Judy Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Judy Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1311,7 +1308,7 @@ Recruit.find({}).remove()
         active: false,
         status: 'Pending Info',
         dob: '08/13/1997',
-        recruiter: {recruiterId: '17289', fullname: 'Judy Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Judy Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1394,7 +1391,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Pending Info',
         dob: '04/17/1993',
-        recruiter: {recruiterId: '17289', fullname: 'Judy Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Judy Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: false},
@@ -1474,7 +1471,7 @@ Recruit.find({}).remove()
         status: 'Approved',
         notif: {daysuntil: 1, activity: 'HV', active: true, note:'Home visit scheduled.'},
         dob: '09/02/1999',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1558,7 +1555,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         notif: {daysuntil: 10, activity: 'TC', active: true, note:'Check in at the end of bootcamp'},
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1644,7 +1641,7 @@ Recruit.find({}).remove()
         dob: '08/20/1998',
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1732,7 +1729,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         notif: {daysuntil: 5, activity: 'TC', active: true, note:'Last contacted 12/10.'},
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1818,7 +1815,7 @@ Recruit.find({}).remove()
         status: 'Incomplete',
         notif: {daysuntil: 4, activity: 'EM', active: true, note:'No contact since 10/14.'},
         dob: '09/07/1996',
-        recruiter: {recruiterId: '002995', fullname: 'Amber Recruiter'},
+        recruiter: {recruiterId: '002995102', rs: 'Chantilly', fullname: 'Amber Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: false},
@@ -1901,7 +1898,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         notif: {daysuntil: 0, activity: 'TC', active: true, note:'No contact since 10/14.'},
         dob: '04/22/1999',
-        recruiter: {recruiterId: '002995', fullname: 'Amber Recruiter'},
+        recruiter: {recruiterId: '002995102', rs: 'Chantilly', fullname: 'Amber Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -1985,7 +1982,7 @@ Recruit.find({}).remove()
         dob: '10/17/1994',
         status: 'Incomplete',
         notif: {daysuntil: 2, activity: 'TC', active: true, note:'Prospect might be waivering.'},
-        recruiter: {recruiterId: '17289', fullname: 'Judy Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Judy Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2067,7 +2064,7 @@ Recruit.find({}).remove()
         active: false,
         status: 'Pending Info',
         dob: '06/14/1997',
-        recruiter: {recruiterId: '17289', fullname: 'Judy Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Judy Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2149,7 +2146,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Pending Info',
         dob: '04/17/1997',
-        recruiter: {recruiterId: '17289', fullname: 'Judy Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Judy Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2228,7 +2225,7 @@ Recruit.find({}).remove()
         dob: '09/02/1998',
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
-        recruiter: {recruiterId: '002995', fullname: 'Amber Recruiter'},
+        recruiter: {recruiterId: '002995102', rs: 'Chantilly', fullname: 'Amber Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2312,7 +2309,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Approved',
         notif: {daysuntil: 2, activity: 'TC', active: true, note:'Prospect\'s mother is against him enlisting.'},
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2398,7 +2395,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         notif: {daysuntil: 2, activity: 'EM', active: true, note:'Prospect is waivering.'},
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match : {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2485,7 +2482,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
         notif: {daysuntil: 11, activity: 'EM', active: true, note:'2nd contact, need to complete forms.'},
         dob: '03/16/97',
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2570,7 +2567,7 @@ Recruit.find({}).remove()
         active: true,
         dob: '10/15/1998',
         status: 'Approved',
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2658,7 +2655,7 @@ Recruit.find({}).remove()
         status: 'Approved',
         notif: {daysuntil: 1, activity: 'HV', active: true, note:'Interview at Garfield HS. Bring brochures.'},
         dob: '08/30/1999',
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2746,7 +2743,7 @@ Recruit.find({}).remove()
         status: 'MEPS Check-in',
         dob: '01/10/1999',
         notif: {daysuntil: 9, activity: 'HV', active: true, note:'MEPS checkin.'},
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: false},
@@ -2835,7 +2832,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 3, desc: 'DMV'},
         dob: '11/13/1998',
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -2922,7 +2919,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Prospect',
         dob: '06/11/1999',
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -3008,7 +3005,7 @@ Recruit.find({}).remove()
         status: 'Incomplete',
         notif: {daysuntil: 20, activity: 'HV', active: true, note:'Home visit scheduled.'},
         dob: '08/16/1998',
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -3094,7 +3091,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'MEPS Check-in',
         dob: '09/27/1998',
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: false},
@@ -3182,7 +3179,7 @@ Recruit.find({}).remove()
         status: 'Incomplete',
         notif: {daysuntil: 3, activity: 'HV', active: false, resolution: 'Canceled', note:'Home visit scheduled.'},
         dob: '04/12/1999',
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -3266,7 +3263,7 @@ Recruit.find({}).remove()
         status: 'Incomplete',
         dob: '10/12/1994',
         notif: {daysuntil: 0, activity: 'TC', active: true, note:'Still awaiting completed medical forms.'},
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -3349,7 +3346,7 @@ Recruit.find({}).remove()
         status: 'Incomplete',
         dob: '06/14/1998',
         notif: {daysuntil: 0, activity: 'TC', active: true, note:'Weekly checkin.'},
-        recruiter: {recruiterId: '198848', fullname: 'Omar Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Omar Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -3431,7 +3428,7 @@ Recruit.find({}).remove()
         dob: '09/02/2000',
         status: 'Prospect',
         notif: {daysuntil: 1, activity: 'TC', active: true, note:'Weekly checkin.'},
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: false},
           usCitizenFamily: {has: false},
@@ -3513,7 +3510,7 @@ Recruit.find({}).remove()
         status: 'MEPS DQ',
         dob: '09/02/1995',
         notif: {daysuntil: 1, activity: 'TC', active: true, note:'Touch base - getting contact info on two HS friends.'},
-        recruiter: {recruiterId: '002995', fullname: 'Amber Recruiter'},
+        recruiter: {recruiterId: '002995102', rs: 'Chantilly', fullname: 'Amber Recruiter'},
         match: {
           sex: {val: 'M'}
         },
@@ -3561,7 +3558,7 @@ Recruit.find({}).remove()
         active: true,
         status: 'Prospect',
         notif: {daysuntil: 3, activity: 'HV', active: true, note: 'Home visit scheduled.'},
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -3606,7 +3603,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -3659,7 +3656,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -3712,7 +3709,7 @@ Recruit.find({}).remove()
       note: 'Verify graduation info'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -3766,7 +3763,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -3819,7 +3816,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -3872,7 +3869,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: 17289
+      recruiterId: '172891922', rs: '4MCD'
     },
     match: {
       usCitizen: {
@@ -3923,10 +3920,7 @@ Recruit.find({}).remove()
       active: true,
       note: 'Second contact, reviewing materials'
     },
-    recruiter: {
-      recruiterId: '002995',
-      fullname: ''
-    },
+    recruiter: {recruiterId: '002995102', rs: 'Chantilly'},
     match: {
       usCitizen: {
         has: true
@@ -3977,7 +3971,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -4029,10 +4023,7 @@ Recruit.find({}).remove()
       active: true,
       note: 'Initial contact'
     },
-    recruiter: {
-      recruiterId: '000000',
-      fullname: ''
-    },
+    recruiter: {recruiterId: '1503303857', rs: 'MCRC',fullname: ''},
     match: {
       usCitizen: {
         has: true
@@ -4083,7 +4074,7 @@ Recruit.find({}).remove()
       note: 'Verify graduation info'
     },
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -4136,7 +4127,7 @@ Recruit.find({}).remove()
       note: 'Verify graduation info'
     },
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -4189,7 +4180,7 @@ Recruit.find({}).remove()
       note: 'Interview'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -4242,7 +4233,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -4295,7 +4286,7 @@ Recruit.find({}).remove()
       note: 'Verify graduation info'
     },
     recruiter: {
-      recruiterId: '101185',
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -4348,7 +4339,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: '198848',
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -4401,7 +4392,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: '101185',
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -4454,7 +4445,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -4507,7 +4498,7 @@ Recruit.find({}).remove()
       note: 'Interview'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -4560,7 +4551,7 @@ Recruit.find({}).remove()
       note: 'Verify graduation info'
     },
     recruiter: {
-      recruiterId: '002995'
+      recruiterId: '002995102', rs: 'Chantilly'
     },
     match: {
       usCitizen: {
@@ -4612,7 +4603,7 @@ Recruit.find({}).remove()
       note: 'Verify graduation info'
     },
     recruiter: {
-      recruiterId: 198848
+      recruiterId: '198848953', rs: 'Frederick'
     },
     match: {
       usCitizen: {
@@ -4664,7 +4655,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: 17289
+      recruiterId: '172891922', rs: '4MCD'
     },
     match: {
       usCitizen: {
@@ -4716,7 +4707,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -4769,7 +4760,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -4822,7 +4813,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -4875,7 +4866,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -4928,7 +4919,7 @@ Recruit.find({}).remove()
       note: 'Interview'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -4981,7 +4972,7 @@ Recruit.find({}).remove()
       note: 'Interview'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -5034,7 +5025,7 @@ Recruit.find({}).remove()
       note: 'Verify graduation info'
     },
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -5087,7 +5078,7 @@ Recruit.find({}).remove()
       note: 'Interview'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -5139,10 +5130,7 @@ Recruit.find({}).remove()
       active: true,
       note: 'Verify graduation info'
     },
-    recruiter: {
-      recruiterId: 101185,
-      fullname: ''
-    },
+    recruiter: {recruiterId: '979101185', rs: 'ERR',fullname: ''},
     match: {
       usCitizen: {
         has: true
@@ -5193,7 +5181,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -5246,7 +5234,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -5299,7 +5287,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -5352,7 +5340,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -5405,7 +5393,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -5458,7 +5446,7 @@ Recruit.find({}).remove()
       note: 'Verify graduation info'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -5511,7 +5499,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -5564,7 +5552,7 @@ Recruit.find({}).remove()
       note: 'Verify graduation info'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -5617,7 +5605,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -5670,7 +5658,7 @@ Recruit.find({}).remove()
       note: 'Initial contact'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -5723,7 +5711,7 @@ Recruit.find({}).remove()
       note: 'Second contact, reviewing materials'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -5775,7 +5763,7 @@ Recruit.find({}).remove()
       active: true,
       note: 'Verify graduation info'
     },
-    recruiter: {recruiterId: '000000',fullname: ''},
+    recruiter: {recruiterId: '1503303857', rs: 'MCRC',fullname: ''},
     match: {
       usCitizen: {
         has: true
@@ -5830,7 +5818,7 @@ Recruit.find({}).remove()
       active: true,
       note: 'Monthly check-in'
     },
-    recruiter: {recruiterId: '101185', fullname: ''},
+    recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
@@ -5993,7 +5981,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -6162,7 +6150,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -6331,7 +6319,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -6495,7 +6483,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 6, activity: 'OT', active: true,note: 'PRP Screen'},
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -6664,7 +6652,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -6833,7 +6821,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -7002,7 +6990,7 @@ Recruit.find({}).remove()
       note: 'Pre-Shipping discussion'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -7171,7 +7159,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -7340,7 +7328,7 @@ Recruit.find({}).remove()
       note: 'Pre-Shipping discussion'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -7513,7 +7501,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -7682,7 +7670,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -7851,7 +7839,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -8020,7 +8008,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -8189,7 +8177,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -8358,7 +8346,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -8527,7 +8515,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -8696,7 +8684,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -8865,7 +8853,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -9034,7 +9022,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -9203,7 +9191,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -9372,7 +9360,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -9541,7 +9529,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -9710,7 +9698,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -9879,7 +9867,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -10048,7 +10036,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -10217,7 +10205,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -10386,7 +10374,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -10555,7 +10543,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -10724,7 +10712,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -10893,7 +10881,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -11062,7 +11050,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -11231,7 +11219,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -11400,7 +11388,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -11569,7 +11557,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -11738,7 +11726,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -11907,7 +11895,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -12076,7 +12064,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -12245,7 +12233,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -12414,7 +12402,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -12583,7 +12571,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -12752,7 +12740,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -12921,7 +12909,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -13090,7 +13078,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -13259,7 +13247,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -13428,7 +13416,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -13597,7 +13585,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -13766,7 +13754,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -13935,7 +13923,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -14104,7 +14092,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -14273,7 +14261,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -14442,7 +14430,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -14611,7 +14599,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -14772,8 +14760,9 @@ Recruit.find({}).remove()
     active: true,
     dob: '1996-01-02',
     status: 'Contract/Poolee',
-        dutyType: {id: 1, desc: 'DMR'},
-    assignedPef: {pefCode: 'CC', recruiter: '101185', month: 0},
+    dutyType: {id: 1, desc: 'DMR'},
+    mcroc: '201611CC-XX-XXX-07/19/2016',
+    assignedPef: {pefCode: 'CC', recruiter: '979101185', month: 0},
     notif: {
       daysuntil: 0,
       activity: 'EM',
@@ -14781,7 +14770,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -14924,8 +14913,8 @@ Recruit.find({}).remove()
       ao: 34,
       ei: 32,
       es: 12,
-      dep: '',
-      activeDutyDateProjected: '',
+      dep: '10/25/2016',
+      activeDutyDateProjected: '07/20/2017',
       stnId: 632,
       pef: '',
       teMosAfs: 14156,
@@ -14950,7 +14939,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -15119,7 +15108,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -15288,7 +15277,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -15457,7 +15446,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -15626,7 +15615,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -15795,7 +15784,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -15964,7 +15953,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -16125,15 +16114,16 @@ Recruit.find({}).remove()
     active: true,
     dob: '1997-02-27',
     status: 'Contract/Poolee',
-        dutyType: {id: 1, desc: 'DMR'},
-    assignedPef: {pefCode: 'CJ', recruiter: '002995', month: 2},
+    dutyType: {id: 1, desc: 'DMR'},
+    mcroc: '201608CJ-XX-XXX-10/05/2016',
+    assignedPef: {pefCode: 'CJ', recruiter: '002995102', month: 2},
     notif: {
       daysuntil: 0,
       activity: 'TC',
       active: true,
       note: 'PRP Screen'
     },
-    recruiter: {recruiterId: '002995'},
+    recruiter: {recruiterId: '002995102', rs: 'Chantilly'},
     match: {
       usCitizen: {
         has: true
@@ -16274,8 +16264,8 @@ Recruit.find({}).remove()
       ao: 78,
       ei: 36,
       es: 12,
-      dep: '',
-      activeDutyDateProjected: '',
+      dep: '01/25/2017',
+      activeDutyDateProjected: '08/25/2017',
       stnId: 632,
       pef: '',
       teMosAfs: 14156,
@@ -16300,7 +16290,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -16469,7 +16459,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -16638,7 +16628,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -16807,7 +16797,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -16976,7 +16966,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -17145,7 +17135,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -17314,7 +17304,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -17483,7 +17473,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -17652,7 +17642,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -17821,7 +17811,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -17990,7 +17980,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -18159,7 +18149,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -18328,7 +18318,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -18497,7 +18487,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -18666,7 +18656,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -18835,7 +18825,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -19004,7 +18994,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -19173,7 +19163,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -19342,7 +19332,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -19511,7 +19501,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -19680,7 +19670,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -19849,7 +19839,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -20018,7 +20008,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -20187,7 +20177,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -20356,7 +20346,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -20525,7 +20515,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -20694,7 +20684,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -20863,7 +20853,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -21032,7 +21022,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -21201,7 +21191,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -21370,7 +21360,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -21539,7 +21529,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -21708,7 +21698,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -21877,7 +21867,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -22046,7 +22036,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -22215,7 +22205,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -22384,7 +22374,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -22553,7 +22543,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -22722,7 +22712,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -22891,7 +22881,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -23060,7 +23050,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -23229,7 +23219,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -23398,7 +23388,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -23567,7 +23557,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -23736,7 +23726,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -23905,7 +23895,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -24074,7 +24064,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -24243,7 +24233,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -24412,7 +24402,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -24581,7 +24571,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -24750,7 +24740,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -24919,7 +24909,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -25088,7 +25078,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -25257,7 +25247,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -25426,7 +25416,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -25595,7 +25585,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -25764,7 +25754,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -25933,7 +25923,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -26102,7 +26092,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -26271,7 +26261,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -26440,7 +26430,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -26609,7 +26599,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -26778,7 +26768,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -26947,7 +26937,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -27116,7 +27106,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -27285,7 +27275,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -27454,7 +27444,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -27623,7 +27613,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -27792,7 +27782,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -27961,7 +27951,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -28130,7 +28120,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -28299,7 +28289,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -28468,7 +28458,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -28637,7 +28627,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -28806,7 +28796,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -28975,7 +28965,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -29144,7 +29134,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -29313,7 +29303,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -29482,7 +29472,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -29651,7 +29641,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -29820,7 +29810,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -29989,7 +29979,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -30158,7 +30148,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -30327,7 +30317,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -30496,7 +30486,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -30665,7 +30655,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -30834,7 +30824,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -31003,7 +30993,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -31172,7 +31162,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -31341,7 +31331,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -31510,7 +31500,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -31679,7 +31669,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -31848,7 +31838,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -32017,7 +32007,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -32186,7 +32176,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -32355,7 +32345,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -32524,7 +32514,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -32693,7 +32683,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -32862,7 +32852,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -33031,7 +33021,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -33200,7 +33190,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -33369,7 +33359,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -33538,7 +33528,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -33707,7 +33697,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -33876,7 +33866,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -34045,7 +34035,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -34214,7 +34204,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -34383,7 +34373,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -34552,7 +34542,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -34721,7 +34711,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -34890,7 +34880,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -35059,7 +35049,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -35228,7 +35218,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -35397,7 +35387,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -35566,7 +35556,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -35735,7 +35725,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -35904,7 +35894,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -36073,7 +36063,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -36242,7 +36232,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -36411,7 +36401,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -36580,7 +36570,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -36749,7 +36739,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -36918,7 +36908,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -37087,7 +37077,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -37256,7 +37246,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -37425,7 +37415,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -37594,7 +37584,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -37763,7 +37753,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -37932,7 +37922,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -38101,7 +38091,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -38270,7 +38260,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -38439,7 +38429,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -38608,7 +38598,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -38777,7 +38767,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -38946,7 +38936,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -39115,7 +39105,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -39284,7 +39274,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -39453,7 +39443,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -39622,7 +39612,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -39791,7 +39781,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -39960,7 +39950,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -40129,7 +40119,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -40298,7 +40288,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -40467,7 +40457,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -40636,7 +40626,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -40805,7 +40795,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -40974,7 +40964,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -41143,7 +41133,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -41312,7 +41302,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -41481,7 +41471,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -41650,7 +41640,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -41819,7 +41809,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -41988,7 +41978,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -42157,7 +42147,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -42326,7 +42316,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -42495,7 +42485,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -42664,7 +42654,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -42833,7 +42823,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -43002,7 +42992,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -43171,7 +43161,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -43340,7 +43330,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -43509,7 +43499,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -43678,7 +43668,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -43847,7 +43837,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -44016,7 +44006,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -44185,7 +44175,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -44354,7 +44344,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -44523,7 +44513,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -44692,7 +44682,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -44861,7 +44851,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -45030,7 +45020,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -45199,7 +45189,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -45368,7 +45358,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -45537,7 +45527,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -45706,7 +45696,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -45875,7 +45865,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -46044,7 +46034,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -46213,7 +46203,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -46382,7 +46372,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -46551,7 +46541,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -46720,7 +46710,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -46889,7 +46879,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -47058,7 +47048,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -47227,7 +47217,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -47396,7 +47386,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -47565,7 +47555,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -47734,7 +47724,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -47903,7 +47893,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -48072,7 +48062,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -48241,7 +48231,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -48410,7 +48400,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -48579,7 +48569,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -48748,7 +48738,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -48917,7 +48907,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -49086,7 +49076,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -49255,7 +49245,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -49424,7 +49414,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -49593,7 +49583,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -49762,7 +49752,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -49931,7 +49921,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -50100,7 +50090,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -50269,7 +50259,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -50438,7 +50428,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -50607,7 +50597,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -50776,7 +50766,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -50945,7 +50935,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -51114,7 +51104,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -51283,7 +51273,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -51452,7 +51442,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -51621,7 +51611,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -51790,7 +51780,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -51959,7 +51949,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -52128,7 +52118,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -52297,7 +52287,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -52466,7 +52456,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -52635,7 +52625,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -52804,7 +52794,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -52973,7 +52963,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -53142,7 +53132,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -53311,7 +53301,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -53480,7 +53470,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -53649,7 +53639,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -53818,7 +53808,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -53987,7 +53977,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -54156,7 +54146,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -54325,7 +54315,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -54490,7 +54480,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -54655,7 +54645,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -54820,7 +54810,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -54985,7 +54975,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -55150,7 +55140,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -55315,7 +55305,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -55468,7 +55458,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -55633,7 +55623,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -55798,7 +55788,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -55963,7 +55953,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -56128,7 +56118,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -56293,7 +56283,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -56458,7 +56448,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -56623,7 +56613,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -56788,7 +56778,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -56953,7 +56943,7 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -57118,7 +57108,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -57283,7 +57273,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -57448,7 +57438,7 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -57605,7 +57595,8 @@ Recruit.find({}).remove()
     active: true,
     dob: '1995-03-08',
     status: 'Contract/Poolee',
-        dutyType: {id: 1, desc: 'DMR'},
+    dutyType: {id: 1, desc: 'DMR'},
+    mcroc: '201612CE-XX-XXX-12/27/2016',
     assignedPef: {pefCode: 'CE', recruiter: '17289', month: 2},
     notif: {
       daysuntil: 0,
@@ -57614,7 +57605,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -57753,8 +57744,8 @@ Recruit.find({}).remove()
       ao: 36,
       ei: 68,
       es: 12,
-      dep: '',
-      activeDutyDateProjected: '',
+      dep: '01/25/2017',
+      activeDutyDateProjected: '08/25/2017',
       stnId: 632,
       pef: '',
       teMosAfs: 14156,
@@ -57779,7 +57770,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -57944,7 +57935,7 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -58111,7 +58102,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 9, activity: 'HV', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -58263,7 +58254,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 5, activity: 'OT', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -58421,7 +58412,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 10, activity: 'HV', active: true, note: 'Monthly check-in'},
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -58579,7 +58570,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'EM', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: 198848,
+      recruiterId: '198848953', rs: 'Frederick',
       fullname: ''
     },
     match: {
@@ -58739,7 +58730,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 4, activity: 'TC', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -58897,7 +58888,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 11, activity: 'EM', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -59052,11 +59043,12 @@ Recruit.find({}).remove()
     active: true,
     dob: '1999-06-09',
     status: 'Contract/Poolee',
-        dutyType: {id: 1, desc: 'DMR'},
-    assignedPef: {pefCode: 'CA', recruiter: '002995', month: 0},
+    dutyType: {id: 1, desc: 'DMR'},
+    mcroc: '201610CA-XX-XXX-06/19/2016',
+    assignedPef: {pefCode: 'CA', recruiter: '002995102', month: 0},
     notif: {daysuntil: 0, activity: 'HV', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -59194,8 +59186,8 @@ Recruit.find({}).remove()
       ao: 90,
       ei: 98,
       es: 12,
-      dep: '',
-      activeDutyDateProjected: '',
+      dep: '01/25/2017',
+      activeDutyDateProjected: '08/25/2017',
       stnId: 632,
       pef: '',
       teMosAfs: 14156,
@@ -59215,7 +59207,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 3, activity: 'EM', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -59373,7 +59365,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'TC', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -59531,7 +59523,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 10, activity: 'TC', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -59691,7 +59683,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'EM', active: true, note: 'Monthly check-in'},
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -59849,7 +59841,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'HV', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -59945,7 +59937,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 8, activity: 'OT', active: true, note: 'Monthly check-in'},
     recruiter: {
-      recruiterId: '000000',
+      recruiterId: '1503303857', rs: 'MCRC',
       fullname: ''
     },
     match: {
@@ -60105,7 +60097,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 4, activity: 'TC', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: 17289,
+      recruiterId: '172891922', rs: '4MCD',
       fullname: ''
     },
     match: {
@@ -60265,7 +60257,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 2, activity: 'HV', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -60425,7 +60417,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 1, activity: 'HV', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -60587,7 +60579,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 6, activity: 'EM', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -60747,7 +60739,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 1, activity: 'TC', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -60907,7 +60899,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'HV', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -61069,7 +61061,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 0, activity: 'HV', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -61231,7 +61223,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 8, activity: 'TC', active: true, note: 'Monthly check-in'},
     recruiter: {
-      recruiterId: 101185,
+      recruiterId: '979101185', rs: 'ERR',
       fullname: ''
     },
     match: {
@@ -61391,7 +61383,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 6, activity: 'OT', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '002995',
+      recruiterId: '002995102', rs: 'Chantilly',
       fullname: ''
     },
     match: {
@@ -61552,7 +61544,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1999',
-        recruiter: {recruiterId: '101185', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '979101185', rs: 'ERR', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -61639,7 +61631,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1999',
-        recruiter: {recruiterId: '17289', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -61726,7 +61718,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1999',
-        recruiter: {recruiterId: '17289', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '172891922', rs: '4MCD', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -61815,7 +61807,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1999',
-        recruiter: {recruiterId: '198848', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -61904,7 +61896,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1999',
-        recruiter: {recruiterId: '198848', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -61993,7 +61985,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1999',
-        recruiter: {recruiterId: '002995', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '002995102', rs: 'Chantilly', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -62082,7 +62074,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1999',
-        recruiter: {recruiterId: '002995', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '002995102', rs: 'Chantilly', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},
@@ -62171,7 +62163,7 @@ Recruit.find({}).remove()
         status: 'Contract/Poolee',
         dutyType: {id: 1, desc: 'DMR'},
         dob: '10/07/1999',
-        recruiter: {recruiterId: '000000', fullname: 'Kai Recruiter'},
+        recruiter: {recruiterId: '1503303857', rs: 'MCRC', fullname: 'Kai Recruiter'},
         match: {
           usCitizen: {has: true},
           usCitizenFamily: {has: true},

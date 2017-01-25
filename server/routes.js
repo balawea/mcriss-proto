@@ -13,7 +13,6 @@ export default function(app) {
   app.use('/api/rss', require('./api/rs'));
   app.use('/api/pefRequirements', require('./api/pefRequirement'));
   app.use('/api/recruits', require('./api/recruit'));
-  app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
 
   app.use('/auth', require('./auth').default);

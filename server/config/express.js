@@ -4,6 +4,8 @@
 
 'use strict';
 
+//APB compression ???
+//import compression from 'compression';
 import express from 'express';
 import favicon from 'serve-favicon';
 import morgan from 'morgan';
@@ -19,11 +21,15 @@ import passport from 'passport';
 import session from 'express-session';
 import connectMongo from 'connect-mongo';
 import mongoose from 'mongoose';
+
 var MongoStore = connectMongo(session);
 
 export default function(app) {
   var env = app.get('env');
 
+  //APB  GZIP compression!!!
+  //app.use(compression());
+  
   if(env === 'development' || env === 'test') {
     app.use(express.static(path.join(config.root, '.tmp')));
   }

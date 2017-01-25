@@ -6,19 +6,19 @@
   <tr class="row-top-border">
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Social Security Number</label><br>
-      <label class="lb-16">{{c.recruit.ssn}}</label>
+      <label class="lb-16">{{::c.recruit.ssn}}</label>
     </div></td>
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Last Name</label><br>
-      <label class="lb-16">{{c.recruit.lastName}}</label>
+      <label class="lb-16">{{::c.recruit.lastName}}</label>
     </div></td>
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">First Name</label><br>
-      <label class="lb-16">{{c.recruit.firstName}}</label>
+      <label class="lb-16">{{::c.recruit.firstName}}</label>
     </div></td>
     <td class=col-sm-3><div class="form-group">
       <label class="lb-xs">Middle Name</label><br>
-      <label class="lb-16">{{c.recruit.middleName}}</label>
+      <label class="lb-16">{{::c.recruit.middleName}}</label>
     </div></td>
   </tr>
 
@@ -26,11 +26,11 @@
   <tr>
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Current Address</label><br>
-      <label class="lb-16 label-wrap">{{c.recruit.formattedAddr}}</label>
+      <label class="lb-16 label-wrap">{{::c.recruit.formattedAddr}}</label>
     </div></td>
     <td class="col-sm-3" colspan="2"><div class="form-group">
       <label class="lb-xs">Home of Record</label><br>
-      <label class="lb-16 label-wrap">{{c.recruit.formattedHor}}</label>
+      <label class="lb-16 label-wrap">{{::c.recruit.formattedHor}}</label>
     </div></td>
     <td></td>
   </tr>
@@ -39,15 +39,15 @@
   <tr class="row-top-border">
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Citizenship</label><br>
-      <label class="lb-16">{{c.recruit.citz}}</label>
+      <label class="lb-16">{{::c.recruit.citz}}</label>
     </div></td>
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Sex</label><br>
-      <label class="lb-16">{{c.recruit.sex}}</label>
+      <label class="lb-16">{{::c.recruit.sex}}</label>
     </div></td>
     <td colspan="2" class="col-sm-6"><div class="form-group">
       <label class="lb-xs">Ethnic Category</label><br>
-      <label class="lb-16">{{c.recruit.ethnicity}}</label>
+      <label class="lb-16">{{::c.recruit.ethnicity}}</label>
     </div></td>
   </tr>
 
@@ -55,15 +55,15 @@
   <tr>
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Marital Status</label><br>
-      <label class="lb-16">{{c.recruit.marital}}</label>
+      <label class="lb-16">{{::c.recruit.marital}}</label>
     </div></td>
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Dependents</label><br>
-      <label class="lb-16">{{c.recruit.dependents}}</label>
+      <label class="lb-16">{{::c.recruit.dependents}}</label>
     </div></td>
     <td colspan="2" class="col-sm-6"><div class="form-group">
       <label class="lb-xs">Racial Category</label><br>
-      <label class="lb-16">{{c.recruit.race}}</label>
+      <label class="lb-16">{{::c.recruit.race}}</label>
     </div></td></td>
   </tr>
 
@@ -71,19 +71,19 @@
   <tr class="row-top-border">
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Date of Birth</label><br>
-      <label class="lb-16">{{c.recruit.dob | date: 'MM/dd/yyyy'}}</label>
+      <label class="lb-16">{{::c.recruit.dob | date: 'MM/dd/yyyy'}}</label>
     </div></td>
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Religious Preference</label><br>
-      <label class="lb-16">{{c.recruit.religion}}</label>
+      <label class="lb-16">{{::c.recruit.religion}}</label>
     </div></td>
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Education</label><br>
-      <label class="lb-16">{{c.recruit.education}}</label>
+      <label class="lb-16">{{::c.recruit.education}}</label>
     </div></td>
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs">Foreign Language</label><br>
-      <label class="lb-16">{{c.recruit.language}}</label>
+      <label class="lb-16">{{::c.recruit.language}}</label>
     </div></td>
   </tr>
 
@@ -91,11 +91,11 @@
   <tr class="row-top-border">
     <td class="col-sm-3"><div class="form-group">
       <label class="lb-xs"><small>Drivers License</small></label><br>
-      <label class="lb-16">{{c.recruit.licenseNum}}</label>
+      <label class="lb-16">{{::c.recruit.licenseNum}}</label>
     </div></td>
     <td class="col-sm-3" colspan="2"><div class="form-group">
       <label class="lb-xs">Place of Birth</label><br>
-      <label class="lb-16 label-wrap">{{c.recruit.birthPlace}}</label>
+      <label class="lb-16 label-wrap">{{::c.recruit.birthPlace}}</label>
     </div></td>
     <td class="col-sm-3"></td>
   </tr>

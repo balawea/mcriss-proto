@@ -13,7 +13,7 @@ var RecruitSchema = new mongoose.Schema({
   notif: {daysuntil: Number, activity: String, active: Boolean, resolution: String, note: String},
   contact: [{date: Date, location: String, method:String, poc: String}],
   dob: Date,
-  recruiter: {recruiterId: String, fullname: String},
+  recruiter: {recruiterId: String, rs: String, fullname: String},
   assignedPef: { pefCode: String, id: String, recruiter: String, month:Number},
   flaggedPefs: [{ pefCode: String, notes: String, recruiter: String, isBookmarked: Boolean}],
   match: {

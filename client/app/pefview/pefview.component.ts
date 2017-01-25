@@ -1,6 +1,5 @@
 'use strict';
 const angular = require('angular');
-const noUiSlider = require('nouislider');
 const uiRouter = require('angular-ui-router');
 const Masonry = require('masonry-layout');
 const swal = require('sweetalert');

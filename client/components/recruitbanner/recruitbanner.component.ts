@@ -7,6 +7,7 @@ export class RecruitBannerComponent {
   constructor($scope, $rootScope) {
 
     $scope.$on('SELECT_RECRUIT', function(event, recruit) {
+      console.info('Recruit banner broadcast received');
       $scope.recr = recruit;
     });
     

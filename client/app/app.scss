@@ -4,13 +4,7 @@ $icon-font-path: '/assets/fonts/bootstrap/';
 $fa-font-path: '/assets/fonts/font-awesome/';
 @import '~font-awesome/scss/font-awesome';
 @import "../assets/themes/paper/bootswatch";
-@import "~nouislider/distribute/nouislider";
-@import "../assets/styles/noUiSlider";
 @import "~sweetalert/dist/sweetalert";
-
-//@import "~sweetalert/dist/sweeetalert.css";
-
-// @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
 
 /**
  * App-wide Styles
@@ -52,15 +46,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   background-color: #e52430 //e51f4a;
 }
 
-.danger {
-//  background-color: #d43f3a;
-  color: #e52430 //e51f4a;
-}
-
-.foo {
-  color: #ff4466;
-}
-
 .badge-warning {
   background-color: #fda313;
 }
@@ -96,8 +81,31 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   outline-width: 2px;
 }
 
-.tile-small {
-  height: 224px;
+.tile-recruit {
+  height: 205px;
+  
+  a:hover {
+    text-decoration: none !important;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+  
+  .panel-header{
+    padding: 10px 10px 0px 10px;
+    font-weight: 600;
+  }
+  .panel-body{
+    padding: 0px 10px;
+    flex:1;
+  }
+  .panel-footer{
+    background-color: white;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #080840;
+  }
 }
 
 .text-warning {
@@ -108,6 +116,55 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   color: #398439;
 }
 
+.text48 {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 60px;
+  vertical-align: sub;
+}
+
+.text-mcroc {
+  font-size: 10px;
+  font-weight: 600;
+  color: #080840;
+}
+
+.text40 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+/////////////////////
+////    COLORS
+/////////////////////
+.danger {
+  color: #e52430 //e51f4a;
+}
+
+.maroon {
+  color: #C91032;
+}
+
+.success-bg {
+  background-color: #4caf50;
+}
+
+.success {
+  color: #4caf50;
+}
+
+.green {
+  color: limegreen;
+}
+
+.ltgray{
+  color: #bbbbbb;
+}
+
+.red {
+  color: #e52430;
+}
+
 .navy {
   color: #080840;
 }
@@ -116,25 +173,12 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   color: #d5d5d5;
 }
 
-.text48 {
-  font-size: 38px;
-  font-weight: 500;
-  line-height: 60px;
-  vertical-align: sub;
+.whitesmoke {
+  color: whitesmoke;
 }
 
-.text40 {
-  font-size: 30px;
-  line-height: 40px;
-}
-
-.ltgray{
-  color: #bbbbbb;
-}
-
-.fa-check-green {
-  @extend .fa-check;
-  color: limegreen;
+.gray {
+  color: gray;
 }
 
 .fa-square-green {
@@ -145,11 +189,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 .fa-square-o-green {
   @extend .fa-square-o;
   color: limegreen;
-}
-
-.fa-exclamation-triangle{
-  @extend .fa-exclamation-triangle;
-  color: #e52430;
 }
 
 .fa-bars-white{
@@ -185,10 +224,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 .fa-pencil-gray {
   @extend .fa-pencil;
   color: #d5d5d5;
-}
-
-.ltgray{
-  color: #bbbbbb;
 }
 
 .usmc {
@@ -246,7 +281,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     padding-top: 5px;
   .panel-body{
     padding: 0px;
-    padding-bottom: 0px !important;
+    //padding-bottom: 0px !important;
   }
   .panel-footer{
     padding: 0px 15px;
@@ -425,7 +460,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   padding-right: 5px;
 }
 
-
 .margin5 {
   margin: 0px 5px;
 }
@@ -447,6 +481,14 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 .marginvertical15 {
   margin: 10px 0px;
+}
+
+.hrmargin5 {
+  margin: 5px 0px;
+}
+
+.hrmargin10 {
+  margin-top: 0px !important;
 }
 
 .subheader-text {
@@ -571,7 +613,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 //  display: inline-table;
 //  margin: 0px;
 //  padding: 0px;
-  @extend .google-visualization-orgchart-node;
+//  @extend .google-visualization-orgchart-node;
   border-bottom: 0px white none !important;
   border-top: 0px white none !important;
   border-style: none !important;
@@ -615,22 +657,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   color: whitesmoke;
 }
 
-.google-visualization-orgchart-node.google-visualization-orgchart-node-medium {
-  @extend .google-visualization-orgchart-node;
-  border-bottom: 0px white none !important;
-  border-top: 0px white none !important;
-  border-style: none !important;
-  padding: 0px !important;
-  font-size: 13px !important;
-  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-  margin: 0px;
-}
-
-.google-visualization-orgchart-table * {
-  @extend .google-visualization-orgchart-table;
-  padding: 0px !important;
-}
-
 .a2:hover, .a2:focus, .a2:active {
   color: #2196F3;
   border-bottom: 2px darkred solid !important;
@@ -644,12 +670,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   float: right;
   margin: 0px 5px;
   padding: 0px;
-  width: 8%;
   flex-grow: 1;
-}
-
-.gray {
-  color: gray;
 }
 
 .padtop15 {
@@ -706,7 +727,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 .headerfont {
   font-size: 30px;
-//  font-weight: 500;
   font-style: normal;
 }
 
@@ -742,6 +762,7 @@ li:hover {
 // Component styles are injected through gulp
 /* inject:scss */
 @import 'admin/admin';
+@import 'allocationview/allocationview';
 @import 'candidateprofile/candidateprofile';
 @import 'candidateprofile/exams/exams';
 @import 'candidateprofile/personal/personal';
@@ -749,7 +770,9 @@ li:hover {
 @import 'main/main';
 @import 'pefview/pefview';
 @import 'recruiterview/recruiterview';
+@import 'rstree/rstree';
 @import 'samplepef/samplepef';
+@import 'treeGrid/treeGrid';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
 @import '../components/recruitbanner/recruitbanner';
