@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/mcriss-proto
+hooks:
+  BeforeInstall:
+    - location: Scripts/BeforeInstall.sh
+      runas: ubuntu
+  AfterInstall:
+    - location: Scripts/AfterInstall.sh
+      timeout: 180
+  ApplicationStart:
+    - location: Scripts/ApplicationStart.sh
+      timeout: 3600
+      runas: ubuntu
