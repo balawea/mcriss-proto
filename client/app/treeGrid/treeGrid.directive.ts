@@ -47,7 +47,7 @@ export default angular.module('mcrissDemoApp.treeGrid', [])
       link: function (scope, element, attrs) {
         var error, expandingProperty, expand_all_parents, expand_level, for_all_ancestors, for_each_branch, get_parent, n, on_treeData_change, select_branch, selected_branch, tree;
         var on_expandTo_change;
-        
+
         error = function (s) {
           console.log('ERROR:' + s);
           debugger;
@@ -125,10 +125,10 @@ export default angular.module('mcrissDemoApp.treeGrid', [])
             }
             return _results;
         };
-        
+
         selected_branch = null;
         select_branch = function (branch) {
-          
+
           if (!branch) {
             if (selected_branch != null) {
               selected_branch.selected = false;
@@ -158,7 +158,7 @@ export default angular.module('mcrissDemoApp.treeGrid', [])
             }
           }
         };
-        
+
         scope.on_user_click = function (branch) {
           if (scope.onClick) {
             scope.onClick({
@@ -220,10 +220,12 @@ export default angular.module('mcrissDemoApp.treeGrid', [])
               break;
           }
 
-          return function (a, b) {
+          return function (a: any, b: any) {
             a = key(a);
             b = key(b);
-            return direction * ((a > b) - (b > a));
+            var lhs = a > b ? 1 : 0;
+            var rhs = b > a ? 1 : 0;
+            return direction * (lhs - rhs);
           };
         }
 
@@ -376,7 +378,7 @@ export default angular.module('mcrissDemoApp.treeGrid', [])
             }
           });
         };
-        
+
         scope.$watch('selectedRs', on_set_selection);
 
         on_expandTo_change = function () {

@@ -28,11 +28,12 @@ export class SamplepefComponent {
     this.timeout = $timeout;
     this.root = $rootScope;
     this.getUser = Auth.getCurrentUserSync;
-    
+
     //if no hash (no applicant selected), go to recruiterview to choose one.
-    if (this.id === '')
+    if (this.id === '') {
       $state.go('recruiterview');
-    
+    }
+
   } //ctor
 
   /*@ngInject*/
@@ -60,14 +61,14 @@ export class SamplepefComponent {
     });
   }   //oninit
 
-  //Save assignment changes 
+  //Save assignment changes
   toggleAssignment() {
     if (this.selectedPef) {
       let assigning = !this.isAssigned(this.selectedPef);
       let haswaivers = this.hasWaivers(this.selectedPef);
       let date = new Date();
 
-      //months in seed data are FY based: Oct=0, Nov=1, etc. 
+      //months in seed data are FY based: Oct=0, Nov=1, etc.
       let monthInFyOrder = (date.getMonth() + 3) % 12;
       //two digit natural month, ie 01, 06
 
@@ -86,40 +87,45 @@ export class SamplepefComponent {
         this.fullrecruit.mcroc = mcroc;
       }
       else {
-        monthInFyOrder = this.fullrecruit.assignedPef.month;  //we are freeing up a seat. Apply it back to the month it was assigned in. 
+        monthInFyOrder = this.fullrecruit.assignedPef.month;  //we are freeing up a seat. Apply it back to the month it was assigned in.
         this.fullrecruit.assignedPef = {};
         this.fullrecruit.exams.waiver = this.fullrecruit.mcroc = undefined;
         this.selectedPef.errs = this.selectedPef.errCategory = 0;
       }
-      
+
       this.pefs.sort(this.byErrs);
 
       //save pef assignment to recruit document
       this.$http.put(`/api/recruits/${this.id}`, this.fullrecruit)
       .then(res => {
         if(assigning) {
-          if (haswaivers)
+          if (haswaivers) {
             swal("Waiver", `Waiver process initiated for assignment to PEF ${this.selectedPef.pefCode}`, "success");
-          else
+          }
+          else {
             swal("Assigned", `Candidate successfully assigned to PEF ${this.selectedPef.pefCode}`, "success");
+          }
         }
-        else
+        else {
           swal("Unassigned", `Candidate is no longer assigned to PEF ${this.selectedPef.pefCode}`, "info");
+        }
 
         this.broadcastRecruit(this.fullrecruit);
       });
-      
+
       //update month assignment total to RS document
       this.$http.get(`/api/rss/rs/${this.user.rs}`)
       .then(res => {
         var data = res.data[0];
         var actual = data.allocation[this.selectedPef.pefCode].actual;
 
-        if (assigning)  //increment
-          actual['m'+monthInFyOrder] += 1;
-        else            //decrement
-          actual['m'+monthInFyOrder] -= 1;
-        
+        if (assigning) {  //increment
+          actual['m' + monthInFyOrder] += 1;
+        }
+        else {            //decrement
+          actual['m' + monthInFyOrder] -= 1;
+        }
+
         this.$http.put(`/api/rss/${data._id}`, data);
       });
 
@@ -143,7 +149,7 @@ export class SamplepefComponent {
     }
     return false;
   }
-  
+
   hasWaivers(pef) {
     return pef.waivercount > 0;
   }
@@ -169,7 +175,7 @@ export class SamplepefComponent {
   waive(obj) {
     obj.iswaived = !obj.iswaived;
     obj.flag = !obj.iswaived;
-    
+
     if (obj.iswaived) {
       this.selectedPef.errs -= 1;
       this.selectedPef.waivercount += 1;
@@ -213,21 +219,25 @@ export class SamplepefComponent {
     let acode = a.pefCode;
     let bcode = b.pefCode;
 
-    if (aerr < berr)
+    if (aerr < berr) {
       return -1;
-    if (aerr > berr)
+    }
+    if (aerr > berr) {
       return 1;
+    }
 
-    if (acode < bcode)
+    if (acode < bcode) {
       return -1;
-    else
+    }
+    else {
       return 1;
+    }
   }
-  
+
   broadcastRecruit(recr) {
    //alert the pageheader controller to display the current recruit
     let profile = {id: recr._id, fullName: recr.fullName, age: recr.age.val, sex: recr.match.sex.val, status: recr.status,
-                   ssn: recr.personal.ssn, pefCode:((recr.assignedPef || {}).pefCode || undefined), dutyType:((recr.dutyType || {}).desc || undefined)}; 
+                   ssn: recr.personal.ssn, pefCode:((recr.assignedPef || {}).pefCode || undefined), dutyType:((recr.dutyType || {}).desc || undefined)};
     this.root.$broadcast('SELECT_RECRUIT', profile);
   }//
 } //class
@@ -274,7 +284,7 @@ function getPefErrors(p, r) {
 
     for (let pkey in pef) {
       let pval = pef[pkey];
-      
+
       //skip null, empty, and undefined pef values, allow zeroes
       if (!pval && pval !== 0)
         continue;
@@ -289,11 +299,11 @@ function getPefErrors(p, r) {
       if (typeof(pval) === "object") {
         compareObjects(pval, rval);
       }
-      
+
       if ((pkey === "waivable")) {
         isWaivable = pval;
       }
-      
+
       if (pkey === "waiver") {
         waiver = pval;
       }
@@ -318,10 +328,12 @@ function getPefErrors(p, r) {
         markError();
         recval = rval;
 
-        if (pkey === "max")
+        if (pkey === "max") {
           pefmax = pval;
-        else
+        }
+        else {
           pefmin = pval;
+        }
       }
 
       //For a waivable error on a boolean or exact value field (pefval), we know there will be no waiver amount to compare
@@ -338,19 +350,20 @@ function getPefErrors(p, r) {
       if (isErr && isWaivable && (waiver !== undefined) && (recval !== undefined) && (pefmax !== undefined) && (recval - waiver <= pefmax)){
         isWaivableMaxWithinWaiverAmount = true;
       }
-      
+
       // Below: if we have all necessary parties populated at once, indicate whether the parent pef node is in a waivable state
       if (isWaivableExactValOrBoolean || isWaivableMinWithinWaiverAmount || isWaivableMaxWithinWaiverAmount) {
         pef.canwaive = true;
         pef.iswaived = isStarred;
         pef.flag = !isStarred;
 
-        if (isStarred)
+        if (isStarred) {
           wcount++;
+        }
 
         continue;
       }
-      
+
       function markError(){
         if (pef.flag !== true) {
           ++errs;
@@ -359,14 +372,14 @@ function getPefErrors(p, r) {
         }
       }
     } // for (let pkey in pef)
-    
+
   } // CompareObjects
-  
+
   //clear errors if the pef is selected
   if(isStarred){
     errs = -1;
   }
-  
+
   return {e: errs, w: wcount};
 } //GetPefErrors
 
@@ -382,7 +395,7 @@ function getBookmarks(pefs, bkmarks) {
       pef.notes = mark.notes;
     }
   }
-  
+
   return pefs;
 }
 

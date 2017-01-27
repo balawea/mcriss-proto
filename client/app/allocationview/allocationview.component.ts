@@ -26,7 +26,7 @@ export class allocationviewComponent {
     this.$scope = $scope;
     this.getUser = Auth.getCurrentUserSync;
   } //ctor
-  
+
   /*@ngInject*/
   $onInit() {
     this.seatarray = [];
@@ -64,12 +64,14 @@ export class allocationviewComponent {
         let acode = a.pefCode;
         let bcode = b.pefCode;
 
-        if (acode <= bcode)
+        if (acode <= bcode) {
           return -1;
-        else
+        }
+        else {
           return 1;
+        }
       });
-      
+
       this.$http.get('/api/rss/children/' + this.getUser().rs).then(rss => {
         this.rss = rss.data;
         this.select(this.pefs[0]);
@@ -96,8 +98,9 @@ export class allocationviewComponent {
         //console.log(this.$scope.matchingRs);
         this.setSelectedRs(this.$scope.matchingRs);
       }
-      else
+      else {
         this.setSelectedRs(this.$scope.tree_data[0]);
+      }
     }
   } //
 
@@ -108,10 +111,10 @@ export class allocationviewComponent {
     function byName(childRs) {
       return childRs.rs === childRsName;
     };
-    
+
     let userRs = rss.find(byName);
     let alloc = userRs.allocation[pefCode];
-    let currentrs = {};
+    let currentrs = <any>{};
     currentrs.name = userRs.name;
     currentrs.childList = userRs.children;
     currentrs.children = [];
@@ -119,18 +122,20 @@ export class allocationviewComponent {
     currentrs.availfy = 0;
     currentrs.actualfy = 0;
     buildNameParts(currentrs);
-    
+
     for (let monthkey in alloc.plan) {
-      let planval = alloc.plan[monthkey];
-      let actualval = alloc.actual[monthkey];
-      currentrs[monthkey] = planval - actualval;
-      currentrs.planfy += planval;
-      currentrs.actualfy += actualval;
-      currentrs.availfy += currentrs[monthkey];
+      if (alloc.plan.hasOwnProperty(monthkey)) {
+        let planval = alloc.plan[monthkey];
+        let actualval = alloc.actual[monthkey];
+        currentrs[monthkey] = planval - actualval;
+        currentrs.planfy += planval;
+        currentrs.actualfy += actualval;
+        currentrs.availfy += currentrs[monthkey];
+      }
     }
-    
+
     return nestChildrenOf(currentrs);
-    
+
     function nestChildrenOf(rs) {
       //for each first level child
       for (let child of rs.childList){
@@ -141,13 +146,13 @@ export class allocationviewComponent {
           let fullChild = rss.find(byName);
 
           if (!!fullChild) {
-            let detail = {};
+            let detail = <any>{};
 
             //If this child has children, nest them
             if (((fullChild.children || {}).length || 0) > 0) {
 
               let alloc = fullChild.allocation[pefCode];
-              let childrs = {};
+              let childrs = <any>{};
               childrs.children = [];
               childrs.childList = fullChild.children;
               childrs.planfy = 0;
@@ -156,16 +161,18 @@ export class allocationviewComponent {
               childrs.name = fullChild.name;
               buildNameParts(childrs);
               for (let monthkey in alloc.plan) {
-                let planval = alloc.plan[monthkey];
-                let actualval = alloc.actual[monthkey];
-                childrs[monthkey] = planval - actualval;
-                childrs.planfy += planval;
-                childrs.actualfy += actualval;
-                childrs.availfy += childrs[monthkey];
+                if (alloc.plan.hasOwnProperty(monthkey)) {
+                  let planval = alloc.plan[monthkey];
+                  let actualval = alloc.actual[monthkey];
+                  childrs[monthkey] = planval - actualval;
+                  childrs.planfy += planval;
+                  childrs.actualfy += actualval;
+                  childrs.availfy += childrs[monthkey];
+                }
               }
 
               detail = nestChildrenOf(childrs);
-              
+
             }
             else {
               //build terminal child seat data
@@ -177,12 +184,14 @@ export class allocationviewComponent {
               detail.name = fullChild.name;
               buildNameParts(detail);
               for (let monthkey in alloc.plan) {
-                let planval = alloc.plan[monthkey];
-                let actualval = alloc.actual[monthkey];
-                detail[monthkey] = planval - actualval;
-                detail.planfy += planval;
-                detail.actualfy += actualval;
-                detail.availfy += detail[monthkey];
+                if (alloc.plan.hasOwnProperty(monthkey)) {
+                  let planval = alloc.plan[monthkey];
+                  let actualval = alloc.actual[monthkey];
+                  detail[monthkey] = planval - actualval;
+                  detail.planfy += planval;
+                  detail.actualfy += actualval;
+                  detail.availfy += detail[monthkey];
+                }
               }
             }
             rs.planfy += detail.planfy;
@@ -190,14 +199,15 @@ export class allocationviewComponent {
             rs.availfy += detail.availfy;
 
             for (let key in detail) {
-              if (key === 'children' || key === 'availfy' || key === 'planfy' || key === 'actualfy' || key === 'name' || key === 'childList' || key === 'name1' || key === 'name2')
+              if (key === 'children' || key === 'availfy' || key === 'planfy' || key === 'actualfy' || key === 'name' || key === 'childList' || key === 'name1' || key === 'name2') {
                 continue;
+              }
               rs[key] += detail[key];
             }
 
-            if (scope.selectedRs.name === detail.name)
+            if (scope.selectedRs.name === detail.name) {
               scope.matchingRs = detail;
-
+            }
             rs.children.push(detail);
           }
         }
@@ -209,7 +219,7 @@ export class allocationviewComponent {
     function buildNameParts(rs) {
       let name = rs.name;
       let parts = name.split(" ");
-      
+
       rs.name1 = parts[0];
       rs.name2 = parts[1];
     }
@@ -218,7 +228,7 @@ export class allocationviewComponent {
   waive(obj) {
     obj.iswaived = !obj.iswaived;
     obj.flag = !obj.iswaived;
-    
+
     if (obj.iswaived) {
       this.selectedPef.errs -= 1;
       this.selectedPef.waivercount += 1;

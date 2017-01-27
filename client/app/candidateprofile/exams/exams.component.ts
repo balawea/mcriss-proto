@@ -18,7 +18,7 @@ export class ExamsComponent {
     this.id = $location.hash();
     this.isAdmin = Auth.isAdminSync;
   } //ctor
-    
+
   /*@ngInject*/
   $onInit() {
     this.$http.get(`/api/recruits/${this.id}`).then(responseRec => {
@@ -36,10 +36,12 @@ export class ExamsComponent {
   saveDutyType() {
     let dt = this.fullrecruit.dutyType;
 
-    if(dt.id.toString() ==="1")
+    if(dt.id.toString() ==="1") {
       dt.desc = 'DMR';
-    else
+    }
+    else {
       dt.desc = 'DMV';
+    }
 
     this.$http.put(`/api/recruits/${this.id}`, this.fullrecruit).then(responseRec => {
       this.broadcastRecruit(this.fullrecruit);
@@ -48,7 +50,7 @@ export class ExamsComponent {
 
   broadcastRecruit(recr) {
     let profile = {id: recr._id, fullName: recr.fullName, age: recr.age.val, sex: recr.match.sex.val, status: recr.status,
-                   ssn: recr.personal.ssn, pefCode:((recr.assignedPef || {}).pefCode || undefined), dutyType:((recr.dutyType || {}).desc || undefined)}; 
+                   ssn: recr.personal.ssn, pefCode:((recr.assignedPef || {}).pefCode || undefined), dutyType:((recr.dutyType || {}).desc || undefined)};
     this.$root.$broadcast('SELECT_RECRUIT', profile);
   }//
 

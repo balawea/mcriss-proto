@@ -18,15 +18,12 @@ interface IPolyFillErrorConstructor extends ErrorConstructor {
     stackTraceLimit: any;
 }
 
-if(!ENV) {
-    var ENV = 'development';
-}
+var ENV = ENV || 'development';
 
 if(ENV === 'production') {
     // Production
 } else {
     // Development
-    
     (<IPolyFillErrorConstructor>Error).stackTraceLimit = Infinity;
     // require('zone.js/dist/long-stack-trace-zone');
 }
