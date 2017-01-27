@@ -83,7 +83,7 @@
             <div class="panel-body">
             <label class="col-xs-7">Age</label>
               <input class="text-border-sm" ng-readonly="true" ng-model="vm.recruit.age.val">
-              <!-- TODO: simplify this ng-if and ng-class-->
+
               <span ng-if="vm.selectedPef.requirements.age.description"><i class="fa fa-info-circle pull-right rightmargin-5" ng-class="{'red': vm.selectedPef.requirements.age.flag, 'success': !vm.selectedPef.requirements.age.flag}" uib-tooltip="{{vm.selectedPef.requirements.age.description}}"></i></span>
             </div>
           <div class="panel-footer" ng-show="vm.selectedPef.requirements.age.canwaive===true" ng-class="{'footer-danger': vm.selectedPef.requirements.age.flag===true}">

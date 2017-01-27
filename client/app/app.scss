@@ -23,6 +23,11 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   display: none;
 }
 
+body {
+  @extend body;
+  color: #444;
+}
+
 .nav-tabs-show {
   @extend .nav-tabs;
   display: block;
@@ -76,13 +81,13 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 .footer-danger {
   color: #ffffff;
-  background-color: #e52430;
+  background-color: #e52430 !important;
   outline-color: #e52430; //d43f3a
   outline-width: 2px;
 }
 
 .tile-recruit {
-  height: 205px;
+  //height: 205px;
   
   a:hover {
     text-decoration: none !important;
@@ -98,7 +103,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     flex:1;
   }
   .panel-footer{
-    background-color: white;
+    background-color: white !important;
     height: 20px;
     padding: 0px;
     margin: 0px;
@@ -226,12 +231,39 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   color: #d5d5d5;
 }
 
+.seat-panel-text {
+  margin: 0 5px;
+  margin-left: 15px;
+  line-height: 1;
+  font-size: 18px;
+  padding-top: 12px;
+  float: left;
+}
+
+.seat-panel-text2 {
+  font-size: 24px;
+  padding-top: 10px;
+  margin-top: 10px;
+  line-height: .9;
+  margin-left: 15px;
+}
+
 .usmc {
   width: 52px;
   height: 54px;
 }
 
 //PANELS
+
+.panel {
+  @extend .panel;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  
+  .panel-footer {
+//    @extend .panel-footer;
+    background-color: #e9e9e9;
+  }
+}
 
 .panel.small-fixed-panel{
   width: 100px;
@@ -468,6 +500,10 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   margin: 0px 20px;
 }
 
+.marginhorizontal10 {
+  margin: 0px 10px;
+}
+
 .margin10 {
   margin: 0px 10px;
   font-size: 16px;
@@ -481,10 +517,12 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 .marginvertical15 {
   margin: 10px 0px;
+  border-top: 1px solid #ddd;
 }
 
 .hrmargin5 {
   margin: 5px 0px;
+  border-top: 1px solid #ddd;
 }
 
 .hrmargin10 {
@@ -519,6 +557,10 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 .peflist {
   overflow-y: scroll;
   height: 80%;
+}
+
+.scroll {
+  overflow-y: scroll;
 }
 
 .pef-text {
@@ -557,9 +599,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 .text-16 {
   font-size:16px;
-//  padding-left: 5px;
-//  margin-left: 10px;
-//  line-height: normal;
 }
 
 .label-border {
@@ -571,6 +610,20 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   padding-right: 5px;
 }
 
+.waiver-input {
+  vertical-align: top;
+//  margin-top: 1px;
+  height: 18px;
+}
+
+.width175 {
+  width: 200px;
+}
+
+.width90 {
+  width: 80%;
+}
+
 .lb-sm {
   font-size: 10px;
 }
@@ -578,6 +631,10 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 .font-14 {
   font-size: 13px;
   font-style: normal;
+}
+
+.font24 {
+  font-size: 24px;
 }
 
 .nav-navy {
@@ -608,12 +665,16 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   font-weight: 300;
 }
 
+.nav-white2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: -5px;
+  border-bottom: 2px darkred solid;
+  height: 45px;
+}
+
 .panel.rs-panel{
   width:160px;
-//  display: inline-table;
-//  margin: 0px;
-//  padding: 0px;
-//  @extend .google-visualization-orgchart-node;
   border-bottom: 0px white none !important;
   border-top: 0px white none !important;
   border-style: none !important;

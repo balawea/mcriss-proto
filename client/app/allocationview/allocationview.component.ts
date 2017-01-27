@@ -1,7 +1,6 @@
 'use strict';
 const angular = require('angular');
 const uiRouter = require('angular-ui-router');
-//const swal = require('sweetalert');
 import routes from './allocationview.routes';
 import treeGrid from '../treeGrid/treeGrid.directive';
 
@@ -35,8 +34,28 @@ export class allocationviewComponent {
     this.user = this.getUser();
     this.userRsName = this.user.rs;
     this.$scope.tree_data = [];
-    this.selectedRs = {};
-    this.$scope.my_tree = this.tree = {};
+    this.$scope.selectedRs = {};
+    this.$scope.expanding_property = {
+      field: "name",
+      displayName: "Location",
+      sortable: true,
+      sortingType: "string",
+      cellTemplate: "<strong>{{row.branch[expandingProperty.field]}}</strong>"
+    };
+    this.$scope.col_defs = [
+      {field: "m0", displayName: "Oct", sortable: true, sortingType: "number", filterable: true},
+      {field: "m1", displayName: "Nov", sortable: true, sortingType: "number", filterable: true},
+      {field: "m2", displayName: "Dec", sortable: true, sortingType: "number", filterable: true},
+      {field: "m3", displayName: "Jan", sortable: true, sortingType: "number", filterable: true},
+      {field: "m4", displayName: "Feb", sortable: true, sortingType: "number", filterable: true},
+      {field: "m5", displayName: "Mar", sortable: true, sortingType: "number", filterable: true},
+      {field: "m6", displayName: "Apr", sortable: true, sortingType: "number", filterable: true},
+      {field: "m7", displayName: "May", sortable: true, sortingType: "number", filterable: true},
+      {field: "m8", displayName: "Jun", sortable: true, sortingType: "number", filterable: true},
+      {field: "m9", displayName: "Jul", sortable: true, sortingType: "number", filterable: true},
+      {field: "m10", displayName: "Aug", sortable: true, sortingType: "number", filterable: true},
+      {field: "m11", displayName: "Sep", sortable: true, sortingType: "number", filterable: true}
+    ];
 
     this.$http.get('/api/pefRequirements/').then(res => {
       this.pefs = this.p = res.data;
@@ -54,37 +73,12 @@ export class allocationviewComponent {
       this.$http.get('/api/rss/children/' + this.getUser().rs).then(rss => {
         this.rss = rss.data;
         this.select(this.pefs[0]);
-
       });
     }); //get
-
-
-    this.$scope.expanding_property = {
-      field: "name",
-      displayName: "RS",
-      cellTemplate: "<strong>{{row.branch[expandingProperty.field]}}</strong>"
-    };
-    this.$scope.col_defs = [
-      {field: "m0", displayName: "Oct", sortable: true, sortingType: "number", filterable: true},
-      {field: "m1", displayName: "Nov", sortable: true, sortingType: "number", filterable: true},
-      {field: "m2", displayName: "Dec", sortable: true, sortingType: "number", filterable: true},
-      {field: "m3", displayName: "Jan", sortable: true, sortingType: "number", filterable: true},
-      {field: "m4", displayName: "Feb", sortable: true, sortingType: "number", filterable: true},
-      {field: "m5", displayName: "Mar", sortable: true, sortingType: "number", filterable: true},
-      {field: "m6", displayName: "Apr", sortable: true, sortingType: "number", filterable: true},
-      {field: "m7", displayName: "May", sortable: true, sortingType: "number", filterable: true},
-      {field: "m8", displayName: "Jun", sortable: true, sortingType: "number", filterable: true},
-      {field: "m9", displayName: "Jul", sortable: true, sortingType: "number", filterable: true},
-      {field: "m10", displayName: "Aug", sortable: true, sortingType: "number", filterable: true},
-      {field: "m11", displayName: "Sep", sortable: true, sortingType: "number", filterable: true}
-      
-    ];
-
   } //oninit
 
   setSelectedRs(branch) {
-    this.selectedRs = branch;
-    console.log(branch);
+    this.$scope.selectedRs = branch;
   };
 
   select(pef, rss = this.rss) {
@@ -92,12 +86,23 @@ export class allocationviewComponent {
 
     if (rss.length > 0) {
       this.$scope.tree_data = [];
-      this.$scope.tree_data.push(this.getNestedSeatData(rss, pef.pefCode));
+      this.$scope.matchingRs = {};
+      let data = this.getNestedSeatData(rss, pef.pefCode, this.$scope);
+      this.$scope.tree_data.push(data);
 
+      //matchingRs is set in getNestedSeatData since we are looping the collection there already
+      //If matchingRs.name is empty (ie on page load), default to the top RS in the tree.
+      if (this.$scope.matchingRs.name) {
+        //console.log(this.$scope.matchingRs);
+        this.setSelectedRs(this.$scope.matchingRs);
+      }
+      else
+        this.setSelectedRs(this.$scope.tree_data[0]);
     }
   } //
 
-  getNestedSeatData(rss, pefCode) {
+  //TODO: REFACTOR ME!!!!
+  getNestedSeatData(rss, pefCode, scope) {
     let childRsName = this.getUser().rs;
 
     function byName(childRs) {
@@ -113,6 +118,7 @@ export class allocationviewComponent {
     currentrs.planfy = 0;
     currentrs.availfy = 0;
     currentrs.actualfy = 0;
+    buildNameParts(currentrs);
     
     for (let monthkey in alloc.plan) {
       let planval = alloc.plan[monthkey];
@@ -126,10 +132,8 @@ export class allocationviewComponent {
     return nestChildrenOf(currentrs);
     
     function nestChildrenOf(rs) {
-      
       //for each first level child
       for (let child of rs.childList){
-        
         //first level children
         if (child.l === 0) {
           //find that child in rss
@@ -150,6 +154,7 @@ export class allocationviewComponent {
               childrs.availfy = 0;
               childrs.actualfy = 0;
               childrs.name = fullChild.name;
+              buildNameParts(childrs);
               for (let monthkey in alloc.plan) {
                 let planval = alloc.plan[monthkey];
                 let actualval = alloc.actual[monthkey];
@@ -170,6 +175,7 @@ export class allocationviewComponent {
               detail.availfy = 0;
               detail.actualfy = 0;
               detail.name = fullChild.name;
+              buildNameParts(detail);
               for (let monthkey in alloc.plan) {
                 let planval = alloc.plan[monthkey];
                 let actualval = alloc.actual[monthkey];
@@ -182,13 +188,15 @@ export class allocationviewComponent {
             rs.planfy += detail.planfy;
             rs.actualfy += detail.actualfy;
             rs.availfy += detail.availfy;
-            for (let monthkey in detail) {
-              if (monthkey === 'children' || monthkey === 'availfy' || monthkey === 'planfy'
-                 || monthkey === 'actualfy' || monthkey === 'name' || monthkey === 'childList')
+
+            for (let key in detail) {
+              if (key === 'children' || key === 'availfy' || key === 'planfy' || key === 'actualfy' || key === 'name' || key === 'childList' || key === 'name1' || key === 'name2')
                 continue;
-              
-              rs[monthkey] += detail[monthkey];
+              rs[key] += detail[key];
             }
+
+            if (scope.selectedRs.name === detail.name)
+              scope.matchingRs = detail;
 
             rs.children.push(detail);
           }
@@ -198,81 +206,14 @@ export class allocationviewComponent {
       return rs;
     } //nestchildrenof
 
+    function buildNameParts(rs) {
+      let name = rs.name;
+      let parts = name.split(" ");
+      
+      rs.name1 = parts[0];
+      rs.name2 = parts[1];
+    }
   } //
-
-  //build allocation obj for display
-  getAllocations(rss) {
-    let myrs = [];
-    var detail;
-    
-    //calc available at each RS (no rollup)
-    for(let rs of rss) {
-      detail = rs.allocation[this.selectedPef.pefCode];
-      detail.rs = rs.rs;
-      detail.name = rs.name;
-      detail.children = rs.children;
-      detail.level = rs.level;
-      let avail = {};
-      let planfy = 0;
-      let availfy = 0;
-      let actualfy = 0;
-      for (let monthkey in detail.plan) {
-        let planval = detail.plan[monthkey];
-        let actualval = detail.actual[monthkey];
-        avail[monthkey] = planval - actualval;
-        
-        planfy += planval;        
-        actualfy += actualval;
-        availfy += avail[monthkey];
-      }
-      detail.available = avail;
-      detail.availfy = availfy;
-      detail.planfy = planfy;
-      detail.actualfy = actualfy;
-
-      detail.availableProgress = availfy + '/' + planfy;
-      detail.actualProgress = actualfy + '/' + planfy;
-      myrs.push(detail);
-    }
-
-    //calc available rollup
-    for (let rs of myrs) {
-      if (rs.children !== undefined) {
-        let availRollup = rs.availfy;
-        let actualRollup = rs.actualfy;
-
-        for (let childobj of rs.children) {
-          let cname = childobj.n;
-          var childfull = rss.filter(function(obj) {
-            return obj.rs === cname;
-          })[0];
-
-          if (childfull !== undefined) {
-            var child = childfull.allocation[this.selectedPef.pefCode];
-            availRollup += child.availfy;
-            actualRollup += child.actualfy;
-          }
-        }
-        rs.availableRU = availRollup;
-        rs.actualRU = actualRollup;
-      }
-    }
-    
-    //TODO: children should sort under parents!
-    myrs.sort(this.byLevel);
-
-    this.seatarray = myrs;
-  }
-
-  byLevel(a, b) {
-    if (a.level===b.level)
-      return 0;
-
-    if(a.level > b.level)
-      return 1;
-    else
-      return -1;
-  }
 
   waive(obj) {
     obj.iswaived = !obj.iswaived;
@@ -287,7 +228,7 @@ export class allocationviewComponent {
       this.selectedPef.waivercount -= 1;
     }
     this.pefs.sort();
-  }
+  } //
 
 
 }// class
@@ -295,7 +236,6 @@ export class allocationviewComponent {
 export default angular.module('mcrissDemoApp.allocationview', [uiRouter, treeGrid])
   .config(routes)
   .component('allocationview', {
-    //template: require('./allocationview.html'),
     template: require('./allocationview.html'),
     controller: allocationviewComponent,
     controllerAs: 'vm'

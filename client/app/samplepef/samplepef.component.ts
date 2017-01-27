@@ -151,8 +151,6 @@ export class SamplepefComponent {
   select(pef) {
     this.selectedPef = pef;
     this.layout();
-    
-    console.log(pef);
   }
 
   //delaying the call to refresh the masonry handle gives the digest time to update the DOM

@@ -1896,6 +1896,7 @@ Recruit.find({}).remove()
         middleName: 'Johan',
         active: true,
         status: 'Contract/Poolee',
+        dutyType: {id: 1, desc: 'DMR'},
         notif: {daysuntil: 0, activity: 'TC', active: true, note:'No contact since 10/14.'},
         dob: '04/22/1999',
         recruiter: {recruiterId: '002995102', rs: 'Chantilly', fullname: 'Amber Recruiter'},

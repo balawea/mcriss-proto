@@ -4,7 +4,7 @@ Rs.find({}).remove()
   .then(() => {
   Rs.create(
 
-    {
+  {
     name: "MCRC",
     rs: "MCRC",
     children: [{n:'ERR', l:0}, {n:'WRR', l:0}, {n:'1MCD', l:1}, {n:'4MCD', l:1}, {n:'6MCD', l:1}, {n:'Frederick', l:2}, {n:'Richmond', l:2}, {n:'Baltimore', l:2}, {n:'Chantilly', l:3}, {n:'Fairfax', l:3}, {n:'Warrenton', l:3}],
@@ -209,7 +209,7 @@ Rs.find({}).remove()
     name: "4th MCD",
     rs: "4MCD",
     parents: [{n:'MCRC', l:1}, {n:'ERR', l:0}],
-    children: [{n:'Frederick', l:0}, {n:'Richmond', l:0}, {n:'Baltimore', l:0}, {n:'Chantilly', l:1}, {n:'Fairfax', l:1}, {n:'Warrenton', l:1}],
+    children: [{n:'Baltimore', l:0}, {n:'Frederick', l:0}, {n:'Richmond', l:0}, {n:'Chantilly', l:1}, {n:'Fairfax', l:1}, {n:'Warrenton', l:1}],
     level: 2,
     allocation: {
       AE: {total: 131, reserve:2, plan:{m0:1,m1:1,m2:1,m3:1,m4:0,m5:0,m6:0,m7:0,m8:0,m9:0,m10:0,m11:0}, actual: {m0:1,m1:1,m2:1,m3:0,m4:0,m5:0,m6:0,m7:0,m8:0,m9:0,m10:0,m11:0}},

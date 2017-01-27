@@ -40,7 +40,7 @@ export class PefviewComponent {
       this.msnry = new Masonry( '.grid', {
         itemSelector: '.grid-item',
         columnWidth: 275,
-        transitionDuration: '0.5s'
+        transitionDuration: '0.3s'
       })
 
       this.layout(this.msnry);
@@ -73,7 +73,7 @@ export class PefviewComponent {
   }
 
   layout(msnry) {
-    if (!!msnry) {
+    if (msnry) {
       this.$timeout(function() {
         msnry.layout();
       }, 300, false);
@@ -94,9 +94,6 @@ export class PefviewComponent {
 
   save() {
     if (this.selectedPef) {
-
-      console.log(this.selectedPef);
-
       this.$http.put(`/api/pefRequirements/${this.selectedPef._id}`, this.selectedPef)
       .then(res => {
         if (res.statusText==="OK") {
@@ -110,14 +107,14 @@ export class PefviewComponent {
         this.selectedPef.isEditing = false;
       });
     }
-  }
+  } //
 
   //cancel edits on a single pef, replace it in the pefs array with the original from the db.
   cancel() {
     if (this.selectedPef) {
       this.$http.get(`/api/pefRequirements/${this.selectedPef._id}`)
       .then(pef => {
-        var oldpef;
+        let oldpef;
         for(let i=0;i<this.pefs.length;i++){
           if(this.pefs[i]._id === this.selectedPef._id){
             oldpef = this.initPefs([pef.data]);
@@ -126,25 +123,20 @@ export class PefviewComponent {
             console.info('canceled');
           }
         }
-      });
-
+      }); //then
     }
-  }
+  } //
 
-  //Init brick visibility obj for each pef
   //Set isEditing to false.
-  //Might dynamically hide unused tiles here.
   initPefs(pefs) {
     for (let pef of pefs) {
       pef.isEditing = false;
     }
     return pefs;
-  }
+  } //
 
   editDesc(name, node) {
     if (this.selectedPef && !this.isReadOnly()) {
-      // "node" will come in as "ssn" or "driving.license", etc, where "p" = this.selectedPef.requirements.
-      // The description data will be nested in "node", so drill down through "p" to get a reference to it.
       let p = this.selectedPef.requirements;
       var nodes = node.split('.');
       for (let n of nodes) {
@@ -155,11 +147,10 @@ export class PefviewComponent {
       }
 
       this.getDesc(name, p, (inputVal) => {
-
         if (inputVal !== false) {
           p.description = inputVal;
         }
-      }, p);
+      });
     }
   }//
 
