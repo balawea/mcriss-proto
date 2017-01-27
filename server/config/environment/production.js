@@ -20,5 +20,7 @@ module.exports = {
       || process.env.MONGOHQ_URL
       || process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME
       || 'mongodb://localhost/mcrissdemo'
-  }
+  },
+  // Seed database on startup. Of course, we would never RELALY do this in production.
+  seedDB: true
 };
