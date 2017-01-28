@@ -7,7 +7,7 @@ cd /var/www/mcriss-proto
 npm install
 gulp build
 
-cd /var/www/wwwroot/dist/server
+cd /var/www/mcriss-proto/dist/server
 
 echo "Starting NodeJS"
 forever start app.js >> /home/ubuntu/gulplog/nodelog.log &
