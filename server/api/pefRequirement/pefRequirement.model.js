@@ -32,7 +32,6 @@ var PefRequirementSchema = new mongoose.Schema({
     ve: {description:String, min:Number, waivable:Boolean, waiver:Number},
     qt: {description:String, min:Number, waivable:Boolean, waiver:Number},
     dlab: {description:String, min:Number, waivable:Boolean, waiver:Number},
-//    asvabOrList: {description:String, gt:Number, cl:Number, el:Number, mm:Number, ve:Number, qt:Number}, //Logical OR: exceeding any one of the included scores makes a match
     height: {
       description:String,
       min:Number,

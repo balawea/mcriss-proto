@@ -48,7 +48,7 @@ var RecruitSchema = new mongoose.Schema({
       correctable: {has: Boolean},
       depth: {has: Boolean},
       color: {val: Number},
-      acuity: {val: Number, val1: Number, val2: Number},
+      acuity: {val: Number, val1: Number, val2: Number},  //val1 + val2 = val. This is a simplification of the actual business rule.
       acuity1: {val: Number},
       acuity2: {val: Number}
     },

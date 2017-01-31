@@ -127,9 +127,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 13},
-            acuity: {val:25},
-            acuity: {val:20},
-            acuity: {val:40}
+            acuity: {val: 40, val1: 20, val2: 20}
           },
           moral: {
             conduct: {val: 0},
@@ -215,7 +213,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 12},
-            acuity: {val: 20, val1: 30, val2: 20},
+            acuity: {val: 50, val1: 30, val2: 20},
             acuity1: {val: 20},
             acuity2: {val: 20}
           },
@@ -308,7 +306,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 40},
+            acuity: {val: 40, val1: 20, val2: 20},
             acuity1: {val: 40},
             acuity2: {val: 40}
           },
@@ -983,8 +981,8 @@ Recruit.find({}).remove()
           vision: {
             correctable: {has: true},
             depth: {has: true},
-            color: {val: 10},
-            acuity: {val: 50, val1: 30, val2: 20}
+            color: {val: 12},
+            acuity: {val: 45, val1: 25, val2: 20}
           },
           moral: {
             conduct: {val: 0},
@@ -1164,7 +1162,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 120, val1: 20, val2: 100}
+            acuity: {val: 115, val1: 55, val2: 60}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -1251,7 +1249,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 50, val1: 20, val2: 20}
+            acuity: {val: 40, val1: 20, val2: 20}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -1667,7 +1665,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 11},
-            acuity: {val:120, val1: 100, val2: 20}
+            acuity: {val: 40, val1: 20, val2: 20}
           },
           moral: {
             conduct: {val: 1},
@@ -1684,7 +1682,6 @@ Recruit.find({}).remove()
           address: {street: '3885 Broad Blvd.', city: 'Windsor Mill', state: 'MD', zip: 21244, country: 'United States'},
           hor: {street: '3885 Broad Blvd.', city: 'Windsor Mill', state: 'MD', zip: 21244, country: 'United States'},
           citz: 'Native Born',
-          
           ethnicity: 'Not Hispanic or Latino',
           marital: 'Single',
           dependents: 0,
@@ -1771,7 +1768,6 @@ Recruit.find({}).remove()
           address: {street: '39775 Bengal Rd.', city: 'Manchester', state: 'MD', zip: 21244, country: 'United States'},
           hor: {street: '10119 Heath Ct.', city: 'Chantilly', state: 'VA', zip: 20155, country: 'United States'},
           citz: 'Native Born',
-          
           ethnicity: 'Hispanic or Latino',
           marital: 'Married',
           dependents: 3,
@@ -1931,7 +1927,7 @@ Recruit.find({}).remove()
             correctable: {has: false},
             depth: {has: false},
             color: {val: 14},
-            acuity: {val: 120, val1: 20, val2: 100}
+            acuity: {val: 200, val1: 120, val2: 80}
           },
           speech: {has: true},
           algebra: {has: true}
@@ -2015,7 +2011,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 50, val1: 20, val2: 20}
+            acuity: {val: 40, val1: 20, val2: 20}
           }
         },
         personal: {
@@ -2097,7 +2093,7 @@ Recruit.find({}).remove()
             correctable: {has: false},
             depth: {has: false},
             color: {val: 14},
-            acuity: {val: 120, val1: 20, val2: 100}
+            acuity: {val: 60, val1: 20, val2: 40}
           }
         },
         personal: {
@@ -2259,7 +2255,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: false},
             color: {val: 14},
-            acuity: {val: 120, val1: 60, val2: 60}
+            acuity: {val: 80, val1: 40, val2: 40}
           }
         },  //match
         personal: {
@@ -2688,7 +2684,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 12},
-            acuity: {val: 120, val1: 20, val2: 100}
+            acuity: {val: 80, val1: 20, val2: 60}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -2776,7 +2772,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 50, val1: 30, val2: 20}
+            acuity: {val: 45, val1: 25, val2: 20}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -2865,7 +2861,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 120, val1: 60, val2: 60}
+            acuity: {val: 100, val1: 40, val2: 60}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -3033,7 +3029,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 13},
-            acuity: {val: 50, val1: 30, val2: 20}
+            acuity: {val: 40, val1: 20, val2: 20}
           },
           moral: {
             conduct: {val: 0},
@@ -3211,7 +3207,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 120, val1: 20, val2: 100}
+            acuity: {val: 40, val1: 20, val2: 20}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -3296,7 +3292,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 50, val1: 20, val2: 20}
+            acuity: {val: 50, val1: 20, val2: 30}
           }
         },
         personal: {
@@ -3379,7 +3375,7 @@ Recruit.find({}).remove()
             correctable: {has: false},
             depth: {has: false},
             color: {val: 14},
-            acuity: {val: 120, val1: 20, val2: 100}
+            acuity: {val: 70, val1: 20, val2: 50}
           }
         },
         personal: {
@@ -5894,9 +5890,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -6063,9 +6057,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -6232,9 +6224,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
         },
@@ -6401,15 +6391,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 70
-        }
+        acuity: {val: 50, val1: 25, val2: 25}
       },
       speech: {
         has: true
@@ -6565,9 +6547,7 @@ Recruit.find({}).remove()
         color: {
           val: 5
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 45, val1: 25, val2: 20},
         acuity1: {
           val: 60
         },
@@ -6734,9 +6714,7 @@ Recruit.find({}).remove()
         color: {
           val: 3
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 50
         },
@@ -6903,9 +6881,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 30
         },
@@ -7072,9 +7048,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 60
         },
@@ -7241,9 +7215,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 30
         },
@@ -7410,14 +7382,12 @@ Recruit.find({}).remove()
         color: {
           val: 5
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
-          val: 25
+          val: 30
         },
         acuity2: {
-          val: 70
+          val: 20
         }
       },
       speech: {
@@ -7583,9 +7553,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 60
         },
@@ -7752,9 +7720,7 @@ Recruit.find({}).remove()
         color: {
           val: 8
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 200
         },
@@ -7921,9 +7887,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -8090,9 +8054,7 @@ Recruit.find({}).remove()
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 100
         },
@@ -8259,9 +8221,7 @@ Recruit.find({}).remove()
         color: {
           val: 8
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 30
         },
@@ -8428,9 +8388,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 50, val1: 20, val2: 30},
         acuity1: {
           val: 30
         },
@@ -8597,9 +8555,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 40
         },
@@ -8766,9 +8722,7 @@ Recruit.find({}).remove()
         color: {
           val: 8
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -8935,9 +8889,7 @@ Recruit.find({}).remove()
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 25
         },
@@ -9104,9 +9056,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 25
         },
@@ -9273,9 +9223,7 @@ Recruit.find({}).remove()
         color: {
           val: 8
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 80, val1: 30, val2: 50},
         acuity1: {
           val: 50
         },
@@ -9442,9 +9390,7 @@ Recruit.find({}).remove()
         color: {
           val: 12
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 80, val1: 30, val2: 50},
         acuity1: {
           val: 70
         },
@@ -9611,9 +9557,7 @@ Recruit.find({}).remove()
         color: {
           val: 11
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 180, val1: 130, val2: 50},
         acuity1: {
           val: 70
         },
@@ -9780,9 +9724,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 80, val1: 40, val2: 40},
         acuity1: {
           val: 25
         },
@@ -9949,9 +9891,7 @@ Recruit.find({}).remove()
         color: {
           val: 5
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 30
         },
@@ -10118,9 +10058,7 @@ Recruit.find({}).remove()
         color: {
           val: 14
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 60
         },
@@ -10287,9 +10225,7 @@ Recruit.find({}).remove()
         color: {
           val: 12
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -10456,9 +10392,7 @@ Recruit.find({}).remove()
         color: {
           val: 13
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 200
         },
@@ -10625,9 +10559,7 @@ Recruit.find({}).remove()
         color: {
           val: 11
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 40
         },
@@ -10699,6 +10631,7 @@ Recruit.find({}).remove()
       adObligation: 'N/A'
     }
   },
+
   {
     firstName: 'Wyatt',
     lastName: 'Neal',
@@ -10713,22 +10646,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 61
       },
@@ -10763,40 +10686,22 @@ Recruit.find({}).remove()
         val: 110
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
         },
@@ -10804,27 +10709,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'weaverneal@gmail.com',
@@ -10882,22 +10773,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -10932,40 +10813,22 @@ Recruit.find({}).remove()
         val: 160
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
         },
@@ -10973,27 +10836,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'ibazikiwe@gmail.com',
@@ -11051,22 +10900,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -11101,68 +10940,33 @@ Recruit.find({}).remove()
         val: 77
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'harrylevin@gmail.com',
@@ -11212,7 +11016,7 @@ Recruit.find({}).remove()
     active: true,
     dob: '1995-03-01',
     status: 'Contract/Poolee',
-        dutyType: {id: 1, desc: 'DMR'},
+    dutyType: {id: 1, desc: 'DMR'},
     notif: {
       daysuntil: 8,
       activity: 'TC',
@@ -11220,22 +11024,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -11270,68 +11064,33 @@ Recruit.find({}).remove()
         val: 45
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'asahickman@gmail.com',
@@ -11389,22 +11148,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 63
       },
@@ -11439,40 +11188,22 @@ Recruit.find({}).remove()
         val: 61
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -11480,27 +11211,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'krishnamandavi@outlook.com',
@@ -11558,22 +11275,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -11608,68 +11315,33 @@ Recruit.find({}).remove()
         val: 122
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'chriscampbell003@gmail.com',
@@ -11727,22 +11399,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 62
       },
@@ -11777,68 +11439,30 @@ Recruit.find({}).remove()
         val: 129
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 50
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 55, val1: 30, val2: 25}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'juanherman@gmail.com',
@@ -11896,22 +11520,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 64
       },
@@ -11946,68 +11560,33 @@ Recruit.find({}).remove()
         val: 163
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 200
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'emilsosa@outlook.com',
@@ -12065,22 +11644,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 0},
       height: {
         val: 73
       },
@@ -12115,68 +11684,33 @@ Recruit.find({}).remove()
         val: 115
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 200
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'jbgolden@hotmail.com',
@@ -12234,22 +11768,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -12284,68 +11808,33 @@ Recruit.find({}).remove()
         val: 163
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'kenraconrad@gmail.com',
@@ -12403,22 +11892,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 73
       },
@@ -12453,40 +11932,22 @@ Recruit.find({}).remove()
         val: 116
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -12494,27 +11955,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'solomontorres@hotmail.com',
@@ -12572,22 +12019,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 64
       },
@@ -12622,68 +12059,33 @@ Recruit.find({}).remove()
         val: 143
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 3
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 55, val1: 30, val2: 25},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'kimkirby@hotmail.com',
@@ -12741,22 +12143,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '1503303857', rs: 'MCRC',
-      fullname: ''
-    },
+      recruiterId: '1503303857', rs: 'MCRC', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 61
       },
@@ -12791,68 +12183,33 @@ Recruit.find({}).remove()
         val: 114
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 180, val1: 100, val2: 80},
         acuity1: {
-          val: 40
-        },
-        acuity2: {
           val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'andymccoy@outlook.com',
@@ -12910,22 +12267,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -12960,40 +12307,22 @@ Recruit.find({}).remove()
         val: 89
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 60
         },
@@ -13001,27 +12330,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'kimpena@hotmail.com',
@@ -13079,22 +12394,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -13129,68 +12434,30 @@ Recruit.find({}).remove()
         val: 36
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 60
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 60, val1: 20, val2: 40}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'whitneychen@gmail.com',
@@ -13248,22 +12515,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -13298,68 +12555,33 @@ Recruit.find({}).remove()
         val: 48
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 30, val1: 15, val2: 15},
         acuity1: {
           val: 200
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'kimberleyrosales@hotmail.com',
@@ -13417,22 +12639,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 69
       },
@@ -13467,40 +12679,22 @@ Recruit.find({}).remove()
         val: 71
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -13508,27 +12702,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'dawnjefferson@hotmail.com',
@@ -13586,22 +12766,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -13636,40 +12806,22 @@ Recruit.find({}).remove()
         val: 145
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 100
         },
@@ -13677,27 +12829,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'moonberger@gmail.com',
@@ -13755,22 +12893,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -13805,40 +12933,22 @@ Recruit.find({}).remove()
         val: 93
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 30
         },
@@ -13846,27 +12956,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'thorntonnguyen@outlook.com',
@@ -13924,22 +13020,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -13974,40 +13060,22 @@ Recruit.find({}).remove()
         val: 163
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
         },
@@ -14015,27 +13083,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'bryceecarney@hotmail.com',
@@ -14093,22 +13147,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -14143,68 +13187,33 @@ Recruit.find({}).remove()
         val: 93
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'coleeng@gmail.com',
@@ -14262,22 +13271,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 65
       },
@@ -14312,68 +13311,33 @@ Recruit.find({}).remove()
         val: 125
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 1},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'garrisonholden@hotmail.com',
@@ -14431,22 +13395,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 65
       },
@@ -14481,40 +13435,22 @@ Recruit.find({}).remove()
         val: 114
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -14522,27 +13458,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'jensburt@hotmail.com',
@@ -14600,22 +13522,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -14650,68 +13562,33 @@ Recruit.find({}).remove()
         val: 31
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 2},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'arieaton@gmail.com',
@@ -14771,22 +13648,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 63
       },
@@ -14821,68 +13688,33 @@ Recruit.find({}).remove()
         val: 122
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'jackserrano@hotmail.com',
@@ -14940,22 +13772,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -14990,68 +13812,33 @@ Recruit.find({}).remove()
         val: 42
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 5
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'bransonolomide@hotmail.com',
@@ -15109,22 +13896,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -15159,68 +13936,33 @@ Recruit.find({}).remove()
         val: 161
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 8
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'gabrielhull@unimail.com',
@@ -15278,22 +14020,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 73
       },
@@ -15328,68 +14060,33 @@ Recruit.find({}).remove()
         val: 126
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
-          val: 25
-        },
-        acuity2: {
           val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'kendraroberts@gmail.com',
@@ -15447,22 +14144,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 69
       },
@@ -15497,68 +14184,33 @@ Recruit.find({}).remove()
         val: 126
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'lesliegould@gmail.com',
@@ -15616,22 +14268,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -15666,68 +14308,33 @@ Recruit.find({}).remove()
         val: 100
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'zainshawkat@gmail.com',
@@ -15785,22 +14392,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 0},
       height: {
         val: 72
       },
@@ -15835,68 +14432,33 @@ Recruit.find({}).remove()
         val: 146
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'harmonynorton@outlook.com',
@@ -15954,22 +14516,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 72
       },
@@ -16004,40 +14556,22 @@ Recruit.find({}).remove()
         val: 78
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -16045,27 +14579,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'sandersmorrison@outlook.com',
@@ -16126,18 +14646,10 @@ Recruit.find({}).remove()
     },
     recruiter: {recruiterId: '002995102', rs: 'Chantilly'},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -16172,68 +14684,33 @@ Recruit.find({}).remove()
         val: 108
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 5
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'pfarley@comvex.com',
@@ -16291,22 +14768,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -16341,40 +14808,22 @@ Recruit.find({}).remove()
         val: 44
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 200, val1: 140, val2: 60},
         acuity1: {
           val: 40
         },
@@ -16382,27 +14831,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'estelleblankenship@gmail.com',
@@ -16460,22 +14895,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -16510,40 +14935,22 @@ Recruit.find({}).remove()
         val: 80
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
         },
@@ -16551,27 +14958,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'irisjoyce@gmail.com',
@@ -16629,22 +15022,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -16679,68 +15062,33 @@ Recruit.find({}).remove()
         val: 150
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 3
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'skinnersawyer@comvex.com',
@@ -16798,22 +15146,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 68
       },
@@ -16848,68 +15186,33 @@ Recruit.find({}).remove()
         val: 93
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'jennifersheppard@outlook.com',
@@ -16967,22 +15270,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -17017,68 +15310,33 @@ Recruit.find({}).remove()
         val: 147
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'walkernash@gmail.com',
@@ -17136,22 +15394,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -17186,40 +15434,22 @@ Recruit.find({}).remove()
         val: 106
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
         },
@@ -17227,27 +15457,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'chrisnorris@gmail.com',
@@ -17305,22 +15521,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -17355,40 +15561,22 @@ Recruit.find({}).remove()
         val: 89
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
         },
@@ -17396,27 +15584,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'jsanders@outlook.com',
@@ -17474,22 +15648,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -17524,68 +15688,32 @@ Recruit.find({}).remove()
         val: 83
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 40
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'asimon@gmail.com',
@@ -17643,22 +15771,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -17693,68 +15811,33 @@ Recruit.find({}).remove()
         val: 78
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 8
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'errolsimmons@gmail.com',
@@ -17804,7 +15887,7 @@ Recruit.find({}).remove()
     active: true,
     dob: '1994-05-30',
     status: 'Contract/Poolee',
-        dutyType: {id: 1, desc: 'DMR'},
+    dutyType: {id: 1, desc: 'DMR'},
     notif: {
       daysuntil: 2,
       activity: 'EM',
@@ -17812,22 +15895,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -17862,40 +15935,22 @@ Recruit.find({}).remove()
         val: 43
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 5
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -17903,27 +15958,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'langstonnguyen@comvex.com',
@@ -17973,7 +16014,7 @@ Recruit.find({}).remove()
     active: true,
     dob: '2000-01-15',
     status: 'Contract/Poolee',
-        dutyType: {id: 1, desc: 'DMR'},
+    dutyType: {id: 1, desc: 'DMR'},
     notif: {
       daysuntil: 7,
       activity: 'OT',
@@ -17981,22 +16022,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -18031,68 +16062,33 @@ Recruit.find({}).remove()
         val: 39
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'jordanvelasquez@outlook.com',
@@ -18150,22 +16146,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -18200,68 +16186,32 @@ Recruit.find({}).remove()
         val: 164
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
-        },
-        acuity: {
-          val: 70
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        },        
+        acuity: {val: 70, val1: 30, val2: 40},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'hernandezkeller@gmail.com',
@@ -18319,22 +16269,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -18369,40 +16309,22 @@ Recruit.find({}).remove()
         val: 118
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 8
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -18410,27 +16332,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'gingeryoung@gmail.com',
@@ -18488,22 +16396,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -18538,40 +16436,22 @@ Recruit.find({}).remove()
         val: 60
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 100
         },
@@ -18579,27 +16459,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'foxmayo@gmail.com',
@@ -18657,22 +16523,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 62
       },
@@ -18707,68 +16563,33 @@ Recruit.find({}).remove()
         val: 90
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 200
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'isabellawebb@outlook.com',
@@ -18826,22 +16647,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -18876,68 +16687,33 @@ Recruit.find({}).remove()
         val: 148
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'jewelltrujillo@outlook.com',
@@ -18995,22 +16771,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -19045,40 +16811,22 @@ Recruit.find({}).remove()
         val: 80
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
         },
@@ -19086,27 +16834,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'monaberry@gmail.com',
@@ -19164,22 +16898,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: false},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -19214,68 +16938,32 @@ Recruit.find({}).remove()
         val: 50
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 50
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'everettreeves@gmail.com',
@@ -19333,22 +17021,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 63
       },
@@ -19383,40 +17061,22 @@ Recruit.find({}).remove()
         val: 64
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
         },
@@ -19424,27 +17084,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'evansschroeder@gmail.com',
@@ -19502,22 +17148,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 66
       },
@@ -19552,40 +17188,22 @@ Recruit.find({}).remove()
         val: 63
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 50
         },
@@ -19593,27 +17211,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'monicavance@gmail.com',
@@ -19671,22 +17275,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -19721,68 +17315,33 @@ Recruit.find({}).remove()
         val: 47
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
-          val: 50
-        },
-        acuity2: {
           val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'beverlyjames@gmail.com',
@@ -19840,22 +17399,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 63
       },
@@ -19890,68 +17439,33 @@ Recruit.find({}).remove()
         val: 33
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'summerboyer@gmail.com',
@@ -20009,22 +17523,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -20059,68 +17563,33 @@ Recruit.find({}).remove()
         val: 163
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'oneilwarren@gmail.com',
@@ -20178,22 +17647,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -20228,40 +17687,22 @@ Recruit.find({}).remove()
         val: 149
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
         },
@@ -20269,27 +17710,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'butlerross@gmail.com',
@@ -20347,22 +17774,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -20397,40 +17814,22 @@ Recruit.find({}).remove()
         val: 97
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
         },
@@ -20438,27 +17837,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'kellywatts@outlook.com',
@@ -20516,22 +17901,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 63
       },
@@ -20566,68 +17941,33 @@ Recruit.find({}).remove()
         val: 115
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'morsepruitt@comvex.com',
@@ -20685,22 +18025,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -20735,40 +18065,22 @@ Recruit.find({}).remove()
         val: 100
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
         },
@@ -20776,27 +18088,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'jewelhardin@comvex.com',
@@ -20854,22 +18152,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -20904,68 +18192,33 @@ Recruit.find({}).remove()
         val: 144
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
-          val: 25
-        },
-        acuity2: {
           val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'lizrandall@outlook.com',
@@ -21023,22 +18276,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 61
       },
@@ -21073,40 +18316,22 @@ Recruit.find({}).remove()
         val: 122
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 30
         },
@@ -21114,27 +18339,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'cantonhambra@comvex.com',
@@ -21192,22 +18403,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 61
       },
@@ -21242,40 +18443,22 @@ Recruit.find({}).remove()
         val: 33
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 50
         },
@@ -21283,27 +18466,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'sargentburke@gmail.com',
@@ -21361,22 +18530,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -21411,68 +18570,32 @@ Recruit.find({}).remove()
         val: 161
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 50, val1: 30, val2: 20},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'stuartfloyd@gmail.com',
@@ -21530,22 +18653,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -21580,68 +18693,30 @@ Recruit.find({}).remove()
         val: 159
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 100
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 50, val1: 30, val2: 20}
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'shirleychambers@outlook.com',
@@ -21699,22 +18774,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'F'},
+      clearance: {val: 0},
       height: {
         val: 72
       },
@@ -21749,68 +18814,33 @@ Recruit.find({}).remove()
         val: 158
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'rhondafields@gmail.com',
@@ -21868,22 +18898,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 63
       },
@@ -21918,68 +18938,33 @@ Recruit.find({}).remove()
         val: 41
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 14
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'shelbyburris@gmail.com',
@@ -22037,22 +19022,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -22087,40 +19062,22 @@ Recruit.find({}).remove()
         val: 109
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 50
         },
@@ -22128,27 +19085,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'robertsargento@gmail.com',
@@ -22206,22 +19149,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -22256,68 +19189,32 @@ Recruit.find({}).remove()
         val: 154
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 50
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 55, val1: 25, val2: 30},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'boonemoore@gmail.com',
@@ -22367,30 +19264,19 @@ Recruit.find({}).remove()
     active: true,
     dob: '1998-02-28',
     status: 'Contract/Poolee',
-        dutyType: {id: 1, desc: 'DMR'},
+    dutyType: {id: 1, desc: 'DMR'},
     notif: {
       daysuntil: 0,
       activity: 'HV',
       active: true,
       note: 'Pre-Ship meeting'
     },
-    recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+    recruiter: {recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 65
       },
@@ -22425,68 +19311,33 @@ Recruit.find({}).remove()
         val: 103
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 50, val1: 20, val2: 30},
         acuity1: {
           val: 200
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'mflowers@gmail.com',
@@ -22544,22 +19395,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 67
       },
@@ -22594,40 +19435,22 @@ Recruit.find({}).remove()
         val: 98
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 25
         },
@@ -22635,27 +19458,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'morrisdonaldson@gmail.com',
@@ -22713,22 +19522,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 68
       },
@@ -22763,68 +19562,33 @@ Recruit.find({}).remove()
         val: 78
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'rosafuentes@outlook.com',
@@ -22882,22 +19646,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -22932,40 +19686,22 @@ Recruit.find({}).remove()
         val: 32
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 70
         },
@@ -22973,27 +19709,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'anniefitzpatrick@gmail.com',
@@ -23051,22 +19773,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '1503303857', rs: 'MCRC',
-      fullname: ''
-    },
+      recruiterId: '1503303857', rs: 'MCRC', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -23101,40 +19813,22 @@ Recruit.find({}).remove()
         val: 101
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 30
         },
@@ -23142,27 +19836,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'henrylong@gmail.com',
@@ -23220,22 +19900,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -23270,40 +19940,22 @@ Recruit.find({}).remove()
         val: 149
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 30
         },
@@ -23311,27 +19963,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'meyercarr@outlook.com',
@@ -23389,22 +20027,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 66
       },
@@ -23439,68 +20067,33 @@ Recruit.find({}).remove()
         val: 73
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'matildavazquez@outlook.com',
@@ -23558,22 +20151,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -23608,40 +20191,22 @@ Recruit.find({}).remove()
         val: 113
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 60
         },
@@ -23649,27 +20214,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'collierwilder@outlook.com',
@@ -23727,22 +20278,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -23777,68 +20318,33 @@ Recruit.find({}).remove()
         val: 146
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'florinoguerra@gmail.com',
@@ -23896,22 +20402,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -23946,68 +20442,33 @@ Recruit.find({}).remove()
         val: 92
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'garnergreen@comvex.com',
@@ -24065,22 +20526,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 73
       },
@@ -24115,68 +20566,33 @@ Recruit.find({}).remove()
         val: 47
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'shaunagill@outlook.com',
@@ -24234,22 +20650,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -24284,68 +20690,33 @@ Recruit.find({}).remove()
         val: 35
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'jamesjohnson@gmail.com',
@@ -24403,22 +20774,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 64
       },
@@ -24453,68 +20814,33 @@ Recruit.find({}).remove()
         val: 116
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 1},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 55, val1: 25, val2: 30},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'ryanmeyers@comvex.com',
@@ -24572,22 +20898,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -24622,40 +20938,22 @@ Recruit.find({}).remove()
         val: 145
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 160, val1: 80, val2: 80},
         acuity1: {
           val: 25
         },
@@ -24663,27 +20961,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'seanobrien@outlook.com',
@@ -24741,22 +21025,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -24791,40 +21065,22 @@ Recruit.find({}).remove()
         val: 106
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 70
         },
@@ -24832,27 +21088,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'danielshogan@outlook.com',
@@ -24910,22 +21152,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 66
       },
@@ -24960,68 +21192,33 @@ Recruit.find({}).remove()
         val: 147
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'kristinefischer@hotmail.com',
@@ -25079,22 +21276,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 67
       },
@@ -25129,68 +21316,33 @@ Recruit.find({}).remove()
         val: 116
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 2},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'barronvillarreal@hotmail.com',
@@ -25248,22 +21400,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 71
       },
@@ -25298,68 +21440,33 @@ Recruit.find({}).remove()
         val: 83
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 3},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'robertmosley@outlook.com',
@@ -25417,22 +21524,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -25467,40 +21564,22 @@ Recruit.find({}).remove()
         val: 144
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
         },
@@ -25508,27 +21587,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'jasondowns@gmail.com',
@@ -25586,22 +21651,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -25636,68 +21691,30 @@ Recruit.find({}).remove()
         val: 117
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 35, val1: 20, val2: 15}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'alejandragay@hotmail.com',
@@ -25755,22 +21772,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -25805,68 +21812,33 @@ Recruit.find({}).remove()
         val: 73
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'paulineguy@hotmail.com',
@@ -25924,22 +21896,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 69
       },
@@ -25974,68 +21936,33 @@ Recruit.find({}).remove()
         val: 57
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 180, val1: 140, val2: 40},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'wilkersonpuckett@hotmail.com',
@@ -26093,22 +22020,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -26143,68 +22060,33 @@ Recruit.find({}).remove()
         val: 62
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
-          val: 5
+          val: 12
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'cobbgibbs@hotmail.com',
@@ -26262,22 +22144,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 66
       },
@@ -26312,68 +22184,33 @@ Recruit.find({}).remove()
         val: 127
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'pmichaels@hotmail.com',
@@ -26431,22 +22268,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -26481,40 +22308,22 @@ Recruit.find({}).remove()
         val: 129
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 70
         },
@@ -26522,27 +22331,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'caseyvang@gmail.com',
@@ -26600,22 +22395,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -26650,68 +22435,33 @@ Recruit.find({}).remove()
         val: 147
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'rothpugh@hotmail.com',
@@ -26769,22 +22519,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -26819,68 +22559,32 @@ Recruit.find({}).remove()
         val: 42
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 100
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 50, val1: 25, val2: 25},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'charlesclayton@gmail.com',
@@ -26938,22 +22642,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -26988,68 +22682,33 @@ Recruit.find({}).remove()
         val: 145
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'gonzalezdillard@hotmail.com',
@@ -27107,22 +22766,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -27157,40 +22806,22 @@ Recruit.find({}).remove()
         val: 133
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 70
         },
@@ -27198,27 +22829,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'alishahooper@hotmail.com',
@@ -27276,22 +22893,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -27326,68 +22933,33 @@ Recruit.find({}).remove()
         val: 101
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'gutierrezcraig@hotmail.com',
@@ -27445,22 +23017,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: false},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -27495,68 +23057,30 @@ Recruit.find({}).remove()
         val: 140
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 50
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 50, val1: 25, val2: 25}
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'inesgonzalez@hotmail.com',
@@ -27614,22 +23138,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 63
       },
@@ -27664,40 +23178,22 @@ Recruit.find({}).remove()
         val: 153
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 20
         },
@@ -27705,27 +23201,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'popeprice@hotmail.com',
@@ -27783,22 +23265,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 72
       },
@@ -27833,68 +23305,33 @@ Recruit.find({}).remove()
         val: 145
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'celiaduke@hotmail.com',
@@ -27952,22 +23389,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -28002,40 +23429,22 @@ Recruit.find({}).remove()
         val: 132
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 50
         },
@@ -28043,27 +23452,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'cookchan@gmail.com',
@@ -28121,22 +23516,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -28171,68 +23556,33 @@ Recruit.find({}).remove()
         val: 31
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'adelasavage@hotmail.com',
@@ -28290,22 +23640,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -28340,40 +23680,22 @@ Recruit.find({}).remove()
         val: 144
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 20
         },
@@ -28381,27 +23703,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'julianadaniel@outlook.com',
@@ -28459,22 +23767,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -28509,40 +23807,22 @@ Recruit.find({}).remove()
         val: 163
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 70
         },
@@ -28550,27 +23830,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'katrinafrancis@outlook.com',
@@ -28628,22 +23894,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 65
       },
@@ -28678,40 +23934,22 @@ Recruit.find({}).remove()
         val: 38
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
         },
@@ -28719,27 +23957,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'fredamullen@gmail.com',
@@ -28797,22 +24021,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -28847,40 +24061,22 @@ Recruit.find({}).remove()
         val: 47
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 50
         },
@@ -28888,27 +24084,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'kennedydelgado@outlook.com',
@@ -28966,22 +24148,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -29016,68 +24188,30 @@ Recruit.find({}).remove()
         val: 63
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 25
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 35, val1: 20, val2: 15}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'ayalahumphrey@gmail.com',
@@ -29135,22 +24269,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -29185,68 +24309,30 @@ Recruit.find({}).remove()
         val: 99
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'fischerosborn@hotmail.com',
@@ -29304,22 +24390,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 66
       },
@@ -29354,68 +24430,33 @@ Recruit.find({}).remove()
         val: 70
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'lesterhammond@aol.com',
@@ -29473,22 +24514,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 73
       },
@@ -29523,40 +24554,22 @@ Recruit.find({}).remove()
         val: 93
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
         },
@@ -29564,27 +24577,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'reesepaul@aol.com',
@@ -29642,22 +24641,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -29692,68 +24681,33 @@ Recruit.find({}).remove()
         val: 75
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 55, val1: 30, val2: 25},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'erickareilly@aol.com',
@@ -29811,22 +24765,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -29861,68 +24805,33 @@ Recruit.find({}).remove()
         val: 34
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 14
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 50, val1: 20, val2: 30},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'deborafuller@aol.com',
@@ -29980,22 +24889,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -30030,40 +24929,22 @@ Recruit.find({}).remove()
         val: 128
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 1},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 30
         },
@@ -30071,27 +24952,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'riversknox@outlook.com',
@@ -30149,22 +25016,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 67
       },
@@ -30199,68 +25056,33 @@ Recruit.find({}).remove()
         val: 50
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 3
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'robertamooney@aol.com',
@@ -30318,22 +25140,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -30368,40 +25180,22 @@ Recruit.find({}).remove()
         val: 147
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 30
         },
@@ -30409,27 +25203,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'zelmaterrell@outlook.com',
@@ -30487,22 +25267,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -30537,68 +25307,30 @@ Recruit.find({}).remove()
         val: 71
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 8
         },
-        acuity: {
-          val: 40
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'pittmankirkland@gmail.com',
@@ -30656,22 +25388,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -30706,68 +25428,30 @@ Recruit.find({}).remove()
         val: 102
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 60, val1: 30, val2: 30}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'mosescallahan@gmail.com',
@@ -30825,22 +25509,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 0},
       height: {
         val: 71
       },
@@ -30875,68 +25549,33 @@ Recruit.find({}).remove()
         val: 123
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'melissacunningham@hotmail.com',
@@ -30994,22 +25633,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 64
       },
@@ -31044,68 +25673,33 @@ Recruit.find({}).remove()
         val: 90
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'foremanavery@aol.com',
@@ -31163,22 +25757,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 73
       },
@@ -31213,68 +25797,33 @@ Recruit.find({}).remove()
         val: 87
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'kelliewood@hotmail.com',
@@ -31332,22 +25881,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 0},
       height: {
         val: 70
       },
@@ -31382,68 +25921,33 @@ Recruit.find({}).remove()
         val: 53
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 20, val2: 40},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'eniddickson@hotmail.com',
@@ -31501,22 +26005,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -31551,68 +26045,30 @@ Recruit.find({}).remove()
         val: 94
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'dyerpetersen@aol.com',
@@ -31670,22 +26126,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 64
       },
@@ -31720,68 +26166,33 @@ Recruit.find({}).remove()
         val: 130
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'sondrabooker@aol.com',
@@ -31839,22 +26250,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -31889,68 +26290,33 @@ Recruit.find({}).remove()
         val: 64
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'geraldineoconnor@gmail.com',
@@ -32008,22 +26374,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 0},
       height: {
         val: 61
       },
@@ -32058,68 +26414,33 @@ Recruit.find({}).remove()
         val: 40
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'opheliaholloway@outlook.com',
@@ -32177,22 +26498,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 73
       },
@@ -32227,68 +26538,32 @@ Recruit.find({}).remove()
         val: 115
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 3
         },
-        acuity: {
-          val: 30
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'martinhayes@aol.com',
@@ -32346,22 +26621,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 67
       },
@@ -32396,40 +26661,22 @@ Recruit.find({}).remove()
         val: 34
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 50, val1: 20, val2: 30},
         acuity1: {
           val: 40
         },
@@ -32437,27 +26684,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'mikehood@aol.com',
@@ -32515,22 +26748,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -32565,68 +26788,33 @@ Recruit.find({}).remove()
         val: 84
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
-          val: 25
-        },
-        acuity2: {
           val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'headwade@outlook.com',
@@ -32684,22 +26872,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -32734,68 +26912,33 @@ Recruit.find({}).remove()
         val: 139
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 200, val1: 120, val2: 80},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'jodyfry@gmail.com',
@@ -32853,22 +26996,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -32903,40 +27036,22 @@ Recruit.find({}).remove()
         val: 131
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 70
         },
@@ -32944,27 +27059,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'allenburton@gmail.com',
@@ -33022,22 +27123,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 73
       },
@@ -33072,68 +27163,33 @@ Recruit.find({}).remove()
         val: 40
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'francesclemons@aol.com',
@@ -33191,22 +27247,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -33241,68 +27287,30 @@ Recruit.find({}).remove()
         val: 66
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 200
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 200, val1: 80, val2: 120}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'charitybowman@aol.com',
@@ -33360,22 +27368,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 71
       },
@@ -33410,40 +27408,22 @@ Recruit.find({}).remove()
         val: 67
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
         },
@@ -33451,27 +27431,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'houstonwiley@outlook.com',
@@ -33529,22 +27495,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -33579,68 +27535,33 @@ Recruit.find({}).remove()
         val: 99
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 200
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'catalinaherring@aol.com',
@@ -33698,22 +27619,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -33748,68 +27659,33 @@ Recruit.find({}).remove()
         val: 51
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'romansnyder@gmail.com',
@@ -33867,22 +27743,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: false},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -33917,68 +27783,33 @@ Recruit.find({}).remove()
         val: 62
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'genevieverobbins@aol.com',
@@ -34036,22 +27867,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -34086,40 +27907,22 @@ Recruit.find({}).remove()
         val: 127
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 30
         },
@@ -34127,27 +27930,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'kentschultz@aol.com',
@@ -34205,22 +27994,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 64
       },
@@ -34255,40 +28034,22 @@ Recruit.find({}).remove()
         val: 138
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
         },
@@ -34296,27 +28057,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'fannybennett@aol.com',
@@ -34374,22 +28121,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 68
       },
@@ -34424,68 +28161,33 @@ Recruit.find({}).remove()
         val: 81
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 2},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'rosalesbeck@gmail.com',
@@ -34543,22 +28245,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -34593,68 +28285,33 @@ Recruit.find({}).remove()
         val: 127
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 14
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'hennycarroll@gmail.com',
@@ -34712,22 +28369,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -34762,40 +28409,22 @@ Recruit.find({}).remove()
         val: 157
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
         },
@@ -34803,27 +28432,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'littlemoreno@gmail.com',
@@ -34881,22 +28496,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 65
       },
@@ -34931,40 +28536,22 @@ Recruit.find({}).remove()
         val: 52
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 30
         },
@@ -34972,27 +28559,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'lowetravis@gmail.com',
@@ -35050,22 +28623,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -35100,68 +28663,33 @@ Recruit.find({}).remove()
         val: 52
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'michaelmaynard@outlook.com',
@@ -35219,22 +28747,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -35269,68 +28787,33 @@ Recruit.find({}).remove()
         val: 132
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'alexwong@outlook.com',
@@ -35388,22 +28871,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 73
       },
@@ -35438,68 +28911,33 @@ Recruit.find({}).remove()
         val: 51
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'reynajenkins@gmail.com',
@@ -35557,22 +28995,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -35607,68 +29035,33 @@ Recruit.find({}).remove()
         val: 77
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'alyceshields@gmail.com',
@@ -35726,22 +29119,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 67
       },
@@ -35776,40 +29159,22 @@ Recruit.find({}).remove()
         val: 139
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
         },
@@ -35817,27 +29182,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'jenningsblair@gmail.com',
@@ -35895,22 +29246,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 61
       },
@@ -35945,68 +29286,30 @@ Recruit.find({}).remove()
         val: 124
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 100
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 100, val1: 60, val2: 40}
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'kennethcarson@gmail.com',
@@ -36064,22 +29367,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -36114,68 +29407,30 @@ Recruit.find({}).remove()
         val: 58
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 20
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'stefaniehobbs@gmail.com',
@@ -36233,22 +29488,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -36283,68 +29528,33 @@ Recruit.find({}).remove()
         val: 89
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
-          val: 40
-        },
-        acuity2: {
           val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'torresrivers@gmail.com',
@@ -36402,22 +29612,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -36452,68 +29652,33 @@ Recruit.find({}).remove()
         val: 135
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'tysonleblanc@gmail.com',
@@ -36571,22 +29736,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -36621,68 +29776,33 @@ Recruit.find({}).remove()
         val: 58
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'adrianachavez@outlook.com',
@@ -36740,22 +29860,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -36790,40 +29900,22 @@ Recruit.find({}).remove()
         val: 123
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 1},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 100
         },
@@ -36831,27 +29923,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'chrissaunders@gmail.com',
@@ -36909,22 +29987,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 64
       },
@@ -36959,40 +30027,22 @@ Recruit.find({}).remove()
         val: 154
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 14
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 40
         },
@@ -37000,27 +30050,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'janicegonzales@outlook.com',
@@ -37078,22 +30114,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 61
       },
@@ -37128,68 +30154,33 @@ Recruit.find({}).remove()
         val: 161
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
-          val: 50
-        },
-        acuity2: {
           val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'tabathaboyle@gmail.com',
@@ -37247,22 +30238,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -37297,68 +30278,33 @@ Recruit.find({}).remove()
         val: 88
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'levinewoodard@gmail.com',
@@ -37416,22 +30362,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 64
       },
@@ -37466,68 +30402,33 @@ Recruit.find({}).remove()
         val: 104
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'merrillalston@outlook.com',
@@ -37585,22 +30486,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -37635,68 +30526,33 @@ Recruit.find({}).remove()
         val: 47
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'perryjohns@gmail.com',
@@ -37754,22 +30610,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -37804,68 +30650,33 @@ Recruit.find({}).remove()
         val: 125
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'alfredawallace@gmail.com',
@@ -37923,22 +30734,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -37973,68 +30774,33 @@ Recruit.find({}).remove()
         val: 144
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 8
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'lunafranco@outlook.com',
@@ -38092,22 +30858,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -38142,68 +30898,30 @@ Recruit.find({}).remove()
         val: 87
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 200
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 200, val1: 80, val2: 120}
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'feliciadavis@gmail.com',
@@ -38261,22 +30979,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 68
       },
@@ -38311,40 +31019,22 @@ Recruit.find({}).remove()
         val: 61
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -38352,27 +31042,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'wilcoxhorton@gmail.com',
@@ -38430,22 +31106,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 72
       },
@@ -38480,68 +31146,33 @@ Recruit.find({}).remove()
         val: 163
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 200, val1: 80, val2: 120},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'dellaaustin@gmail.com',
@@ -38599,22 +31230,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -38649,68 +31270,33 @@ Recruit.find({}).remove()
         val: 88
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
-          val: 50
-        },
-        acuity2: {
           val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'mitchellmann@outlook.com',
@@ -38768,22 +31354,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -38818,68 +31394,33 @@ Recruit.find({}).remove()
         val: 120
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'orlandosandoval@gmail.com',
@@ -38937,22 +31478,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 71
       },
@@ -38987,40 +31518,22 @@ Recruit.find({}).remove()
         val: 35
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 30
         },
@@ -39028,27 +31541,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'hessrios@outlook.com',
@@ -39106,22 +31605,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 72
       },
@@ -39156,40 +31645,22 @@ Recruit.find({}).remove()
         val: 137
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -39197,27 +31668,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'figueroamcdowell@gmail.com',
@@ -39275,22 +31732,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 64
       },
@@ -39325,40 +31772,22 @@ Recruit.find({}).remove()
         val: 61
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 220, val1: 100, val2: 120},
         acuity1: {
           val: 30
         },
@@ -39366,27 +31795,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'ortizcotton@gmail.com',
@@ -39444,22 +31859,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -39494,68 +31899,33 @@ Recruit.find({}).remove()
         val: 64
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 8
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'richardsdurham@outlook.com',
@@ -39613,22 +31983,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 72
       },
@@ -39663,68 +32023,33 @@ Recruit.find({}).remove()
         val: 156
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'carolineallison@outlook.com',
@@ -39782,22 +32107,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -39832,68 +32147,33 @@ Recruit.find({}).remove()
         val: 110
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'feliciacarver@gmail.com',
@@ -39951,22 +32231,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 66
       },
@@ -40001,68 +32271,33 @@ Recruit.find({}).remove()
         val: 110
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 2},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'alstonkelly@gmail.com',
@@ -40120,22 +32355,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -40170,68 +32395,33 @@ Recruit.find({}).remove()
         val: 159
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 200, val1: 120, val2: 80},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'bentleybrooks@gmail.com',
@@ -40289,22 +32479,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -40339,40 +32519,22 @@ Recruit.find({}).remove()
         val: 52
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 30
         },
@@ -40380,27 +32542,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'delacruzbruce@outlook.com',
@@ -40458,22 +32606,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -40508,68 +32646,33 @@ Recruit.find({}).remove()
         val: 80
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'rollinslindsey@gmail.com',
@@ -40627,22 +32730,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 69
       },
@@ -40677,40 +32770,22 @@ Recruit.find({}).remove()
         val: 145
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 50
         },
@@ -40718,27 +32793,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'oliveparsons@comvex.com',
@@ -40796,22 +32857,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -40846,68 +32897,33 @@ Recruit.find({}).remove()
         val: 121
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 14
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'daltonsalinas@outlook.com',
@@ -40965,22 +32981,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 61
       },
@@ -41015,68 +33021,32 @@ Recruit.find({}).remove()
         val: 149
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 100
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 100, val1: 60, val2: 40},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'altaalexander@comvex.com',
@@ -41134,22 +33104,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -41184,40 +33144,22 @@ Recruit.find({}).remove()
         val: 40
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 180, val1: 100, val2: 80},
         acuity1: {
           val: 30
         },
@@ -41225,27 +33167,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'cunninghamwillis@gmail.com',
@@ -41303,22 +33231,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 66
       },
@@ -41353,40 +33271,22 @@ Recruit.find({}).remove()
         val: 133
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -41394,27 +33294,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'dinaworkman@gmail.com',
@@ -41472,22 +33358,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -41522,68 +33398,33 @@ Recruit.find({}).remove()
         val: 122
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 8
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'mooremathis@gmail.com',
@@ -41641,22 +33482,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -41691,40 +33522,22 @@ Recruit.find({}).remove()
         val: 109
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 70
         },
@@ -41732,27 +33545,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'jeannettedickerson@comvex.com',
@@ -41810,22 +33609,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 68
       },
@@ -41860,40 +33649,22 @@ Recruit.find({}).remove()
         val: 91
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 20, val2: 40},
         acuity1: {
           val: 50
         },
@@ -41901,27 +33672,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'barrettpacheco@gmail.com',
@@ -41979,22 +33736,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -42029,68 +33776,33 @@ Recruit.find({}).remove()
         val: 92
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'leonardvalencia@comvex.com',
@@ -42148,22 +33860,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 61
       },
@@ -42198,68 +33900,30 @@ Recruit.find({}).remove()
         val: 149
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 50
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 50, val1: 25, val2: 25}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'kenwest@comvex.com',
@@ -42317,22 +33981,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -42367,68 +34021,33 @@ Recruit.find({}).remove()
         val: 45
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'francojimenez@outlook.com',
@@ -42486,22 +34105,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -42536,40 +34145,22 @@ Recruit.find({}).remove()
         val: 65
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 3
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 70
         },
@@ -42577,27 +34168,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'mannyriggs@outlook.com',
@@ -42655,22 +34232,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 61
       },
@@ -42705,68 +34272,33 @@ Recruit.find({}).remove()
         val: 40
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 200
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'samuelcasey@gmail.com',
@@ -42824,22 +34356,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 70
       },
@@ -42874,40 +34396,22 @@ Recruit.find({}).remove()
         val: 115
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -42915,27 +34419,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'samuelsutton@gmail.com',
@@ -42993,22 +34483,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -43043,68 +34523,33 @@ Recruit.find({}).remove()
         val: 163
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'deannmccormick@comvex.com',
@@ -43162,22 +34607,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 73
       },
@@ -43212,40 +34647,22 @@ Recruit.find({}).remove()
         val: 163
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 70
         },
@@ -43253,27 +34670,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'deansutton@amazon.com',
@@ -43331,22 +34734,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 69
       },
@@ -43381,68 +34774,30 @@ Recruit.find({}).remove()
         val: 50
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'perryespinoza@hotmail.com',
@@ -43500,22 +34855,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -43550,68 +34895,30 @@ Recruit.find({}).remove()
         val: 130
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'teresacopeland@hotmail.com',
@@ -43669,22 +34976,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -43719,40 +35016,22 @@ Recruit.find({}).remove()
         val: 149
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
         },
@@ -43760,27 +35039,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'anthonywhitney@outlook.com',
@@ -43838,22 +35103,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 67
       },
@@ -43888,68 +35143,30 @@ Recruit.find({}).remove()
         val: 112
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 3
         },
-        acuity: {
-          val: 50
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 50, val1: 25, val2: 25}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'anthonybyers@gmail.com',
@@ -44007,22 +35224,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -44057,68 +35264,33 @@ Recruit.find({}).remove()
         val: 64
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'carsoncarlson@outlook.com',
@@ -44176,22 +35348,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -44226,68 +35388,33 @@ Recruit.find({}).remove()
         val: 51
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'albertweeks@gmail.com',
@@ -44345,22 +35472,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -44395,40 +35512,22 @@ Recruit.find({}).remove()
         val: 104
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
         },
@@ -44436,27 +35535,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'victorjohnston@outlook.com',
@@ -44514,22 +35599,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -44564,68 +35639,33 @@ Recruit.find({}).remove()
         val: 108
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 180, val1: 100, val2: 80},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'gregdean@gmail.com',
@@ -44683,22 +35723,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 68
       },
@@ -44733,68 +35763,33 @@ Recruit.find({}).remove()
         val: 71
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 200, val1: 120, val2: 80},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'peytonfrye@outlook.com',
@@ -44852,22 +35847,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -44902,68 +35887,33 @@ Recruit.find({}).remove()
         val: 100
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'dillonglover@gmail.com',
@@ -45021,22 +35971,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -45071,40 +36011,22 @@ Recruit.find({}).remove()
         val: 43
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 30
         },
@@ -45112,27 +36034,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'marcusbradshaw@hotmail.com',
@@ -45190,22 +36098,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -45240,40 +36138,22 @@ Recruit.find({}).remove()
         val: 161
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 20
         },
@@ -45281,27 +36161,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'alfordlott@outlook.com',
@@ -45359,22 +36225,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -45409,68 +36265,33 @@ Recruit.find({}).remove()
         val: 40
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'charlestrevino@outlook.com',
@@ -45528,22 +36349,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -45578,40 +36389,22 @@ Recruit.find({}).remove()
         val: 38
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 25
         },
@@ -45619,27 +36412,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'johnmoses@gmail.com',
@@ -45697,22 +36476,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -45747,68 +36516,33 @@ Recruit.find({}).remove()
         val: 140
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 8
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'merlesmith@outlook.com',
@@ -45866,22 +36600,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 61
       },
@@ -45916,40 +36640,22 @@ Recruit.find({}).remove()
         val: 109
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -45957,27 +36663,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'marvinowens@outlook.com',
@@ -46035,22 +36727,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 65
       },
@@ -46085,68 +36767,33 @@ Recruit.find({}).remove()
         val: 106
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 14
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'fryoneil@outlook.com',
@@ -46204,22 +36851,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -46254,40 +36891,22 @@ Recruit.find({}).remove()
         val: 46
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 30
         },
@@ -46295,27 +36914,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'jennagilmore@outlook.com',
@@ -46373,22 +36978,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 0},
       height: {
         val: 67
       },
@@ -46423,68 +37018,33 @@ Recruit.find({}).remove()
         val: 81
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'anthonypotts@outlook.com',
@@ -46542,22 +37102,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -46592,68 +37142,30 @@ Recruit.find({}).remove()
         val: 151
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 20
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'yeardleyfrank@outlook.com',
@@ -46711,22 +37223,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -46761,40 +37263,22 @@ Recruit.find({}).remove()
         val: 115
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 60
         },
@@ -46802,27 +37286,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'karinacase@outlook.com',
@@ -46880,22 +37350,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -46930,40 +37390,22 @@ Recruit.find({}).remove()
         val: 75
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {
           val: 20
         },
@@ -46971,27 +37413,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'elnoradouglas@outlook.com',
@@ -47049,22 +37477,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 61
       },
@@ -47099,68 +37517,33 @@ Recruit.find({}).remove()
         val: 64
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 200, val1: 80, val2: 120},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'elliottsullivan@outlook.com',
@@ -47218,22 +37601,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -47268,68 +37641,33 @@ Recruit.find({}).remove()
         val: 128
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 200
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'tamaraknapp@outlook.com',
@@ -47387,22 +37725,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -47437,68 +37765,33 @@ Recruit.find({}).remove()
         val: 35
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'marshallfouad@outlook.com',
@@ -47556,22 +37849,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -47606,40 +37889,22 @@ Recruit.find({}).remove()
         val: 112
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
         },
@@ -47647,27 +37912,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'adkinsswanson@outlook.com',
@@ -47725,22 +37976,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 67
       },
@@ -47775,68 +38016,30 @@ Recruit.find({}).remove()
         val: 81
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'gilbertpratt@outlook.com',
@@ -47894,22 +38097,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 68
       },
@@ -47944,68 +38137,30 @@ Recruit.find({}).remove()
         val: 152
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 14
         },
-        acuity: {
-          val: 60
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 60, val1: 30, val2: 30}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'whitleybuckner@outlook.com',
@@ -48063,22 +38218,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 71
       },
@@ -48113,40 +38258,22 @@ Recruit.find({}).remove()
         val: 31
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
         },
@@ -48154,27 +38281,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'tammieconley@outlook.com',
@@ -48232,22 +38345,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -48282,40 +38385,22 @@ Recruit.find({}).remove()
         val: 110
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 270
-        },
+        acuity: {val: 140, val1: 80, val2: 60},
         acuity1: {
           val: 70
         },
@@ -48323,27 +38408,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'wendywaters@outlook.com',
@@ -48401,22 +38472,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -48451,68 +38512,33 @@ Recruit.find({}).remove()
         val: 127
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'tillmansantos@outlook.com',
@@ -48570,22 +38596,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -48620,68 +38636,30 @@ Recruit.find({}).remove()
         val: 151
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'mendozaarturo@outlook.com',
@@ -48739,22 +38717,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -48789,68 +38757,33 @@ Recruit.find({}).remove()
         val: 144
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'hensleymay@outlook.com',
@@ -48908,22 +38841,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -48958,68 +38881,32 @@ Recruit.find({}).remove()
         val: 43
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 8
         },
-        acuity: {
-          val: 30
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'ebonypotter@outlook.com',
@@ -49077,22 +38964,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 66
       },
@@ -49127,68 +39004,33 @@ Recruit.find({}).remove()
         val: 127
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: false},
+        offenses: {val: 3},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'buckleyholcomb@outlook.com',
@@ -49246,22 +39088,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -49296,68 +39128,33 @@ Recruit.find({}).remove()
         val: 93
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 2
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 2},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 20, val2: 40},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'romerobaldwin@outlook.com',
@@ -49415,22 +39212,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -49465,68 +39252,33 @@ Recruit.find({}).remove()
         val: 93
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'patricknelson@outlook.com',
@@ -49584,22 +39336,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -49634,68 +39376,30 @@ Recruit.find({}).remove()
         val: 133
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 100
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 100, val1: 60, val2: 40}
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'chaserodriquez@outlook.com',
@@ -49753,22 +39457,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 64
       },
@@ -49803,68 +39497,32 @@ Recruit.find({}).remove()
         val: 44
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 50
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 50, val1: 25, val2: 25},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'janeharrison@outlook.com',
@@ -49922,22 +39580,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -49972,68 +39620,33 @@ Recruit.find({}).remove()
         val: 31
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 180, val1: 140, val2: 40},
         acuity1: {
           val: 30
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'lynnepeck@outlook.com',
@@ -50091,22 +39704,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -50141,40 +39744,22 @@ Recruit.find({}).remove()
         val: 60
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
         },
@@ -50182,27 +39767,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'mercerdiallo@outlook.com',
@@ -50260,22 +39831,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -50310,68 +39871,33 @@ Recruit.find({}).remove()
         val: 30
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'mcdowellpreston@outlook.com',
@@ -50429,22 +39955,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 0},
       height: {
         val: 73
       },
@@ -50479,68 +39995,33 @@ Recruit.find({}).remove()
         val: 153
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'audreydale@outlook.com',
@@ -50598,22 +40079,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 0},
       height: {
         val: 64
       },
@@ -50648,68 +40119,33 @@ Recruit.find({}).remove()
         val: 107
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'lorenalove@outlook.com',
@@ -50767,22 +40203,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 69
       },
@@ -50817,40 +40243,22 @@ Recruit.find({}).remove()
         val: 126
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 200, val1: 120, val2: 80},
         acuity1: {
           val: 30
         },
@@ -50858,27 +40266,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'gouldmcdonald@outlook.com',
@@ -50936,22 +40330,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 62
       },
@@ -50986,40 +40370,22 @@ Recruit.find({}).remove()
         val: 53
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 70
         },
@@ -51027,27 +40393,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'eloiseclements@outlook.com',
@@ -51105,22 +40457,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 67
       },
@@ -51155,40 +40497,22 @@ Recruit.find({}).remove()
         val: 121
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 40
         },
@@ -51196,27 +40520,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'bradyglass@outlook.com',
@@ -51274,22 +40584,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -51324,40 +40624,22 @@ Recruit.find({}).remove()
         val: 47
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 70
         },
@@ -51365,27 +40647,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'ladonnawall@outlook.com',
@@ -51443,22 +40711,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -51493,68 +40751,33 @@ Recruit.find({}).remove()
         val: 74
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'russohudson@outlook.com',
@@ -51612,22 +40835,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 63
       },
@@ -51662,40 +40875,22 @@ Recruit.find({}).remove()
         val: 32
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 180, val1: 100, val2: 80},
         acuity1: {
           val: 20
         },
@@ -51703,27 +40898,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'dollyhawkins@outlook.com',
@@ -51781,22 +40962,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 63
       },
@@ -51831,40 +41002,22 @@ Recruit.find({}).remove()
         val: 53
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
         },
@@ -51872,27 +41025,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: false},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'kaufmanparks@outlook.com',
@@ -51950,22 +41089,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 64
       },
@@ -52000,68 +41129,33 @@ Recruit.find({}).remove()
         val: 49
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'fuentesfarmer@outlook.com',
@@ -52119,22 +41213,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -52169,68 +41253,33 @@ Recruit.find({}).remove()
         val: 86
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 200, val1: 80, val2: 120},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'miguelruiz@outlook.com',
@@ -52288,22 +41337,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -52338,40 +41377,22 @@ Recruit.find({}).remove()
         val: 64
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 200, val1: 80, val2: 120},
         acuity1: {
           val: 30
         },
@@ -52379,27 +41400,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'ratliffclay@outlook.com',
@@ -52457,22 +41464,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -52507,68 +41504,32 @@ Recruit.find({}).remove()
         val: 124
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 60
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 60, val1: 30, val2: 30},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'masonromero@outlook.com',
@@ -52626,22 +41587,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -52676,40 +41627,22 @@ Recruit.find({}).remove()
         val: 129
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -52717,27 +41650,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'keriwalter@outlook.com',
@@ -52795,22 +41714,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -52845,40 +41754,22 @@ Recruit.find({}).remove()
         val: 159
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 160, val1: 80, val2: 80},
         acuity1: {
           val: 30
         },
@@ -52886,27 +41777,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'nolancobb@outlook.com',
@@ -52964,22 +41841,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -53014,68 +41881,33 @@ Recruit.find({}).remove()
         val: 159
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 160, val1: 80, val2: 80},
         acuity1: {
           val: 70
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'molinavinson@outlook.com',
@@ -53133,22 +41965,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 66
       },
@@ -53183,40 +42005,22 @@ Recruit.find({}).remove()
         val: 82
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 200
         },
@@ -53224,27 +42028,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'maddencherry@outlook.com',
@@ -53302,22 +42092,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -53352,40 +42132,22 @@ Recruit.find({}).remove()
         val: 74
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 70
         },
@@ -53393,27 +42155,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'navarrobuckley@outlook.com',
@@ -53471,22 +42219,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
-      usCitizen: {
-        has: false
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: false},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 70
       },
@@ -53521,40 +42259,22 @@ Recruit.find({}).remove()
         val: 78
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 70
         },
@@ -53562,27 +42282,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'hollierosario@outlook.com',
@@ -53640,22 +42346,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -53690,40 +42386,22 @@ Recruit.find({}).remove()
         val: 111
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -53731,27 +42409,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'mccormickhancock@comvex.com',
@@ -53809,22 +42473,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 68
       },
@@ -53859,68 +42513,33 @@ Recruit.find({}).remove()
         val: 31
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 40
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'tanyamichael@comvex.com',
@@ -53978,22 +42597,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: false
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: false},
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -54028,40 +42637,22 @@ Recruit.find({}).remove()
         val: 104
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -54069,27 +42660,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'nancydelacruz@outlook.com',
@@ -54147,22 +42724,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
-      usCitizen: {
-        has: true
-      },
-      usCitizenFamily: {
-        has: true
-      },
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      usCitizen: {has: true},
+      usCitizenFamily: {has: true},
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 65
       },
@@ -54197,68 +42764,33 @@ Recruit.find({}).remove()
         val: 48
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'kingdecker@outlook.com',
@@ -54316,18 +42848,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 65
       },
@@ -54362,40 +42888,22 @@ Recruit.find({}).remove()
         val: 156
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 4
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 2},
+        marijuana: {val: 3}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -54403,27 +42911,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'waynehess@comvex.com',
@@ -54481,18 +42975,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -54527,68 +43015,33 @@ Recruit.find({}).remove()
         val: 113
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 1},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'artwolfe@gmail.com',
@@ -54646,18 +43099,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 64
       },
@@ -54692,40 +43139,22 @@ Recruit.find({}).remove()
         val: 146
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 50
         },
@@ -54733,27 +43162,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'alexenglish@gmail.com',
@@ -54811,18 +43226,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -54857,68 +43266,33 @@ Recruit.find({}).remove()
         val: 97
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'millsjacobson@outlook.com',
@@ -54976,18 +43350,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 63
       },
@@ -55022,40 +43390,22 @@ Recruit.find({}).remove()
         val: 104
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -55063,27 +43413,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'louellalowery@outlook.com',
@@ -55141,18 +43477,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -55187,68 +43517,33 @@ Recruit.find({}).remove()
         val: 92
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 220, val1: 100, val2: 120},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'lisawebster@gmail.com',
@@ -55306,9 +43601,7 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: false},
@@ -55342,66 +43635,33 @@ Recruit.find({}).remove()
         val: 141
       },
       driving: {
-        license: {
-          has: true
-        },
+        license: {has: true},
         offenses: {val: 0},
-        violations: {
-          val: 2
-        }
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 30, val1: 15, val2: 15},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'griffinrice@gmail.com',
@@ -55459,18 +43719,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -55505,40 +43759,22 @@ Recruit.find({}).remove()
         val: 94
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 2
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 2},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
         },
@@ -55546,27 +43782,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'latishashelton@gmail.com',
@@ -55624,18 +43846,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -55670,40 +43886,22 @@ Recruit.find({}).remove()
         val: 136
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 8
         },
-        acuity: {
-          val: 200
-        },
+        acuity: {val: 200, val1: 80, val2: 120},
         acuity1: {
           val: 30
         },
@@ -55711,27 +43909,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'risareynolds@outlook.com',
@@ -55789,18 +43973,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -55835,68 +44013,30 @@ Recruit.find({}).remove()
         val: 132
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 40
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'alexmanning@gmail.com',
@@ -55954,18 +44094,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 69
       },
@@ -56000,40 +44134,22 @@ Recruit.find({}).remove()
         val: 111
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 55, val1: 30, val2: 25},
         acuity1: {
           val: 40
         },
@@ -56041,27 +44157,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'fultonmclean@outlook.com',
@@ -56119,18 +44221,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -56165,68 +44261,30 @@ Recruit.find({}).remove()
         val: 68
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 30
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'foleydillon@gmail.com',
@@ -56284,18 +44342,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -56330,40 +44382,22 @@ Recruit.find({}).remove()
         val: 113
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
         },
@@ -56371,27 +44405,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'mamieavila@comvex.com',
@@ -56449,18 +44469,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -56495,68 +44509,33 @@ Recruit.find({}).remove()
         val: 100
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 3
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'haynesshepherd@outlook.com',
@@ -56614,18 +44593,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 65
       },
@@ -56660,68 +44633,33 @@ Recruit.find({}).remove()
         val: 74
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 30, val1: 15, val2: 15},
         acuity1: {
           val: 200
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'cartermaxwell@gmail.com',
@@ -56779,18 +44717,12 @@ Recruit.find({}).remove()
       note: 'Pre-Ship meeting'
     },
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 72
       },
@@ -56825,68 +44757,33 @@ Recruit.find({}).remove()
         val: 36
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'jeanerickson@fanfare.com',
@@ -56944,18 +44841,12 @@ Recruit.find({}).remove()
       note: 'Semester check-in'
     },
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 68
       },
@@ -56990,40 +44881,22 @@ Recruit.find({}).remove()
         val: 146
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: false},
+        offenses: {val: 3},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 5
         },
-        acuity: {
-          val: 70
-        },
+        acuity: {val: 70, val1: 35, val2: 35},
         acuity1: {
           val: 40
         },
@@ -57031,27 +44904,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: false
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: false},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'wadeortiz@comvex.com',
@@ -57109,18 +44968,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: false},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 63
       },
@@ -57155,40 +45008,22 @@ Recruit.find({}).remove()
         val: 86
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 3
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 3},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
         },
@@ -57196,27 +45031,13 @@ Recruit.find({}).remove()
           val: 100
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 2
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 2}
     },
     personal: {
       email: 'gillbeach@gmail.com',
@@ -57274,18 +45095,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 64
       },
@@ -57320,68 +45135,30 @@ Recruit.find({}).remove()
         val: 59
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 70
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 70, val1: 35, val2: 35}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'dejesusdalton@outlook.com',
@@ -57439,18 +45216,12 @@ Recruit.find({}).remove()
       note: 'Monthly check-in'
     },
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 70
       },
@@ -57485,40 +45256,22 @@ Recruit.find({}).remove()
         val: 64
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 2
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 2},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 11
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 20
         },
@@ -57526,27 +45279,13 @@ Recruit.find({}).remove()
           val: 70
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: false
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: false},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'beverlyvega@gmail.com',
@@ -57606,18 +45345,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 62
       },
@@ -57652,40 +45385,22 @@ Recruit.find({}).remove()
         val: 104
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 1
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 1},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 100
-        },
+        acuity: {val: 100, val1: 60, val2: 40},
         acuity1: {
           val: 20
         },
@@ -57693,27 +45408,13 @@ Recruit.find({}).remove()
           val: 200
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'nskinner@outlook.com',
@@ -57771,18 +45472,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '1503303857', rs: 'MCRC',
-      fullname: ''
-    },
+      recruiterId: '1503303857', rs: 'MCRC', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 0
-      },
+      sex: {val: 'M'},
+      clearance: {val: 0},
       height: {
         val: 66
       },
@@ -57817,68 +45512,33 @@ Recruit.find({}).remove()
         val: 82
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 1
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 1},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 4
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 3},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 11
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 35, val1: 20, val2: 15},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'charlesmcfarland@gmail.com',
@@ -57936,18 +45596,12 @@ Recruit.find({}).remove()
       note: 'PRP Screen'
     },
     recruiter: {
-      recruiterId: '1503303857', rs: 'MCRC',
-      fullname: ''
-    },
+      recruiterId: '1503303857', rs: 'MCRC', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'M'},
+      clearance: {val: 1},
       height: {
         val: 65
       },
@@ -57982,68 +45636,33 @@ Recruit.find({}).remove()
         val: 66
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 2
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 2}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 100
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'gallegosmeyer@outlook.com',
@@ -58103,9 +45722,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 9, activity: 'HV', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
@@ -58141,68 +45758,33 @@ Recruit.find({}).remove()
         val: 164
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'naomishort@comvex.com',
@@ -58255,16 +45837,12 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 5, activity: 'OT', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
       sex: {val: 'F'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -58299,68 +45877,33 @@ Recruit.find({}).remove()
         val: 154
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'fateochola@boston.edu',
@@ -58413,16 +45956,12 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 10, activity: 'HV', active: true, note: 'Monthly check-in'},
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
       sex: {val: 'F'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -58457,68 +45996,33 @@ Recruit.find({}).remove()
         val: 147
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 50, val1: 30, val2: 20},
         acuity1: {
           val: 25
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'marisollane@outlook.com',
@@ -58571,18 +46075,12 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'EM', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: '198848953', rs: 'Frederick',
-      fullname: ''
-    },
+      recruiterId: '198848953', rs: 'Frederick', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 66
       },
@@ -58617,68 +46115,30 @@ Recruit.find({}).remove()
         val: 121
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 50
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'evelynpetersen@gmail.com',
@@ -58731,16 +46191,12 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 4, activity: 'TC', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
       sex: {val: 'M'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -58775,68 +46231,30 @@ Recruit.find({}).remove()
         val: 157
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: false},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
-        acuity1: {
-          val: 20
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'kemphutchinson@outlook.com',
@@ -58889,16 +46307,12 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 11, activity: 'EM', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '1503303857', rs: 'MCRC',
-      fullname: ''
-    },
+      recruiterId: '1503303857', rs: 'MCRC', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
       sex: {val: 'F'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 67
       },
@@ -58933,68 +46347,30 @@ Recruit.find({}).remove()
         val: 149
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 20
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 40, val1: 20, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'evelynmacmillan@gmail.com',
@@ -59049,17 +46425,13 @@ Recruit.find({}).remove()
     assignedPef: {pefCode: 'CA', recruiter: '002995102', month: 0},
     notif: {daysuntil: 0, activity: 'HV', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
       sex:
       {val: 'F'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -59094,40 +46466,22 @@ Recruit.find({}).remove()
         val: 153
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 30
         },
@@ -59135,27 +46489,13 @@ Recruit.find({}).remove()
           val: 60
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'jessicadavid@comvex.com',
@@ -59208,16 +46548,12 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 3, activity: 'EM', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
       sex: {val: 'F'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -59252,68 +46588,33 @@ Recruit.find({}).remove()
         val: 137
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 20
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 20
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'evaferguson@comvex.com',
@@ -59366,16 +46667,12 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'TC', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
       sex: {val: 'M'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -59410,68 +46707,33 @@ Recruit.find({}).remove()
         val: 122
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'eboone@gmail.com',
@@ -59524,18 +46786,12 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 10, activity: 'TC', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -59570,68 +46826,32 @@ Recruit.find({}).remove()
         val: 116
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 25
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 45, val1: 25, val2: 20},
+        acuity1: {val: 30},
+        acuity2: {val: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'keithtalley@gmail.com',
@@ -59684,16 +46904,12 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'EM', active: true, note: 'Monthly check-in'},
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
       sex: {val: 'F'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 73
       },
@@ -59728,68 +46944,30 @@ Recruit.find({}).remove()
         val: 138
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 40
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 55, val1: 35, val2: 20}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'giaharris@outlook.com',
@@ -59842,9 +47020,7 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'HV', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
       usCitizen: {has: true},
       usCitizenFamily: {has: true},
@@ -59875,7 +47051,7 @@ Recruit.find({}).remove()
         correctable: {has: true},
         depth: {has: true},
         color: {val: 13},
-        acuity: {val: 60},
+        acuity: {val: 50, val1: 25, val2: 25},
         acuity1: {val: 25},
         acuity2: {val: 25}
       },
@@ -59938,18 +47114,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 8, activity: 'OT', active: true, note: 'Monthly check-in'},
     recruiter: {
-      recruiterId: '1503303857', rs: 'MCRC',
-      fullname: ''
-    },
+      recruiterId: '1503303857', rs: 'MCRC', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
       sex: {val: 'M'},
-      clearance: {
-        val: 2
-      },
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -59984,68 +47156,30 @@ Recruit.find({}).remove()
         val: 119
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 2
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 2}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 40, val1: 20, val2: 30}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'webstercarey@university.com',
@@ -60098,18 +47232,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 4, activity: 'TC', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '172891922', rs: '4MCD',
-      fullname: ''
-    },
+      recruiterId: '172891922', rs: '4MCD', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
       sex: {val: 'M'},
-      clearance: {
-        val: 2
-      },
+      clearance: {val: 2},
       height: {
         val: 71
       },
@@ -60144,68 +47274,33 @@ Recruit.find({}).remove()
         val: 156
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 40
-        },
+        acuity: {val: 40, val1: 20, val2: 20},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'lanceherman@university.com',
@@ -60258,18 +47353,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 2, activity: 'HV', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
       sex: {val: 'F'},
-      clearance: {
-        val: 2
-      },
+      clearance: {val: 2},
       height: {
         val: 72
       },
@@ -60304,68 +47395,33 @@ Recruit.find({}).remove()
         val: 137
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 60
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 50
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'jennypollard@comvex.com',
@@ -60418,20 +47474,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 1, activity: 'HV', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'M'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'M'},
+      clearance: {val: 2},
       height: {
         val: 67
       },
@@ -60466,68 +47516,33 @@ Recruit.find({}).remove()
         val: 143
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 1
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 1}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 14
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 25
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'jamesdalton@gmail.com',
@@ -60580,18 +47595,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 6, activity: 'EM', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
       sex: {val: 'M'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 63
       },
@@ -60626,68 +47637,33 @@ Recruit.find({}).remove()
         val: 162
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 14
         },
-        acuity: {
-          val: 50
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'englishoconnor@university.com',
@@ -60740,18 +47716,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 1, activity: 'TC', active: true, note: 'Poolee Function'},
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
       sex: {val: 'M'},
-      clearance: {
-        val: 2
-      },
+      clearance: {val: 2},
       height: {
         val: 71
       },
@@ -60786,68 +47758,30 @@ Recruit.find({}).remove()
         val: 156
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 12
         },
-        acuity: {
-          val: 50
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 30
-        }
+        acuity: {val: 50, val1: 20, val2: 30}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'vicvalencia@university.com',
@@ -60900,20 +47834,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 7, activity: 'HV', active: true, note: 'Informational meeting'},
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 2
-      },
+      sex: {val: 'F'},
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -60948,68 +47876,33 @@ Recruit.find({}).remove()
         val: 122
       },
       driving: {
-        license: {
-          has: false
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: false},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 1
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 1},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 60, val1: 30, val2: 30},
         acuity1: {
           val: 40
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'frankiemullins@university.com',
@@ -61062,20 +47955,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 0, activity: 'HV', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
-      sex: {
-        val: 'F'
-      },
-      clearance: {
-        val: 1
-      },
+      sex: {val: 'F'},
+      clearance: {val: 1},
       height: {
         val: 71
       },
@@ -61110,68 +47997,33 @@ Recruit.find({}).remove()
         val: 122
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: false
-        },
+        correctable: {has: true},
+        depth: {has: false},
         color: {
           val: 12
         },
-        acuity: {
-          val: 25
-        },
+        acuity: {val: 80, val1: 40, val2: 40},
         acuity1: {
           val: 20
-        },
-        acuity2: {
-          val: 50
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: false
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: true},
+      pftClass1: {has: false},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'wynnefox@university.com',
@@ -61224,18 +48076,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 8, activity: 'TC', active: true, note: 'Monthly check-in'},
     recruiter: {
-      recruiterId: '979101185', rs: 'ERR',
-      fullname: ''
-    },
+      recruiterId: '979101185', rs: 'ERR', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
       sex: {val: 'M'},
-      clearance: {
-        val: 2
-      },
+      clearance: {val: 2},
       height: {
         val: 70
       },
@@ -61270,68 +48118,33 @@ Recruit.find({}).remove()
         val: 143
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 0
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 0}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 1
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 1}
       },
       vision: {
-        correctable: {
-          has: true
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: true},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 30
-        },
+        acuity: {val: 80, val1: 40, val2: 40},
         acuity1: {
           val: 60
-        },
-        acuity2: {
-          val: 30
         }
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 1
-      },
-      flightPhysical: {
-        has: false
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: true
-      },
-      prpScreen: {
-        val: 1
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 1},
+      flightPhysical: {has: false},
+      pftClass1: {has: true},
+      waterQual: {has: true},
+      prpScreen: {val: 1}
     },
     personal: {
       email: 'chaseforbes@gmail.com',
@@ -61384,18 +48197,14 @@ Recruit.find({}).remove()
         dutyType: {id: 1, desc: 'DMR'},
     notif: {daysuntil: 6, activity: 'OT', active: true, note: 'Additional screening'},
     recruiter: {
-      recruiterId: '002995102', rs: 'Chantilly',
-      fullname: ''
-    },
+      recruiterId: '002995102', rs: 'Chantilly', fullname: ''},
     match: {
       usCitizen: {
         has: true
       },
       usCitizenFamily: {has: true},
       sex: {val: 'F'},
-      clearance: {
-        val: 1
-      },
+      clearance: {val: 1},
       height: {
         val: 68
       },
@@ -61430,68 +48239,30 @@ Recruit.find({}).remove()
         val: 133
       },
       driving: {
-        license: {
-          has: true
-        },
-        offenses: {
-          val: 0
-        },
-        violations: {
-          val: 4
-        }
+        license: {has: true},
+        offenses: {val: 0},
+        violations: {val: 3}
       },
       moral: {
-        conduct: {
-          val: 0
-        },
-        otherDrugs: {
-          val: 0
-        },
-        marijuana: {
-          val: 0
-        }
+        conduct: {val: 0},
+        otherDrugs: {val: 0},
+        marijuana: {val: 0}
       },
       vision: {
-        correctable: {
-          has: false
-        },
-        depth: {
-          has: true
-        },
+        correctable: {has: false},
+        depth: {has: true},
         color: {
           val: 13
         },
-        acuity: {
-          val: 25
-        },
-        acuity1: {
-          val: 30
-        },
-        acuity2: {
-          val: 20
-        }
+        acuity: {val: 20, val1: 10, val2: 10}
       },
-      speech: {
-        has: true
-      },
-      algebra: {
-        has: true
-      },
-      tierGrad: {
-        val: 2
-      },
-      flightPhysical: {
-        has: true
-      },
-      pftClass1: {
-        has: true
-      },
-      waterQual: {
-        has: false
-      },
-      prpScreen: {
-        val: 0
-      }
+      speech: {has: true},
+      algebra: {has: true},
+      tierGrad: {val: 2},
+      flightPhysical: {has: true},
+      pftClass1: {has: true},
+      waterQual: {has: false},
+      prpScreen: {val: 0}
     },
     personal: {
       email: 'roxannemckinney@comvex.com',
@@ -61536,8 +48307,6 @@ Recruit.find({}).remove()
     }
   },
       
-
-
   {
         firstName: 'Josh',
         lastName: 'Fantastic',
@@ -61750,9 +48519,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 20},
-            acuity: {val: 20},
-            acuity: {val: 20}
+            acuity: {val: 35, val1: 15, val2: 20}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -61839,9 +48606,7 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 20},
-            acuity: {val: 20},
-            acuity: {val: 20}
+            acuity: {val: 40, val1: 20, val2: 20}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -61928,9 +48693,9 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 20},
-            acuity: {val: 20},
-            acuity: {val: 20}
+            acuity: {val: 40, val1: 20, val2: 20},
+            acuity1: {val: 20},
+            acuity2: {val: 20}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -62017,9 +48782,9 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 20},
-            acuity: {val: 20},
-            acuity: {val: 20}
+            acuity: {val: 40, val1: 20, val2: 20},
+            acuity1: {val: 20},
+            acuity2: {val: 20}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -62106,9 +48871,9 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 20},
-            acuity: {val: 20},
-            acuity: {val: 20}
+            acuity: {val: 40, val1: 20, val2: 20},
+            acuity1: {val: 20},
+            acuity2: {val: 20}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -62195,9 +48960,9 @@ Recruit.find({}).remove()
             correctable: {has: true},
             depth: {has: true},
             color: {val: 14},
-            acuity: {val: 20},
-            acuity: {val: 20},
-            acuity: {val: 20}
+            acuity: {val: 40, val1: 20, val2: 20},
+            acuity1: {val: 20},
+            acuity2: {val: 20}
           },
           speech: {has: true},
           algebra: {has: true},
@@ -62245,7 +49010,8 @@ Recruit.find({}).remove()
           mso: 'N/A',
           adObligation: 'N/A'
         }
-      },
+      }
+
     )
     .then(() => {
       console.log('finished populating RECRUITS');

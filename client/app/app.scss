@@ -71,10 +71,17 @@ body {
   background-color: #c6dbef;
 }
 
-.text-danger {
-  color: #5d0817;
+.text-error {
+  //color: #5d0817;
   background-color: #ffffff;  //ffacc5;
   outline-color: #e52430; //d43f3a
+  outline-width: 2px;
+  outline-style: dashed;
+}
+
+.text-pass {
+  background-color: #ffffff;  //ffacc5;
+  outline-color: #4caf50; //d43f3a
   outline-width: 2px;
   outline-style: dashed;
 }
@@ -115,10 +122,6 @@ body {
 
 .text-warning {
   color: #d58512;
-}
-
-.text-success {
-  color: #398439;
 }
 
 .text48 {

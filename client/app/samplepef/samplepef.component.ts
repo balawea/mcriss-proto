@@ -63,74 +63,76 @@ export class SamplepefComponent {
 
   //Save assignment changes
   toggleAssignment() {
-    if (this.selectedPef) {
-      let assigning = !this.isAssigned(this.selectedPef);
-      let haswaivers = this.hasWaivers(this.selectedPef);
-      let date = new Date();
+    if (!this.selectedPef) {
+      return;
+    }
 
-      //months in seed data are FY based: Oct=0, Nov=1, etc.
-      let monthInFyOrder = (date.getMonth() + 3) % 12;
-      //two digit natural month, ie 01, 06
+    let assigning = !this.isAssigned(this.selectedPef);
+    let haswaivers = this.hasWaivers(this.selectedPef);
+    let date = new Date();
 
-      //FUTURE: priviledged users can grab/request seats from different months, so to
-      //implement that we could identify the correct MCROC year/month for that seat and apply it here.
-      let monthNatural = ("0" + (date.getMonth() + 1)).slice(-2);
-      let year = date.getFullYear();
-      let today = date.toLocaleDateString('en-US');
-      let bonuscode = '-XX-XXX-';
-      let mcroc = year + monthNatural + this.selectedPef.pefCode + bonuscode + today;
+    //months in seed data are FY based: Oct=0, Nov=1, etc.
+    let monthInFyOrder = (date.getMonth() + 3) % 12;
+    //two digit natural month, ie 01, 06
 
-      if (assigning) {
-        this.fullrecruit.assignedPef = {pefCode: this.selectedPef.pefCode, id: this.selectedPef._id, month: monthInFyOrder};
-        this.fullrecruit.exams.waiver = (haswaivers) ? "Requested" : undefined;
-        this.selectedPef.errs = -1;
-        this.fullrecruit.mcroc = mcroc;
-      }
-      else {
-        monthInFyOrder = this.fullrecruit.assignedPef.month;  //we are freeing up a seat. Apply it back to the month it was assigned in.
-        this.fullrecruit.assignedPef = {};
-        this.fullrecruit.exams.waiver = this.fullrecruit.mcroc = undefined;
-        this.selectedPef.errs = this.selectedPef.errCategory = 0;
-      }
+    //FUTURE: priviledged users can grab/request seats from different months, so to
+    //implement that we could identify the correct MCROC year/month for that seat and apply it here.
+    let monthNatural = ("0" + (date.getMonth() + 1)).slice(-2);
+    let year = date.getFullYear();
+    let today = date.toLocaleDateString('en-US');
+    let bonuscode = '-XX-XXX-';
+    let mcroc = year + monthNatural + this.selectedPef.pefCode + bonuscode + today;
 
-      this.pefs.sort(this.byErrs);
+    if (assigning) {
+      this.fullrecruit.assignedPef = {pefCode: this.selectedPef.pefCode, id: this.selectedPef._id, month: monthInFyOrder};
+      this.fullrecruit.exams.waiver = (haswaivers) ? "Requested" : undefined;
+      this.selectedPef.errs = -1;
+      this.fullrecruit.mcroc = mcroc;
+    }
+    else {
+      monthInFyOrder = this.fullrecruit.assignedPef.month;  //we are freeing up a seat. Apply it back to the month it was assigned in.
+      this.fullrecruit.assignedPef = {};
+      this.fullrecruit.exams.waiver = this.fullrecruit.mcroc = undefined;
+      this.selectedPef.errs = this.selectedPef.errCategory = 0;
+    }
 
-      //save pef assignment to recruit document
-      this.$http.put(`/api/recruits/${this.id}`, this.fullrecruit)
-      .then(res => {
-        if(assigning) {
-          if (haswaivers) {
-            swal("Waiver", `Waiver process initiated for assignment to PEF ${this.selectedPef.pefCode}`, "success");
-          }
-          else {
-            swal("Assigned", `Candidate successfully assigned to PEF ${this.selectedPef.pefCode}`, "success");
-          }
+    this.pefs.sort(this.byErrs);
+
+    //save pef assignment to recruit document
+    this.$http.put(`/api/recruits/${this.id}`, this.fullrecruit)
+    .then(res => {
+      if(assigning) {
+        if (haswaivers) {
+          swal("Waiver", `Waiver process initiated for assignment to PEF ${this.selectedPef.pefCode}`, "success");
         }
         else {
-          swal("Unassigned", `Candidate is no longer assigned to PEF ${this.selectedPef.pefCode}`, "info");
+          swal("Assigned", `Candidate successfully assigned to PEF ${this.selectedPef.pefCode}`, "success");
         }
+      }
+      else {
+        swal("Unassigned", `Candidate is no longer assigned to PEF ${this.selectedPef.pefCode}`, "info");
+      }
 
-        this.broadcastRecruit(this.fullrecruit);
-      });
+      this.broadcastRecruit(this.fullrecruit);
+    });
 
-      //update month assignment total to RS document
-      this.$http.get(`/api/rss/rs/${this.user.rs}`)
-      .then(res => {
-        var data = res.data[0];
-        var actual = data.allocation[this.selectedPef.pefCode].actual;
+    //update month assignment total to RS document
+    this.$http.get(`/api/rss/rs/${this.user.rs}`)
+    .then(res => {
+      var data = res.data[0];
+      var actual = data.allocation[this.selectedPef.pefCode].actual;
 
-        if (assigning) {  //increment
-          actual['m' + monthInFyOrder] += 1;
-        }
-        else {            //decrement
-          actual['m' + monthInFyOrder] -= 1;
-        }
+      if (assigning) {  //increment
+        actual['m' + monthInFyOrder] += 1;
+      }
+      else {            //decrement
+        actual['m' + monthInFyOrder] -= 1;
+      }
 
-        this.$http.put(`/api/rss/${data._id}`, data);
-      });
+      this.$http.put(`/api/rss/${data._id}`, data);
+    });
 
-    }
-  }
+  } //  toggleAssignment
 
   canAssign(pef) {
     if (pef) {
@@ -222,6 +224,7 @@ export class SamplepefComponent {
     if (aerr < berr) {
       return -1;
     }
+    
     if (aerr > berr) {
       return 1;
     }
@@ -285,7 +288,7 @@ function getPefErrors(p, r) {
     for (let pkey in pef) {
       let pval = pef[pkey];
 
-      //skip null, empty, and undefined pef values, allow zeroes
+      //skip null, empty, false, and undefined pef values. Allow zeroes.
       if (!pval && pval !== 0)
         continue;
 

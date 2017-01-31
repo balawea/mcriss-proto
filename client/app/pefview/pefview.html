@@ -62,9 +62,9 @@
               <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.age.description}}" ng-click="vm.editDesc('Age', 'age')"></i></span>
             </div>
             <div class="panel-body">
-              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.age.min">
+              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(min)" ng-model="vm.selectedPef.requirements.age.min" ng-maxlength="2">
               <label class="margin5">yo </label>
-              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.age.max">
+              <input class="text-border-sm" ng-readonly="vm.isReadOnly()" placeholder="(max)" ng-model="vm.selectedPef.requirements.age.max" ng-maxlength="2">
               <label class="margin5">yo </label>
             </div>
           <div class="panel-footer">
@@ -481,26 +481,16 @@
                 <label class="control-label pull-left">Acuity Eye 1: 20/
                 <input class="text-border-sm40" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max1"></label>
                 <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}" ng-click="vm.editDesc('Acuity', 'vision.acuity')"></i></span>
+                <label class="control-label pull-left">Acuity Eye 2: 20/
+                <input class="text-border-sm40" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max2"></label>
               </div>
             </div>
           <div class="panel-footer">
             <span class="marginhorizontal10">
               <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.vision.acuity.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
             </span>
-          </div>
-        </div>
-
-          <div class="panel block-panel-small-0 pull-left">
-            <div class="panel-body">
-              <div  class="col-xs-12">
-                <label class="control-label pull-left">Acuity Eye 2: 20/
-                <input class="text-border-sm40" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.max2"></label>
-                <span><i class="fa fa-file-text {{vm.modeColor}} pull-right" uib-tooltip="{{vm.selectedPef.requirements.vision.acuity.description}}" ng-click="vm.editDesc('Acuity', 'vision.acuity')"></i></span>
-              </div>
-            </div>
-          <div class="panel-footer">
-            <span class="marginhorizontal10">
-              <label class="margin0"><input type="checkbox" ng-model="vm.selectedPef.requirements.vision.acuity.waivable" ng-disabled="vm.isReadOnly()"> waivable</label>
+            <span class="marginhorizontal10" ng-if="vm.selectedPef.requirements.vision.acuity.waivable===true">
+              <label class="margin0">Amount:<input class="text-border-xs waiver-input" ng-readonly="vm.isReadOnly()" ng-model="vm.selectedPef.requirements.vision.acuity.waiver"></label>
             </span>
           </div>
         </div>

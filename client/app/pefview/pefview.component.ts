@@ -94,8 +94,17 @@ export class PefviewComponent {
 
   save() {
     if (this.selectedPef) {
+      if (this.selectedPef.requirements.vision.acuity.max1 && this.selectedPef.requirements.vision.acuity.max2) {
+        this.selectedPef.requirements.vision.acuity.max = parseInt(this.selectedPef.requirements.vision.acuity.max1) + parseInt(this.selectedPef.requirements.vision.acuity.max2);
+      }
+      else {
+        this.selectedPef.requirements.vision.acuity.max = undefined;
+      }
+
       this.$http.put(`/api/pefRequirements/${this.selectedPef._id}`, this.selectedPef)
       .then(res => {
+        console.log(res);
+        
         if (res.statusText==="OK") {
           console.info('saved');
           swal("Success", `PEF ${this.selectedPef.pefCode} has been saved.`, "success");
