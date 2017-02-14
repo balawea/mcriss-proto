@@ -256,6 +256,10 @@ body {
   height: 54px;
 }
 
+.button-skinny {
+  padding: 3px 10px;
+}
+
 //PANELS
 
 .panel {
@@ -313,10 +317,10 @@ body {
   display: inline-table;
   float: left;
   margin: 10px;
-    padding-top: 5px;
+  margin-bottom: 0px;
+  padding-top: 5px;
   .panel-body{
-    padding: 0px;
-    //padding-bottom: 0px !important;
+    padding: 5px !important;
   }
   .panel-footer{
     padding: 0px 15px;
@@ -330,6 +334,7 @@ body {
   display: inline-table;
   float: left;
   margin: 10px;
+  margin-top: 0px;
   .panel-body{
     padding:10px;
     flex:1;
@@ -344,6 +349,7 @@ body {
   display: inline-table;
   float: left;
   margin: 10px;
+  margin-bottom: 0px;
   padding-top: 10px;
   .panel-header{
     padding: 0px 10px;
@@ -363,6 +369,7 @@ body {
   display: inline-table;
   float: left;
   margin: 10px;
+  margin-bottom: 0px;
 
   .panel-body{
     padding-top: 5px;
@@ -383,12 +390,12 @@ body {
   float: left;
   margin: 10px;
   margin-top: 0px;
-  height: 70px;
+  height: 50px;
   width: 98%;
   .panel-header{
-    padding: 5px;
+    padding: 0px 5px;
     font-weight: 600;
-    height: 33px;
+    height: 25px;
     background-color: #4c4c4c;
   }
   .panel-body{
@@ -518,6 +525,10 @@ body {
   margin-bottom: 10px;
 }
 
+.marginbottom20 {
+  margin-bottom: 20px;
+}
+
 .marginvertical15 {
   margin: 10px 0px;
   border-top: 1px solid #ddd;
@@ -537,6 +548,13 @@ body {
   font-style: normal;
   font-size: 16px;
   font-weight: 300;
+}
+
+.home-text {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .margin0 {
@@ -627,6 +645,10 @@ body {
   width: 80%;
 }
 
+.height70 {
+  height: 70px;
+}
+
 .lb-sm {
   font-size: 10px;
 }
@@ -638,6 +660,10 @@ body {
 
 .font24 {
   font-size: 24px;
+}
+
+.line-height13 {
+  line-height: 1.3 !important;
 }
 
 .nav-navy {
@@ -664,7 +690,8 @@ body {
   margin: 0px 10px;
   margin-bottom: 10px;
   border-bottom: 2px darkred solid;
-  height: 55px;
+  height: 45px;
+  min-height: 45px !important;
   font-weight: 300;
 }
 
@@ -763,6 +790,11 @@ body {
 
 .padbottom0 {
   padding-bottom: 0px;
+}
+
+.padvertical10 {
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
 }
 
 .padsides10 {

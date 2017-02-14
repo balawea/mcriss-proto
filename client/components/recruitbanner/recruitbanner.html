@@ -6,7 +6,7 @@
     <!--   Title and Icons   -->
     <div uib-collapse="vm.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
 
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav line-height13">
         <li><i class="headerfont margin10">{{recr.fullName}}</i></li>
         <li class="padtop15"><i class="subheader-text">Age: <strong>{{recr.age}}</strong></i></li>
         <li class="padtop15"><i class="subheader-text">Sex: <strong>{{recr.sex}}</strong></i></li>
@@ -16,10 +16,10 @@
       </ul>
 
       <ul class="nav navbar-nav pull-right">
-        <li><a class="fa fa-user fa-2x pull-left a2" ng-class="{'gray': state!='candidateprofile'}" href="/candidateprofile#{{recr.id}}" uib-tooltip="Candidate Profile"></a></li>
-        <li><a class="fa fa-heartbeat fa-2x pull-left a2 gray" ui-sref="{{state}}" uib-tooltip="Medical Info"></a></li>
-        <li><a class="fa fa-comments fa-2x pull-left a2 gray" ui-sref="{{state}}" uib-tooltip="Notes"></a></li>
-        <li ng-if="recr.dutyType==='DMR'"><a class="fa fa-link fa-2x pull-left a2" ng-class="{'gray': state!='samplepef'}" href="/samplepef#{{recr.id}}" uib-tooltip="PEF Assignment"></a></li>
+        <li><a class="fa fa-user fa-2x pull-left a2 padvertical10" ng-class="{'gray': state!='candidateprofile'}" href="/candidateprofile#{{recr.id}}" uib-tooltip="Candidate Profile"></a></li>
+        <li><a class="fa fa-heartbeat fa-2x pull-left a2 gray padvertical10" ui-sref="{{state}}" uib-tooltip="Medical Info"></a></li>
+        <li><a class="fa fa-comments fa-2x pull-left a2 gray padvertical10" ui-sref="{{state}}" uib-tooltip="Notes"></a></li>
+        <li ng-if="recr.dutyType==='DMR'"><a class="fa fa-link fa-2x pull-left a2 padvertical10" ng-class="{'gray': state!='samplepef'}" href="/samplepef#{{recr.id}}" uib-tooltip="PEF Assignment"></a></li>
       </ul>
 
     </div>

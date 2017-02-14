@@ -132,6 +132,7 @@ export class PefviewComponent {
             console.info('canceled');
           }
         }
+        this.layout(this.msnry);
       }); //then
     }
   } //
