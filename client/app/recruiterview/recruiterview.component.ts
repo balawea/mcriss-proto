@@ -17,7 +17,6 @@ export class RecruiterviewComponent {
     this.$http = $http;
     this.getCurrentUser = Auth.getCurrentUser;
     this.$state = $state;
-
   } //ctor
 
   $onInit() {

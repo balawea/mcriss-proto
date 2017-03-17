@@ -41,10 +41,9 @@
 
       <span class="margin20 pull-right text-gray headerfont-sm padtop15">{{recvisible.length}}
       </span>
-
       <h2 class="page-header padbottom0"></h2>
-      <ul class="nav nav-tabs-show nav-stacked col-sm-2" ng-repeat="recruit in vm.recruits | filter: vm.filter(filtertxt, vm.alert, vm.male, vm.female, vm.starred) as recvisible track by recruit._id">
-        <li>
+      <ul class="padding0 flextiles">
+        <li class="nav nav-tabs-show nav-stacked col-sm-2" ng-repeat="recruit in vm.recruits | filter: vm.filter(filtertxt, vm.alert, vm.male, vm.female, vm.starred) as recvisible track by recruit._id">
           <div class="panel tile-recruit text-center">
             <a href="/candidateprofile#{{::recruit._id}}">
               <div class="panel-header">

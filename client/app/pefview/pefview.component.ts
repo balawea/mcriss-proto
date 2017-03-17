@@ -41,10 +41,9 @@ export class PefviewComponent {
         itemSelector: '.grid-item',
         columnWidth: 275,
         transitionDuration: '0.3s'
-      })
-
+      });
       this.layout(this.msnry);
-    })
+    });
   }   //oninit
 
   byPefCode(a, b) {
@@ -65,7 +64,7 @@ export class PefviewComponent {
   }
 
   select(pef) {
-    if (!!this.selectedPef && this.selectedPef != pef)
+    if (!!this.selectedPef && this.selectedPef !== pef)
       this.selectedPef.isEditing = false;
 
     this.selectedPef = pef;
@@ -93,13 +92,14 @@ export class PefviewComponent {
   }
 
   save() {
+    console.log('save');
     if (this.selectedPef) {
-      if (this.selectedPef.requirements.vision.acuity.max1 && this.selectedPef.requirements.vision.acuity.max2) {
-        this.selectedPef.requirements.vision.acuity.max = parseInt(this.selectedPef.requirements.vision.acuity.max1) + parseInt(this.selectedPef.requirements.vision.acuity.max2);
-      }
-      else {
-        this.selectedPef.requirements.vision.acuity.max = undefined;
-      }
+      if (((this.selectedPef.requirements.vision || {}).acuity || undefined)) {
+          this.selectedPef.requirements.vision.acuity.max = parseInt(this.selectedPef.requirements.vision.acuity.max1, 10) + parseInt(this.selectedPef.requirements.vision.acuity.max2, 10);
+        }
+        else {
+          (this.selectedPef.requirements.vision || {}).acuity = undefined;
+        }
 
       this.$http.put(`/api/pefRequirements/${this.selectedPef._id}`, this.selectedPef)
       .then(res => {

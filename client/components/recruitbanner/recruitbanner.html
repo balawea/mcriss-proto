@@ -4,10 +4,13 @@
     </div>
 
     <!--   Title and Icons   -->
-    <div uib-collapse="vm.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+    <div uib-collapse="vm.isCollapsed" class="navbar-collapse collapse" id="banner-main">
 
-      <ul class="nav navbar-nav line-height13">
+      <ul class="nav navbar-nav line-height13 margin0">
         <li><i class="headerfont margin10">{{recr.fullName}}</i></li>
+      </ul>
+
+      <ul class="nav navbar-nav line-height13 margin0 visible-lg-block">
         <li class="padtop15"><i class="subheader-text">Age: <strong>{{recr.age}}</strong></i></li>
         <li class="padtop15"><i class="subheader-text">Sex: <strong>{{recr.sex}}</strong></i></li>
         <li class="padtop15"><i class="subheader-text">SSN4: <strong>{{recr.ssn}}</strong></i></li>

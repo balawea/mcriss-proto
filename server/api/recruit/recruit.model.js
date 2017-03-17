@@ -106,6 +106,7 @@ var RecruitSchema = new mongoose.Schema({
     toJSON: { virtuals: true }
 });
 
+//virtuals
 RecruitSchema.virtual('age.val').get(function() {
   return (Math.floor((Date.now() - new Date(this.dob))/31536000000)); //31536000000 = msecs/year
 });
@@ -124,6 +125,8 @@ RecruitSchema.virtual('fhor').get(function() {
   return addr.street + '\n' + addr.city + ', ' + addr.state + ' ' + addr.zip + '\n' + addr.country;
 });
 
+
+//statics
 RecruitSchema.statics.findbyrec = function (req) {
   return this.find({"recruiter.recruiterId": req}, {"firstName": 1, "lastName": 1, "notif": 1, "status": 1, "match.sex.val": 1, "personal.ssn": 1, "assignedPef.pefCode": 1, "dob": 1, "exams.pef": 1, "dutyType.desc": 1, "mcroc": 1});
 };

@@ -38,7 +38,7 @@ export class SamplepefComponent {
 
   /*@ngInject*/
   $onInit() {
-    this.user = this.getUser()
+    this.user = this.getUser();
 
     this.$http.get('/api/pefRequirements/').then(responsePef => {
       this.p = responsePef.data;
@@ -59,6 +59,7 @@ export class SamplepefComponent {
         this.layout();
       });
     });
+
   }   //oninit
 
   //Save assignment changes
@@ -392,7 +393,7 @@ function getBookmarks(pefs, bkmarks) {
 
   for (let pef of pefs) {
     for (let mark of bkmarks) {
-      if (mark.pefCode===pef.pefCode) {
+      if (mark.pefCode === pef.pefCode) {
         pef.isBookmarked=true;
       }
       pef.notes = mark.notes;

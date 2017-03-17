@@ -29,12 +29,19 @@ body {
 }
 
 .nav-tabs-show {
-  @extend .nav-tabs;
   display: block;
+  width: 190px;
 }
 
 .aligncenter {
   align-items: center;
+}
+
+.flextiles {
+  display: inline-flex;
+  max-width: 1140px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .fa-2x,.fa-3x,.fa-4x {
@@ -94,7 +101,7 @@ body {
 }
 
 .tile-recruit {
-  //height: 205px;
+  width: 175px;
   
   a:hover {
     text-decoration: none !important;
@@ -647,6 +654,11 @@ body {
 
 .height70 {
   height: 70px;
+}
+
+.maxheight70 {
+  max-height: 70px;
+  min-height: 0px;
 }
 
 .lb-sm {

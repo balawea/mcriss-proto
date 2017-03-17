@@ -3,6 +3,8 @@
 const angular = require('angular');
 
 export class RecruitBannerComponent {
+  isCollapsed = true;
+  
   /*@ngInject*/
   constructor($scope, $rootScope) {
 

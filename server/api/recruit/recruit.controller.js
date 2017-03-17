@@ -75,6 +75,7 @@ export function index(req, res) {
 //get lite recruit objects for recruiterview tiles
 export function lite(req, res) {
   return recruit.lite().exec()
+    .then(handleEntityNotFound(res))
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
@@ -87,7 +88,6 @@ export function findbyrec(req, res) {
     .then(handleEntityNotFound(res))
     .then(respondWithResult(res))
     .catch(handleError(res));
-
 }
 
 // Gets a single recruit from the DB
